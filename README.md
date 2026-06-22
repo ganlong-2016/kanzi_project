@@ -39,6 +39,7 @@
 
 ## 文档索引
 
+- [在 Kanzi Studio 中建工程操作手册](docs/setup-in-studio.md)
 - [架构总览](docs/architecture.md)
 - [工程引用与依赖规范](docs/project-references.md)
 - [命名规范](docs/naming-conventions.md)
