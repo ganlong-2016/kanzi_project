@@ -58,6 +58,14 @@
 
 各组在 Kanzi Studio 中按对应目录的 README 建立 `.kzproj`,并把工程文件提交回该目录。
 
+### Tool_project vs Application(kzb-only 工作流)
+
+Kanzi Studio 新建工程会生成两个文件夹:
+- **`Tool_project/`**:`.kzproj` + 资源,**kzb 从这里导出 —— 只需要它**,提交进 Git。
+- **`Application/`**:C++ 运行时/各平台构建脚手架。本项目由 Android 加载 kzb,**不编译它**;已在 `.gitignore` 忽略 `studio-projects/**/Application/`,本地保留不碍事,**不必每次手删**。
+
+建议把 kzb 的导出输出路径显式设到独立的 `out/` 目录,避免依赖 `Application/` 下的默认路径。
+
 ## 开工顺序(摘要)
 
 1. 先建 `core` 并导出 `core.kzb`(token + 日/夜主题 + 通用组件库 + 冻结的 Data Source stub)。

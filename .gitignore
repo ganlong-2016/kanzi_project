@@ -4,6 +4,10 @@
 out/
 output/
 
+# kzb-only 工作流:每个工程只跟踪 Tool_project/,不需要 C++ Application 脚手架
+# (Studio 新建工程会默认生成 Application/,这里统一忽略,本地保留即可)
+studio-projects/**/Application/
+
 # Kanzi Studio 临时 / 缓存
 *.tmp
 .kanzi_cache/
