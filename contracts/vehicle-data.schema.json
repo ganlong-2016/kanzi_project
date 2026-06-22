@@ -1,0 +1,92 @@
+{
+  "$schema": "https://example.com/nextrea-vehicle-data-contract",
+  "project": "nextrea",
+  "version": "1.0.0",
+  "description": "nextrea Data Source 契约。Kanzi Studio 在 core 工程的 Data Sources/VehicleData 中按此结构建模(配 stub 默认值);Android 侧 Java Plugin 的 DataObject 树必须逐字段对齐(字段名/类型/枚举)。每个信号都带一个 <signal>Valid(bool)有效性字段,无效/超时/故障时置 false,UI 据此显示故障态,严禁用默认值掩盖故障。",
+  "conventions": {
+    "fieldNaming": "camelCase",
+    "types": ["bool", "int", "real", "string", "enum", "list"],
+    "validityField": "<signal>Valid (bool),false 表示该信号无效/超时/故障",
+    "enum": "int 取值,含义见 enums 段"
+  },
+  "groups": {
+    "System": {
+      "path": "kzb://core/Data Sources/VehicleData/System",
+      "fields": {
+        "currentTimeText": { "type": "string", "stub": "08:24", "desc": "已格式化的当前时间(随 locale)" },
+        "dateText":        { "type": "string", "stub": "周一 6月22日", "desc": "已格式化日期" },
+        "locale":          { "type": "string", "stub": "zh-CN", "desc": "当前语言,zh-CN/en" },
+        "theme":           { "type": "string", "stub": "Day", "desc": "当前主题,Day/Night" },
+        "networkLevel":    { "type": "int", "range": [0, 4], "stub": 3, "desc": "信号格" },
+        "bluetoothOn":     { "type": "bool", "stub": true },
+        "outsideTemp":     { "type": "real", "unit": "°C", "stub": 26.0 },
+        "outsideTempValid":{ "type": "bool", "stub": true }
+      }
+    },
+    "Charging": {
+      "path": "kzb://core/Data Sources/VehicleData/Charging",
+      "fields": {
+        "soc":             { "type": "real", "unit": "%", "range": [0, 100], "stub": 62.0, "desc": "电量百分比" },
+        "socValid":        { "type": "bool", "stub": true },
+        "chargeStatus":    { "type": "enum", "enum": "ChargeStatus", "stub": 1, "desc": "充电状态" },
+        "chargeStatusValid":{ "type": "bool", "stub": true },
+        "chargePower":     { "type": "real", "unit": "kW", "stub": 48.5, "desc": "当前充电功率" },
+        "chargePowerValid":{ "type": "bool", "stub": true },
+        "remainingMinutes":{ "type": "int", "unit": "min", "stub": 35, "desc": "充满剩余分钟" },
+        "remainingMinutesValid": { "type": "bool", "stub": true },
+        "rangeKm":         { "type": "real", "unit": "km", "stub": 410.0, "desc": "续航里程" },
+        "rangeKmValid":    { "type": "bool", "stub": true },
+        "plugConnected":   { "type": "bool", "stub": true, "desc": "充电枪是否插入" },
+        "targetSoc":       { "type": "real", "unit": "%", "range": [0, 100], "stub": 90.0, "desc": "目标电量(可设置)" }
+      }
+    },
+    "VehicleControl": {
+      "path": "kzb://core/Data Sources/VehicleData/VehicleControl",
+      "fields": {
+        "locked":            { "type": "bool", "stub": true, "desc": "整车落锁" },
+        "lockedValid":       { "type": "bool", "stub": true },
+        "doorFrontLeft":     { "type": "bool", "stub": false, "desc": "true=开" },
+        "doorFrontRight":    { "type": "bool", "stub": false },
+        "doorRearLeft":      { "type": "bool", "stub": false },
+        "doorRearRight":     { "type": "bool", "stub": false },
+        "doorValid":         { "type": "bool", "stub": true, "desc": "车门信号组有效性" },
+        "trunkOpen":         { "type": "bool", "stub": false },
+        "windowFrontLeft":   { "type": "int", "unit": "%", "range": [0, 100], "stub": 0, "desc": "车窗开度,0=关 100=全开" },
+        "windowFrontRight":  { "type": "int", "unit": "%", "range": [0, 100], "stub": 0 },
+        "windowRearLeft":    { "type": "int", "unit": "%", "range": [0, 100], "stub": 0 },
+        "windowRearRight":   { "type": "int", "unit": "%", "range": [0, 100], "stub": 0 },
+        "windowValid":       { "type": "bool", "stub": true },
+        "headlightOn":       { "type": "bool", "stub": false }
+      }
+    },
+    "Interior": {
+      "path": "kzb://core/Data Sources/VehicleData/Interior",
+      "fields": {
+        "ambientOn":         { "type": "bool", "stub": true, "desc": "氛围灯开关" },
+        "ambientColor":      { "type": "string", "stub": "#4D8BFFFF", "desc": "氛围灯颜色 #RRGGBBAA" },
+        "ambientBrightness": { "type": "int", "unit": "%", "range": [0, 100], "stub": 70 },
+        "ambientValid":      { "type": "bool", "stub": true },
+        "fragranceOn":       { "type": "bool", "stub": false },
+        "fragranceLevel":    { "type": "int", "range": [0, 3], "stub": 1, "desc": "香氛档位" },
+        "seatHeatLevel":     { "type": "int", "range": [0, 3], "stub": 0, "desc": "座椅加热档位" },
+        "sunroofPosition":   { "type": "int", "unit": "%", "range": [0, 100], "stub": 0 }
+      }
+    }
+  },
+  "enums": {
+    "ChargeStatus": {
+      "0": "UNKNOWN/无效",
+      "1": "CHARGING/充电中",
+      "2": "COMPLETED/已充满",
+      "3": "PAUSED/暂停",
+      "4": "FAULT/故障"
+    }
+  },
+  "rules": [
+    "字段名/类型/枚举值在 Studio 与 Android Java DataObject 两侧必须完全一致。",
+    "交付后字段冻结,只允许追加新字段,不得改名/改类型/删除。",
+    "任何信号无效/超时/故障时,对应 <signal>Valid 置 false;UI 绑定该字段显示故障态(Color/Error + common.unavailable),禁止以默认值/0 伪装正常。",
+    "写操作(开窗/落锁/调氛围灯等)以下游回推的真实状态刷新 UI,失败要走显式错误,不静默。",
+    "枚举的 0 一律保留为 UNKNOWN/无效。"
+  ]
+}

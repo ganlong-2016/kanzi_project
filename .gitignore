@@ -1,0 +1,18 @@
+# Kanzi 导出产物(由 CI 生成并归档,不进 Git)
+*.kzb
+*.kzb.cfg
+out/
+output/
+
+# Kanzi Studio 临时 / 缓存
+*.tmp
+.kanzi_cache/
+**/Backup/
+**/Temp/
+
+# OS / 编辑器
+.DS_Store
+Thumbs.db
+*.swp
+
+# 大资源建议用 Git LFS 管理(3D / 高清纹理 / 字体),按需在 .gitattributes 配置
