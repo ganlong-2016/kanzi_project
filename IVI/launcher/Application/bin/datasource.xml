@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DroidDataSource>
+	<time type="string">0</time>
+	<Bool_Test type="bool">false</Bool_Test>
+	<String_Test type="string">"default"</String_Test>
+	<Float_Test type="float">0.0</Float_Test>
+
+	<List_Test type ="list">
+		<index type = "string">0</index>
+		<icon type = "string">0</icon>
+	</List_Test>
+
+	<ImageUri_Test type="string">""</ImageUri_Test>
+	<Light type="bool">false</Light>
+</DroidDataSource>
