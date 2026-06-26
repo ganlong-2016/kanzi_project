@@ -1,0 +1,35 @@
+# ===== Kanzi Studio: 本地/自动生成文件,不应提交 =====
+
+# 自动保存(Kanzi Studio autosave)
+*.kzproj.autosave
+*.kzproj.autosave.user
+
+# 用户本地设置(每人不同)
+*.kzproj.user
+
+# Kanzi Studio 滚动备份(Car.kzproj_1 / _2 ...)
+*.kzproj_*
+
+# 工程会话锁文件
+*.lock
+
+# ===== 自动生成的图片缓存(Kanzi 打开/导入时自动重建)=====
+*/Images/thumbnails/
+*/Images/mipmaps/
+*/Images/compressed/
+*/Images/cubemaps/mipmaps/
+*/Images/cubemaps/thumbnails/
+
+# ===== 导出/构建产物(导出时重新生成)=====
+# 注意:数据源 XML 等源文件不在此列(*.xml 不被忽略)
+*.kzb
+*.kzb.cfg
+*.kzb.txt
+
+# ===== OS / 编辑器 =====
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# 大资源(3D / 高清纹理 / 字体)建议用 Git LFS,按需在 .gitattributes 配置
