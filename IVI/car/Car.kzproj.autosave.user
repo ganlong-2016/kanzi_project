@@ -19,8 +19,7 @@
                       <d2p1:string>/Screens/Screen</d2p1:string>
                       <d2p1:string>/Screens/Screen/RootPage</d2p1:string>
                       <d2p1:string>/Screens/Screen/RootPage/Viewport 2D</d2p1:string>
-                      <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene (Scene)</d2p1:string>
-                      <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene (Scene)/RootNode (car)</d2p1:string>
+                      <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene</d2p1:string>
                     </d10p1:ExpandedNodePaths>
                     <d10p1:RootSpecificDataItems>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
@@ -36,7 +35,24 @@
                           </d10p1:ExpandedItemPaths>
                           <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
                           <d10p1:SelectedItemPaths>
-                            <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene/Camera</d2p1:string>
+                            <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene</d2p1:string>
+                          </d10p1:SelectedItemPaths>
+                        </d2p1:Value>
+                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                        <d2p1:Key>/Car/Screens</d2p1:Key>
+                        <d2p1:Value>
+                          <d10p1:ExpandedEditorItemPaths />
+                          <d10p1:ExpandedItemPaths>
+                            <d2p1:string>/Screens</d2p1:string>
+                            <d2p1:string>/Screens/Screen</d2p1:string>
+                            <d2p1:string>/Screens/Screen/RootPage</d2p1:string>
+                            <d2p1:string>/Screens/Screen/RootPage/Viewport 2D</d2p1:string>
+                            <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene</d2p1:string>
+                          </d10p1:ExpandedItemPaths>
+                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
+                          <d10p1:SelectedItemPaths>
+                            <d2p1:string>/Screens/Screen</d2p1:string>
                           </d10p1:SelectedItemPaths>
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
@@ -50,52 +66,17 @@
                             <d2p1:string>/Screens/Screen/RootPage</d2p1:string>
                             <d2p1:string>/Screens/Screen/RootPage/Viewport 2D</d2p1:string>
                             <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene</d2p1:string>
-                            <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene/Sunset (Sunset)</d2p1:string>
                           </d10p1:ExpandedItemPaths>
                           <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
                           <d10p1:SelectedItemPaths>
-                            <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene/Sunset (Sunset)/Lines</d2p1:string>
-                          </d10p1:SelectedItemPaths>
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/common/Screens</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Screens</d2p1:string>
-                            <d2p1:string>/Screens/Screen</d2p1:string>
-                            <d2p1:string>/Screens/Screen/RootPage</d2p1:string>
                             <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths>
-                            <d2p1:string>/Screens/Screen</d2p1:string>
-                          </d10p1:SelectedItemPaths>
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/Car/Screens</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Screens</d2p1:string>
-                            <d2p1:string>/Screens/Screen</d2p1:string>
-                            <d2p1:string>/Screens/Screen/RootPage</d2p1:string>
-                            <d2p1:string>/Screens/Screen/RootPage/Viewport 2D</d2p1:string>
-                            <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene (Scene)</d2p1:string>
-                            <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene (Scene)/RootNode (car)</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths>
-                            <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene (Scene)/Camera</d2p1:string>
                           </d10p1:SelectedItemPaths>
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                     </d10p1:RootSpecificDataItems>
                     <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
                     <d10p1:SelectedNodePaths>
-                      <d2p1:string>/Screens/Screen/RootPage/Viewport 2D/Scene (Scene)/Camera</d2p1:string>
+                      <d2p1:string>/Screens/Screen</d2p1:string>
                     </d10p1:SelectedNodePaths>
                   </d2p1:Value>
                 </d2p1:KeyValueOfProjectExplorerViewModeProjectExplorerState.ProjectDependentData.ViewModeDataZii17Iwv>
@@ -103,30 +84,10 @@
                   <d2p1:Key>LAYERS</d2p1:Key>
                   <d2p1:Value xmlns:d10p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.ApplicationCommon.Windows.WindowStates">
                     <d10p1:ExpandedEditorNodePaths />
-                    <d10p1:ExpandedNodePaths>
-                      <d2p1:string>/Sunset</d2p1:string>
-                      <d2p1:string>/Sunset/Sunset</d2p1:string>
-                    </d10p1:ExpandedNodePaths>
-                    <d10p1:RootSpecificDataItems>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/environment/Prefabs/Sunset</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Sunset</d2p1:string>
-                            <d2p1:string>/Sunset/Sunset</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths>
-                            <d2p1:string>/Sunset/Sunset/ENV_Sphere_</d2p1:string>
-                          </d10p1:SelectedItemPaths>
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                    </d10p1:RootSpecificDataItems>
+                    <d10p1:ExpandedNodePaths />
+                    <d10p1:RootSpecificDataItems />
                     <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                    <d10p1:SelectedNodePaths>
-                      <d2p1:string>/Sunset/Sunset/ENV_Sphere_</d2p1:string>
-                    </d10p1:SelectedNodePaths>
+                    <d10p1:SelectedNodePaths />
                   </d2p1:Value>
                 </d2p1:KeyValueOfProjectExplorerViewModeProjectExplorerState.ProjectDependentData.ViewModeDataZii17Iwv>
               </d7p2:ViewModeDataItems>
@@ -142,7 +103,7 @@
                   <d8p1:ContentType>ABSOLUTE</d8p1:ContentType>
                   <d8p1:IsResourceReference>false</d8p1:IsResourceReference>
                   <d8p1:referredItemPath>
-                    <d8p1:pathString>Car/Prefabs/Scene/Scene/Camera/</d8p1:pathString>
+                    <d8p1:pathString>Car/Screens/Screen/RootPage/Viewport 2D/Scene/Camera/</d8p1:pathString>
                   </d8p1:referredItemPath>
                   <d8p1:textContent
                     i:nil="true" />
@@ -161,10 +122,10 @@
                   <d2p1:Value xmlns:d10p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.ApplicationCommon.Windows.WindowStates">
                     <d10p1:ExpandedEditorNodePaths />
                     <d10p1:ExpandedNodePaths>
-                      <d2p1:string>/Camera</d2p1:string>
-                      <d2p1:string>/Camera/Triggers</d2p1:string>
-                      <d2p1:string>/Camera/Animation</d2p1:string>
-                      <d2p1:string>/Camera/Input Manipulators</d2p1:string>
+                      <d2p1:string>/Screen</d2p1:string>
+                      <d2p1:string>/Screen/Triggers</d2p1:string>
+                      <d2p1:string>/Screen/Animation</d2p1:string>
+                      <d2p1:string>/Screen/Input Manipulators</d2p1:string>
                     </d10p1:ExpandedNodePaths>
                     <d10p1:RootSpecificDataItems>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
@@ -306,20 +267,6 @@
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/environment/Prefabs/test/test/Stack Layout 2D</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Stack Layout 2D</d2p1:string>
-                            <d2p1:string>/Stack Layout 2D/Triggers</d2p1:string>
-                            <d2p1:string>/Stack Layout 2D/Animation</d2p1:string>
-                            <d2p1:string>/Stack Layout 2D/Input Manipulators</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths />
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                         <d2p1:Key>/environment/Prefabs/test/test</d2p1:Key>
                         <d2p1:Value>
                           <d10p1:ExpandedEditorItemPaths />
@@ -334,14 +281,14 @@
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/environment/Prefabs/test/test/Stack Layout 2D/Text Block 2D</d2p1:Key>
+                        <d2p1:Key>/common/Prefabs/DataLayer/DataLayer</d2p1:Key>
                         <d2p1:Value>
                           <d10p1:ExpandedEditorItemPaths />
                           <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Text Block 2D</d2p1:string>
-                            <d2p1:string>/Text Block 2D/Triggers</d2p1:string>
-                            <d2p1:string>/Text Block 2D/Animation</d2p1:string>
-                            <d2p1:string>/Text Block 2D/Input Manipulators</d2p1:string>
+                            <d2p1:string>/DataLayer</d2p1:string>
+                            <d2p1:string>/DataLayer/Triggers</d2p1:string>
+                            <d2p1:string>/DataLayer/Animation</d2p1:string>
+                            <d2p1:string>/DataLayer/Input Manipulators</d2p1:string>
                           </d10p1:ExpandedItemPaths>
                           <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
                           <d10p1:SelectedItemPaths />
@@ -390,35 +337,21 @@
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/environment/Prefabs/Sunset/Sunset/ENV_Sphere_</d2p1:Key>
+                        <d2p1:Key>/launcher/Screens/Screen/RootPage/Viewport 2D</d2p1:Key>
                         <d2p1:Value>
                           <d10p1:ExpandedEditorItemPaths />
                           <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/ENV_Sphere_</d2p1:string>
-                            <d2p1:string>/ENV_Sphere_/Triggers</d2p1:string>
-                            <d2p1:string>/ENV_Sphere_/Animation</d2p1:string>
-                            <d2p1:string>/ENV_Sphere_/Input Manipulators</d2p1:string>
+                            <d2p1:string>/Viewport 2D</d2p1:string>
+                            <d2p1:string>/Viewport 2D/Triggers</d2p1:string>
+                            <d2p1:string>/Viewport 2D/Animation</d2p1:string>
+                            <d2p1:string>/Viewport 2D/Input Manipulators</d2p1:string>
                           </d10p1:ExpandedItemPaths>
                           <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
                           <d10p1:SelectedItemPaths />
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/environment/Prefabs/Sunset/Sunset/Lines</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Lines</d2p1:string>
-                            <d2p1:string>/Lines/Triggers</d2p1:string>
-                            <d2p1:string>/Lines/Animation</d2p1:string>
-                            <d2p1:string>/Lines/Input Manipulators</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths />
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/environment/Screens/Screen/RootPage/Viewport 2D/Scene</d2p1:Key>
+                        <d2p1:Key>/launcher/Screens/Screen/RootPage/Viewport 2D/Scene</d2p1:Key>
                         <d2p1:Value>
                           <d10p1:ExpandedEditorItemPaths />
                           <d10p1:ExpandedItemPaths>
@@ -432,28 +365,14 @@
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/environment/Screens/Screen/RootPage/Viewport 2D/Scene/Sunset</d2p1:Key>
+                        <d2p1:Key>/launcher/Screens/Screen/RootPage/Viewport 2D/Scene/Prefab View 3D</d2p1:Key>
                         <d2p1:Value>
                           <d10p1:ExpandedEditorItemPaths />
                           <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Sunset (Sunset)</d2p1:string>
-                            <d2p1:string>/Sunset (Sunset)/Triggers</d2p1:string>
-                            <d2p1:string>/Sunset (Sunset)/Animation</d2p1:string>
-                            <d2p1:string>/Sunset (Sunset)/Input Manipulators</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths />
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/environment/Screens/Screen/RootPage/Viewport 2D/Scene/Camera</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Camera</d2p1:string>
-                            <d2p1:string>/Camera/Triggers</d2p1:string>
-                            <d2p1:string>/Camera/Animation</d2p1:string>
-                            <d2p1:string>/Camera/Input Manipulators</d2p1:string>
+                            <d2p1:string>/Prefab View 3D</d2p1:string>
+                            <d2p1:string>/Prefab View 3D/Triggers</d2p1:string>
+                            <d2p1:string>/Prefab View 3D/Animation</d2p1:string>
+                            <d2p1:string>/Prefab View 3D/Input Manipulators</d2p1:string>
                           </d10p1:ExpandedItemPaths>
                           <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
                           <d10p1:SelectedItemPaths />
@@ -474,20 +393,6 @@
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/common/Screens/Screen</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Screen</d2p1:string>
-                            <d2p1:string>/Screen/Triggers</d2p1:string>
-                            <d2p1:string>/Screen/Animation</d2p1:string>
-                            <d2p1:string>/Screen/Input Manipulators</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths />
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                         <d2p1:Key>/launcher/Screens/Screen/RootPage/Viewport 2D/Scene/car</d2p1:Key>
                         <d2p1:Value>
                           <d10p1:ExpandedEditorItemPaths />
@@ -496,6 +401,96 @@
                             <d2p1:string>/car/Triggers</d2p1:string>
                             <d2p1:string>/car/Animation</d2p1:string>
                             <d2p1:string>/car/Input Manipulators</d2p1:string>
+                          </d10p1:ExpandedItemPaths>
+                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
+                          <d10p1:SelectedItemPaths />
+                        </d2p1:Value>
+                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                        <d2p1:Key>/launcher/Screens/Screen/RootPage/Viewport 2D/Scene/Directional Light</d2p1:Key>
+                        <d2p1:Value>
+                          <d10p1:ExpandedEditorItemPaths />
+                          <d10p1:ExpandedItemPaths>
+                            <d2p1:string>/Directional Light</d2p1:string>
+                            <d2p1:string>/Directional Light/Triggers</d2p1:string>
+                            <d2p1:string>/Directional Light/Animation</d2p1:string>
+                            <d2p1:string>/Directional Light/Input Manipulators</d2p1:string>
+                          </d10p1:ExpandedItemPaths>
+                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
+                          <d10p1:SelectedItemPaths />
+                        </d2p1:Value>
+                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                        <d2p1:Key>/Car/Prefabs/RootNode/scania</d2p1:Key>
+                        <d2p1:Value>
+                          <d10p1:ExpandedEditorItemPaths />
+                          <d10p1:ExpandedItemPaths>
+                            <d2p1:string>/RootNode</d2p1:string>
+                            <d2p1:string>/RootNode/Triggers</d2p1:string>
+                            <d2p1:string>/RootNode/Animation</d2p1:string>
+                            <d2p1:string>/RootNode/Input Manipulators</d2p1:string>
+                          </d10p1:ExpandedItemPaths>
+                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
+                          <d10p1:SelectedItemPaths />
+                        </d2p1:Value>
+                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                        <d2p1:Key>/launcher/Screens/Screen/RootPage/Viewport 2D/Scene/Prefab View 3D_1</d2p1:Key>
+                        <d2p1:Value>
+                          <d10p1:ExpandedEditorItemPaths />
+                          <d10p1:ExpandedItemPaths>
+                            <d2p1:string>/Prefab View 3D_1</d2p1:string>
+                            <d2p1:string>/Prefab View 3D_1/Triggers</d2p1:string>
+                            <d2p1:string>/Prefab View 3D_1/Animation</d2p1:string>
+                            <d2p1:string>/Prefab View 3D_1/Input Manipulators</d2p1:string>
+                          </d10p1:ExpandedItemPaths>
+                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
+                          <d10p1:SelectedItemPaths />
+                        </d2p1:Value>
+                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                        <d2p1:Key>/environment/Screens/Screen/RootPage/Viewport 2D/Scene</d2p1:Key>
+                        <d2p1:Value>
+                          <d10p1:ExpandedEditorItemPaths />
+                          <d10p1:ExpandedItemPaths>
+                            <d2p1:string>/Scene</d2p1:string>
+                            <d2p1:string>/Scene/Triggers</d2p1:string>
+                            <d2p1:string>/Scene/Animation</d2p1:string>
+                            <d2p1:string>/Scene/Input Manipulators</d2p1:string>
+                          </d10p1:ExpandedItemPaths>
+                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
+                          <d10p1:SelectedItemPaths />
+                        </d2p1:Value>
+                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                        <d2p1:Key>/environment/Screens/Screen/RootPage/Viewport 2D</d2p1:Key>
+                        <d2p1:Value>
+                          <d10p1:ExpandedEditorItemPaths />
+                          <d10p1:ExpandedItemPaths>
+                            <d2p1:string>/Viewport 2D</d2p1:string>
+                            <d2p1:string>/Viewport 2D/Triggers</d2p1:string>
+                            <d2p1:string>/Viewport 2D/Animation</d2p1:string>
+                            <d2p1:string>/Viewport 2D/Input Manipulators</d2p1:string>
+                          </d10p1:ExpandedItemPaths>
+                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
+                          <d10p1:SelectedItemPaths />
+                        </d2p1:Value>
+                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                        <d2p1:Key>/Car/Screens/Screen/RootPage</d2p1:Key>
+                        <d2p1:Value>
+                          <d10p1:ExpandedEditorItemPaths />
+                          <d10p1:ExpandedItemPaths>
+                            <d2p1:string>/RootPage</d2p1:string>
+                            <d2p1:string>/RootPage/Triggers</d2p1:string>
+                            <d2p1:string>/RootPage/Triggers/Page: Activated (Page: Activated)</d2p1:string>
+                            <d2p1:string>/RootPage/Triggers/Page: Activated (Page: Activated)/Conditions</d2p1:string>
+                            <d2p1:string>/RootPage/Triggers/Page: Activated (Page: Activated)/Actions</d2p1:string>
+                            <d2p1:string>/RootPage/Triggers/Page: Deactivated (Page: Deactivated)</d2p1:string>
+                            <d2p1:string>/RootPage/Triggers/Page: Deactivated (Page: Deactivated)/Conditions</d2p1:string>
+                            <d2p1:string>/RootPage/Triggers/Page: Deactivated (Page: Deactivated)/Actions</d2p1:string>
+                            <d2p1:string>/RootPage/Animation</d2p1:string>
+                            <d2p1:string>/RootPage/Input Manipulators</d2p1:string>
                           </d10p1:ExpandedItemPaths>
                           <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
                           <d10p1:SelectedItemPaths />
@@ -516,71 +511,6 @@
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/Car/Screens/Screen/RootPage/Viewport 2D/Scene</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Scene (Scene)</d2p1:string>
-                            <d2p1:string>/Scene (Scene)/Triggers</d2p1:string>
-                            <d2p1:string>/Scene (Scene)/Animation</d2p1:string>
-                            <d2p1:string>/Scene (Scene)/Input Manipulators</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths />
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/Car/Prefabs/4x2_1027_shadow_update_3 1/4x2_1027_shadow_update_3 1</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/4x2_1027_shadow_update_3 1</d2p1:string>
-                            <d2p1:string>/4x2_1027_shadow_update_3 1/Triggers</d2p1:string>
-                            <d2p1:string>/4x2_1027_shadow_update_3 1/Animation</d2p1:string>
-                            <d2p1:string>/4x2_1027_shadow_update_3 1/Input Manipulators</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths />
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/Car/Prefabs/RootNode/car</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/RootNode</d2p1:string>
-                            <d2p1:string>/RootNode/Triggers</d2p1:string>
-                            <d2p1:string>/RootNode/Animation</d2p1:string>
-                            <d2p1:string>/RootNode/Input Manipulators</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths />
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/Car/Screens/Screen/RootPage/Viewport 2D/Scene/RootNode</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths />
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths />
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/Car/Prefabs/RootNode/car/X1_1</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/X1_1</d2p1:string>
-                            <d2p1:string>/X1_1/Triggers</d2p1:string>
-                            <d2p1:string>/X1_1/Animation</d2p1:string>
-                            <d2p1:string>/X1_1/Input Manipulators</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths />
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                         <d2p1:Key>/Car/Prefabs/car/car</d2p1:Key>
                         <d2p1:Value>
                           <d10p1:ExpandedEditorItemPaths />
@@ -595,21 +525,21 @@
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/Car/Screens/Screen</d2p1:Key>
+                        <d2p1:Key>/Car/Screens/Screen/RootPage/Viewport 2D/Scene/Prefab View 3D</d2p1:Key>
                         <d2p1:Value>
                           <d10p1:ExpandedEditorItemPaths />
                           <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Screen</d2p1:string>
-                            <d2p1:string>/Screen/Triggers</d2p1:string>
-                            <d2p1:string>/Screen/Animation</d2p1:string>
-                            <d2p1:string>/Screen/Input Manipulators</d2p1:string>
+                            <d2p1:string>/Prefab View 3D (car)</d2p1:string>
+                            <d2p1:string>/Prefab View 3D (car)/Triggers</d2p1:string>
+                            <d2p1:string>/Prefab View 3D (car)/Animation</d2p1:string>
+                            <d2p1:string>/Prefab View 3D (car)/Input Manipulators</d2p1:string>
                           </d10p1:ExpandedItemPaths>
                           <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
                           <d10p1:SelectedItemPaths />
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/Car/Prefabs/Scene/Scene/Camera</d2p1:Key>
+                        <d2p1:Key>/Car/Screens/Screen/RootPage/Viewport 2D/Scene/Camera</d2p1:Key>
                         <d2p1:Value>
                           <d10p1:ExpandedEditorItemPaths />
                           <d10p1:ExpandedItemPaths>
@@ -623,7 +553,7 @@
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/Car/Prefabs/Scene/Scene/Directional Light</d2p1:Key>
+                        <d2p1:Key>/Car/Screens/Screen/RootPage/Viewport 2D/Scene/Directional Light</d2p1:Key>
                         <d2p1:Value>
                           <d10p1:ExpandedEditorItemPaths />
                           <d10p1:ExpandedItemPaths>
@@ -637,14 +567,14 @@
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/Car/Prefabs/car/car/X1_1</d2p1:Key>
+                        <d2p1:Key>/Car/Screens/Screen</d2p1:Key>
                         <d2p1:Value>
                           <d10p1:ExpandedEditorItemPaths />
                           <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/X1_1</d2p1:string>
-                            <d2p1:string>/X1_1/Triggers</d2p1:string>
-                            <d2p1:string>/X1_1/Animation</d2p1:string>
-                            <d2p1:string>/X1_1/Input Manipulators</d2p1:string>
+                            <d2p1:string>/Screen</d2p1:string>
+                            <d2p1:string>/Screen/Triggers</d2p1:string>
+                            <d2p1:string>/Screen/Animation</d2p1:string>
+                            <d2p1:string>/Screen/Input Manipulators</d2p1:string>
                           </d10p1:ExpandedItemPaths>
                           <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
                           <d10p1:SelectedItemPaths />
@@ -671,12 +601,10 @@
                       <d2p1:string>/Resources objects</d2p1:string>
                       <d2p1:string>/Resources objects/Localization</d2p1:string>
                       <d2p1:string>/Resources objects/Materials and Textures</d2p1:string>
-                      <d2p1:string>/Resources objects/Materials and Textures/Materials</d2p1:string>
-                      <d2p1:string>/Resources objects/Materials and Textures/Material Types</d2p1:string>
                       <d2p1:string>/Resources objects/Meshes</d2p1:string>
                       <d2p1:string>/Resources objects/Project References</d2p1:string>
                       <d2p1:string>/Resources objects/Resource Files</d2p1:string>
-                      <d2p1:string>/Resources objects/Resource Files/Images</d2p1:string>
+                      <d2p1:string>/Resources objects/Resource Files/3D Assets</d2p1:string>
                       <d2p1:string>/Resources objects/Styles</d2p1:string>
                     </d10p1:ExpandedNodePaths>
                     <d10p1:RootSpecificDataItems>
@@ -698,47 +626,6 @@
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/environment/Resources objects</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Resources objects</d2p1:string>
-                            <d2p1:string>/Resources objects/Localization</d2p1:string>
-                            <d2p1:string>/Resources objects/Materials and Textures</d2p1:string>
-                            <d2p1:string>/Resources objects/Materials and Textures/Materials</d2p1:string>
-                            <d2p1:string>/Resources objects/Materials and Textures/Material Types</d2p1:string>
-                            <d2p1:string>/Resources objects/Materials and Textures/Material Types/Textured</d2p1:string>
-                            <d2p1:string>/Resources objects/Meshes</d2p1:string>
-                            <d2p1:string>/Resources objects/Project References</d2p1:string>
-                            <d2p1:string>/Resources objects/Resource Files</d2p1:string>
-                            <d2p1:string>/Resources objects/Resource Files/Images</d2p1:string>
-                            <d2p1:string>/Resources objects/Styles</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>61.600000000000023</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths>
-                            <d2p1:string>/Resources objects/Materials and Textures/Material Types/Textured/street_lines</d2p1:string>
-                          </d10p1:SelectedItemPaths>
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/common/Resources objects</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Resources objects</d2p1:string>
-                            <d2p1:string>/Resources objects/Project References</d2p1:string>
-                            <d2p1:string>/Resources objects/Property Types</d2p1:string>
-                            <d2p1:string>/Resources objects/Property Types/common</d2p1:string>
-                            <d2p1:string>/Resources objects/Property Types/common/str</d2p1:string>
-                            <d2p1:string>/Resources objects/Styles</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>128</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths>
-                            <d2p1:string>/Resources objects/Styles/LocaleStyle</d2p1:string>
-                          </d10p1:SelectedItemPaths>
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                         <d2p1:Key>/Car/Resources objects</d2p1:Key>
                         <d2p1:Value>
                           <d10p1:ExpandedEditorItemPaths />
@@ -746,25 +633,33 @@
                             <d2p1:string>/Resources objects</d2p1:string>
                             <d2p1:string>/Resources objects/Localization</d2p1:string>
                             <d2p1:string>/Resources objects/Materials and Textures</d2p1:string>
-                            <d2p1:string>/Resources objects/Materials and Textures/Materials</d2p1:string>
-                            <d2p1:string>/Resources objects/Materials and Textures/Material Types</d2p1:string>
                             <d2p1:string>/Resources objects/Meshes</d2p1:string>
                             <d2p1:string>/Resources objects/Project References</d2p1:string>
                             <d2p1:string>/Resources objects/Resource Files</d2p1:string>
-                            <d2p1:string>/Resources objects/Resource Files/Images</d2p1:string>
+                            <d2p1:string>/Resources objects/Resource Files/3D Assets</d2p1:string>
                             <d2p1:string>/Resources objects/Styles</d2p1:string>
                           </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>192</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths>
-                            <d2p1:string>/Resources objects/Meshes/X1_1</d2p1:string>
-                          </d10p1:SelectedItemPaths>
+                          <d10p1:ScrollPosition>275.20000000000005</d10p1:ScrollPosition>
+                          <d10p1:SelectedItemPaths />
+                        </d2p1:Value>
+                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                        <d2p1:Key>/environment/Resources objects</d2p1:Key>
+                        <d2p1:Value>
+                          <d10p1:ExpandedEditorItemPaths />
+                          <d10p1:ExpandedItemPaths>
+                            <d2p1:string>/Resources objects</d2p1:string>
+                            <d2p1:string>/Resources objects/Localization</d2p1:string>
+                            <d2p1:string>/Resources objects/Project References</d2p1:string>
+                            <d2p1:string>/Resources objects/Styles</d2p1:string>
+                          </d10p1:ExpandedItemPaths>
+                          <d10p1:ScrollPosition>72.800000000000011</d10p1:ScrollPosition>
+                          <d10p1:SelectedItemPaths />
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                     </d10p1:RootSpecificDataItems>
-                    <d10p1:ScrollPosition>192</d10p1:ScrollPosition>
-                    <d10p1:SelectedNodePaths>
-                      <d2p1:string>/Resources objects/Meshes/X1_1</d2p1:string>
-                    </d10p1:SelectedNodePaths>
+                    <d10p1:ScrollPosition>275.20000000000005</d10p1:ScrollPosition>
+                    <d10p1:SelectedNodePaths />
                   </d2p1:Value>
                 </d2p1:KeyValueOfProjectExplorerViewModeProjectExplorerState.ProjectDependentData.ViewModeDataZii17Iwv>
               </d7p2:ViewModeDataItems>
@@ -840,9 +735,7 @@
                     <d10p1:ExpandedEditorNodePaths />
                     <d10p1:ExpandedNodePaths>
                       <d2p1:string>/Prefabs</d2p1:string>
-                      <d2p1:string>/Prefabs/4x2_1027_shadow_update_3 1</d2p1:string>
                       <d2p1:string>/Prefabs/car</d2p1:string>
-                      <d2p1:string>/Prefabs/Scene</d2p1:string>
                     </d10p1:ExpandedNodePaths>
                     <d10p1:RootSpecificDataItems>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
@@ -855,53 +748,32 @@
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                       <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/environment/Prefabs</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Prefabs</d2p1:string>
-                            <d2p1:string>/Prefabs/Sunset</d2p1:string>
-                            <d2p1:string>/Prefabs/test/Stack Layout 2D</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths>
-                            <d2p1:string>/Prefabs/Sunset</d2p1:string>
-                          </d10p1:SelectedItemPaths>
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                        <d2p1:Key>/common/Prefabs</d2p1:Key>
-                        <d2p1:Value>
-                          <d10p1:ExpandedEditorItemPaths />
-                          <d10p1:ExpandedItemPaths>
-                            <d2p1:string>/Prefabs</d2p1:string>
-                          </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
-                          <d10p1:SelectedItemPaths>
-                            <d2p1:string>/Prefabs/DataLayer</d2p1:string>
-                          </d10p1:SelectedItemPaths>
-                        </d2p1:Value>
-                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
-                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                         <d2p1:Key>/Car/Prefabs</d2p1:Key>
                         <d2p1:Value>
                           <d10p1:ExpandedEditorItemPaths />
                           <d10p1:ExpandedItemPaths>
                             <d2p1:string>/Prefabs</d2p1:string>
-                            <d2p1:string>/Prefabs/4x2_1027_shadow_update_3 1</d2p1:string>
                             <d2p1:string>/Prefabs/car</d2p1:string>
-                            <d2p1:string>/Prefabs/Scene</d2p1:string>
                           </d10p1:ExpandedItemPaths>
-                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
+                          <d10p1:ScrollPosition>889.6</d10p1:ScrollPosition>
                           <d10p1:SelectedItemPaths>
-                            <d2p1:string>/Prefabs/car/X1_1</d2p1:string>
+                            <d2p1:string>/Prefabs/car</d2p1:string>
                           </d10p1:SelectedItemPaths>
                         </d2p1:Value>
                       </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                      <d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
+                        <d2p1:Key>/environment/Prefabs</d2p1:Key>
+                        <d2p1:Value>
+                          <d10p1:ExpandedEditorItemPaths />
+                          <d10p1:ExpandedItemPaths />
+                          <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
+                          <d10p1:SelectedItemPaths />
+                        </d2p1:Value>
+                      </d2p1:KeyValueOfstringProjectExplorerState.ViewModeState.HierarchicalEditorViewModeDataifjOcRyb>
                     </d10p1:RootSpecificDataItems>
-                    <d10p1:ScrollPosition>0</d10p1:ScrollPosition>
+                    <d10p1:ScrollPosition>889.6</d10p1:ScrollPosition>
                     <d10p1:SelectedNodePaths>
-                      <d2p1:string>/Prefabs/car/X1_1</d2p1:string>
+                      <d2p1:string>/Prefabs/car</d2p1:string>
                     </d10p1:SelectedNodePaths>
                   </d2p1:Value>
                 </d2p1:KeyValueOfProjectExplorerViewModeProjectExplorerState.ProjectDependentData.ViewModeDataZii17Iwv>
@@ -1056,7 +928,9 @@
             <d2p1:Key>Assets</d2p1:Key>
             <d2p1:Value xmlns:d7p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base" xmlns:d7p2="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Presentation.Application.Assets"
               i:type="d7p2:AssetsWindowState.ProjectSpecificData">
-              <d7p2:FilteredTypeNames />
+              <d7p2:FilteredTypeNames>
+                <d2p1:string>Rightware.Kanzi.Tool.Logic.Project.MaterialItems.Material</d2p1:string>
+              </d7p2:FilteredTypeNames>
               <d7p2:SearchText></d7p2:SearchText>
             </d2p1:Value>
           </d2p1:KeyValueOfstringSerializableObjectEu9UlzsU>
