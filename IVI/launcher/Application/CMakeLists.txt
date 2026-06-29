@@ -57,6 +57,14 @@ if(EXISTS "${Car_codebehind_lib_dir}")
     target_link_libraries(launcher Car_CodeBehind)
 endif()
 # [Car CodeBehind lib end]. Do not remove or change this identifier.
+# [Car CodeBehind lib start]. Do not remove or change this identifier.
+set(Car_codebehind_lib_dir "${CMAKE_CURRENT_SOURCE_DIR}/../../car/CodeBehind/Car")
+if(EXISTS "${Car_codebehind_lib_dir}")
+    add_subdirectory("${Car_codebehind_lib_dir}" "${CMAKE_CURRENT_BINARY_DIR}/CodeBehind/Car")
+    include_directories(${Car_codebehind_lib_dir}/include)
+    target_link_libraries(launcher Car_CodeBehind)
+endif()
+# [Car CodeBehind lib end]. Do not remove or change this identifier.
 # [CodeBehind libs end]. Do not remove this identifier.
 
 set_target_properties(launcher PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
