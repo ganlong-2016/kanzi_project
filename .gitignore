@@ -13,12 +13,16 @@
 # 工程会话锁文件
 *.lock
 
-# ===== 自动生成的图片缓存(Kanzi 打开/导入时自动重建)=====
-*/Images/thumbnails/
-*/Images/mipmaps/
-*/Images/compressed/
-*/Images/cubemaps/mipmaps/
-*/Images/cubemaps/thumbnails/
+# ===== 自动生成的图片/导出缓存(Kanzi 打开/导入/导出时自动重建)=====
+# 用 **/ 以匹配任意层级(如 IVI/car/Images/...)
+**/Images/thumbnails/
+**/Images/mipmaps/
+**/Images/compressed/
+**/Images/cubemaps/mipmaps/
+**/Images/cubemaps/thumbnails/
+**/Images/cubemaps/compressed/
+# 导出缓存文件(任意目录)
+*.KZBExport.cache
 
 # ===== 导出/构建产物(导出时重新生成)=====
 # 注意:数据源 XML 等源文件不在此列(*.xml 不被忽略)
