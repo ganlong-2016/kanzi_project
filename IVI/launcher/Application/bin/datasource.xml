@@ -2,6 +2,7 @@
 
 <DroidDataSource>
 	<time type="string">0</time>
+	<env type="int">1</env>
 	<Bool_Test type="bool">false</Bool_Test>
 	<String_Test type="string">"default"</String_Test>
 	<Float_Test type="float">0.0</Float_Test>
@@ -13,4 +14,5 @@
 
 	<ImageUri_Test type="string">""</ImageUri_Test>
 	<Light type="bool">false</Light>
+	
 </DroidDataSource>

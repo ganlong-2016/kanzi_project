@@ -1061,10 +1061,10 @@
                   i:nil="true" />
                 <isHidden
                   i:nil="true" />
-                <isReadOnly>false</isReadOnly>
+                <isReadOnly>true</isReadOnly>
                 <propertyTypeReference>Window.MetricsType</propertyTypeReference>
                 <value xmlns:d9p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
-                  i:type="d9p1:LengthType">RELATIVE</value>
+                  i:type="d9p1:LengthType">ABSOLUTE</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
             <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -1074,10 +1074,10 @@
                   i:nil="true" />
                 <isHidden
                   i:nil="true" />
-                <isReadOnly>false</isReadOnly>
+                <isReadOnly>true</isReadOnly>
                 <propertyTypeReference>Window.Width</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:float">1</value>
+                  i:type="d9p1:float">1920</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
             <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -1087,10 +1087,10 @@
                   i:nil="true" />
                 <isHidden
                   i:nil="true" />
-                <isReadOnly>false</isReadOnly>
+                <isReadOnly>true</isReadOnly>
                 <propertyTypeReference>Window.Height</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:float">1</value>
+                  i:type="d9p1:float">1080</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
             <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -1252,11 +1252,12 @@
               <d6p1:Value>
                 <categoryOverride
                   i:nil="true" />
-                <isHidden>true</isHidden>
-                <isReadOnly>false</isReadOnly>
+                <isHidden
+                  i:nil="true" />
+                <isReadOnly>true</isReadOnly>
                 <propertyTypeReference>WindowAbsoluteWidth</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:float">854</value>
+                  i:type="d9p1:float">1920</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
             <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -1264,11 +1265,12 @@
               <d6p1:Value>
                 <categoryOverride
                   i:nil="true" />
-                <isHidden>true</isHidden>
-                <isReadOnly>false</isReadOnly>
+                <isHidden
+                  i:nil="true" />
+                <isReadOnly>true</isReadOnly>
                 <propertyTypeReference>WindowAbsoluteHeight</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:float">480</value>
+                  i:type="d9p1:float">1080</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
             <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -1276,9 +1278,8 @@
               <d6p1:Value>
                 <categoryOverride
                   i:nil="true" />
-                <isHidden
-                  i:nil="true" />
-                <isReadOnly>false</isReadOnly>
+                <isHidden>true</isHidden>
+                <isReadOnly>true</isReadOnly>
                 <propertyTypeReference>WindowRelativeWidth</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
                   i:type="d9p1:float">1</value>
@@ -1289,9 +1290,8 @@
               <d6p1:Value>
                 <categoryOverride
                   i:nil="true" />
-                <isHidden
-                  i:nil="true" />
-                <isReadOnly>false</isReadOnly>
+                <isHidden>true</isHidden>
+                <isReadOnly>true</isReadOnly>
                 <propertyTypeReference>WindowRelativeHeight</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
                   i:type="d9p1:float">1</value>
@@ -1308,7 +1308,7 @@
                   i:nil="true" />
                 <propertyTypeReference>ScreenResolution</propertyTypeReference>
                 <value xmlns:d9p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
-                  i:type="d9p1:ScreenResolution">CUSTOM</value>
+                  i:type="d9p1:ScreenResolution">RESOLUTION_1920_1080</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
             <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -1321,7 +1321,7 @@
                   i:nil="true" />
                 <propertyTypeReference>EffectiveScreenSize</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:string">Screen size not available</value>
+                  i:type="d9p1:string">1920 x 1080</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
             <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -3131,6 +3131,37 @@
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
                                   i:type="d17p1:dateTime">2026-06-25T07:14:54.319293Z</value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>Node3D.RenderTransformation</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>Node3D.RenderTransformation</propertyTypeReference>
+                                <value xmlns:d17p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                                  i:type="d17p1:SRTTransformation">
+                                  <d17p1:isScaleUniform>true</d17p1:isScaleUniform>
+                                  <d17p1:rotation xmlns:d18p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                    <d18p1:_x>0</d18p1:_x>
+                                    <d18p1:_y>0</d18p1:_y>
+                                    <d18p1:_z>0</d18p1:_z>
+                                  </d17p1:rotation>
+                                  <d17p1:scale xmlns:d18p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                    <d18p1:_x>0.03</d18p1:_x>
+                                    <d18p1:_y>0.03</d18p1:_y>
+                                    <d18p1:_z>0.03</d18p1:_z>
+                                  </d17p1:scale>
+                                  <d17p1:translation xmlns:d18p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                    <d18p1:_x>0</d18p1:_x>
+                                    <d18p1:_y>0</d18p1:_y>
+                                    <d18p1:_z>0</d18p1:_z>
+                                  </d17p1:translation>
+                                </value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                           </properties>
@@ -11231,12 +11262,13 @@
                             <propertyTypeReference>TextConcept.Text</propertyTypeReference>
                             <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
                               i:type="d15p1:ProjectItemReference">
-                              <d15p1:ContentType>TEXT</d15p1:ContentType>
+                              <d15p1:ContentType>RESOURCE_REFERENCE</d15p1:ContentType>
                               <d15p1:IsResourceReference>false</d15p1:IsResourceReference>
                               <d15p1:referredItemPath>
-                                <d15p1:pathString>relative://</d15p1:pathString>
+                                <d15p1:pathString>relative://title</d15p1:pathString>
                               </d15p1:referredItemPath>
-                              <d15p1:textContent>test</d15p1:textContent>
+                              <d15p1:textContent
+                                i:nil="true" />
                             </value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -11437,7 +11469,7 @@
                                   i:nil="true" />
                                 <propertyTypeReference>BindingItem.IsBindingEnabled</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:boolean">true</value>
+                                  i:type="d17p1:boolean">false</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -12577,6 +12609,37 @@
                           </d13p1:referredItemPath>
                           <d13p1:textContent
                             i:nil="true" />
+                        </value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Node3D.RenderTransformation</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Node3D.RenderTransformation</propertyTypeReference>
+                        <value xmlns:d13p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                          i:type="d13p1:SRTTransformation">
+                          <d13p1:isScaleUniform>true</d13p1:isScaleUniform>
+                          <d13p1:rotation xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                            <d14p1:_x>0</d14p1:_x>
+                            <d14p1:_y>0</d14p1:_y>
+                            <d14p1:_z>0</d14p1:_z>
+                          </d13p1:rotation>
+                          <d13p1:scale xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                            <d14p1:_x>1</d14p1:_x>
+                            <d14p1:_y>1</d14p1:_y>
+                            <d14p1:_z>1</d14p1:_z>
+                          </d13p1:scale>
+                          <d13p1:translation xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                            <d14p1:_x>0</d14p1:_x>
+                            <d14p1:_y>0</d14p1:_y>
+                            <d14p1:_z>0</d14p1:_z>
+                          </d13p1:translation>
                         </value>
                       </d10p1:Value>
                     </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -21657,14 +21720,15 @@
       <d2p1:Key>kzb://environment/Prefabs/test/test/Stack Layout 2D/Text Block 2D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>704.80000000000007</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -21678,7 +21742,7 @@
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>524.03940104166668</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>489.6</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -21776,7 +21840,7 @@
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>255.20000000000005</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>100.80000000000007</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -21790,7 +21854,7 @@
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>480.80000000000007</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -21902,7 +21966,7 @@
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>564.80000000000007</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
