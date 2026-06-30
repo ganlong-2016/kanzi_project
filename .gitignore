@@ -13,6 +13,10 @@
 # 工程会话锁文件
 *.lock
 
+# Kanzi 临时 / 备份目录(自动生成)
+**/Temp/
+**/Backup/
+
 # ===== 自动生成的图片/导出缓存(Kanzi 打开/导入/导出时自动重建)=====
 # 用 **/ 以匹配任意层级(如 IVI/car/Images/...)
 **/Images/thumbnails/
