@@ -1,0 +1,54 @@
+@startuml architecture-overview
+title IVI 中控 HMI — 工程/组件关系
+
+skinparam componentStyle rectangle
+skinparam shadowing false
+skinparam rectangle {
+  BorderColor #4D8BFF
+}
+
+package "Kanzi Studio 工程(本仓库)" {
+
+  component "common\n共享资源工程" as common #DDEBFF
+  note bottom of common
+    Fonts: NotoSans CJK
+    主题 / Resource Dictionary
+    通用组件 Prefab
+    数据源契约 datasource.xml
+  end note
+
+  component "launcher\n集成主工程 (含 Application C++)" as launcher #FFE9CC
+  note bottom of launcher
+    Screen / RootPage
+    状态栏 / 导航
+    Prefab View 组合各模块
+  end note
+
+  component "car\n3D 卡车" as car
+  component "car_setting\n车辆设置" as car_setting
+  component "environment\n3D 场景" as environment
+}
+
+component "plugins/datasource\nJava 数据源插件 (解析 XML)" as plugin #E8FFE8
+cloud "Android 渲染侧\n加载 kzb + 提供真实数据" as android
+
+launcher --> common : kzb:// 引用
+car ..> common : 引用(推荐)
+car_setting ..> common : 引用(推荐)
+environment ..> common : 引用(推荐)
+
+launcher --> car : Prefab View 组合
+launcher --> car_setting : Prefab View 组合(待接入)
+launcher --> environment : Prefab View 组合
+
+plugin --> launcher : 数据模型 / 绑定
+launcher --> android : 导出 kzb
+plugin --> android : 运行时数据
+
+note as N1
+  依赖单向无环:
+  launcher -> 模块 -> common
+  common 不引用上层;模块之间不互引
+end note
+
+@enduml

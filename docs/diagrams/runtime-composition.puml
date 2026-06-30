@@ -1,0 +1,30 @@
+@startuml runtime-composition
+title 运行时节点组合 — launcher 如何拼装各模块
+
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+rectangle "Screen" as screen {
+  rectangle "RootPage" as root {
+    rectangle "Viewport 2D" as vp {
+      rectangle "状态栏\n(common 组件)" as status
+      rectangle "内容区" as content {
+        rectangle "Prefab View → kzb://car/.../CarPage" as pv_car
+        rectangle "Prefab View → kzb://car_setting/.../CarSettingPage\n(待接入)" as pv_set
+        rectangle "Prefab View → kzb://environment/.../EnvPage" as pv_env
+      }
+    }
+  }
+}
+
+rectangle "导航 / 状态机" as nav
+
+nav ..> content : 切换显示
+status ..> nav : 入口/标签
+
+note bottom of content
+  各模块以 Prefab View 引用 kzb 根 Prefab;
+  外部用 ##Template 自定义属性控制模块外观/状态
+end note
+
+@enduml

@@ -1,0 +1,29 @@
+@startuml build-pipeline
+title 导出与交付流水线(到 kzb 为止 + 交给 Android)
+
+skinparam shadowing false
+
+start
+:在 Kanzi Studio 中 Save 各工程;
+:导出 common.kzproj → common.kzb;
+note right: 被依赖者先导
+fork
+  :导出 car → car.kzb;
+fork again
+  :导出 car_setting → car_setting.kzb;
+fork again
+  :导出 environment → environment.kzb;
+fork again
+  :导出 launcher → launcher.kzb;
+end fork
+:校验 数据字段 ⇔ datasource.xml 一致;
+:校验 命名稳定 / 未引用资源裁剪 / 体积阈值;
+:产物归档 + 更新 kzb 依赖清单;
+:交付 Android 渲染侧;
+note right
+  运行时:先加载 common.kzb,
+  再加载模块 kzb(kzb://common 引用)
+end note
+stop
+
+@enduml

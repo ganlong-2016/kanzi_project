@@ -1,0 +1,29 @@
+@startuml data-flow
+title 数据流 — 数据源插件 / 绑定读写
+
+skinparam shadowing false
+
+actor "车辆 / Android 侧" as veh
+participant "datasource.xml" as xml
+participant "Java 数据源插件" as plug
+participant "Kanzi 数据模型\n(DataSource)" as dm
+participant "UI 节点" as ui
+
+== 初始化 ==
+xml -> plug : 解析,定义字段/类型
+plug -> dm : 暴露 DataObject 树
+
+== 读(监听)==
+dm --> ui : 普通绑定 → 属性自动刷新
+
+== 写(交互)==
+ui -> dm : To-Source 绑定 → 回写 DataObject
+dm -> plug : 值变更
+plug -> veh : 下发指令(开窗/落锁…)
+
+== 运行时更新 ==
+veh -> plug : 真实信号
+plug -> dm : 更新值
+dm --> ui : 自动刷新(含 <signal>Valid 故障态)
+
+@enduml
