@@ -1,16 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--
+  nextera / ScaniaGui 数据源契约(DroidDataSource)
+  由 Java 插件 DroidDataSourceplugin 解析,定义 Kanzi 数据模型结构。
+
+  规则(依据插件解析器 SaxHandler / TypeConverters):
+    - type 支持:int / float / bool / string / list(大小写不敏感)
+    - 无 type 的元素 = Object(分组节点,可嵌套用于归类)
+    - list 内部只允许标量列(int/float/bool/string),不可再嵌套 Object/list
+    - 标量的文本为"默认值"(占位,运行时由 Android 侧提供真值);解析会去除空白,故默认字符串勿依赖空格
+    - 字段/类型/枚举在 XML、Kanzi 绑定、Android 三处必须一致;交付后只追加不改名
+    - 关键信号配 <xxxValid type="bool"> 表达有效性/故障,UI 据此显示故障态,禁止用默认值掩盖故障
+  common(设计/参考)与 launcher/Application/bin(运行时)两份需保持一致。
+-->
 <DroidDataSource>
-	<time type="string">0</time>
-	<Bool_Test type="bool">false</Bool_Test>
-	<String_Test type="string">"default"</String_Test>
-	<Float_Test type="float">0.0</Float_Test>
 
-	<List_Test type ="list">
-		<index type = "string">0</index>
-		<icon type = "string">0</icon>
-	</List_Test>
+    <!-- ===== 兼容字段:现有工程已大量绑定,请勿删除/改名 ===== -->
+    <time type="string">0</time>
+    <env type="int">1</env>
+    <Light type="bool">false</Light>
 
-	<ImageUri_Test type="string">""</ImageUri_Test>
-	<Light type="bool">false</Light>
+    <!-- ===== 系统 / 状态栏 ===== -->
+    <System>
+        <timeText type="string">08:24</timeText>
+        <dateText type="string">06-30</dateText>
+        <locale type="string">zh-CN</locale>          <!-- zh-CN / en -->
+        <theme type="string">Day</theme>               <!-- Day / Night -->
+        <outsideTemp type="float">26.0</outsideTemp>
+        <outsideTempValid type="bool">true</outsideTempValid>
+        <networkLevel type="int">3</networkLevel>       <!-- 0-4 -->
+        <bluetoothOn type="bool">true</bluetoothOn>
+    </System>
+
+    <!-- ===== 行车 ===== -->
+    <Vehicle>
+        <speed type="float">0.0</speed>                 <!-- km/h -->
+        <speedValid type="bool">true</speedValid>
+        <gear type="string">P</gear>                    <!-- P/R/N/D -->
+    </Vehicle>
+
+    <!-- ===== 充电 ===== -->
+    <Charging>
+        <soc type="float">62.0</soc>                    <!-- % 0-100 -->
+        <socValid type="bool">true</socValid>
+        <chargeStatus type="int">1</chargeStatus>       <!-- 0未知 1充电 2完成 3暂停 4故障 -->
+        <chargePower type="float">48.5</chargePower>    <!-- kW -->
+        <remainingMinutes type="int">35</remainingMinutes>
+        <rangeKm type="float">410.0</rangeKm>
+        <plugConnected type="bool">true</plugConnected>
+        <targetSoc type="int">90</targetSoc>            <!-- % 可设置 -->
+    </Charging>
+
+    <!-- ===== 车控 ===== -->
+    <VehicleControl>
+        <locked type="bool">true</locked>
+        <lockedValid type="bool">true</lockedValid>
+        <doorFrontLeft type="bool">false</doorFrontLeft>
+        <doorFrontRight type="bool">false</doorFrontRight>
+        <doorRearLeft type="bool">false</doorRearLeft>
+        <doorRearRight type="bool">false</doorRearRight>
+        <doorValid type="bool">true</doorValid>
+        <windowFrontLeft type="int">0</windowFrontLeft> <!-- 开度 0-100 -->
+        <headlightOn type="bool">false</headlightOn>
+    </VehicleControl>
+
+    <!-- ===== 内饰 ===== -->
+    <Interior>
+        <ambientOn type="bool">true</ambientOn>
+        <ambientColor type="string">#4D8BFFFF</ambientColor>
+        <ambientBrightness type="int">70</ambientBrightness>
+        <fragranceOn type="bool">false</fragranceOn>
+        <seatHeatLevel type="int">0</seatHeatLevel>     <!-- 0-3 -->
+    </Interior>
+
+    <!-- ===== Demo 样板:每种绑定示例对应一个字段(见 docs/demo-module.md)===== -->
+    <Demo>
+        <titleText type="string">Demo</titleText>              <!-- 读:string → Text -->
+        <gaugeValue type="float">62.0</gaugeValue>             <!-- 读:float → 进度/表盘 -->
+        <gaugeValid type="bool">true</gaugeValid>              <!-- 有效性 → 故障态 -->
+        <toggleOn type="bool">false</toggleOn>                 <!-- 读写:bool → 开关(To-Source)-->
+        <sliderValue type="int">30</sliderValue>               <!-- 读写:int → 滑块(To-Source)-->
+        <accentColor type="string">#1E6BFFFF</accentColor>     <!-- 读写:颜色字符串 -->
+        <statusEnum type="int">1</statusEnum>                  <!-- 枚举 → 图标/状态切换 -->
+        <iconUri type="string">content://demo/icon</iconUri>   <!-- 图片 URI → Image(插件加载)-->
+        <menu type="list">                                     <!-- 列表 → List Box -->
+            <index type="int">0</index>
+            <title type="string">item</title>
+            <icon type="string">icon</icon>
+        </menu>
+    </Demo>
+
 </DroidDataSource>

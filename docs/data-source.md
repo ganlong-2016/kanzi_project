@@ -24,25 +24,15 @@ sequenceDiagram
 
 ## 2. XML 契约(关键:这是和插件/Android 的接口)
 
-数据结构由 XML 决定。当前 `IVI/common/Binary/datasource.xml` 仍是**示例字段**,量产前需替换为**真实信号**并冻结:
+数据结构由 XML 决定。**真实契约已落地**在 [`IVI/common/Binary/datasource.xml`](../IVI/common/Binary/datasource.xml)(运行时副本 `IVI/launcher/Application/bin/datasource.xml` 保持一致):包含 `System / Vehicle / Charging / VehicleControl / Interior / Demo` 分组,并保留 `time / env / Light` 兼容字段。示例数据供各模块绑定参照,`Demo` 分组专供样板([demo-module.md](demo-module.md))。
 
-```xml
-<!-- 现状(示例,需替换) -->
-<DroidDataSource>
-    <time type="string">0</time>
-    <Bool_Test type="bool">false</Bool_Test>
-    <String_Test type="string">"default"</String_Test>
-    <Float_Test type="float">0.0</Float_Test>
-    <List_Test type="list">
-        <index type="string">0</index>
-        <icon type="string">0</icon>
-    </List_Test>
-    <ImageUri_Test type="string">""</ImageUri_Test>
-    <Light type="bool">false</Light>
-</DroidDataSource>
-```
+**解析器支持的结构(依据插件源码 `SaxHandler` / `TypeConverters`)**:
+- `type`:`int` / `float` / `bool` / `string` / `list`(大小写不敏感)。
+- **无 `type` 的元素 = Object 分组节点,可嵌套**(用于 `Charging`、`Interior` 这类归类)。
+- `list` 内部只允许标量列(int/float/bool/string),**不能再嵌套** Object/list。
+- 标量文本 = 默认值(占位;解析会**去除空白**,默认字符串勿依赖空格);真值运行时由 Android 侧提供。
 
-**建议的真实契约样式**(分组 + 类型 + 有效性字段):
+契约样式(节选,完整见文件):
 
 ```xml
 <DroidDataSource>
