@@ -2,7 +2,7 @@
 
 `IVI/demo/` 是**样板模块**:把所有常用开发手法各做一个最小示例,其它模块照着它开发即可覆盖完整功能。每个示例都绑定到数据源契约里的字段(见单一来源 [`assets/datasource.xml`](../assets/datasource.xml) 的 `Demo` 分组)。
 
-> 说明:`demo.kzproj` 的节点/绑定/Prefab/状态机需在 **Kanzi Studio 里搭建**(工程文件是工具序列化格式,不手改)。本文是**精确到步骤的蓝图**,照着在 Studio 里建即可;每个示例标注了绑定字段与做法。
+> 说明:`demo.kzproj` 的节点/绑定/Prefab/状态机需在 **Kanzi Studio 里搭建**(工程文件是工具序列化格式,不手改)。本文是**蓝图 + 布局 + 连线表**;**逐步的 Studio 点选操作**见 [Kanzi Studio 操作手册](kanzi-studio-guide.md)。
 >
 > **数据源在 launcher**(插件在 launcher 注册),demo 作为子模块设计期看不到数据源。所以下文 `Demo/xxx` 指**数据源字段**,"绑数据源"这步在 **launcher 侧**做;**demo 内部**只绑自己暴露的输入属性 `Demo.Xxx`(`##Template`)。机制见 [data-source.md §3.5](data-source.md),连线见本文末「launcher 连线对照表」。
 

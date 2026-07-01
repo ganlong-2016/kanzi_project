@@ -50,6 +50,7 @@ flowchart TB
 
 - [架构总览与设计原则](docs/architecture.md)
 - [数据源:插件 + XML 契约 + 绑定(读/写)](docs/data-source.md)
+- [Kanzi Studio 操作手册(手把手,含 common 建哪些资源)](docs/kanzi-studio-guide.md)
 - [如何新增一个模块(照着做)](docs/add-new-module.md)
 - [demo 样板模块 — 开发示例大全](docs/demo-module.md)
 - [命名 / 引用 / Public 可见性 / 导出规范](docs/conventions.md)
