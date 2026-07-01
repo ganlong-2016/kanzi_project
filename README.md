@@ -9,7 +9,7 @@
 ```mermaid
 flowchart TB
     subgraph Studio["Kanzi Studio 工程(本仓库)"]
-        common["common<br/>共享资源工程<br/>字体 / 主题 / 通用组件 / 数据源契约"]
+        common["common<br/>共享资源工程<br/>字体 / 主题 / 通用组件"]
         launcher["launcher<br/>集成主工程(含 Screen)<br/>桌面 / 状态栏 / 导航 / 组合各模块"]
         car["car<br/>功能子工程(3D 卡车)"]
         car_setting["car_setting<br/>功能子工程(车辆设置)"]
@@ -37,7 +37,8 @@ flowchart TB
 | 路径 | 角色 | 说明 |
 |------|------|------|
 | `IVI/launcher/` | **集成主工程** | 含 `Tool_project/launcher.kzproj` 与 `Application/`(C++);持有 Screen,组合各模块,运行时入口 |
-| `IVI/common/` | **共享资源工程** | `common.kzproj` + `Fonts/`(NotoSans CJK)+ `Binary/datasource.xml`(数据契约)+ 共享主题/组件 |
+| `IVI/common/` | **共享资源工程** | `common.kzproj` + `Fonts/`(NotoSans CJK)+ 共享主题/组件 |
+| `assets/datasource.xml` | **数据契约** | 单一来源;数据源插件在 launcher 注册并解析它 |
 | `IVI/car/` | 功能子工程 | 3D 卡车(`3D Assets/`、`MeshData/`、`Shaders/`) |
 | `IVI/car_setting/` | 功能子工程 | 车辆设置(纯 2D UI) |
 | `IVI/environment/` | 功能子工程 | 3D 场景 / 光照贴图 |
@@ -59,7 +60,7 @@ flowchart TB
 ## 快速上手(开发一个新模块)
 
 1. 读 [架构总览](docs/architecture.md) 和 [命名/引用规范](docs/conventions.md)。
-2. 在 `IVI/` 下新建 `<module>/<module>.kzproj`,**引用 `common`**(用它的字体/主题/组件/数据源契约)。
+2. 在 `IVI/` 下新建 `<module>/<module>.kzproj`,**引用 `common`**(用它的字体/主题/组件)。
 3. 用 common 的通用组件搭 UI,把属性**绑定到数据源**(见 [data-source](docs/data-source.md))。
 4. 文案走**本地化**、样式走**主题 token**(见 [localization-and-theme](docs/localization-and-theme.md))。
 5. 在 `launcher` 里用 **Prefab View** 把模块挂上、加导航。

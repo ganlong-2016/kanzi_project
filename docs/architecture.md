@@ -5,9 +5,9 @@
 IVI 中控 HMI 采用 **多工程模块化 + 多 kzb** 架构:
 
 - **`launcher`** = 集成主工程,持有运行时 **Screen**,负责桌面/状态栏/导航,并把各功能模块**组合**进来。
-- **`common`** = 共享资源工程(设计系统地基):字体、主题、通用组件、数据源契约。
+- **`common`** = 共享资源工程(设计系统地基):字体、主题、通用组件(**数据源不在此**,见下)。
 - **功能子工程**(`car` / `car_setting` / `environment` …)= 各自一个业务域,独立导出 kzb。
-- **`plugins/datasource`** = Java 数据源插件,解析 XML 把数据喂给 Kanzi 数据模型;UI 读写都走数据绑定。
+- **`plugins/datasource`** = Java 数据源插件(**在 launcher 注册**),解析 `assets/datasource.xml` 把数据喂给数据模型;数据源属 **Screen 级**,归 launcher(子模块通过 `##Template` 属性从 launcher 接收数据)。
 
 每个 `.kzproj` 导出一个 **kzb**,由 Android 渲染侧加载。
 
@@ -19,7 +19,7 @@ flowchart TB
         c1["Fonts: NotoSans CJK"]
         c2["主题 / Resource Dictionary"]
         c3["通用组件 Prefab"]
-        c4["数据源契约 datasource.xml"]
+        c4["图标 / 图集(Images)"]
     end
 
     subgraph launcher["launcher(集成主工程 + Application C++)"]
@@ -50,7 +50,7 @@ flowchart TB
 ## 3. 设计原则(必须遵守)
 
 1. **依赖单向、无环**:`launcher → 各模块`、`各模块 → common`;**common 不引用任何上层**,**模块之间不互相引用**。
-2. **common 是唯一共享地基**:主题 token、字体、通用组件、数据源契约只在 common 定义,其它工程**引用**(标 `Public`)。
+2. **common 是共享地基**:主题 token、字体、通用组件在 common 定义,其它工程**引用**(标 `Public`)。**数据源不走 common**:插件在 launcher、数据源属 Screen 级,子模块经 launcher 用 `##Template` 属性接收数据(见 [data-source.md §3.5](data-source.md))。
 3. **UI 与数据解耦**:UI 只通过**数据绑定**读写数据源,不在界面里硬编码业务数据。
 4. **文案走本地化、样式走主题**:禁止硬编码文字与颜色/字号。
 5. **launcher 只负责组合与导航**:不在主工程里硬连模块内部节点,模块通过 Prefab View / 运行时加载挂载。

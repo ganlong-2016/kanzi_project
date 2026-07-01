@@ -41,13 +41,18 @@ flowchart TB
 
 ## 逐项步骤(在 Kanzi Studio 中)
 
+> **重要:数据源在 launcher(插件在 launcher 注册),demo 作为子模块设计期看不到数据源。**
+> 因此下表/下文里写的 `Demo/xxx` 指**数据源字段**,实际"绑定到数据源"这一步在 **launcher 侧**完成;**demo 内部**只绑定到自己暴露的输入属性 `Demo.Xxx`(`##Template`)。数据传递机制见 [data-source.md §3.5](data-source.md)。
+
 ### 1. 新建/打开 demo 并引用 common
 - `Library > Project References > Add Existing Project` → `IVI/common/common.kzproj`。
-- 之后可用 common 的字体、主题 token、通用组件、数据源(它们在 common 已 Public)。
+- 之后可用 common 的字体、主题 token、通用组件(它们在 common 已 Public)。**数据源不在 common,不在此列。**
 
-### 2. 设 Data Context
-- 选 `DemoPage` 根节点 → Properties 加 `Data Context` → 指向数据源(`kzb://common/.../DroidDataSource`)。子节点自动继承。
-- 需要重新导入数据源结构:数据源变更后,在 Studio 里 **Update / 重新导入** 该数据源,才会出现新的 `Demo/*`、`Charging/*` 等字段。
+### 2. 暴露输入属性(替代"在 demo 里设数据源 Data Context")
+- 在 `DemoPage` 根 Prefab 用 **Property Types** 建一组输入属性:`Demo.Title`(String)、`Demo.GaugeValue`(Real)、`Demo.ToggleOn`(Bool)、`Demo.SliderValue`(Int)、`Demo.AccentColor`(Color/String)、`Demo.StatusEnum`(Int)、`Demo.IconUri`(String) 等。
+- demo 内部节点绑定到 `{##Template/Demo.Xxx}`;给属性**设计期默认值**便于独立预览。
+- **launcher 侧**:在挂载 demo 的 Prefab View 上,把这些属性绑定到数据源对应字段(读用普通绑定、写用 To-Source),见 [data-source.md §3.5](data-source.md)。
+- 数据源结构变更后,在 launcher 里 **Update / 重新导入**数据源,才会出现新的 `Demo/*`、`Charging/*` 字段。
 
 ### 3. 读:文本
 - Text Block → Properties → `+ Add Binding` → `Text` 绑定到 `Demo/titleText`。

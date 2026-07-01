@@ -8,9 +8,9 @@
 
 ```mermaid
 flowchart LR
-    A["1. 新建工程<br/>IVI/mymodule/mymodule.kzproj"] --> B["2. 引用 common<br/>(主题/字体/组件/数据源)"]
+    A["1. 新建工程<br/>IVI/mymodule/mymodule.kzproj"] --> B["2. 引用 common<br/>(主题/字体/组件)"]
     B --> C["3. 搭页面 Prefab<br/>Prefabs/Pages/MyModulePage"]
-    C --> D["4. 绑定数据源(读/写)"]
+    C --> D["4. 暴露输入属性(##Template)<br/>launcher 侧绑数据源"]
     D --> E["5. 文案→本地化<br/>样式→主题 token"]
     E --> F["6. 设根 Prefab 为 Public"]
     F --> G["7. 在 launcher 用 Prefab View 挂载 + 导航"]
@@ -28,19 +28,20 @@ flowchart LR
 ### 2. 引用 common
 
 - `Library > Project References` → **Add Existing Project** → 选 `IVI/common/common.kzproj`。
-- 之后即可使用 common 的字体、主题 token、通用组件、数据源(它们在 common 里已设 `Public`)。
+- 之后即可使用 common 的字体、主题 token、通用组件(它们在 common 里已设 `Public`)。**数据源不在 common(在 launcher),见第 4 步。**
 
 ### 3. 搭页面 Prefab
 
 - 建 `Prefabs/Pages/MyModulePage` 作为模块**根 Prefab**(命名稳定,供 launcher 挂载)。
 - 用 **common 的通用组件**(Button/Card/Switch/List 等)拼 UI,不要重复造控件。
 
-### 4. 绑定数据源
+### 4. 接数据(数据源在 launcher,不在模块)
 
-- 在页面根节点加 `Data Context` 指向 common 的数据源(子节点继承)。
-- **读**:`Text/Value/Visible` 等属性 `+ Add Binding` 到对应字段。
-- **写**(如开关/滑块):用 **To-Source** 绑定回写字段。
-- 详见 [data-source.md](data-source.md)。处理好 `<signal>Valid` 故障态。
+数据源插件在 **launcher**,模块设计期看不到数据源。所以用**属性下发**模式(见 [data-source.md §3.5](data-source.md)):
+
+- **模块侧**:在根 Prefab 暴露输入属性(如 `MyModule.Soc`、`MyModule.ToggleOn`),内部节点绑定 `{##Template/MyModule.Soc}`;给属性设计期默认值便于独立预览。
+- **launcher 侧**:在挂载本模块的 Prefab View 上,把这些属性**读绑定**到数据源字段,写用 **To-Source** 回推(或用 Message)。
+- 处理好 `<signal>Valid` 故障态。
 
 ### 5. 文案与样式
 

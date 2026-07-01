@@ -69,33 +69,62 @@ sequenceDiagram
 
 支持的 `type`:`string` / `bool` / `float` / `int` / `list`。
 
-## 3. 在 Kanzi Studio 中使用数据源
+## 3. 数据源归属(重要:插件在 launcher)
 
-### 3.1 数据源放哪
-- 数据源(插件类型)在 **common** 创建,并设 `Visibility Across Projects = Public`,供各模块引用。
-- 插件 jar 路径要让 Studio(预览)和 Android(运行时)都能加载;XML 路径同理。
+**现状**:数据源插件在 **launcher** 的 `Library > Kanzi Engine Plugins` 注册,数据源实例也在 **launcher**。
+这与 Kanzi 机制一致:**数据源和本地化/主题一样是 Screen 节点级资源**,天然归属含 Screen 的主工程(launcher)。被引用的子工程(car/demo/…)在设计期**看不到**这个数据源。
 
-### 3.2 设置 Data Context
-- 在节点(通常是模块根/某容器)Properties 添加 **`Data Context`**,指向数据源;**子节点自动继承**。
-- 一个节点只有一个 Data Context;若同时要多个数据源,在子树上分别 override。
+因此正确做法是:**在 launcher 里绑定数据源,子模块通过"属性"接收数据、通过"属性/消息"回传** —— 见下面 §3.5。
 
-### 3.3 读(普通绑定)
-- 选中节点 → Properties → `+ Add Binding` → 把属性(如 `Text`)绑定到 Data Context 下的数据对象。
-- 数据变 → 绑定自动刷新(这就是"监听",无需额外节点)。
+> (可选,较重)若一定要让子模块在**设计期直接绑数据源字段**,需把**插件 + 数据源定义迁到 common**、各工程引用 common 且 Studio 能加载该插件、数据源设 Public;运行时数据上下文仍在 launcher 的 Screen 设置。非当前方案,不推荐先做。
 
-### 3.4 写(To-Source 绑定)
-- 在 Binding Editor 把 **Mode 设为 `To Source`**,Push Target 指向数据对象。
-- 例:车窗滑块的值 → To-Source 写回 `VehicleControl.windowFrontLeft`;插件监听变更后下发车辆。
-- 写操作以**回推的真实状态**刷新 UI;失败走显式错误,不静默。
+### 3.1 在 launcher 设 Data Context
+- 在 launcher 的 **Screen / 根节点** Properties 添加 `Data Context` 指向数据源;launcher 内节点及**运行时挂到其下的子模块**都继承。
+- 一个节点只有一个 Data Context;需要多个数据源时在子树上 override。
+
+### 3.2 读(普通绑定,在 launcher)
+- launcher 里的节点 `+ Add Binding` → 把属性(如 `Text`)绑定到数据对象;数据变自动刷新。
+
+### 3.3 写(To-Source,在 launcher)
+- Binding Editor 把 Mode 设为 `To Source`,Push Target 指向数据对象。以回推真值刷新 UI,失败显式报错。
+
+### 3.4 子模块内部:只依赖自己的"属性"
+- 子模块**不直接绑数据源**;它在根 Prefab 上暴露**输入属性**(自定义 Property Type),内部节点绑定到 `{##Template/<NS>.<Prop>}`。
+- 给属性设计期默认值 → 子模块可**独立预览**、与数据源解耦。
+
+### 3.5 launcher ↔ 子模块 的数据传递(核心)
+
+```mermaid
+flowchart LR
+    DS["launcher: 数据源<br/>(Charging/soc, Demo/toggleOn ...)"]
+    PV["launcher: 子模块的 Prefab View<br/>(实例根 = 暴露的属性)"]
+    MOD["子模块内部节点<br/>{##Template/Demo.Soc} 等"]
+    DS -->|读: 普通绑定| PV
+    PV -->|##Template 继承| MOD
+    MOD -->|写: To-Source 到实例根属性| PV
+    PV -->|写: To-Source 回数据源| DS
+```
+
+**读(数据源 → 子模块):**
+1. 子模块根 Prefab 建输入属性,如 `Demo.Soc`(Real)、`Demo.Title`(String)。内部节点绑 `{##Template/Demo.Soc}`。
+2. launcher 中挂载子模块的 **Prefab View** 上,把 `Demo.Soc` **普通绑定**到数据源 `Charging/soc`。
+3. 运行时:数据源 → Prefab View 属性 → 子模块内部,自动刷新。
+
+**写(子模块 → 数据源):**
+- 方案①(属性回写):子模块交互控件(开关/滑块)把值 **To-Source 写到自己的实例根属性**(`##Template/Demo.ToggleOn`);launcher 在该 Prefab View 上再加一条 **To-Source**,把 `Demo.ToggleOn` 推到数据源 `Demo/toggleOn`。
+- 方案②(消息):子模块交互时 dispatch 一个 **Message**(带参数);launcher 用 **Message Trigger** 监听 → Action 写数据源。命令式/事件场景更清晰。
+
+> 一句话:**launcher = 数据绑定层(smart),子模块 = 只认自己属性的展示层(dumb)**;数据源与子模块通过 Prefab View 上的属性(和消息)来回传递。
 
 ## 4. 常见坑
 
 | 现象 | 原因 | 解决 |
 |------|------|------|
-| 绑定不到字段/下拉看不到 | 数据源未 Public,或模块未引用 common | common 里数据源设 Public,模块加 Project Reference |
-| 运行时数据不更新 | 插件/XML 没被加载,或字段名不一致 | 校验插件路径、XML 路径、字段名三方一致 |
+| 子模块里绑不到数据源字段 | 数据源在 launcher,子模块设计期看不到 | 子模块暴露属性、绑 `##Template`;launcher 侧把数据源绑到 Prefab View 属性(§3.5) |
+| 运行时数据不更新 | 插件/XML 没加载,或字段名不一致 | 校验插件路径、`assets/datasource.xml` 路径、字段名三方一致 |
+| 写不回数据源 | 只做了读绑定 | 用 To-Source(属性回写)或 Message(§3.5 写) |
 | 显示成默认值看不出故障 | 没用有效性字段 | 加 `<signal>Valid`,UI 绑定它显示故障态 |
-| 预览里数据是死的 | 设计期靠 XML 的 stub 值 | 在 XML 填合理 stub 便于预览 |
+| 子模块预览没数据 | 设计期无数据源 | 给暴露属性设计期默认值,便于独立预览 |
 
 ## 5. 相关
 - 本地化文案不要直接绑业务数据源,见 [localization-and-theme.md](localization-and-theme.md) 的 DataLayer 方案。
