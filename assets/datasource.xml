@@ -15,11 +15,6 @@
 -->
 <DroidDataSource>
 
-    <!-- ===== 兼容字段:现有工程已大量绑定,请勿删除/改名 ===== -->
-    <time type="string">0</time>
-    <env type="int">1</env>
-    <Light type="bool">false</Light>
-
     <!-- ===== 系统 / 状态栏 ===== -->
     <System>
         <timeText type="string">08:24</timeText>
