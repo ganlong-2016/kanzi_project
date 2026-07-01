@@ -73,6 +73,14 @@ if(EXISTS "${car_setting_codebehind_lib_dir}")
     target_link_libraries(launcher car_setting_CodeBehind)
 endif()
 # [car_setting CodeBehind lib end]. Do not remove or change this identifier.
+# [demo CodeBehind lib start]. Do not remove or change this identifier.
+set(demo_codebehind_lib_dir "${CMAKE_CURRENT_SOURCE_DIR}/../../demo/CodeBehind/demo")
+if(EXISTS "${demo_codebehind_lib_dir}")
+    add_subdirectory("${demo_codebehind_lib_dir}" "${CMAKE_CURRENT_BINARY_DIR}/CodeBehind/demo")
+    include_directories(${demo_codebehind_lib_dir}/include)
+    target_link_libraries(launcher demo_CodeBehind)
+endif()
+# [demo CodeBehind lib end]. Do not remove or change this identifier.
 # [CodeBehind libs end]. Do not remove this identifier.
 
 set_target_properties(launcher PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")

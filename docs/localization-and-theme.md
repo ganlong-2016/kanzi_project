@@ -23,7 +23,7 @@ flowchart TB
     loc -->|切语言| tab
     tab --> bridge
     bridge -->|To-Source 写入| layer
-    layer -->|普通字符串绑定(只读)| mod
+    layer -->|"普通字符串绑定(只读)"| mod
 ```
 
 - **表放含 Screen 的工程(launcher)**;`common` 放 **DataLayer**(纯 string,Public)。

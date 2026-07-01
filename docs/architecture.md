@@ -23,6 +23,8 @@ flowchart TB
     end
 
     subgraph launcher["launcher(集成主工程 + Application C++)"]
+        space[" "]
+        style space fill:none,stroke:none,color:#00000000
         l1["Screen / RootPage"]
         l2["状态栏 / 导航框架"]
         l3["Prefab View:挂载各模块"]
@@ -76,8 +78,8 @@ flowchart TB
 flowchart LR
     XML["datasource.xml"] --> JPlugin["Java 数据源插件"]
     JPlugin --> DM["Kanzi 数据模型(DataSource)"]
-    DM -->|普通绑定(读)| UI["UI 节点"]
-    UI -->|To-Source 绑定(写)| DM
+    DM -->|"普通绑定(读)"| UI["UI 节点"]
+    UI -->|"To-Source 绑定(写)"| DM
     DM --> JPlugin
     JPlugin -->|运行时| Vehicle["车辆 / Android 侧"]
 ```
