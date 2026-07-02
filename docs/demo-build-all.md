@@ -67,7 +67,7 @@
 
 | 组件 | 用什么节点 | 样式 | 暴露属性(默认) |
 |------|-----------|------|------------------|
-| **Card** | Empty Node 2D(或 Grid Layout 2D) | Background Brush = `Color/Surface`;圆角用带圆角九宫格图作 Background(简化可先直角);Layout Width/Height 由使用方定 | (可选)`Card.Title`(String)—— 内含 Text 子节点 |
+| **Card** | Empty Node 2D(或 **Rectangle 2D**,自带宽高更直观) | Background Brush = `Color/Surface`;**必须设 Layout Width/Height(否则 2D 节点塌成 0×0 完全看不见)**,如 440×360;圆角用带圆角九宫格图作底 | (可选)`Card.Title`(String)—— 内含 Text 子节点 |
 | **LabelText** | Text Block 2D | Style=`LocaleStyle`;Foreground Brush=`Color/TextPrimary` | `LabelText.Text`(String,"Text") |
 | **ToggleSwitch** | Toggle Button 2D(+State Manager,见 §6.1) | Background=`Color/Surface`;On/Off 视觉用 State Manager(On=`Color/Accent`) | `ToggleSwitch.State`(**Int**,0,expose 其 **Toggle State**);`ToggleSwitch.Label`(String,来自子 Text Block 2D) |
 | **Slider** | Factory Content 的 **Slider**(或按滑块教程:轨道+手柄) | 轨道=`Color/Divider`;已滑=`Color/Accent`;手柄=`Color/Surface` | `Slider.Value`(Int/Float,30,expose 其 **Value**) |
@@ -179,6 +179,7 @@ Localization Editor 里加下列 key,填中/英:
 ## 13. 常见问题
 | 现象 | 处理 |
 |----|----|
+| Card/卡片完全看不到 | 2D 节点没尺寸=0×0。给 `Layout Width/Height`(如 440×360);背景走主题 `Color/Surface` 时预览要在 Dictionaries 里激活主题,或临时用直接 Color Brush 验证 |
 | 找不到 Colors/Resource Dictionaries 分类 | 颜色=Color Brush(Materials and Textures);主题=Themes;预览=顶部 Dictionaries |
 | 创建资源没入口 | 用 **Alt+右键** 分类 |
 | 改了没进 git | Kanzi 里 **Ctrl+S 保存**(autosave 不算);确认编辑的是仓库里那份工程 |
