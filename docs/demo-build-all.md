@@ -67,7 +67,7 @@
 
 | 组件 | 用什么节点 | 样式 | 暴露属性(默认) |
 |------|-----------|------|------------------|
-| **Card** | Empty Node 2D(或 **Rectangle 2D**,自带宽高更直观) | Background Brush = `Color/Surface`;**必须设 Layout Width/Height(否则 2D 节点塌成 0×0 完全看不见)**,如 440×360;圆角用带圆角九宫格图作底 | (可选)`Card.Title`(String)—— 内含 Text 子节点 |
+| **Card** | **Empty Node 2D 作根**(见 §6.2,**不要用 Rectangle 2D 作根**) | 根节点 Layout Width/Height=440×360;子节点 `Background`(Rectangle 2D 底)+`Content`(Stack Layout 2D 放内容) | (可选)`Card.Title`(String) |
 | **LabelText** | Text Block 2D | Style=`LocaleStyle`;Foreground Brush=`Color/TextPrimary` | `LabelText.Text`(String,"Text") |
 | **ToggleSwitch** | Toggle Button 2D(+State Manager,见 §6.1) | Background=`Color/Surface`;On/Off 视觉用 State Manager(On=`Color/Accent`) | `ToggleSwitch.State`(**Int**,0,expose 其 **Toggle State**);`ToggleSwitch.Label`(String,来自子 Text Block 2D) |
 | **Slider** | Factory Content 的 **Slider**(或按滑块教程:轨道+手柄) | 轨道=`Color/Divider`;已滑=`Color/Accent`;手柄=`Color/Surface` | `Slider.Value`(Int/Float,30,expose 其 **Value**) |
@@ -91,6 +91,36 @@
 
 > 写回:Toggle State 支持 **To-Source / 双向**绑定(注意:**单向绑定会被点击覆盖**)。demo/launcher 侧的映射见 §9 卡3 与 §11(数据源里 `toggleOn` 是 bool,与 Int 用 `? 1 : 0` / `!= 0` 互转)。
 
+### 6.2 Card 详细(容器结构,重点)
+
+**问题根因:** 若 Card 预制体根节点是 **Rectangle 2D**,它只是"画一块底",**不能当容器**。在 demo 里把 LabelText/Slider 等直接挂在 Card 的 **Prefab View 2D** 下,会变成 Rectangle 的**兄弟节点**,容易被背景矩形盖住或无法布局,表现为"卡片里加什么都看不见"。
+
+**正确结构(在 common 里改 Card 预制体):**
+
+```
+Card (Empty Node 2D, 根, Layout Width=440, Layout Height=360)
+├── Background (Rectangle 2D)
+│     Background Brush = Color/Surface
+│     Width=440, Height=360, Corner Radius=20
+│     Horizontal/Vertical Alignment = STRETCH(或填满父节点)
+└── Content (Stack Layout 2D)          ← 所有卡片内容加在这里
+      Layout Width=440, Layout Height=360
+      Padding: Top=16, Left=16, Right=16, Bottom=16
+      Orientation = Vertical
+      Horizontal/Vertical Alignment = STRETCH
+```
+
+**操作步骤(在 common 工程):**
+
+1. `Prefabs` 双击打开 **Card** 预制体。
+2. 若根节点已是 **Rectangle 2D**:在 `Prefabs` 里 **Alt+右键 Card 根节点 → Empty Node From Items**(官方"替换根节点"操作)。Kanzi 会新建 **Empty Node 2D** 作根,原 Rectangle 变成其子节点,重命名该 Rectangle 为 `Background`。
+3. 若根节点是 Empty Node 2D 但没有 Content:按上面结构补 `Background` + `Content`。
+4. 选中 `Background`(Rectangle 2D):设 Width/Height=440×360、Corner Radius=20、Background Brush=`Color/Surface`;Horizontal/Vertical Alignment 设为 **Stretch**,保证铺满。
+5. 在 Card 根下 **Alt+右键 → Stack Layout 2D**,命名 **`Content`**,设 Layout 440×360、Padding 16、Orientation=Vertical、Alignment=Stretch。
+6. **拖进 `Prefabs` 保存**(若已改结构,Apply prefab 变更)。Make Public。
+
+> **层级顺序:** `Background` 必须在 `Content` **上面(节点树更靠前)**,这样 Content 里的文字/控件绘制在背景之上。若背景挡住了内容,在 Node Tree 里把 `Content` 拖到 `Background` 下面。
+
 ## 7. common — Make Public + 导出
 - 选中每个组件/brush/style → 右键 **Make Public**(或 `Properties` 设 `Visibility Across Projects = Public`);或 `Project > Properties` 设 `Resource Visibility Across Projects = Public` 一次性全公开。
 - `File > Export > Export KZB` 导出 `common.kzb`。
@@ -109,6 +139,45 @@
 ## 9. demo — 页面与卡片
 1. 引用 common:`Library` 右键 **Project References → Add → Existing Project** → `IVI/common/common.kzproj`。
 2. 建页面:`Node Tree` 用 Grid Layout 2D 排 4×2,拖进 `Prefabs` 命名 `DemoPage`(放 `Prefabs/Pages/`)。按 §1 放进"内容容器"。
+3. **预览主题(必做,否则 LabelText 等用 `Color/TextPrimary` 的控件可能看不见):** 选中 `DemoPage` 根(或 Screen 根) → `Properties` → Resource Dictionary → **Linked Dictionaries** → 添加 `kzb://common/Themes/AppTheme`(或 common 里 AppTheme 的引用)。预览时顶部 **Dictionaries → Locales and Themes** 选 `Day` 或 `Night`。
+
+### 9.1 在卡片里加内容(正确挂法)
+
+**❌ 错误:** 选中 Grid 里的 **Card Prefab View 2D** → 直接在其下新建 LabelText/Slider。  
+**✅ 正确:** 展开节点树到 Card 预制体内部的 **`Content`** 节点,在 **Content 下**添加组件:
+
+```
+DemoPage / Grid Layout 2D
+└── Prefab View 2D (Card 实例)
+      └── Card (Empty Node 2D, 预制体根)
+            ├── Background (Rectangle 2D)
+            └── Content (Stack Layout 2D)     ← 在这里加内容
+                  ├── Prefab View 2D (LabelText)   ← 卡片标题
+                  └── Prefab View 2D (ProgressRing / Slider / …)
+```
+
+**逐步操作(以卡2「读·文本」为例):**
+
+1. Grid 里已有 Card 的 Prefab View 2D(模板=`kzb://common/Prefabs/Card`)。
+2. 在 Node Tree **展开**该 Prefab View → 看到 **Card** → 再展开 → 选中 **`Content`**(Stack Layout 2D)。
+3. **Alt+右键 `Content` → Prefab View**,Prefab Template 选 `kzb://common/Prefabs/LabelText`。
+4. 选中该 LabelText 实例,设 `LabelText.Text` 为 `demo.text`(本地化键)或临时 `"Hello"` 验证可见。
+5. 若仍看不见:确认 §6.2 的 Card 结构、`Content` 在 `Background` 下方、§9 第 3 步已链接 AppTheme;或临时把 LabelText 的 Foreground Brush 改为直接选 `Brush_TextPrimary_Day` 排查。
+
+**每张卡片在 `Content` 下放置的组件:**
+
+| 卡 | Content 下放置 |
+|----|----------------|
+| 1 进度 | 标题 LabelText + ProgressRing |
+| 2 文本 | 标题 LabelText + LabelText(绑 Demo.Title) |
+| 3 开关 | 标题 LabelText + ToggleSwitch |
+| 4 滑块 | 标题 LabelText + Slider |
+| 5 颜色 | 标题 LabelText + 色块 Rectangle 2D |
+| 6 状态 | 标题 LabelText + StatusIcon |
+| 7 图片 | 标题 LabelText + ImageBox |
+| 8 列表 | 标题 LabelText + Grid List Box |
+
+组件属性绑定到 `DemoPage` 根上的 `Demo.*`(见下表),方式:在 Content 里的组件实例上 expose → 在 DemoPage 根汇总为 `Demo.*`。
 
 **DemoPage 暴露属性(在卡片组件上 expose 后重命名):**
 | 属性 | 类型 | 默认 |
@@ -122,7 +191,7 @@
 | `Demo.StatusEnum` | Int | 1 |
 | `Demo.IconUri` | String | (空) |
 
-**8 张卡片(每张=一个 Card 实例内放对应组件,组件属性绑到 DemoPage 根属性):**
+**8 张卡片(每张=Grid 里一个 Card Prefab View;**内容加在 Card→Content 下**,见 §9.1):**
 | 卡 | 标题(本地化键) | 组件 | 绑定 |
 |----|------|------|------|
 | 1 读·进度 | `demo.gauge` | ProgressRing | `Value` ← `{##Template/Demo.GaugeValue}`;`Demo.GaugeValid`=false→"--"+`Color/Error` |
@@ -180,6 +249,7 @@ Localization Editor 里加下列 key,填中/英:
 | 现象 | 处理 |
 |----|----|
 | Card/卡片完全看不到 | 2D 节点没尺寸=0×0。给 `Layout Width/Height`(如 440×360);背景走主题 `Color/Surface` 时预览要在 Dictionaries 里激活主题,或临时用直接 Color Brush 验证 |
+| 卡片里加了 LabelText/Slider 等但全看不见 | **① Card 根不能是 Rectangle 2D**,按 §6.2 改成 Empty Node 2D + Background + Content;**② 内容必须加在 Card→Content 下**,不要挂在 Card Prefab View 2D 外层(§9.1);**③ Content 节点要在 Background 下面(后绘制);④ demo 预览需 Linked Dictionaries 链接 AppTheme**,否则 `Color/TextPrimary` 文字透明;临时改 Foreground Brush 为 `Brush_TextPrimary_Day` 可验证 |
 | 找不到 Colors/Resource Dictionaries 分类 | 颜色=Color Brush(Materials and Textures);主题=Themes;预览=顶部 Dictionaries |
 | 创建资源没入口 | 用 **Alt+右键** 分类 |
 | 改了没进 git | Kanzi 里 **Ctrl+S 保存**(autosave 不算);确认编辑的是仓库里那份工程 |
