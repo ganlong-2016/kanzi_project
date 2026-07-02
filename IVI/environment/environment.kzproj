@@ -1321,7 +1321,7 @@
                   i:nil="true" />
                 <propertyTypeReference>EffectiveScreenSize</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:string">1920 x 1080</value>
+                  i:type="d9p1:string">Screen size not available</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
             <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -5911,7 +5911,7 @@
           <d3p1:cachedMeshVariables>
             <d3p1:ClusterCount>1</d3p1:ClusterCount>
             <d3p1:HasVertexColor>false</d3p1:HasVertexColor>
-            <d3p1:MeshDataWriteTime>2026-02-16T04:33:04Z</d3p1:MeshDataWriteTime>
+            <d3p1:MeshDataWriteTime>2026-06-30T09:58:43.1047311Z</d3p1:MeshDataWriteTime>
           </d3p1:cachedMeshVariables>
           <d3p1:meshData xmlns:d6p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.ColladaLoader"
             i:nil="true" />
@@ -6072,7 +6072,7 @@
           <d3p1:cachedMeshVariables>
             <d3p1:ClusterCount>1</d3p1:ClusterCount>
             <d3p1:HasVertexColor>false</d3p1:HasVertexColor>
-            <d3p1:MeshDataWriteTime>2026-02-16T04:33:04Z</d3p1:MeshDataWriteTime>
+            <d3p1:MeshDataWriteTime>2026-06-30T09:58:43.108731Z</d3p1:MeshDataWriteTime>
           </d3p1:cachedMeshVariables>
           <d3p1:meshData xmlns:d6p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.ColladaLoader"
             i:nil="true" />
@@ -19671,6 +19671,3037 @@
               <d3p1:PsdImageFileImportSettings
                 i:nil="true" />
             </ProjectItem>
+            <ProjectItem
+              i:type="d3p1:ImageFile">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePreview</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePreview</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string"></value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">2048 x 2048</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">24</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasTransparency</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasTransparency</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasICCProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasICCProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>TargetImageFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>TargetImageFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.BinaryExport"
+                      i:type="d11p1:KzbImageTargetFormat">PNG</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AtcCompressionScheme">EXPLICIT_ALPHA</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">2</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcQuality</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcQuality</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">1</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcBlockSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcBlockSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcBlockSize">UNORM_BLOCK_4x4</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcCompressionSpeed</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcCompressionSpeed</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcCompressionSpeed">VeryFast</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageRawColorByteFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageRawColorByteFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.TextureItems"
+                      i:type="d11p1:ImageColorByteFormat">RGBA_8</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFilePngCompressionLevel</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFilePngCompressionLevel</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                      i:type="d11p1:PngCompressionLevel">ProjectDefault</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIsSRGB</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIsSRGB</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIgnoreColorProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIgnoreColorProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePremultiplyAlpha</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePremultiplyAlpha</propertyTypeReference>
+                    <value
+                      i:type="d3p1:PremultipliedAlphaOption">PROJECT_DEFAULT</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageLinearPremultiply</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageLinearPremultiply</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageEtc2Effort</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageEtc2Effort</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>HasMipmaps</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>HasMipmaps</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportSourceImage</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportSourceImage</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportAlways</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportAlways</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportEmptyWhenFileIsMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportEmptyWhenFileIsMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImportedFrom</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImportedFrom</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ProjectItemReference">
+                      <d11p1:ContentType>ABSOLUTE</d11p1:ContentType>
+                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
+                      <d11p1:referredItemPath
+                        i:nil="true" />
+                      <d11p1:textContent
+                        i:nil="true" />
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IDInImportSource</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IDInImportSource</propertyTypeReference>
+                    <value
+                      i:nil="true" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>MipmapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>MipmapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CubemapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CubemapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsFileMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsFileMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly>true</isReadOnly>
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">LM_Back.png</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-02T02:08:20.508027Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>LM_Back.png</SerializedName>
+              <children />
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+              <d3p1:IsCubemapContainer>false</d3p1:IsCubemapContainer>
+              <d3p1:IsMipmapContainer>false</d3p1:IsMipmapContainer>
+              <d3p1:PsdImageFileImportSettings
+                i:nil="true" />
+            </ProjectItem>
+            <ProjectItem
+              i:type="d3p1:ImageFile">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePreview</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePreview</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string"></value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">2048 x 2048</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">24</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasTransparency</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasTransparency</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasICCProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasICCProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>TargetImageFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>TargetImageFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.BinaryExport"
+                      i:type="d11p1:KzbImageTargetFormat">PNG</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AtcCompressionScheme">EXPLICIT_ALPHA</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">2</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcQuality</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcQuality</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">1</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcBlockSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcBlockSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcBlockSize">UNORM_BLOCK_4x4</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcCompressionSpeed</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcCompressionSpeed</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcCompressionSpeed">VeryFast</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageRawColorByteFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageRawColorByteFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.TextureItems"
+                      i:type="d11p1:ImageColorByteFormat">RGBA_8</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFilePngCompressionLevel</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFilePngCompressionLevel</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                      i:type="d11p1:PngCompressionLevel">ProjectDefault</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIsSRGB</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIsSRGB</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIgnoreColorProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIgnoreColorProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePremultiplyAlpha</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePremultiplyAlpha</propertyTypeReference>
+                    <value
+                      i:type="d3p1:PremultipliedAlphaOption">PROJECT_DEFAULT</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageLinearPremultiply</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageLinearPremultiply</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageEtc2Effort</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageEtc2Effort</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>HasMipmaps</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>HasMipmaps</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportSourceImage</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportSourceImage</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportAlways</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportAlways</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportEmptyWhenFileIsMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportEmptyWhenFileIsMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImportedFrom</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImportedFrom</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ProjectItemReference">
+                      <d11p1:ContentType>ABSOLUTE</d11p1:ContentType>
+                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
+                      <d11p1:referredItemPath
+                        i:nil="true" />
+                      <d11p1:textContent
+                        i:nil="true" />
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IDInImportSource</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IDInImportSource</propertyTypeReference>
+                    <value
+                      i:nil="true" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>MipmapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>MipmapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CubemapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CubemapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsFileMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsFileMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly>true</isReadOnly>
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">LM_Floor.png</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-02T02:08:20.572342Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>LM_Floor.png</SerializedName>
+              <children />
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+              <d3p1:IsCubemapContainer>false</d3p1:IsCubemapContainer>
+              <d3p1:IsMipmapContainer>false</d3p1:IsMipmapContainer>
+              <d3p1:PsdImageFileImportSettings
+                i:nil="true" />
+            </ProjectItem>
+            <ProjectItem
+              i:type="d3p1:ImageFile">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePreview</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePreview</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string"></value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">2048 x 2048</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">24</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasTransparency</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasTransparency</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasICCProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasICCProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>TargetImageFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>TargetImageFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.BinaryExport"
+                      i:type="d11p1:KzbImageTargetFormat">PNG</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AtcCompressionScheme">EXPLICIT_ALPHA</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">2</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcQuality</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcQuality</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">1</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcBlockSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcBlockSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcBlockSize">UNORM_BLOCK_4x4</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcCompressionSpeed</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcCompressionSpeed</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcCompressionSpeed">VeryFast</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageRawColorByteFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageRawColorByteFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.TextureItems"
+                      i:type="d11p1:ImageColorByteFormat">RGBA_8</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFilePngCompressionLevel</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFilePngCompressionLevel</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                      i:type="d11p1:PngCompressionLevel">ProjectDefault</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIsSRGB</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIsSRGB</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIgnoreColorProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIgnoreColorProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePremultiplyAlpha</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePremultiplyAlpha</propertyTypeReference>
+                    <value
+                      i:type="d3p1:PremultipliedAlphaOption">PROJECT_DEFAULT</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageLinearPremultiply</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageLinearPremultiply</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageEtc2Effort</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageEtc2Effort</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>HasMipmaps</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>HasMipmaps</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportSourceImage</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportSourceImage</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportAlways</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportAlways</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportEmptyWhenFileIsMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportEmptyWhenFileIsMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImportedFrom</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImportedFrom</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ProjectItemReference">
+                      <d11p1:ContentType>ABSOLUTE</d11p1:ContentType>
+                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
+                      <d11p1:referredItemPath
+                        i:nil="true" />
+                      <d11p1:textContent
+                        i:nil="true" />
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IDInImportSource</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IDInImportSource</propertyTypeReference>
+                    <value
+                      i:nil="true" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>MipmapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>MipmapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CubemapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CubemapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsFileMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsFileMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly>true</isReadOnly>
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">LM_Roof.png</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-02T02:08:20.6249565Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>LM_Roof.png</SerializedName>
+              <children />
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+              <d3p1:IsCubemapContainer>false</d3p1:IsCubemapContainer>
+              <d3p1:IsMipmapContainer>false</d3p1:IsMipmapContainer>
+              <d3p1:PsdImageFileImportSettings
+                i:nil="true" />
+            </ProjectItem>
+            <ProjectItem
+              i:type="d3p1:ImageFile">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePreview</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePreview</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string"></value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">2048 x 2048</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">24</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasTransparency</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasTransparency</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasICCProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasICCProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>TargetImageFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>TargetImageFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.BinaryExport"
+                      i:type="d11p1:KzbImageTargetFormat">PNG</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AtcCompressionScheme">EXPLICIT_ALPHA</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">2</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcQuality</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcQuality</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">1</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcBlockSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcBlockSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcBlockSize">UNORM_BLOCK_4x4</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcCompressionSpeed</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcCompressionSpeed</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcCompressionSpeed">VeryFast</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageRawColorByteFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageRawColorByteFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.TextureItems"
+                      i:type="d11p1:ImageColorByteFormat">RGBA_8</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFilePngCompressionLevel</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFilePngCompressionLevel</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                      i:type="d11p1:PngCompressionLevel">ProjectDefault</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIsSRGB</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIsSRGB</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIgnoreColorProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIgnoreColorProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePremultiplyAlpha</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePremultiplyAlpha</propertyTypeReference>
+                    <value
+                      i:type="d3p1:PremultipliedAlphaOption">PROJECT_DEFAULT</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageLinearPremultiply</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageLinearPremultiply</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageEtc2Effort</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageEtc2Effort</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>HasMipmaps</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>HasMipmaps</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportSourceImage</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportSourceImage</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportAlways</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportAlways</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportEmptyWhenFileIsMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportEmptyWhenFileIsMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImportedFrom</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImportedFrom</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ProjectItemReference">
+                      <d11p1:ContentType>ABSOLUTE</d11p1:ContentType>
+                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
+                      <d11p1:referredItemPath
+                        i:nil="true" />
+                      <d11p1:textContent
+                        i:nil="true" />
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IDInImportSource</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IDInImportSource</propertyTypeReference>
+                    <value
+                      i:nil="true" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>MipmapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>MipmapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CubemapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CubemapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsFileMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsFileMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly>true</isReadOnly>
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">LM_Walls.png</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-02T02:08:20.6724764Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>LM_Walls.png</SerializedName>
+              <children />
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+              <d3p1:IsCubemapContainer>false</d3p1:IsCubemapContainer>
+              <d3p1:IsMipmapContainer>false</d3p1:IsMipmapContainer>
+              <d3p1:PsdImageFileImportSettings
+                i:nil="true" />
+            </ProjectItem>
+            <ProjectItem
+              i:type="d3p1:ImageFile">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePreview</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePreview</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string"></value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">4096 x 4096</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">24</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasTransparency</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasTransparency</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasICCProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasICCProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>TargetImageFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>TargetImageFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.BinaryExport"
+                      i:type="d11p1:KzbImageTargetFormat">PNG</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AtcCompressionScheme">EXPLICIT_ALPHA</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">2</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcQuality</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcQuality</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">1</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcBlockSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcBlockSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcBlockSize">UNORM_BLOCK_4x4</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcCompressionSpeed</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcCompressionSpeed</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcCompressionSpeed">VeryFast</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageRawColorByteFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageRawColorByteFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.TextureItems"
+                      i:type="d11p1:ImageColorByteFormat">RGBA_8</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFilePngCompressionLevel</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFilePngCompressionLevel</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                      i:type="d11p1:PngCompressionLevel">ProjectDefault</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIsSRGB</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIsSRGB</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIgnoreColorProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIgnoreColorProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePremultiplyAlpha</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePremultiplyAlpha</propertyTypeReference>
+                    <value
+                      i:type="d3p1:PremultipliedAlphaOption">PROJECT_DEFAULT</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageLinearPremultiply</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageLinearPremultiply</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageEtc2Effort</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageEtc2Effort</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>HasMipmaps</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>HasMipmaps</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportSourceImage</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportSourceImage</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportAlways</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportAlways</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportEmptyWhenFileIsMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportEmptyWhenFileIsMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImportedFrom</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImportedFrom</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ProjectItemReference">
+                      <d11p1:ContentType>ABSOLUTE</d11p1:ContentType>
+                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
+                      <d11p1:referredItemPath
+                        i:nil="true" />
+                      <d11p1:textContent
+                        i:nil="true" />
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IDInImportSource</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IDInImportSource</propertyTypeReference>
+                    <value
+                      i:nil="true" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>MipmapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>MipmapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CubemapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CubemapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsFileMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsFileMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly>true</isReadOnly>
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">LM_Woods.png</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-02T02:08:20.8818688Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>LM_Woods.png</SerializedName>
+              <children />
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+              <d3p1:IsCubemapContainer>false</d3p1:IsCubemapContainer>
+              <d3p1:IsMipmapContainer>false</d3p1:IsMipmapContainer>
+              <d3p1:PsdImageFileImportSettings
+                i:nil="true" />
+            </ProjectItem>
+            <ProjectItem
+              i:type="d3p1:ImageFile">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePreview</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePreview</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string"></value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">1 x 1</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">24</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasTransparency</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasTransparency</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasICCProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasICCProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>TargetImageFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>TargetImageFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.BinaryExport"
+                      i:type="d11p1:KzbImageTargetFormat">PNG</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AtcCompressionScheme">EXPLICIT_ALPHA</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">2</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcQuality</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcQuality</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">1</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcBlockSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcBlockSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcBlockSize">UNORM_BLOCK_4x4</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcCompressionSpeed</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcCompressionSpeed</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcCompressionSpeed">VeryFast</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageRawColorByteFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageRawColorByteFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.TextureItems"
+                      i:type="d11p1:ImageColorByteFormat">RGBA_8</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFilePngCompressionLevel</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFilePngCompressionLevel</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                      i:type="d11p1:PngCompressionLevel">ProjectDefault</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIsSRGB</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIsSRGB</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIgnoreColorProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIgnoreColorProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePremultiplyAlpha</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePremultiplyAlpha</propertyTypeReference>
+                    <value
+                      i:type="d3p1:PremultipliedAlphaOption">PROJECT_DEFAULT</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageLinearPremultiply</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageLinearPremultiply</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageEtc2Effort</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageEtc2Effort</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>HasMipmaps</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>HasMipmaps</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportSourceImage</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportSourceImage</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportAlways</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportAlways</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportEmptyWhenFileIsMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportEmptyWhenFileIsMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImportedFrom</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImportedFrom</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ProjectItemReference">
+                      <d11p1:ContentType>ABSOLUTE</d11p1:ContentType>
+                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
+                      <d11p1:referredItemPath
+                        i:nil="true" />
+                      <d11p1:textContent
+                        i:nil="true" />
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IDInImportSource</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IDInImportSource</propertyTypeReference>
+                    <value
+                      i:nil="true" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>MipmapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>MipmapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CubemapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CubemapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsFileMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsFileMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly>true</isReadOnly>
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">White.png</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-02T02:08:20.9207224Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>White.png</SerializedName>
+              <children />
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+              <d3p1:IsCubemapContainer>false</d3p1:IsCubemapContainer>
+              <d3p1:IsMipmapContainer>false</d3p1:IsMipmapContainer>
+              <d3p1:PsdImageFileImportSettings
+                i:nil="true" />
+            </ProjectItem>
+            <ProjectItem
+              i:type="d3p1:ImageFile">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePreview</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePreview</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string"></value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">2048 x 2048</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">24</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasTransparency</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasTransparency</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasICCProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasICCProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>TargetImageFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>TargetImageFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.BinaryExport"
+                      i:type="d11p1:KzbImageTargetFormat">PNG</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AtcCompressionScheme">EXPLICIT_ALPHA</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">2</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcQuality</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcQuality</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">1</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcBlockSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcBlockSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcBlockSize">UNORM_BLOCK_4x4</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcCompressionSpeed</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcCompressionSpeed</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcCompressionSpeed">VeryFast</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageRawColorByteFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageRawColorByteFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.TextureItems"
+                      i:type="d11p1:ImageColorByteFormat">RGBA_8</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFilePngCompressionLevel</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFilePngCompressionLevel</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                      i:type="d11p1:PngCompressionLevel">ProjectDefault</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIsSRGB</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIsSRGB</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIgnoreColorProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIgnoreColorProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePremultiplyAlpha</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePremultiplyAlpha</propertyTypeReference>
+                    <value
+                      i:type="d3p1:PremultipliedAlphaOption">PROJECT_DEFAULT</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageLinearPremultiply</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageLinearPremultiply</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageEtc2Effort</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageEtc2Effort</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>HasMipmaps</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>HasMipmaps</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportSourceImage</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportSourceImage</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportAlways</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportAlways</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportEmptyWhenFileIsMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportEmptyWhenFileIsMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImportedFrom</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImportedFrom</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ProjectItemReference">
+                      <d11p1:ContentType>ABSOLUTE</d11p1:ContentType>
+                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
+                      <d11p1:referredItemPath
+                        i:nil="true" />
+                      <d11p1:textContent
+                        i:nil="true" />
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IDInImportSource</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IDInImportSource</propertyTypeReference>
+                    <value
+                      i:nil="true" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>MipmapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>MipmapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CubemapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CubemapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsFileMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsFileMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly>true</isReadOnly>
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">Wood006_2K_Color.png</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-02T02:08:20.9816177Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>Wood006_2K_Color.png</SerializedName>
+              <children />
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+              <d3p1:IsCubemapContainer>false</d3p1:IsCubemapContainer>
+              <d3p1:IsMipmapContainer>false</d3p1:IsMipmapContainer>
+              <d3p1:PsdImageFileImportSettings
+                i:nil="true" />
+            </ProjectItem>
           </children>
           <dataSource
             i:nil="true" />
@@ -19842,6 +22873,214 @@
                 </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
               </properties>
               <SerializedName>Textured.frag.glsl</SerializedName>
+              <children />
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+            </ProjectItem>
+            <ProjectItem
+              i:type="d3p1:ShaderSourceFile">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsFileMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsFileMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly>true</isReadOnly>
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">ColorTexture.frag.glsl</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-02T02:08:21.9820483Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>ColorTexture.frag.glsl</SerializedName>
+              <children />
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+            </ProjectItem>
+            <ProjectItem
+              i:type="d3p1:ShaderSourceFile">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsFileMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsFileMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly>true</isReadOnly>
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">ColorTexture.vert.glsl</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-02T02:08:21.9840413Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>ColorTexture.vert.glsl</SerializedName>
+              <children />
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+            </ProjectItem>
+            <ProjectItem
+              i:type="d3p1:ShaderSourceFile">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsFileMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsFileMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly>true</isReadOnly>
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">ColorTexture_Lightmap.frag.glsl</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-02T02:08:21.9850898Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>ColorTexture_Lightmap.frag.glsl</SerializedName>
+              <children />
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+            </ProjectItem>
+            <ProjectItem
+              i:type="d3p1:ShaderSourceFile">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsFileMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsFileMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly>true</isReadOnly>
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">ColorTexture_Lightmap.vert.glsl</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-02T02:08:21.9850898Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>ColorTexture_Lightmap.vert.glsl</SerializedName>
               <children />
               <dataSource
                 i:nil="true" />
@@ -21720,8 +24959,7 @@
       <d2p1:Key>kzb://environment/Prefabs/test/test/Stack Layout 2D/Text Block 2D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
