@@ -113,7 +113,7 @@
 |-------------|------|-----------------|
 | `Card` | 卡片外框(Surface 底 + RadiusM) | `Card.Title`(String) |
 | `LabelText` | 文本(Style=LocaleStyle,Foreground=TextPrimary) | `LabelText.Text`(String) |
-| `ToggleSwitch` | 开关 | `ToggleSwitch.IsChecked`(Bool)、`ToggleSwitch.Label`(String) |
+| `ToggleSwitch` | 开关(Toggle Button 2D + State Manager;Toggle State Count=2) | `ToggleSwitch.State`(**Int**,expose Toggle State)、`ToggleSwitch.Label`(String,子 Text Block 2D) |
 | `Slider` | 滑块(0–100) | `Slider.Value`(Int) |
 | `ProgressRing` | 环形进度(0–100) | `ProgressRing.Value`(Float) |
 | `StatusIcon` | 状态图标(枚举驱动) | `StatusIcon.Status`(Int) |
@@ -133,7 +133,7 @@
 | `Demo.Title` | String | `Demo` | 顶栏/卡2 |
 | `Demo.GaugeValue` | Float | 62 | 卡1 进度 |
 | `Demo.GaugeValid` | Bool | true | 卡1 故障态 |
-| `Demo.ToggleOn` | Bool | false | 卡3 开关 |
+| `Demo.ToggleOn` | **Int**(0/1) | 0 | 卡3 开关(Toggle State) |
 | `Demo.SliderValue` | Int | 30 | 卡4 滑块 |
 | `Demo.AccentColor` | Color | `#1E6BFF` | 卡5 颜色 |
 | `Demo.StatusEnum` | Int | 1 | 卡6 状态 |

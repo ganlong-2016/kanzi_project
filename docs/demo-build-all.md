@@ -69,12 +69,27 @@
 |------|-----------|------|------------------|
 | **Card** | Empty Node 2D(或 Grid Layout 2D) | Background Brush = `Color/Surface`;圆角用带圆角九宫格图作 Background(简化可先直角);Layout Width/Height 由使用方定 | (可选)`Card.Title`(String)—— 内含 Text 子节点 |
 | **LabelText** | Text Block 2D | Style=`LocaleStyle`;Foreground Brush=`Color/TextPrimary` | `LabelText.Text`(String,"Text") |
-| **ToggleSwitch** | Toggle Button 2D | Background=`Color/Surface`;用 **State Manager** 定 On/Off 视觉(On=`Color/Accent`) | `ToggleSwitch.IsChecked`(Bool,false,expose 其 **Toggle State**);`ToggleSwitch.Label`(String) |
+| **ToggleSwitch** | Toggle Button 2D(+State Manager,见 §6.1) | Background=`Color/Surface`;On/Off 视觉用 State Manager(On=`Color/Accent`) | `ToggleSwitch.State`(**Int**,0,expose 其 **Toggle State**);`ToggleSwitch.Label`(String,来自子 Text Block 2D) |
 | **Slider** | Factory Content 的 **Slider**(或按滑块教程:轨道+手柄) | 轨道=`Color/Divider`;已滑=`Color/Accent`;手柄=`Color/Surface` | `Slider.Value`(Int/Float,30,expose 其 **Value**) |
 | **ProgressRing** | Factory Content 的 **Progress Indicator**(圆形)/ Progress Bar | 进度色=`Color/Accent`;底=`Color/Divider` | `ProgressRing.Value`(Float,62,expose 其 **Value**,0–100) |
 | **StatusIcon** | Image 2D + **State Manager** | 颜色/图标按状态切 | `StatusIcon.Status`(Int,1,驱动 State Manager) |
 | **ImageBox** | Image 2D | — | `ImageBox.Uri`(String,expose 其图片来源)—— URI 由数据源插件加载 |
 | **ListItem** | Empty Node 2D(行)+ Image(图标)+ Text(标题,Style=LocaleStyle) | Foreground=`Color/TextPrimary` | `ListItem.Title`(String);`ListItem.IconUri`(String) |
+
+### 6.1 ToggleSwitch 详细(Toggle Button 2D 用法,重点)
+
+要点:**Toggle Button 2D 的 `Toggle State` 是整数**(不是 bool),状态个数由 **`Toggle State Count`** 决定;做开关取 2 个状态(Off=0、On=1)。**它没有内置 Label**,标签要自己加一个 **Text Block 2D 子节点**。On/Off 的视觉差异用 **State Manager** 实现。
+
+1. `Node Tree` **Alt+右键 → Toggle Button 2D**,命名 `ToggleSwitch`(也可从 **Asset Packages > Factory Content** 拖 Toggle Button 进来)。
+2. `Properties`:设 **`Toggle State Count = 2`**;设 Layout Width/Height;Background Brush = `Color/Surface`(圆角可用带圆角九宫格图作底)。
+3. **加子节点**:
+   - 一个 Image 2D / Empty Node 2D 作"指示/圆点";
+   - 一个 **Text Block 2D** 作标签(Style=`LocaleStyle`,Foreground Brush=`Color/TextPrimary`)。
+4. **State Manager 做 On/Off**:选中 `ToggleSwitch` → **State Tools** → **Create State Manager** → **Create State ×2** 命名 `Off`/`On` → 分别摆好指示位置/颜色(On 用 `Color/Accent`),点各状态上方保存外观 → **Controller Property** 选 **Toggle Button > Toggle State** → `Off` 值设 **0**、`On` 值设 **1** → **Edit State Manager** 退出。
+5. **拖进 `Prefabs`** 命名 `ToggleSwitch`。
+6. **暴露属性**:选 `ToggleSwitch` 根 → 在 **Toggle State** 属性旁点 **expose** → 重命名 `ToggleSwitch.State`(Int);选那个 Text Block → expose 其 `Text` → `ToggleSwitch.Label`(String)。**Make Public**。
+
+> 写回:Toggle State 支持 **To-Source / 双向**绑定(注意:**单向绑定会被点击覆盖**)。demo/launcher 侧的映射见 §9 卡3 与 §11(数据源里 `toggleOn` 是 bool,与 Int 用 `? 1 : 0` / `!= 0` 互转)。
 
 ## 7. common — Make Public + 导出
 - 选中每个组件/brush/style → 右键 **Make Public**(或 `Properties` 设 `Visibility Across Projects = Public`);或 `Project > Properties` 设 `Resource Visibility Across Projects = Public` 一次性全公开。
@@ -101,7 +116,7 @@
 | `Demo.Title` | String | Demo |
 | `Demo.GaugeValue` | Float | 62 |
 | `Demo.GaugeValid` | Bool | true |
-| `Demo.ToggleOn` | Bool | false |
+| `Demo.ToggleOn` | **Int**(0=关/1=开) | 0 |
 | `Demo.SliderValue` | Int | 30 |
 | `Demo.AccentColor` | Color | #1E6BFF |
 | `Demo.StatusEnum` | Int | 1 |
@@ -112,7 +127,7 @@
 |----|------|------|------|
 | 1 读·进度 | `demo.gauge` | ProgressRing | `Value` ← `{##Template/Demo.GaugeValue}`;`Demo.GaugeValid`=false→"--"+`Color/Error` |
 | 2 读·文本 | `demo.text` | LabelText | `Text` ← `{##Template/Demo.Title}` |
-| 3 写·开关 | `demo.switch` | ToggleSwitch | `IsChecked` 读 ← `{##Template/Demo.ToggleOn}`,并 To-Source 写回同属性 |
+| 3 写·开关 | `demo.switch` | ToggleSwitch | `ToggleSwitch.State`(Int)读 ← `{##Template/Demo.ToggleOn}`,并 To-Source 写回同属性;`ToggleSwitch.Label` ← 本地化 `demo.switch` |
 | 4 写·滑块 | `demo.slider` | Slider | `Value` 读 ← `{##Template/Demo.SliderValue}` + To-Source 写回 |
 | 5 写·颜色 | `demo.color` | 色块(Color Brush) | 颜色 ↔ `{##Template/Demo.AccentColor}`(读+To-Source) |
 | 6 枚举·状态 | `demo.status` | StatusIcon | `Status` ← `{##Template/Demo.StatusEnum}` |
@@ -147,12 +162,15 @@ Localization Editor 里加下列 key,填中/英:
 | `Demo.Title` | 读 | `Demo/titleText` |
 | `Demo.GaugeValue` | 读 | `Demo/gaugeValue` |
 | `Demo.GaugeValid` | 读 | `Demo/gaugeValid` |
-| `Demo.ToggleOn` | 读写 | `Demo/toggleOn` |
+| `Demo.ToggleOn`(Int) | 读写 | `Demo/toggleOn`(bool) |
 | `Demo.SliderValue` | 读写 | `Demo/sliderValue` |
 | `Demo.AccentColor` | 读写 | `Demo/accentColor` |
 | `Demo.StatusEnum` | 读 | `Demo/statusEnum` |
 | `Demo.IconUri` | 读 | `Demo/iconUri` |
 | List Box Items | 读 | `Demo/menu` |
+
+> **开关的 Int↔bool 转换**(Toggle State 是 Int,`toggleOn` 是 bool):读绑定表达式 `{@datasource Demo/toggleOn} ? 1 : 0`;写用 To-Source,Push Target=`Demo/toggleOn`,表达式 `{... Demo.ToggleOn} != 0`。(参考官方 Toggle Button 文档的绑定示例。)
+
 3. 顶栏:时间 Text ← `System/timeText`;日/夜按钮切 AppTheme;中/EN 按钮切 Screen 的 Locale。导航用 State Manager 切换显示 `DemoView`。
 
 ## 12. 导出顺序
