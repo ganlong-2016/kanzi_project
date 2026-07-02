@@ -3171,7 +3171,7 @@
                               <d15p1:ContentType>ABSOLUTE</d15p1:ContentType>
                               <d15p1:IsResourceReference>false</d15p1:IsResourceReference>
                               <d15p1:referredItemPath>
-                                <d15p1:pathString>common/Prefabs/Slider/</d15p1:pathString>
+                                <d15p1:pathString>common/Prefabs/LabelText/</d15p1:pathString>
                               </d15p1:referredItemPath>
                               <d15p1:textContent
                                 i:nil="true" />
@@ -10011,266 +10011,6 @@
                   i:nil="true" />
                 <propertyTypeReference>Name</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:string">Card</value>
-              </d6p1:Value>
-            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-              <d6p1:Key>CreationTime</d6p1:Key>
-              <d6p1:Value>
-                <categoryOverride
-                  i:nil="true" />
-                <isHidden
-                  i:nil="true" />
-                <isReadOnly
-                  i:nil="true" />
-                <propertyTypeReference>CreationTime</propertyTypeReference>
-                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:dateTime">2026-07-01T09:35:59.7947533Z</value>
-              </d6p1:Value>
-            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-          </properties>
-          <SerializedName>Card</SerializedName>
-          <children>
-            <ProjectItem xmlns:d7p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.LayerItems"
-              i:type="d7p1:EmptyLayer">
-              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>Tags</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>Tags</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
-                      i:type="d11p1:ArrayOfProjectItemReference" />
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>EffectiveDataContext</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>EffectiveDataContext</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.DataSourceItems"
-                      i:type="d11p1:DataContext">
-                      <d11p1:dataObjectPath></d11p1:dataObjectPath>
-                      <d11p1:dataSourceReference xmlns:d12p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project">
-                        <d12p1:ContentType>ABSOLUTE</d12p1:ContentType>
-                        <d12p1:IsResourceReference>false</d12p1:IsResourceReference>
-                        <d12p1:referredItemPath
-                          i:nil="true" />
-                        <d12p1:textContent
-                          i:nil="true" />
-                      </d11p1:dataSourceReference>
-                    </value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>EffectiveActivitySource</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>EffectiveActivitySource</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.DataSourceItems"
-                      i:type="d11p1:DataContext">
-                      <d11p1:dataObjectPath></d11p1:dataObjectPath>
-                      <d11p1:dataSourceReference xmlns:d12p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project">
-                        <d12p1:ContentType>ABSOLUTE</d12p1:ContentType>
-                        <d12p1:IsResourceReference>false</d12p1:IsResourceReference>
-                        <d12p1:referredItemPath
-                          i:nil="true" />
-                        <d12p1:textContent
-                          i:nil="true" />
-                      </d11p1:dataSourceReference>
-                    </value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>Name</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>Name</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:string">Card</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>CreationTime</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>CreationTime</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:dateTime">2026-07-01T09:35:59.7957563Z</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ExternalResourceScopes</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ExternalResourceScopes</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
-                      i:type="d11p1:ArrayOfProjectItemReference" />
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>Node2D.BackgroundBrush</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>Node2D.BackgroundBrush</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
-                      i:type="d11p1:ProjectItemReference">
-                      <d11p1:ContentType>RESOURCE_REFERENCE</d11p1:ContentType>
-                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
-                      <d11p1:referredItemPath>
-                        <d11p1:pathString>relative://kzb://common/Brushes/Brush_Background_Day</d11p1:pathString>
-                      </d11p1:referredItemPath>
-                      <d11p1:textContent
-                        i:nil="true" />
-                    </value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-              </properties>
-              <SerializedName>Card</SerializedName>
-              <children>
-                <ProjectItem xmlns:d9p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceDictionaryItems"
-                  i:type="d9p1:ResourceDictionaryItem">
-                  <properties xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
-                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                      <d10p1:Key>ResourceDictionaryLinkedDictionaries</d10p1:Key>
-                      <d10p1:Value>
-                        <categoryOverride
-                          i:nil="true" />
-                        <isHidden
-                          i:nil="true" />
-                        <isReadOnly
-                          i:nil="true" />
-                        <propertyTypeReference>ResourceDictionaryLinkedDictionaries</propertyTypeReference>
-                        <value xmlns:d13p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
-                          i:type="d13p1:ArrayOfProjectItemReference" />
-                      </d10p1:Value>
-                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                      <d10p1:Key>Name</d10p1:Key>
-                      <d10p1:Value>
-                        <categoryOverride
-                          i:nil="true" />
-                        <isHidden
-                          i:nil="true" />
-                        <isReadOnly
-                          i:nil="true" />
-                        <propertyTypeReference>Name</propertyTypeReference>
-                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
-                          i:type="d13p1:string">&lt;ResourceDictionaryInNode&gt;</value>
-                      </d10p1:Value>
-                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                      <d10p1:Key>CreationTime</d10p1:Key>
-                      <d10p1:Value>
-                        <categoryOverride
-                          i:nil="true" />
-                        <isHidden
-                          i:nil="true" />
-                        <isReadOnly
-                          i:nil="true" />
-                        <propertyTypeReference>CreationTime</propertyTypeReference>
-                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
-                          i:type="d13p1:dateTime">2026-07-01T09:35:59.7952545Z</value>
-                      </d10p1:Value>
-                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  </properties>
-                  <SerializedName>&lt;ResourceDictionaryInNode&gt;</SerializedName>
-                  <children />
-                  <dataSource
-                    i:nil="true" />
-                  <isHidden>true</isHidden>
-                  <isReadOnly>false</isReadOnly>
-                  <d9p1:entries />
-                </ProjectItem>
-              </children>
-              <dataSource
-                i:nil="true" />
-              <isHidden>false</isHidden>
-              <isReadOnly>false</isReadOnly>
-            </ProjectItem>
-          </children>
-          <dataSource
-            i:nil="true" />
-          <isHidden>false</isHidden>
-          <isReadOnly>false</isReadOnly>
-        </ProjectItem>
-        <ProjectItem
-          i:type="d3p1:LayerPrefabTemplate">
-          <properties xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
-            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-              <d6p1:Key>ResourceCrossProjectVisibility</d6p1:Key>
-              <d6p1:Value>
-                <categoryOverride
-                  i:nil="true" />
-                <isHidden
-                  i:nil="true" />
-                <isReadOnly
-                  i:nil="true" />
-                <propertyTypeReference>ResourceCrossProjectVisibility</propertyTypeReference>
-                <value xmlns:d9p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
-                  i:type="d9p1:CrossProjectVisibility">Inherit</value>
-              </d6p1:Value>
-            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-              <d6p1:Key>ResourceKeepAliveBehavior</d6p1:Key>
-              <d6p1:Value>
-                <categoryOverride
-                  i:nil="true" />
-                <isHidden
-                  i:nil="true" />
-                <isReadOnly
-                  i:nil="true" />
-                <propertyTypeReference>ResourceKeepAliveBehavior</propertyTypeReference>
-                <value xmlns:d9p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceDictionaryItems"
-                  i:type="d9p1:ResourceKeepAliveBehavior">INHERIT</value>
-              </d6p1:Value>
-            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-              <d6p1:Key>Name</d6p1:Key>
-              <d6p1:Value>
-                <categoryOverride
-                  i:nil="true" />
-                <isHidden
-                  i:nil="true" />
-                <isReadOnly
-                  i:nil="true" />
-                <propertyTypeReference>Name</propertyTypeReference>
-                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
                   i:type="d9p1:string">LabelText</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -10460,27 +10200,6 @@
                       </d11p1:referredItemPath>
                       <d11p1:textContent
                         i:nil="true" />
-                    </value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>LabelText.Text</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>LabelText.Text</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
-                      i:type="d11p1:ProjectItemReference">
-                      <d11p1:ContentType>TEXT</d11p1:ContentType>
-                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
-                      <d11p1:referredItemPath>
-                        <d11p1:pathString>relative://</d11p1:pathString>
-                      </d11p1:referredItemPath>
-                      <d11p1:textContent>LabelText</d11p1:textContent>
                     </value>
                   </d8p1:Value>
                 </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -14625,6 +14344,344 @@
                 i:nil="true" />
               <isHidden>false</isHidden>
               <isReadOnly>false</isReadOnly>
+            </ProjectItem>
+          </children>
+          <dataSource
+            i:nil="true" />
+          <isHidden>false</isHidden>
+          <isReadOnly>false</isReadOnly>
+        </ProjectItem>
+        <ProjectItem
+          i:type="d3p1:LayerPrefabTemplate">
+          <properties xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              <d6p1:Key>ResourceCrossProjectVisibility</d6p1:Key>
+              <d6p1:Value>
+                <categoryOverride
+                  i:nil="true" />
+                <isHidden
+                  i:nil="true" />
+                <isReadOnly
+                  i:nil="true" />
+                <propertyTypeReference>ResourceCrossProjectVisibility</propertyTypeReference>
+                <value xmlns:d9p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                  i:type="d9p1:CrossProjectVisibility">Inherit</value>
+              </d6p1:Value>
+            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              <d6p1:Key>ResourceKeepAliveBehavior</d6p1:Key>
+              <d6p1:Value>
+                <categoryOverride
+                  i:nil="true" />
+                <isHidden
+                  i:nil="true" />
+                <isReadOnly
+                  i:nil="true" />
+                <propertyTypeReference>ResourceKeepAliveBehavior</propertyTypeReference>
+                <value xmlns:d9p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceDictionaryItems"
+                  i:type="d9p1:ResourceKeepAliveBehavior">INHERIT</value>
+              </d6p1:Value>
+            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              <d6p1:Key>Name</d6p1:Key>
+              <d6p1:Value>
+                <categoryOverride
+                  i:nil="true" />
+                <isHidden
+                  i:nil="true" />
+                <isReadOnly
+                  i:nil="true" />
+                <propertyTypeReference>Name</propertyTypeReference>
+                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
+                  i:type="d9p1:string">Card</value>
+              </d6p1:Value>
+            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              <d6p1:Key>CreationTime</d6p1:Key>
+              <d6p1:Value>
+                <categoryOverride
+                  i:nil="true" />
+                <isHidden
+                  i:nil="true" />
+                <isReadOnly
+                  i:nil="true" />
+                <propertyTypeReference>CreationTime</propertyTypeReference>
+                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
+                  i:type="d9p1:dateTime">2026-07-02T06:20:22.2240927Z</value>
+              </d6p1:Value>
+            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+          </properties>
+          <SerializedName>Card</SerializedName>
+          <children>
+            <ProjectItem xmlns:d7p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.UserInterfaceItems"
+              i:type="d7p1:ComponentNode2D">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Tags</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>Tags</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>EffectiveDataContext</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>EffectiveDataContext</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.DataSourceItems"
+                      i:type="d11p1:DataContext">
+                      <d11p1:dataObjectPath></d11p1:dataObjectPath>
+                      <d11p1:dataSourceReference xmlns:d12p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project">
+                        <d12p1:ContentType>ABSOLUTE</d12p1:ContentType>
+                        <d12p1:IsResourceReference>false</d12p1:IsResourceReference>
+                        <d12p1:referredItemPath
+                          i:nil="true" />
+                        <d12p1:textContent
+                          i:nil="true" />
+                      </d11p1:dataSourceReference>
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>EffectiveActivitySource</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>EffectiveActivitySource</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.DataSourceItems"
+                      i:type="d11p1:DataContext">
+                      <d11p1:dataObjectPath></d11p1:dataObjectPath>
+                      <d11p1:dataSourceReference xmlns:d12p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project">
+                        <d12p1:ContentType>ABSOLUTE</d12p1:ContentType>
+                        <d12p1:IsResourceReference>false</d12p1:IsResourceReference>
+                        <d12p1:referredItemPath
+                          i:nil="true" />
+                        <d12p1:textContent
+                          i:nil="true" />
+                      </d11p1:dataSourceReference>
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">Card</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-02T06:20:22.2250948Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ComponentType</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly>true</isReadOnly>
+                    <propertyTypeReference>ComponentType</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ProjectItemReference">
+                      <d11p1:ContentType>ABSOLUTE</d11p1:ContentType>
+                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
+                      <d11p1:referredItemPath>
+                        <d11p1:pathString></d11p1:pathString>
+                      </d11p1:referredItemPath>
+                      <d11p1:textContent
+                        i:nil="true" />
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ExternalResourceScopes</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ExternalResourceScopes</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Shapes.RectangleConcept.Width</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>Shapes.RectangleConcept.Width</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:float">440</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Shapes.RectangleConcept.Height</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>Shapes.RectangleConcept.Height</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:float">360</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Shapes.RectangleConcept.CornerRadiusLength</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>Shapes.RectangleConcept.CornerRadiusLength</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:float">20</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Shapes.ShapeConcept.AlignStrokeDash</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>Shapes.ShapeConcept.AlignStrokeDash</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Node2D.BackgroundBrush</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>Node2D.BackgroundBrush</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ProjectItemReference">
+                      <d11p1:ContentType>ABSOLUTE</d11p1:ContentType>
+                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
+                      <d11p1:referredItemPath>
+                        <d11p1:pathString>common/Brushes/Brush_Surface_Day/</d11p1:pathString>
+                      </d11p1:referredItemPath>
+                      <d11p1:textContent
+                        i:nil="true" />
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>Card</SerializedName>
+              <children>
+                <ProjectItem xmlns:d9p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceDictionaryItems"
+                  i:type="d9p1:ResourceDictionaryItem">
+                  <properties xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>ResourceDictionaryLinkedDictionaries</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>ResourceDictionaryLinkedDictionaries</propertyTypeReference>
+                        <value xmlns:d13p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                          i:type="d13p1:ArrayOfProjectItemReference" />
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Name</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Name</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:string">&lt;ResourceDictionaryInNode&gt;</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>CreationTime</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>CreationTime</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:dateTime">2026-07-02T06:20:22.2250948Z</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  </properties>
+                  <SerializedName>&lt;ResourceDictionaryInNode&gt;</SerializedName>
+                  <children />
+                  <dataSource
+                    i:nil="true" />
+                  <isHidden>true</isHidden>
+                  <isReadOnly>false</isReadOnly>
+                  <d9p1:entries />
+                </ProjectItem>
+              </children>
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+              <d7p1:serializedComponentTypeName>Kanzi.Shapes.Rectangle2D</d7p1:serializedComponentTypeName>
             </ProjectItem>
           </children>
           <dataSource
@@ -55737,20 +55794,6 @@ The default value is (0, 0) when the Depth Rendering Mode property is set to Two
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-      <d2p1:Key>kzb://common/Prefabs/Card/Card</d2p1:Key>
-      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
-        <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
-        </d4p1:BindingEditorData>
-        <d4p1:MaterialRuleTreeData>
-          <d4p1:ExpandedEditorItemPaths />
-          <d4p1:ExpandedItemPaths />
-          <d4p1:SelectedItemPaths />
-        </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>170.39999999999998</d4p1:ScrollPosition>
-      </d2p1:Value>
-    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://common/Screens/Screen/RootPage/Viewport 2D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
@@ -55845,7 +55888,7 @@ The default value is (0, 0) when the Depth Rendering Mode property is set to Two
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>248.79999999999995</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -56378,7 +56421,7 @@ The default value is (0, 0) when the Depth Rendering Mode property is set to Two
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>532.8</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>115.19999999999993</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -56520,7 +56563,7 @@ The default value is (0, 0) when the Depth Rendering Mode property is set to Two
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>226.39999999999998</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>220.79999999999995</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -56697,7 +56740,7 @@ The default value is (0, 0) when the Depth Rendering Mode property is set to Two
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>248.79999999999995</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -56756,7 +56799,7 @@ The default value is (0, 0) when the Depth Rendering Mode property is set to Two
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>248.79999999999995</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -56801,7 +56844,66 @@ The default value is (0, 0) when the Depth Rendering Mode property is set to Two
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>226.39999999999998</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>220.79999999999995</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://common/Prefabs/Card2/Card2</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>220.79999999999995</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://common/Prefabs/Card/Card</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://common/Property Types/ToggleSwitch</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://common/Property Types/ToggleSwitch/ToggleSwitch.State</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>189.60000000000002</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
   </PropertyEditorViewModeStates>
