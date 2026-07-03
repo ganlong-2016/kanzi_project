@@ -11,7 +11,9 @@
     - 标量的文本为"默认值"(占位,运行时由 Android 侧提供真值);解析会去除空白,故默认字符串勿依赖空格
     - 字段/类型/枚举在 XML、Kanzi 绑定、Android 三处必须一致;交付后只追加不改名
     - 关键信号配 <xxxValid type="bool"> 表达有效性/故障,UI 据此显示故障态,禁止用默认值掩盖故障
-  common(设计/参考)与 launcher/Application/bin(运行时)两份需保持一致。
+  本文件是唯一契约来源(设计期与运行期共用):Studio 里数据源的 File 属性直接指向本文件
+  (从 IVI/launcher/Tool_project 出发相对路径为 ../../../assets/datasource.xml,见 docs/demo-build-all.md §4.3);
+  Android 运行时侧按部署约定取用同一份内容,不再维护第二份副本。
 -->
 <DroidDataSource>
 

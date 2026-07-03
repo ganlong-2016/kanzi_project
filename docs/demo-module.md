@@ -2,6 +2,8 @@
 
 `IVI/demo/` 是**样板模块**:把所有常用开发手法各做一个最小示例,其它模块照着它开发即可覆盖完整功能。每个示例都绑定到数据源契约里的字段(见单一来源 [`assets/datasource.xml`](../assets/datasource.xml) 的 `Demo` 分组)。
 
+> ⭐ **逐步操作以 [demo-build-all.md](demo-build-all.md)(v2)为准**(已按 Kanzi Studio 3.9.15 官方文档逐步核实)。v2 把 demo 扩为双子页:子页 A=本文的数据绑定八卡;子页 B 新增八张进阶卡(触发器与动作、关键帧动画+属性插值、长按手势、Scroll View 滚动、Data Trigger、2D 特效、3D 视口、Prefab 动态热切换),对应下表示例 18–25。
+
 > 说明:`demo.kzproj` 的节点/绑定/Prefab/状态机需在 **Kanzi Studio 里搭建**(工程文件是工具序列化格式,不手改)。本文是**蓝图 + 布局 + 连线表**;**逐步的 Studio 点选操作**见 [Kanzi Studio 操作手册](kanzi-studio-guide.md)。
 >
 > **数据源在 launcher**(插件在 launcher 注册),demo 作为子模块设计期看不到数据源。所以下文 `Demo/xxx` 指**数据源字段**,"绑数据源"这步在 **launcher 侧**做;**demo 内部**只绑自己暴露的输入属性 `Demo.Xxx`(`##Template`)。机制见 [data-source.md §3.5](data-source.md),连线见本文末「launcher 连线对照表」。
@@ -49,6 +51,16 @@
 | 15 | 组件复用 | — | 用 common 的 Button/Card/Slider/ListItem |
 | 16 | 导航/挂载 | — | launcher 用 Prefab View 挂 demo |
 | 17 | 动画 | — | Animation Timeline / State Manager |
+| 18 | 触发器与动作 | — | Button: Click → Set Property / Write Log;消息冒泡 + Set Message Handled |
+| 19 | 关键帧动画 + 平滑插值 | — | Animation Clip + Animation Player(Start 动作);Property Target Interpolator |
+| 20 | 手势(长按) | — | Long-Press Manipulator 触发器(非 Button 节点) |
+| 21 | 滚动 | — | Scroll View 2D + Scroll Started/Finished 触发器 |
+| 22 | 数据触发器 | `statusEnum` | Data Trigger + Apply Property Action(与绑定法对照) |
+| 23 | 2D 特效 | — | Shadow / Blur Effect 2D、Effect Stack 2D 毛玻璃 |
+| 24 | 3D 视口 | — | Viewport 2D + Scene + Camera + Light + 变换绑定 |
+| 25 | 动态换 Prefab | — | Prefab View 监听 Prefab Template,热切换内容 |
+
+> 18–25 的逐步配方见 [demo-build-all.md](demo-build-all.md) §10;子页切换本身即 State Manager + 转场示例(§6.3)。
 
 ## demo 页面结构(建议)
 
@@ -169,4 +181,4 @@ flowchart TB
 - [ ] 能独立导出 `demo.kzb`(运行时先加载 `common.kzb`)
 
 ## 数据源改动后必做
-契约已收敛为**单一来源** `assets/datasource.xml`(不再有 common/launcher 两份),含 `System/Vehicle/Charging/VehicleControl/Interior/Demo` 分组,保留 `time/env/Light`。数据源结构变更后,**在 Studio 里重新导入/更新数据源**才会出现新字段;旧的 `*_Test` 绑定若有需改到新字段。
+契约已收敛为**单一来源** `assets/datasource.xml`(不再有 common/launcher 两份),含 `System/Vehicle/Charging/VehicleControl/Interior/Demo` 六个分组。数据源结构变更后,**在 Studio 的 Data Sources 面板里更新数据源**(见 demo-build-all.md §4.3)才会出现新字段;旧绑定若指向被调整的字段需同步修改。

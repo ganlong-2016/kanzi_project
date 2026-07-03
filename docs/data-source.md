@@ -24,7 +24,7 @@ sequenceDiagram
 
 ## 2. XML 契约(关键:这是和插件/Android 的接口)
 
-数据结构由 XML 决定。**真实契约已落地**在**单一来源** [`assets/datasource.xml`](../assets/datasource.xml)(仓库根,设计期与运行期共用一份,已不再有 common/launcher 两份副本):包含 `System / Vehicle / Charging / VehicleControl / Interior / Demo` 分组,并保留 `time / env / Light` 兼容字段。示例数据供各模块绑定参照,`Demo` 分组专供样板([demo-module.md](demo-module.md))。
+数据结构由 XML 决定。**真实契约已落地**在**单一来源** [`assets/datasource.xml`](../assets/datasource.xml)(仓库根,设计期与运行期共用一份,已不再有 common/launcher 两份副本):包含 `System / Vehicle / Charging / VehicleControl / Interior / Demo` 六个分组。示例数据供各模块绑定参照,`Demo` 分组专供样板([demo-module.md](demo-module.md))。Studio 里数据源实例的 File 属性必须指向本文件(修正步骤见 [demo-build-all.md](demo-build-all.md) §4.3)。
 
 **解析器支持的结构(依据插件源码 `SaxHandler` / `TypeConverters`)**:
 - `type`:`int` / `float` / `bool` / `string` / `list`(大小写不敏感)。

@@ -1,6 +1,8 @@
 # demo 定义清单(照着直接创建)
 
-本文给出 demo 的**全部具体定义**:颜色(日/夜)、主题、字体样式、字号/圆角/间距、通用组件、DemoPage 暴露属性、卡片布局、连线与数据字段。**这是 demo 示例的设定值,直接在 Kanzi Studio 里录入即可**。操作方法见 [kanzi-studio-guide.md](kanzi-studio-guide.md)。
+本文给出 demo 的**全部具体定义**:颜色(日/夜)、主题、字体样式、字号/圆角/间距、通用组件、DemoPage 暴露属性、卡片布局、连线与数据字段。**这是 demo 示例的设定值,直接在 Kanzi Studio 里录入即可**。
+
+> ⭐ **逐步操作以 [demo-build-all.md](demo-build-all.md)(v2)为准**:该文档已按 Kanzi Studio 3.9.15 官方文档逐步核实,并把 demo 扩展为**双子页**(子页 A=数据绑定八卡,即本文 §8;子页 B=交互与视觉八卡:触发器/动画/手势/滚动/Data Trigger/2D 特效/3D 视口/动态换 Prefab)。本文与其不一致处以 demo-build-all 为准(已知差异:ProgressRing 改为 ProgressBar、组件清单增加 Button、DemoPage 统一放 `Prefabs/Pages/`)。
 
 ---
 
@@ -111,14 +113,17 @@
 
 | 组件 Prefab | 说明 | 暴露属性(类型) |
 |-------------|------|-----------------|
-| `Card` | 卡片容器(Empty Node 2D 根 + Background Rectangle + Content Stack Layout;**内容加在 Content 下**) | `Card.Title`(String) |
+| `Card` | 卡片容器(Empty Node 2D 根 + Background Rectangle + Content Stack Layout;**内容加在 Content 下**) | `Card.Title`(String,可选) |
 | `LabelText` | 文本(Style=LocaleStyle,Foreground=TextPrimary) | `LabelText.Text`(String) |
+| `Button` | 按钮(Button 2D + Label 子 Text Block;触发器/动作示例的载体) | `Button.Label`(String) |
 | `ToggleSwitch` | 开关(Toggle Button 2D + State Manager;Toggle State Count=2) | `ToggleSwitch.State`(**Int**,expose Toggle State)、`ToggleSwitch.Label`(String,子 Text Block 2D) |
 | `Slider` | 滑块(0–100) | `Slider.Value`(Int) |
-| `ProgressRing` | 环形进度(0–100) | `ProgressRing.Value`(Float) |
-| `StatusIcon` | 状态图标(枚举驱动) | `StatusIcon.Status`(Int) |
-| `ImageBox` | 图片(URI) | `ImageBox.Uri`(String) |
-| `ListItem` | 列表项(图标+标题) | `ListItem.Title`(String)、`ListItem.IconUri`(String) |
+| `ProgressBar` | 条形进度 0–100(两个 Rectangle + 宽度绑定表达式;原 ProgressRing 方案依赖不存在的工厂组件,已废弃) | `ProgressBar.Value`(Float) |
+| `StatusIcon` | 状态图标(Int 枚举驱动内部 State Manager,0–4 五态) | `StatusIcon.Status`(Int) |
+| `ImageBox` | 图片(设计期换 Image 资源;URI 链路由插件在运行时解析) | `ImageBox.Image`(Image) |
+| `ListItem` | 列表项(图标+标题,作 List Box 的 Item Template) | `ListItem.Title`(String) |
+
+> 组件逐步搭建配方见 [demo-build-all.md](demo-build-all.md) §5。
 
 - 组件颜色全走主题 `Color/*`;文字走 `LocaleStyle`;全部 Make Public。
 
