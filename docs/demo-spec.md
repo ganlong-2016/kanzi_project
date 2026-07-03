@@ -111,7 +111,7 @@
 
 | 组件 Prefab | 说明 | 暴露属性(类型) |
 |-------------|------|-----------------|
-| `Card` | 卡片外框(Surface 底 + RadiusM) | `Card.Title`(String) |
+| `Card` | 卡片容器(Empty Node 2D 根 + Background Rectangle + Content Stack Layout;**内容加在 Content 下**) | `Card.Title`(String) |
 | `LabelText` | 文本(Style=LocaleStyle,Foreground=TextPrimary) | `LabelText.Text`(String) |
 | `ToggleSwitch` | 开关(Toggle Button 2D + State Manager;Toggle State Count=2) | `ToggleSwitch.State`(**Int**,expose Toggle State)、`ToggleSwitch.Label`(String,子 Text Block 2D) |
 | `Slider` | 滑块(0–100) | `Slider.Value`(Int) |
