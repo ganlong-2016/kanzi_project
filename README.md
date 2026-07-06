@@ -9,14 +9,17 @@
 ```mermaid
 flowchart TB
     subgraph Studio["Kanzi Studio 工程(本仓库)"]
-        common["common<br/>共享资源工程<br/>字体 / 主题 / 通用组件"]
+        common["common<br/>共享资源工程<br/>字体 / 主题 / Brush"]
+        demo["demo<br/>样板工程<br/>组件 + 页面 + 绑定示例"]
         launcher["launcher<br/>集成主工程(含 Screen)<br/>桌面 / 状态栏 / 导航 / 组合各模块"]
         car["car<br/>功能子工程(3D 卡车)"]
         car_setting["car_setting<br/>功能子工程(车辆设置)"]
         environment["environment<br/>功能子工程(3D 场景)"]
 
         launcher -->|引用 kzb://| common
+        demo -->|仅资源| common
         launcher -->|Prefab View 组合| car
+        launcher -.对照开发.-> demo
         launcher -->|Prefab View 组合| car_setting
         launcher -->|Prefab View 组合| environment
         car -.推荐引用.-> common
@@ -37,7 +40,8 @@ flowchart TB
 | 路径 | 角色 | 说明 |
 |------|------|------|
 | `IVI/launcher/` | **集成主工程** | 含 `Tool_project/launcher.kzproj` 与 `Application/`(C++);持有 Screen,组合各模块,运行时入口 |
-| `IVI/common/` | **共享资源工程** | `common.kzproj` + `Fonts/`(NotoSans CJK)+ 共享主题/组件 |
+| `IVI/common/` | **共享资源工程** | `common.kzproj` + 字体 / Color Brush / AppTheme / Named Style(**不含 UI 组件**) |
+| `IVI/demo/` | **样板工程** | `demo.kzproj` — Card 等组件、DemoPage、绑定示例;照着做,非运行时依赖 |
 | `assets/datasource.xml` | **数据契约** | 单一来源;数据源插件在 launcher 注册并解析它 |
 | `IVI/car/` | 功能子工程 | 3D 卡车(`3D Assets/`、`MeshData/`、`Shaders/`) |
 | `IVI/car_setting/` | 功能子工程 | 车辆设置(纯 2D UI) |
@@ -58,13 +62,14 @@ flowchart TB
 - [命名 / 引用 / Public 可见性 / 导出规范](docs/conventions.md)
 - [本地化(中英)与主题(日/夜)](docs/localization-and-theme.md)
 - [导出 kzb 与依赖关系](docs/export-kzb.md)
+- [组件从 common 迁到 demo（Studio 操作）](docs/migrate-components-to-demo.md)
 - 架构图源文件(PlantUML):[`docs/diagrams/`](docs/diagrams/)
 
 ## 快速上手(开发一个新模块)
 
 1. 读 [架构总览](docs/architecture.md) 和 [命名/引用规范](docs/conventions.md)。
-2. 在 `IVI/` 下新建 `<module>/<module>.kzproj`,**引用 `common`**(用它的字体/主题/组件)。
-3. 用 common 的通用组件搭 UI,把属性**绑定到数据源**(见 [data-source](docs/data-source.md))。
+2. 在 `IVI/` 下新建 `<module>/<module>.kzproj`,**引用 `common`**(字体/主题/Brush)。
+3. 参照 **demo** 的组件与绑定写法,在**本模块**建自己的 Prefab;属性**绑定到数据源**(见 [data-source](docs/data-source.md))。
 4. 文案走**本地化**、样式走**主题 token**(见 [localization-and-theme](docs/localization-and-theme.md))。
 5. 在 `launcher` 里用 **Prefab View** 把模块挂上、加导航。
 6. 导出各自 kzb(见 [export-kzb](docs/export-kzb.md))。

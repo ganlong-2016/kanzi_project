@@ -12,7 +12,7 @@
 
 ![demo 页面 UI 示意图](images/demo/demo-page-mockup.png)
 
-> 一张横屏(车机)Demo 页:顶栏(时间/标题/主题·语言切换)+ 一组卡片,每张卡片演示一种手法。示意图仅表意,实际以 Kanzi 内用 common 组件搭建为准。
+> 一张横屏(车机)Demo 页:顶栏(时间/标题/主题·语言切换)+ 一组卡片,每张卡片演示一种手法。示意图仅表意,实际以 Kanzi 内用 **demo 工程组件 + common 资源**搭建为准。
 
 ## 整页布局(区域 → 展示 → 字段)
 
@@ -48,7 +48,7 @@
 | 12 | 本地化 | — | 文案走本地化(DataLayer) |
 | 13 | 主题 | — | 样式引用 token,日/夜切换 |
 | 14 | Prefab 控制 | `Demo.AccentColor`(自定义属性) | `##Template` 暴露 |
-| 15 | 组件复用 | — | 用 common 的 Button/Card/Slider/ListItem |
+| 15 | 组件复用 | — | 参照 demo 的 Button/Card/Slider,在本模块自建 Prefab |
 | 16 | 导航/挂载 | — | launcher 用 Prefab View 挂 demo |
 | 17 | 动画 | — | Animation Timeline / State Manager |
 | 18 | 触发器与动作 | — | Button: Click → Set Property / Write Log;消息冒泡 + Set Message Handled |
@@ -82,7 +82,7 @@ flowchart TB
 
 ### 1. 新建/打开 demo 并引用 common
 - `Library > Project References > Add Existing Project` → `IVI/common/common.kzproj`。
-- 之后可用 common 的字体、主题 token、通用组件(它们在 common 已 Public)。**数据源不在 common,不在此列。**
+- 之后可用 common 的字体、主题 token、Brush。**组件 Prefab 在 demo 工程** — 对照 demo 的 `Prefabs` 学习 expose 与绑定,在 demo 内搭建;业务模块复制模式到本模块。
 
 ### 2. 暴露输入属性(替代"在 demo 里设数据源 Data Context")
 - 在 `DemoPage` 根 Prefab 用 **Property Types** 建一组输入属性:`Demo.Title`(String)、`Demo.GaugeValue`(Real)、`Demo.ToggleOn`(Bool)、`Demo.SliderValue`(Int)、`Demo.AccentColor`(Color/String)、`Demo.StatusEnum`(Int)、`Demo.IconUri`(String) 等。
@@ -94,20 +94,20 @@ flowchart TB
 - Text Block → Properties → `+ Add Binding` → `Text` 绑定到 `Demo/titleText`。
 
 ### 4. 读:数值 / 进度
-- 用 common 的 ProgressBar(或表盘 Prefab)→ 绑定其 `Value` 到 `Demo/gaugeValue`。
+- 用 demo 里的 ProgressBar(或表盘 Prefab)→ 绑定其 `Value` 到 `Demo/gaugeValue`。
 - (float 62.0 → 进度 62%,注意量程换算)
 
 ### 5. 故障态
 - 绑定 `Demo/gaugeValid`:当为 `false` 时,用 State Manager/绑定表达式让数值区显示"--"并置 `Color/Error`(见主题),**不要用默认值伪装正常**。
 
 ### 6. 写:开关(To-Source)
-- 用 common 的 ToggleSwitch。给它的 `IsChecked`:
+- 用 demo 的 ToggleSwitch。给它的 `IsChecked`:
   - 读:普通绑定 ← `Demo/toggleOn`;
   - 写:再加一条 **To-Source** 绑定,Push Target = `Demo/toggleOn`。
 - 运行时插件监听该字段变更并下发。
 
 ### 7. 写:滑块(To-Source)
-- 用 common 的 Slider,`Value` 读 ← `Demo/sliderValue`,并加 To-Source 写回 `Demo/sliderValue`(int 0-100)。
+- 用 demo 的 Slider,`Value` 读 ← `Demo/sliderValue`,并加 To-Source 写回 `Demo/sliderValue`(int 0-100)。
 
 ### 8. 写:颜色字符串
 - 一个色块/取色控件,把颜色属性与 `Demo/accentColor`(`#RRGGBBAA` 字符串)做读写;写用 To-Source。
@@ -121,7 +121,7 @@ flowchart TB
 - 给一个占位图,URI 无效时显示占位。
 
 ### 11. 列表 → List Box
-- 用 common 的 List Box + item 模板 Prefab(含 Text ← `title`、Image ← `icon`)。
+- 用 demo 的 List Box + item 模板 Prefab(含 Text ← `title`、Image ← `icon`)。
 - `Items Source` 绑定到 `Demo/menu`(list,列:index/title/icon);列表数据运行时由 Android 侧填充。
 
 ### 12. 本地化(中/英)
@@ -138,7 +138,7 @@ flowchart TB
 - 这样 launcher 在挂载 demo 的 Prefab View 上设 `Demo.AccentColor` 即可从外部控制 demo 主色(参考现有 `CarControl.CarColor` 做法)。
 
 ### 15. 组件复用
-- demo 里的按钮/卡片/开关/滑块/列表项**全部用 common 的组件 Prefab 实例**,不在 demo 里另造控件——示范"组件复用"。
+- demo 里按钮/卡片/开关等 **Prefab 建在 demo 工程**;颜色/字号走 common 的**主题 token**,不写死。
 
 ### 16. 在 launcher 挂载 + 导航
 - launcher `Library > Project References` 引用 `IVI/demo/demo.kzproj`。

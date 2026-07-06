@@ -18,18 +18,25 @@
 
 ---
 
-## 0. 分工与现状盘点
+## 0. 分工(必读)
 
-### 0.1 已完成的部分(经工程文件核实,不用重做)
+| 工程 | 放什么 | 不放什么 |
+|------|--------|----------|
+| **common** | Color Brush、AppTheme、Font、Named Style | UI 组件 Prefab、页面、数据源 |
+| **demo** | Card / LabelText 等组件、DemoPage、绑定示例 | 业务逻辑;不替代业务模块 kzb |
+| **launcher** | Screen、数据源、本地化表、挂模块 | 业务 UI 细节 |
+| **业务模块** | 本域 Prefab 与页面 | 复制 common 资源;不运行时依赖 demo |
+
+> **组件在 demo**: `LabelText` / `Card` 等 UI Prefab 已在 `IVI/demo/demo.kzproj` 的 `Prefabs` 下;common 只提供 Brush / Theme / Font。业务模块对照 demo 自建,不运行时引用 demo kzb。
+
+## 0.1 已完成的部分(经工程文件核实)
 
 | 项 | 位置 | 状态 |
 |----|------|------|
 | 18 个颜色 Brush(`Brush_<角色>_<Day/Night>`) | common | ✅ |
 | Theme Group `AppTheme`,含 `Day` / `Night` 两个 Theme,9 个 `Color/*` resource ID | common | ✅ |
 | Named Style `LocaleStyle` / `LocaleStyle_zh`(另有 `LocaleStyle_en`) | common | ✅ |
-| 组件 `LabelText`(已暴露 `LabelText.Text`) | common | ✅ |
-| 组件 `ToggleSwitch`(Toggle Button 2D + Indicator/Label 子节点,已暴露 `ToggleSwitch.State`) | common | ✅ |
-| 组件 `Slider`(轨道 + 手柄结构,已暴露 `Slider.Value`) | common | ✅ |
+| 组件 `LabelText` / `ToggleSwitch` / `Slider` / `Card` | **demo** `Prefabs/` | ✅(Card 结构待 §5.2 改造) |
 | common 工程级 `Visibility Across Projects = Public` | common | ✅ |
 | 数据源插件 `DroidDataSourceplugin` 已导入注册 | launcher | ✅ |
 | 数据源实例已创建(名为 `Data source`) | launcher | ✅(File 路径需修正,见 §4.3) |
@@ -225,7 +232,9 @@ assets/datasource.xml(契约) → DroidDataSourceplugin(Java 插件,解析 XML)
 
 ---
 
-## 5. 通用基础四:组件库(common)
+## 5. 通用基础四:组件库(demo)🔨
+
+> **在 `IVI/demo/demo.kzproj` 里操作**(已引用 common,可直接用 `<Resource ID>` `Color/*` 与 `LocaleStyle`)。**不要在 common 建 UI Prefab。**
 
 ### 5.1 总表
 
@@ -240,15 +249,14 @@ assets/datasource.xml(契约) → DroidDataSourceplugin(Java 插件,解析 XML)
 | `StatusIcon` | 🔨 新建(§5.5) | Empty Node 2D | `StatusIcon.Status`(Int 0–4) |
 | `ImageBox` | 🔨 新建(§5.6) | Image | `ImageBox.Image`(Image 资源) |
 | `ListItem` | 🔨 新建(§5.7) | Empty Node 2D | `ListItem.Title`(String) |
-| `Card2`、`Slider 2D` | 🔨 删除 | —(试验遗留,右键 → Delete) | — |
-
 **通用手法(下面每个组件都用到,先记住):**
 
 - **建节点**:在 **Node Tree** 按住 **Alt 右键**父节点 → 选节点类型。
 - **做成 Prefab**:把搭好的节点**拖进 Prefabs 窗口**,Kanzi 自动生成模板并把原节点替换为实例。
 - **暴露属性**(官方 expose 机制):在 **Prefabs** 里选中预制体**内部**的节点 → **Properties** 里点目标属性**右侧的 expose 小图标** → Kanzi 自动在预制体根创建同类型自定义属性,并在该节点生成 `##Template` 绑定指向根属性。
 - **重命名暴露出的属性**:`Library > Property Types` 里找到新属性 → F2 改名(如 `ProgressBar.Value`)。
-- **Make Public**:右键 Prefab → **Make Public**(common 已设工程级 Public,单个新资源仍建议确认一次)。
+- **Make Public**:右键 Prefab → **Make Public**(demo 工程级 Public 已设,单个新资源仍建议确认一次)。
+- **Prefab View 不能展开**:Node Tree 里 **Prefab View 2D 实例不可展开**编辑内部;要改结构请双击 **Prefabs** 里的模板,或在页面用 **Prefab Placeholder** 拖入(设计期可编辑)。实例侧主要通过 expose + `##Template` 改属性。
 
 ### 5.2 Card 改造 🔨(修复"卡片里加内容看不见")
 
@@ -322,13 +330,10 @@ Card (Empty Node 2D,Layout Width=440, Layout Height=360)
 3. 其下 Alt+右键 → **Text Block 2D**,命名 `Title`:Style=`LocaleStyle`,Foreground Brush=`<Resource ID>` `Color/TextPrimary`,靠左,左边距 72。
 4. 拖进 **Prefabs**;expose `Title` 的 **Text** → 改名 `ListItem.Title`;**Make Public**。
 
-### 5.8 清理 🔨
+### 5.8 导出
 
-`Prefabs` 里右键 `Card2`、`Slider 2D` → **Delete**(它们是试验遗留,避免团队误用)。
-
-### 5.9 导出
-
-`File > Export > Export KZB` 导出 `common.kzb`(每次改完 common 都要重导,依赖它的工程才能看到新资源)。
+1. demo:新建/改动的组件 Prefab 全部 **Make Public** → `File > Export > Export KZB` 导出 `demo.kzb`。
+2. common:若只改了 Brush/Theme/Font,单独重导 `common.kzb`;与组件无关时不必因 demo 组件变更而重导 common。
 
 ---
 
@@ -348,7 +353,7 @@ DemoPage 根(Empty Node 2D 或现有根):**Layout Width=1920、Layout Height=900
 DemoPage (根,1920×900)
 ├── TopBar (Stack Layout 2D,横向,1920×96)
 │   ├── TitleText (Text Block 2D ← 之后绑 {##Template/Demo.Title})
-│   ├── BtnPageA / BtnPageB (common Button 实例,子页切换)
+│   ├── BtnPageA / BtnPageB (demo `Button` 实例,子页切换)
 │   └── (日/夜、中/EN 切换在 launcher 顶栏做,见 §9)
 ├── PageA (Grid Layout 2D,1920×804) ← 数据绑定八卡(§7)
 └── PageB (Grid Layout 2D,1920×804) ← 交互与视觉八卡(§10)
@@ -410,7 +415,7 @@ DemoPage (根,1920×900)
 | **卡5 写·颜色** | LabelText(`颜色`)+ Rectangle 2D 色块 160×160 | 色块 **+ Add Binding**:Property=Background Brush 的 **Brush Color**(在 Binding Editor 用 **Property Field** 选 Color 字段),Expression=`{##Template/Demo.AccentColor}` |
 | **卡6 枚举·状态** | LabelText(`状态`)+ `StatusIcon` 实例 | `StatusIcon.Status` ← `{##Template/Demo.StatusEnum}`(0–4 五色切换,内部 State Manager 已做) |
 | **卡7 图片** | LabelText(`图片`)+ `ImageBox` 实例 | 设计期直接换 `ImageBox.Image` 占位图;URI 链路运行时联调(§5.6 说明) |
-| **卡8 列表** | LabelText(`列表`)+ **Grid List Box 2D**(Alt+右键 Content → Grid List Box 2D,400×480) | ① **Item Template** 属性设为 common 的 `ListItem`;② 列表数据在 **launcher 侧**绑(数据源 `Demo/menu` → 拖到 **Items Source**,见 §8);③ 选中列表 → Node Components → Alt+右键 Triggers → **Message Trigger > List Box > Item Selected** → 其下加 **Write Log** 动作(输出选中项,演示选中事件) |
+| **卡8 列表** | LabelText(`列表`)+ **Grid List Box 2D**(Alt+右键 Content → Grid List Box 2D,400×480) | ① **Item Template** 属性设为 demo 的 `ListItem`;② 列表数据在 **launcher 侧**绑(数据源 `Demo/menu` → 拖到 **Items Source**,见 §8);③ 选中列表 → Node Components → Alt+右键 Triggers → **Message Trigger > List Box > Item Selected** → 其下加 **Write Log** 动作(输出选中项,演示选中事件) |
 | **故障态(卡1 加强)** | 在卡1 的 Content 里再放一个 LabelText,Text 固定 `--`,Foreground = `<Resource ID>` `Color/Error` | 给它加绑定:Property=**Visible**,Expression=`!{##Template/Demo.GaugeValid}`;再给 ProgressBar 实例加绑定 Property=Visible,Expression=`{##Template/Demo.GaugeValid}` —— Valid=false 时进度隐藏、`--` 变红显示 |
 
 **独立验收**(不接 launcher 就能测):选中 Node Tree 里挂 DemoPage 的实例(demo 自己的 Screen/RootPage 下放一个 Prefab View 指向 DemoPage),在实例 Properties 上改 `Demo.GaugeValue`、`Demo.StatusEnum`、`Demo.GaugeValid` 等值,Preview 应实时响应。
@@ -452,7 +457,7 @@ DemoPage (根,1920×900)
 | `Demo.SliderValue` | 数据源 `Demo/sliderValue` | `{@./Demo.SliderValue}` |
 | `Demo.AccentColor` | 数据源 `Demo/accentColor` | 颜色→字符串按项目约定转换 |
 
-**列表**:选中 demo 里那张卡 8 的 Grid List Box(在 DemoView 下展开实例树),把 `Demo/menu` 拖到它的 **Items Source**;再打开 common 的 `ListItem` 模板,把 `Title` 的 Text 绑 `{DataContext.title}`、`Icon` 留占位(列表行的 Data Context 自动指向行数据)。
+**列表**:选中 demo 里那张卡 8 的 Grid List Box(在 DemoView 下展开实例树),把 `Demo/menu` 拖到它的 **Items Source**;再打开 demo 的 `ListItem` 模板,把 `Title` 的 Text 绑 `{DataContext.title}`、`Icon` 留占位(列表行的 Data Context 自动指向行数据)。
 
 ### 8.3 验收
 
@@ -464,7 +469,7 @@ Preview 里:改 `assets/datasource.xml` 里 `Demo` 组的默认值并保存 → 
 
 1. **时间**:顶栏放 Text Block 2D,从 Data Sources 把 `System/timeText` 拖到它的 **Text**。
 2. **日/夜切换**(官方 Theme: Activate Theme 动作):
-   1. 顶栏放一个 common `Button` 实例(`Button.Label`=`日/夜`)。
+   1. 顶栏放一个 demo `Button` 实例(`Button.Label`=`日/夜`)。
    2. Node Components → Alt+右键 Triggers → **Message Trigger > Button > Click**。
    3. Alt+右键该触发器 → **Theme 动作 > Activate Theme**,选 `AppTheme` 的 `Night`。
    4. 再放一个按钮指向 `Day`(先用两个按钮,最稳;想做单键轮换再用 Toggle Button + 两条带 Condition 的动作)。
@@ -475,11 +480,11 @@ Preview 里:改 `assets/datasource.xml` 里 `Demo` 组的默认值并保存 → 
 
 ## 10. 子页 B:交互与视觉八卡 🔨(逐卡步骤)
 
-每张卡同样是"Card 实例 → Content 下加内容"。
+每张卡在 **DemoPage 模板**里用 Card 的 **Prefab View 2D** 实例组合;要往卡里塞演示内容,请在 **Prefabs 里编辑 Card 模板**的 `Content` 槽(§5.2),或在页面层用 expose/`##Template` 驱动子 Prefab——**不要**指望在 Node Tree 展开 Prefab View 往里拖节点。
 
 ### 卡 9:触发器与动作(Trigger / Action / 消息)
 
-1. Content 下放 LabelText(`触发器`)+ 一个 common `Button` 实例(`Button.Label`=`点我`)+ 一个 Rectangle 2D `Target`(120×120,Background Brush=`<Resource ID>` `Color/Divider`)。
+1. Content 下放 LabelText(`触发器`)+ 一个 demo `Button` 实例(`Button.Label`=`点我`)+ 一个 Rectangle 2D `Target`(120×120,Background Brush=`<Resource ID>` `Color/Divider`)。
 2. 选中 Button 实例 → Node Components → Alt+右键 Triggers → **Message Trigger > Button > Click**。
 3. 给该触发器加两个动作(Alt+右键触发器逐个加):
    - **Set Property**:Target Item=`Target` 色块,Target Property=**Opacity**,Value From=Fixed value,Fixed Value=0.3(每次点击半透明,肉眼可见)。
@@ -534,7 +539,7 @@ Preview 里:改 `assets/datasource.xml` 里 `Demo` 组的默认值并保存 → 
 
 ### 卡 14:2D 特效(Shadow / Blur / 毛玻璃)
 
-1. **卡片投影(推荐直接给 Card 组件加,所有卡片同时生效)**:在 common 工程 `Library` Alt+右键 **Effects > 2D Effects** → **Shadow Effect 2D**;从 Library 把它**拖到 Prefabs 里 Card 的 `Background` 节点上**;选中该 Effect 调 **Shadow Blur Radius**(默认 8,试 16)。注意:2D 特效不参与布局计算,卡片四周要留够 Margin 否则阴影被裁。
+1. **卡片投影(推荐直接给 Card 组件加,所有卡片同时生效)**:在 **demo** 工程 `Library` Alt+右键 **Effects > 2D Effects** → **Shadow Effect 2D**;从 Library 把它**拖到 Prefabs 里 Card 的 `Background` 节点上**;选中该 Effect 调 **Shadow Blur Radius**(默认 8,试 16)。注意:2D 特效不参与布局计算,卡片四周要留够 Margin 否则阴影被裁。
 2. **本卡演示模糊**:demo 里 Content 下放一个 `ImageBox` 实例;`Library` Alt+右键 **Effects > 2D Effects** → **Blur Effect 2D**,拖到该实例上;选中 Effect 调 **Blur Radius**。
 3. (进阶,可选)**Effect Stack 2D** 毛玻璃:Library 里创建 **Effect Stack 2D**,在其内 Alt+右键分别加 Blur Effect 2D 与 Shadow Effect 2D,拖到目标节点——官方"frosted glass"做法。
 4. **验收**:Preview 中肉眼可见投影/模糊;调属性实时变。
@@ -566,10 +571,10 @@ Preview 里:改 `assets/datasource.xml` 里 `Demo` 组的默认值并保存 → 
 
 ## 11. Make Public 与导出顺序
 
-1. common:新组件全部 **Make Public** → Export KZB。
-2. demo:`Pages/DemoPage` **Make Public** → Export KZB。
+1. common:仅资源(Brush/Theme/Font)有变更时 Export KZB。
+2. demo:组件 Prefab + `Pages/DemoPage` 全部 **Make Public** → Export KZB。
 3. launcher:Export KZB。
-4. 顺序永远是 **common → demo(各模块)→ launcher**;运行时 Android 侧**先加载 `common.kzb`** 再加载模块 kzb。
+4. 顺序永远是 **common → demo(各模块)→ launcher**;运行时 Android 侧**先加载 `common.kzb`** 再加载模块 kzb。业务模块**不**依赖 `demo.kzb`,只依赖 `common.kzb` + 自身 kzb。
 
 ---
 

@@ -11,7 +11,7 @@
 
 # A. 在 `common` 里创建共享资源
 
-打开 `IVI/common/common.kzproj`。common 提供:**颜色画刷/主题、字体与本地化样式、通用组件**。数据源不在 common(在 launcher,见 B)。
+打开 `IVI/common/common.kzproj`。common **只提供资源**:颜色画刷、主题、字体与 Named Style。**不放 UI 组件 Prefab**(组件在 `demo` 或各业务模块)。数据源不在 common(在 launcher,见 B)。
 
 ## A1. 颜色:Color Brush
 
@@ -47,19 +47,13 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 5. **在本地化表按 locale 指定**:Localization Table 里 `LocaleStyle` 行,在各 locale 列 double-click 选对应 style。
 6. **节点应用**:目标节点(如页面根)`Properties` → **移除 Font Family** → 添加 **Style** → 设 resource ID 为 `LocaleStyle`。切 locale 时字体随之切换。
 
-## A4. 通用组件(Prefabs)
+## A4. 设为 Public 并导出(common 仅资源)
 
-1. **搭结构**:`Node Tree` 里用 Kanzi 内置交互节点(如 **Button 2D / Toggle Button 2D / Slider**,或容器 + 视觉)搭一个控件,套好 A1/A2 的画刷、A3 的样式。
-2. **做成 Prefab**:把该节点**拖进 `Prefabs` 窗口** → Kanzi 自动生成 prefab 模板,并把原节点替换为实例。命名如 `ToggleSwitch`、`Card`、`ListItem`。
-3. **暴露对外属性(关键,自动生成 `##Template`)**:在 prefab 内部选中要对外的节点,`Properties` 里 **在该属性旁点"暴露(expose)"小图标** → Kanzi 自动:在 **prefab 根**建一个自定义属性,并在该节点建 `##Template` 绑定指向根属性。可重命名这个暴露出来的属性(如 `ToggleSwitch.IsChecked`)。
-   - 命令行等价:`ExposePrefabProperty <节点> <属性类型> [属性名]`。
-4. 使用方(demo/launcher)之后只需在实例上设这个暴露属性即可控制组件。
-
-## A5. 设为 Public 并导出
-
-- 单项:`Prefabs`/`Library` 选中 → 右键 **Make Public**(或 `Properties` 设 `Visibility Across Projects = Public`)。
+- `Library` 里 Brush / Theme / Style / Font 等资源 → 右键 **Make Public**。
 - 整工程:`Project > Properties` → `Resource Visibility Across Projects = Public`。
 - `File > Export > Export KZB` 导出 `common.kzb`。
+
+> **不要在 common 建 Card / Button 等 UI Prefab。** 组件搭建见下文 C 节(demo)。
 
 ---
 
@@ -81,17 +75,30 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 
 ---
 
-# C. 搭 `demo` 样板
+# C. 搭 `demo` 样板(组件 + 页面)
 
-打开/新建 `IVI/demo/demo.kzproj`。目标见 [demo 布局与连线表](demo-module.md)。
+打开 `IVI/demo/demo.kzproj`。demo 是**完整参考实现**:UI 组件、DemoPage、绑定示例都在这里。业务模块**对照 demo 学**,运行时**不依赖** demo kzb(除非 launcher 要挂 Demo 页)。
+
+## C0. 若组件仍在 common(历史遗留)
+
+按 [migrate-components-to-demo.md](migrate-components-to-demo.md) 先迁到 demo,再继续下面步骤。
 
 ## C1. 引用 common
-- `Library` → **右键 `Project References`** → **Add** → **Existing Project** → 选 `IVI/common/common.kzproj`。可用 common 的画刷/主题/样式/组件。
 
-## C2. 页面根 Prefab
+- `Library` → **右键 `Project References`** → **Add** → **Existing Project** → `IVI/common/common.kzproj`。
+- 组件里颜色用 `< Resource ID >` → `Color/Surface` 等;文字用 `LocaleStyle`。
+
+## C2. UI 组件(Prefab,建在 demo)
+
+1. **搭结构**:`Node Tree` 用 Kanzi 内置节点(Button 2D / Toggle Button 2D / Slider / Rectangle 2D 等),样式引用 common 的 theme token 与 Named Style。
+2. **做成 Prefab**:拖进 `Prefabs` 窗口 → 命名 `Card`、`LabelText`、`ToggleSwitch` 等。
+3. **暴露属性**:在 prefab 内对要对外的属性点 expose(+)→ 根节点生成自定义属性 + 内部 `##Template` 绑定。
+4. **Card 建议**:在 demo 内用 **Prefab Placeholder** 从 Prefabs 拖入页面(可展开编辑内部);launcher 挂模块时用 **Prefab View** + `kzb://`。Card 壳 + 页面内组合内容,详见 [demo-build-all.md](demo-build-all.md) §5。
+
+## C3. 页面根 Prefab
 - `Node Tree` 搭页面容器(用 Grid/Stack Layout 排卡片)→ 拖进 `Prefabs` 窗口 → 命名 `DemoPage`(放 `Prefabs/Pages/`)。
 
-## C3. 每张卡片(用 common 组件 + 暴露属性)
+## C4. 每张卡片(用 demo 内组件 + 暴露属性)
 
 > demo 内部**不直接绑数据源**(数据源在 launcher);它把要接收的值**暴露为 DemoPage 根属性**(A4 的 expose 机制),launcher 再把这些属性接到数据源(见 D)。
 
@@ -104,10 +111,10 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 - **图片**:Image 节点 expose 其 `Image`/URI 来源 → `Demo.IconUri`。
 - **列表**:List Box(`Items Source`)—— 建议由 launcher 侧绑数据源 `Demo/menu`,或用消息驱动。
 
-## C4. 主题 / 本地化
+## C5. 主题 / 本地化
 - 颜色都走主题 resource ID(A2),文字都走 `LocaleStyle`(A3)/ 本地化,禁止写死。
 
-## C5. Make Public + 导出
+## C6. Make Public + 导出
 - 选 `DemoPage` → **Make Public**;`File > Export > Export KZB` 导出 `demo.kzb`。
 
 ---
@@ -149,6 +156,7 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 
 | 工程 | 建什么(章节) |
 |------|----------------|
-| `common` | Color Brush(A1)、Theme Group 日/夜(A2)、Named Style 多语言字体(A3)、通用组件 Prefab+expose(A4)、Make Public+导出(A5) |
+| `common` | Color Brush(A1)、Theme Group(A2)、Named Style(A3)、Make Public+导出(A4) — **仅资源** |
 | `launcher` | 导入插件(B1)、建数据源指向 `assets/datasource.xml`(B2)、Screen 设 Data Context(B3)、挂载 Prefab View + 连线(D) |
-| `demo`/各模块 | 引用 common(C1)、页面 Prefab(C2)、卡片用 common 组件并 **expose** 出 `Demo.*` 属性(C3)、主题/本地化(C4)、Make Public+导出(C5) |
+| `demo` | 引用 common(C1)、UI 组件(C2)、页面(C3)、卡片 expose(C4)、Make Public+导出(C6) |
+| 业务模块 | 引用 common、**参照 demo** 自建 Prefab,expose 本模块属性,Make Public+导出 |

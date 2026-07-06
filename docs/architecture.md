@@ -5,9 +5,10 @@
 IVI 中控 HMI 采用 **多工程模块化 + 多 kzb** 架构:
 
 - **`launcher`** = 集成主工程,持有运行时 **Screen**,负责桌面/状态栏/导航,并把各功能模块**组合**进来。
-- **`common`** = 共享资源工程(设计系统地基):字体、主题、通用组件(**数据源不在此**,见下)。
-- **功能子工程**(`car` / `car_setting` / `environment` …)= 各自一个业务域,独立导出 kzb。
-- **`plugins/datasource`** = Java 数据源插件(**在 launcher 注册**),解析 `assets/datasource.xml` 把数据喂给数据模型;数据源属 **Screen 级**,归 launcher(子模块通过 `##Template` 属性从 launcher 接收数据)。
+- **`common`** = **共享资源工程**(仅资源):字体、Color Brush、Theme Group、Named Style 等。**不放 UI 组件 Prefab**。
+- **`demo`** = **样板/reference 工程**:完整 2D UI 示例(组件 Prefab、DemoPage、绑定手法)。供团队对照学习,**不是**各模块的运行时依赖。
+- **功能子工程**(`car` / `car_setting` / `environment` …)= 各自业务域,独立导出 kzb;引用 **common** 拿资源,参照 **demo** 学做法。
+- **`plugins/datasource`** = Java 数据源插件(**在 launcher 注册**),解析 `assets/datasource.xml`;数据源属 **Screen 级**,归 launcher。
 
 每个 `.kzproj` 导出一个 **kzb**,由 Android 渲染侧加载。
 
@@ -15,90 +16,93 @@ IVI 中控 HMI 采用 **多工程模块化 + 多 kzb** 架构:
 
 ```mermaid
 flowchart TB
-    subgraph common["common(共享资源)"]
-        c1["Fonts: NotoSans CJK"]
-        c2["主题 / Resource Dictionary"]
-        c3["通用组件 Prefab"]
-        c4["图标 / 图集(Images)"]
+    subgraph common["common(仅资源)"]
+        c1["Fonts"]
+        c2["Color Brush"]
+        c3["Theme Group AppTheme"]
+        c4["Named Style / 图标"]
     end
 
-    subgraph launcher["launcher(集成主工程 + Application C++)"]
-        space[" "]
-        style space fill:none,stroke:none,color:#00000000
+    subgraph demo["demo(样板 · 非运行时依赖)"]
+        d1["UI 组件 Prefab<br/>Card / LabelText / …"]
+        d2["DemoPage + 绑定示例"]
+    end
+
+    subgraph launcher["launcher(集成主工程)"]
         l1["Screen / RootPage"]
-        l2["状态栏 / 导航框架"]
-        l3["Prefab View:挂载各模块"]
+        l2["导航 / 顶栏"]
+        l3["Prefab View 挂载各模块"]
     end
 
-    car["car(3D 卡车)"]
-    car_setting["car_setting(车辆设置)"]
-    environment["environment(3D 场景)"]
-    plugin["Java 数据源插件"]
+    car["car"]
+    car_setting["car_setting"]
+    environment["environment"]
+    plugin["数据源插件"]
 
-    launcher -->|kzb:// 引用| common
-    car -->|kzb:// 引用| common
-    car_setting -->|kzb:// 引用| common
-    environment -->|kzb:// 引用| common
-    launcher -->|Prefab View 组合| car
-    launcher -->|Prefab View 组合| car_setting
-    launcher -->|Prefab View 组合| environment
-    plugin -->|数据模型 / 绑定| launcher
+    launcher -->|kzb:// 资源| common
+    car --> common
+    car_setting --> common
+    environment --> common
+    launcher -->|Prefab View| car
+    launcher -->|Prefab View| car_setting
+    launcher -->|Prefab View| environment
+    launcher -.开发期对照.-> demo
+    plugin --> launcher
 ```
 
-> 现状提示:目前 `launcher` 已引用 `common/car/environment`;`car/car_setting/environment` 对 `common` 的引用**建议补齐**(把主题/字体/组件下沉 common、各模块引用,避免重复)。`car_setting` 还**未接入** launcher。
+> **分工要点**: `common` = 设计 token 与素材; `demo` = 怎么搭 UI、怎么 expose、怎么绑定; 业务模块 = 自己的 Prefab + 引用 common 资源。
 
 ## 3. 设计原则(必须遵守)
 
-1. **依赖单向、无环**:`launcher → 各模块`、`各模块 → common`;**common 不引用任何上层**,**模块之间不互相引用**。
-2. **common 是共享地基**:主题 token、字体、通用组件在 common 定义,其它工程**引用**(标 `Public`)。**数据源不走 common**:插件在 launcher、数据源属 Screen 级,子模块经 launcher 用 `##Template` 属性接收数据(见 [data-source.md §3.5](data-source.md))。
-3. **UI 与数据解耦**:UI 只通过**数据绑定**读写数据源,不在界面里硬编码业务数据。
-4. **文案走本地化、样式走主题**:禁止硬编码文字与颜色/字号。
-5. **launcher 只负责组合与导航**:不在主工程里硬连模块内部节点,模块通过 Prefab View / 运行时加载挂载。
+1. **依赖单向、无环**:`launcher → 各模块`、`各模块 → common`;**common 不引用上层**;**模块之间不互相引用**;**业务模块不依赖 demo kzb**(demo 仅文档级样板)。
+2. **common 只放资源**:主题 token、字体、Named Style、Brush。UI 控件 Prefab 放在**所属模块**或 **demo**(示例)。
+3. **demo 是参考实现**:新同事先跟 [demo-build-all.md](demo-build-all.md) 在 demo 里走通全流程,再在自己的模块复刻模式。
+4. **UI 与数据解耦**:绑定读写数据源;子模块经 launcher 的 `##Template` 属性接数据(见 [data-source.md](data-source.md))。
+5. **文案走本地化、样式走主题**:禁止硬编码颜色/字号;颜色用 `Color/*` resource ID。
+6. **launcher 只负责组合与导航**:用 Prefab View 挂模块根 Prefab,不硬连模块内部节点。
 
 ## 4. 运行时组合(launcher 如何把模块拼起来)
 
 ```mermaid
 flowchart TB
     Screen --> RootPage --> Viewport["Viewport 2D"]
-    Viewport --> StatusBar["状态栏(common 组件)"]
+    Viewport --> StatusBar["状态栏"]
     Viewport --> Content["内容区"]
     Content --> PV1["Prefab View → car"]
     Content --> PV2["Prefab View → car_setting"]
     Content --> PV3["Prefab View → environment"]
-    Nav["导航 / 状态机"] -.切换显示.-> Content
+    Content --> PV4["Prefab View → demo/DemoPage"]
+    Nav["导航 / 状态机"] -.切换.-> Content
 ```
 
-- 各模块以 **Prefab View**(引用 `kzb://<module>/...` 的根 Prefab)挂在 launcher 的内容区。
-- 通过 **Prefab 控制属性**(如 `##Template/<Namespace>.<Prop>`)由外部控制模块外观/状态。
-- 切换显示由导航/状态机驱动。
+- 各模块以 **Prefab View** 挂 `kzb://<module>/Prefabs/...`。
+- 模块根 Prefab 通过 **expose + `##Template`** 对外暴露属性;launcher 在 Prefab View 实例上绑定数据源。
 
 ## 5. 数据流(概念)
 
 ```mermaid
 flowchart LR
-    XML["datasource.xml"] --> JPlugin["Java 数据源插件"]
-    JPlugin --> DM["Kanzi 数据模型(DataSource)"]
-    DM -->|"普通绑定(读)"| UI["UI 节点"]
-    UI -->|"To-Source 绑定(写)"| DM
+    XML["datasource.xml"] --> JPlugin["Java 插件"]
+    JPlugin --> DM["DataModel"]
+    DM -->|"读"| UI["UI"]
+    UI -->|"To-Source 写"| DM
     DM --> JPlugin
-    JPlugin -->|运行时| Vehicle["车辆 / Android 侧"]
+    JPlugin --> Vehicle["Android 侧"]
 ```
 
 细节见 [data-source.md](data-source.md)。
 
 ## 6. 产物与交付
 
-- 每个工程导出一个 kzb:`launcher.kzb / common.kzb / car.kzb / car_setting.kzb / environment.kzb`。
-- 模块 kzb 通过 `kzb://common/...` 引用 common → **运行时加载模块前必须先加载 `common.kzb`**。
-- 交给 Android 渲染侧加载。详见 [export-kzb.md](export-kzb.md)。
+- 工程 kzb:`common.kzb`、`demo.kzb`、`launcher.kzb`、`car.kzb` …
+- **运行时必须先加载 `common.kzb`**,再加载业务模块 kzb。
+- `demo.kzb` 仅在 launcher 挂载 Demo 页时需要;其它业务模块不依赖 demo。
+- 详见 [export-kzb.md](export-kzb.md)。
 
-## 7. 架构图源文件
+## 7. 历史遗留与迁移
 
-PlantUML 源在 [`docs/diagrams/`](diagrams/):
+若你本地 `common.kzproj` 里仍有 `Card` / `LabelText` 等 Prefab,属旧架构。本仓库主分支已迁到 demo;旧工程请按 [migrate-components-to-demo.md](migrate-components-to-demo.md) 对齐。
 
-- `architecture-overview.puml` — 组件/工程关系
-- `data-flow.puml` — 数据读写流
-- `runtime-composition.puml` — 运行时节点组合
-- `build-pipeline.puml` — 导出与交付流水线
+## 8. 架构图源文件
 
-> 渲染:用 PlantUML 插件 / `plantuml file.puml` / VS Code PlantUML 扩展。Markdown 内的 Mermaid 图在 GitHub 可直接显示。
+PlantUML 源在 [`docs/diagrams/`](diagrams/)。

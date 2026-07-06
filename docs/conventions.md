@@ -13,7 +13,8 @@
 ## 2. 节点 / Prefab 命名
 - **PascalCase**,语义清晰。
 - 模块根页面 Prefab:`<域>Page`(如 `CarSettingPage`),命名稳定 = 下游/launcher 加载入口,**交付后不改名**。
-- 通用组件(放 common):`Button`、`ToggleSwitch`、`Card`、`ListItem`、`Popup`、`Slider`、`StatusBar` 等。
+- UI 组件 Prefab(放**业务模块**或 **demo 样板**):`Button`、`ToggleSwitch`、`Card`、`ListItem` 等。**common 不放组件**,只放资源(Brush / Theme / Font / Style)。
+- demo 样板组件命名同上,路径 `kzb://demo/Prefabs/...`,供对照;业务模块用 `kzb://<module>/Prefabs/...`。
 
 ## 3. 属性类型命名
 - 自定义属性:`<命名空间>.<属性名>`(如 `CarControl.CarColor`),命名空间用所属工程/模块名,便于追溯。
@@ -73,11 +74,11 @@ flowchart TB
     launcher --> environment
 ```
 
-- 只允许 `launcher → 模块`、`模块/launcher → common`;**禁止** `common → 上层`、`模块 ↔ 模块`、launcher 设计期硬连模块内部节点。
+- 只允许 `launcher → 模块`、`模块/launcher → common`;**禁止** `common → 上层`、`模块 ↔ 模块`、**业务模块运行时依赖 demo kzb**、launcher 设计期硬连模块内部节点。
 - 添加引用:`Library > Project References > Add Existing Project`。
 - **Public 可见性**:被引用内容默认不暴露,需 `Visibility Across Projects = Public`(或 Make Public)才能跨工程用;可共享 Prefab/纹理/材质/字体/样式;**本地化表/主题组/数据源**是例外(见 [localization-and-theme.md](localization-and-theme.md))。
 - **`##Template` 暴露可控属性**:模块根 Prefab 加自定义属性,内部节点绑定 `{##Template/<NS>.<Prop>}`,launcher 在 Prefab View 实例上赋值控制。
-- **kzb:// URL**:`kzb://common/Prefabs/Components/Button`、`kzb://common/Fonts/NotoSansCJKsc`;工程名全小写稳定,改名会让引用与运行时加载全失效。
+- **kzb:// URL**:`kzb://common/Fonts/NotoSansCJKsc`、`kzb://<你的模块>/Prefabs/Card`(组件在业务模块或 demo 样板);工程名全小写稳定,改名会让引用与运行时加载全失效。
 
 ---
 

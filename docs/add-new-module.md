@@ -8,8 +8,9 @@
 
 ```mermaid
 flowchart LR
-    A["1. 新建工程<br/>IVI/mymodule/mymodule.kzproj"] --> B["2. 引用 common<br/>(主题/字体/组件)"]
-    B --> C["3. 搭页面 Prefab<br/>Prefabs/Pages/MyModulePage"]
+    A["1. 新建工程<br/>IVI/mymodule/mymodule.kzproj"] --> B["2. 引用 common<br/>(主题/字体/Brush)"]
+    B --> B2["2b. 参照 demo<br/>学组件与绑定"]
+    B2 --> C["3. 搭页面 Prefab<br/>Prefabs/Pages/MyModulePage"]
     C --> D["4. 暴露输入属性(##Template)<br/>launcher 侧绑数据源"]
     D --> E["5. 文案→本地化<br/>样式→主题 token"]
     E --> F["6. 设根 Prefab 为 Public"]
@@ -28,12 +29,12 @@ flowchart LR
 ### 2. 引用 common
 
 - `Library > Project References` → **Add Existing Project** → 选 `IVI/common/common.kzproj`。
-- 之后即可使用 common 的字体、主题 token、通用组件(它们在 common 里已设 `Public`)。**数据源不在 common(在 launcher),见第 4 步。**
+- 之后即可使用 common 的字体、主题 token、Color Brush。**UI 组件不在 common** — 打开 `IVI/demo/demo.kzproj` 对照 Card / LabelText 等做法,在**本模块**建自己的 Prefab。
 
 ### 3. 搭页面 Prefab
 
 - 建 `Prefabs/Pages/MyModulePage` 作为模块**根 Prefab**(命名稳定,供 launcher 挂载)。
-- 用 **common 的通用组件**(Button/Card/Switch/List 等)拼 UI,不要重复造控件。
+- 用本模块的 Prefab 拼 UI(结构可参照 demo,路径为 `kzb://mymodule/...`)。
 
 ### 4. 接数据(数据源在 launcher,不在模块)
 
@@ -68,7 +69,7 @@ flowchart LR
 ## 自检清单(交付前)
 
 - [ ]  工程名全小写,保存在 `IVI/mymodule/`
-- [ ]  已引用 common,UI 用的是 common 的组件/主题/字体
+- [ ]  已引用 common;样式走主题 token / LocaleStyle;UI 参照 demo 自建 Prefab
 - [ ]  无硬编码文字(走本地化)、无硬编码颜色/字号(走 token)
 - [ ]  数据读用普通绑定、写用 To-Source;处理了 `Valid` 故障态
 - [ ]  根 Prefab `MyModulePage` 命名稳定且 `Public`

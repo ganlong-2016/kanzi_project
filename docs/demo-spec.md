@@ -109,7 +109,9 @@
 
 ---
 
-## 6. 通用组件(common,Prefab + 暴露属性)
+## 6. 样板组件(demo 工程,Prefab + 暴露属性)
+
+> **不在 common。** 路径 `kzb://demo/Prefabs/...`。业务模块对照此表自建,不引用 demo 的 Card。
 
 | 组件 Prefab | 说明 | 暴露属性(类型) |
 |-------------|------|-----------------|
@@ -198,7 +200,8 @@
 ---
 
 ## 创建顺序
-1. `common`:建 18 个 Color Brush(§2)→ AppTheme 主题(§3)→ LocaleStyle/_zh(§4)→ 通用组件(§6)→ Make Public → 导出。
+1. `common`:建 18 个 Color Brush(§2)→ AppTheme 主题(§3)→ LocaleStyle/_zh(§4)→ Make Public → 导出。
+2. `demo`:按 §6 建 Card / LabelText 等组件与 DemoPage → Make Public → 导出(业务模块对照 demo,不引用 demo kzb)。
 2. `launcher`:导入插件 → 数据源指向 `assets/datasource.xml` → Screen 设 Data Context。
 3. `demo`:引用 common → DemoPage → 按 §8 搭卡片、expose §7 属性 → 本地化(§10)→ Make Public → 导出。
 4. `launcher`:Prefab View 挂 DemoView → 按 §9 连线 → 导航 → 导出。

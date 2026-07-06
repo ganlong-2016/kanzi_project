@@ -7,7 +7,7 @@ skinparam componentStyle rectangle
 rectangle "Screen" as screen {
   rectangle "RootPage" as root {
     rectangle "Viewport 2D" as vp {
-      rectangle "状态栏\n(common 组件)" as status
+      rectangle "状态栏\n(demo 样板)" as status
       rectangle "内容区" as content {
         rectangle "Prefab View → kzb://car/.../CarPage" as pv_car
         rectangle "Prefab View → kzb://car_setting/.../CarSettingPage\n(待接入)" as pv_set
