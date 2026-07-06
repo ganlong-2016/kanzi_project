@@ -8,6 +8,10 @@
 # include <demo_code_behind_module.hpp>
 #endif
 
+#if defined(COMMON_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)
+# include <common_code_behind_module.hpp>
+#endif
+
 #if defined(CAR_SETTING_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)
 # include <car_setting_code_behind_module.hpp>
 #endif
@@ -54,6 +58,10 @@ public:
 
 #if defined(DEMO_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)
         DemoCodeBehindModule::registerModule(getDomain());
+#endif
+
+#if defined(COMMON_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)
+        CommonCodeBehindModule::registerModule(getDomain());
 #endif
 
 #if defined(CAR_SETTING_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)

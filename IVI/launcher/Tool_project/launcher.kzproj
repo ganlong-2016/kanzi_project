@@ -1321,7 +1321,7 @@
                   i:nil="true" />
                 <propertyTypeReference>EffectiveScreenSize</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:string">Screen size not available</value>
+                  i:type="d9p1:string">1920 x 1080</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
             <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
