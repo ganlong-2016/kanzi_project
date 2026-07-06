@@ -1,12 +1,14 @@
 # 架构总览与设计原则
 
+> **开发状态**: demo 样板工程**暂停**;当前优先 **car 3D 模型**（轮胎/车门分组与动画绑定）。详见 [car-model-grouping.md](car-model-grouping.md)。
+
 ## 1. 总体形态
 
 IVI 中控 HMI 采用 **多工程模块化 + 多 kzb** 架构:
 
 - **`launcher`** = 集成主工程,持有运行时 **Screen**,负责桌面/状态栏/导航,并把各功能模块**组合**进来。
 - **`common`** = **共享资源工程**(仅资源):字体、Color Brush、Theme Group、Named Style 等。**不放 UI 组件 Prefab**。
-- **`demo`** = **样板/reference 工程**:完整 2D UI 示例(组件 Prefab、DemoPage、绑定手法)。供团队对照学习,**不是**各模块的运行时依赖。
+- **`demo`** = **样板/reference 工程**（**当前暂停维护**）:完整 2D UI 示例;供团队对照学习,**不是**各模块的运行时依赖。
 - **功能子工程**(`car` / `car_setting` / `environment` …)= 各自业务域,独立导出 kzb;引用 **common** 拿资源,参照 **demo** 学做法。
 - **`plugins/datasource`** = Java 数据源插件(**在 launcher 注册**),解析 `assets/datasource.xml`;数据源属 **Screen 级**,归 launcher。
 

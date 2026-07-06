@@ -3,6 +3,8 @@
 本仓库是基于 **Kanzi Studio** 开发的车机中控(IVI / 中控)HMI 工程。采用**多工程模块化**:一个集成主工程(`launcher`)+ 一个共享资源工程(`common`)+ 若干功能子工程(`car` / `car_setting` / `environment` …),数据由一个 **Java 数据源插件**(解析 XML)注入,UI 通过绑定读写。产物为各工程导出的 **kzb**,交给 Android 渲染侧加载。
 
 > 本套文档的目标:**让团队成员照着这里的结构与示例,独立开发出完整的中控应用。**
+>
+> **当前开发重点**: `car` 3D 模型分组与可控性;**demo 暂停**,文档保留作样板参考。
 
 ## 架构总览
 
@@ -53,8 +55,9 @@ flowchart TB
 ## 文档索引
 
 - [架构总览与设计原则](docs/architecture.md)
+- [car 3D 模型分组（轮胎 / 车门）](docs/car-model-grouping.md) ⭐ **当前**
 - [数据源:插件 + XML 契约 + 绑定(读/写)](docs/data-source.md)
-- ⭐ [demo 一站式搭建文档(只看这一份就能在 Kanzi 里开发 demo)](docs/demo-build-all.md)
+- [demo 一站式搭建文档](docs/demo-build-all.md)（暂停维护,样板参考）
 - [Kanzi Studio 操作手册(手把手,含 common 建哪些资源)](docs/kanzi-studio-guide.md)
 - [demo 定义清单(颜色/主题/组件/属性的具体设定值)](docs/demo-spec.md)
 - [如何新增一个模块(照着做)](docs/add-new-module.md)
