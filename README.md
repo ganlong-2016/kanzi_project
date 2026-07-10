@@ -55,6 +55,7 @@ flowchart TB
 ## 文档索引
 
 - [架构总览与设计原则](docs/architecture.md)
+- [Kanzi Studio 中控项目标准架构(官方文档对照:脑暴图/架构图/时序图/标准文件结构/差距分析)](docs/kanzi-standard-architecture.md)
 - [car 3D 模型分组（轮胎 / 车门）](docs/car-model-grouping.md) ⭐ **当前**
 - [数据源:插件 + XML 契约 + 绑定(读/写)](docs/data-source.md)
 - [demo 一站式搭建文档](docs/demo-build-all.md)（暂停维护,样板参考）
