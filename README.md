@@ -56,6 +56,10 @@ flowchart TB
 
 - [架构总览与设计原则](docs/architecture.md)
 - [Kanzi Studio 中控项目标准架构(官方文档对照:脑暴图/架构图/时序图/标准文件结构/差距分析)](docs/kanzi-standard-architecture.md)
+- [命名规范(单页执行版)](docs/naming-conventions.md)
+- [数据接收与发送节点(Data In/Out 全通道)](docs/data-io-nodes.md)
+- [状态机总纲 + 5 个状态机规格](docs/state-machines/README.md):[充电](docs/state-machines/sm-charging.md) / [驾驶模式](docs/state-machines/sm-drive-mode.md) / [底盘](docs/state-machines/sm-chassis.md) / [轮胎](docs/state-machines/sm-tires.md) / [空调](docs/state-machines/sm-hvac.md)
+- [Trigger 指南(触发器/条件/动作)](docs/trigger-guide.md)
 - [car 3D 模型分组（轮胎 / 车门）](docs/car-model-grouping.md) ⭐ **当前**
 - [数据源:插件 + XML 契约 + 绑定(读/写)](docs/data-source.md)
 - [demo 一站式搭建文档](docs/demo-build-all.md)（暂停维护,样板参考）
