@@ -34,7 +34,37 @@
         <speed type="float">0.0</speed>                 <!-- km/h -->
         <speedValid type="bool">true</speedValid>
         <gear type="string">P</gear>                    <!-- P/R/N/D -->
+        <driveMode type="int">1</driveMode>             <!-- 0经济Eco 1标准Standard 2性能Performance(状态机 sm-drive-mode)-->
+        <driveModeValid type="bool">true</driveModeValid>
     </Vehicle>
+
+    <!-- ===== 底盘(状态机 sm-chassis)===== -->
+    <Chassis>
+        <suspensionLevel type="int">1</suspensionLevel> <!-- 目标高度:0低 1标准 2高 -->
+        <suspensionMoving type="bool">false</suspensionMoving> <!-- 升降执行中 -->
+        <chassisValid type="bool">true</chassisValid>
+    </Chassis>
+
+    <!-- ===== 轮胎(状态机 sm-tires;FL/FR/RL/RR 四轮同构)===== -->
+    <Tires>
+        <statusFL type="int">0</statusFL>               <!-- 0正常 1低压 2高温 3故障/无信号 -->
+        <statusFR type="int">0</statusFR>
+        <statusRL type="int">0</statusRL>
+        <statusRR type="int">0</statusRR>
+        <pressureFL type="float">2.5</pressureFL>       <!-- bar -->
+        <pressureFR type="float">2.5</pressureFR>
+        <pressureRL type="float">2.5</pressureRL>
+        <pressureRR type="float">2.5</pressureRR>
+        <tiresValid type="bool">true</tiresValid>
+    </Tires>
+
+    <!-- ===== 空调(状态机 sm-hvac)===== -->
+    <Hvac>
+        <hvacMode type="int">0</hvacMode>               <!-- 0关闭 1制冷 2制热 3自动 4仅通风 -->
+        <targetTemp type="float">24.0</targetTemp>      <!-- ℃ 可设置 -->
+        <fanLevel type="int">2</fanLevel>               <!-- 0-5 -->
+        <hvacValid type="bool">true</hvacValid>
+    </Hvac>
 
     <!-- ===== 充电 ===== -->
     <Charging>
