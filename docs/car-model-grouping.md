@@ -1,4 +1,6 @@
-# car 3D 模型分组说明
+# car 3D 模型分组
+
+> 3D 场景里**摄像头视角切换与滑动手势**的协作说明见 [architecture/camera-view-and-gesture.md](architecture/camera-view-and-gesture.md)。
 
 > **当前优先级**: demo 暂停,car 3D 模型分组与可控性优先。
 

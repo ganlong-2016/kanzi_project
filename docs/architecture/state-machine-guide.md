@@ -93,3 +93,9 @@ flowchart TB
 ```
 
 > 归属说明:充电/驾驶模式/底盘/空调的**页面级**状态机先落在 `car_setting`(2D 设置页);轮胎状态机落在 `car`(随 3D 车模)。后续若拆出独立 hvac/charging 模块,状态机随根 Prefab 整体迁移,接口(暴露属性)不变。
+
+## 6. 特例:3D 摄像头 × 手势旋转
+
+launcher 3D 场景的 **CameraView + ResetCameraRotation** 不属于上述 5 个数据驱动状态机,而是「预设视角 + 手势旋转」的双状态机协作,详见:
+
+- **[camera-view-and-gesture.md](camera-view-and-gesture.md)** — 属性分工、触发器时序、Studio 配置清单与验收步骤
