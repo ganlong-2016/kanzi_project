@@ -4,6 +4,10 @@
 
 // [CodeBehind libs inclusion]. Do not remove this identifier.
 
+#if defined(CAR_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)
+# include <car_code_behind_module.hpp>
+#endif
+
 #if defined(DEMO_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)
 # include <demo_code_behind_module.hpp>
 #endif
@@ -14,10 +18,6 @@
 
 #if defined(CAR_SETTING_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)
 # include <car_setting_code_behind_module.hpp>
-#endif
-
-#if defined(CAR_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)
-# include <car_code_behind_module.hpp>
 #endif
 
 #if defined(ENVIRONMENT_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)
@@ -56,6 +56,10 @@ public:
 
         // [CodeBehind module inclusion]. Do not remove this identifier.
 
+#if defined(CAR_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)
+        CarCodeBehindModule::registerModule(getDomain());
+#endif
+
 #if defined(DEMO_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)
         DemoCodeBehindModule::registerModule(getDomain());
 #endif
@@ -66,10 +70,6 @@ public:
 
 #if defined(CAR_SETTING_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)
         CarSettingCodeBehindModule::registerModule(getDomain());
-#endif
-
-#if defined(CAR_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)
-        CarCodeBehindModule::registerModule(getDomain());
 #endif
 
 #if defined(ENVIRONMENT_CODE_BEHIND_API) && !defined(ANDROID) && !defined(KANZI_API_IMPORT)

@@ -22,7 +22,7 @@
         <timeText type="string">08:24</timeText>
         <dateText type="string">06-30</dateText>
         <locale type="string">zh-CN</locale>          <!-- zh-CN / en -->
-        <theme type="string">Day</theme>               <!-- Day / Night -->
+        <theme type="int">1</theme>               <!--0 Day / 1 Night -->
         <outsideTemp type="float">26.0</outsideTemp>
         <outsideTempValid type="bool">true</outsideTempValid>
         <networkLevel type="int">3</networkLevel>       <!-- 0-4 -->
