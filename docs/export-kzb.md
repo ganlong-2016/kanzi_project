@@ -63,7 +63,7 @@ CMake 将 VS **工作目录**设为仓库根 **`assets/`**（与 `launcher.kzpro
 | `Cannot open ... launcher.kzb.cfg` | 未 Export KZB，或导出目录与 VS 工作目录不一致 | Studio 导出到 `assets/`；重新 CMake 生成 VS 方案 |
 | 能开 cfg 但黑屏/缺资源 | 依赖 kzb 未导出或未放在同目录 | 按 §2 顺序导出到同一 `assets/` |
 | DLL 找不到 | Kanzi Engine 核心运行时未复制到 exe 目录 | 重新 CMake 生成 |
-| `Could not find ./kzjava.jar` | `KANZI_HOME` 未设或缺少 `Engine\lib\java\kzjava.jar` | 确认 Kanzi 安装与 CMake 的 `KANZI_HOME` |
+| `Could not find ./kzjava.jar` | `assets/kzjava.jar` 未生成 | CMake 配置日志应有 `deploy kzjava.jar`；若 Workspace 无 Studio，设 `KANZI_STUDIO_HOME` 后重新配置+编译 |
 | `Failed to load plugin 'kzjvm.dll'` | 安装目录无对应 VS 配置的 `Studio\Bin\EnginePlugins\...\kzjvm.dll` | 与 VS Release/Debug、VS 版本对齐 |
 
 > **不必**使用 `IVI/launcher/Application/bin`：只要 **导出目录 = 进程工作目录** 即可。本工程选用 `assets/` 是为与 `datasource.xml` 同目录。

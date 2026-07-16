@@ -27,7 +27,7 @@ CMake 已将 `launcher` 的 **工作目录** 设为绝对路径指向本目录�
 
 | 现象 | 处理 |
 |------|------|
-| `Could not find ./kzjava.jar` | 确认 `KANZI_HOME` 正确，重新编译 |
+| `Could not find ./kzjava.jar` | 编译后 `assets/kzjava.jar` 不存在 | 设 `KANZI_STUDIO_HOME` 指向 Studio 安装根目录，重新 CMake 配置并编译；见 [`plugins/README.md`](../plugins/README.md) |
 | `Failed to load plugin 'kzjvm.dll'` | 确认安装目录有 `Studio\Bin\EnginePlugins\<VS配置>\kzjvm.dll`；配置 JDK |
 
 ## 导出
