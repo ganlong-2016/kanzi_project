@@ -18,24 +18,16 @@ CMake 已将 `launcher` 的 **工作目录** 设为绝对路径指向本目录�
 
 缺 `launcher.kzb.cfg` 时会报错：`Cannot open the kzb configuration file 'launcher.kzb.cfg'`。
 
-## Java 插件运行时（`DroidDataSourceplugin`）
+## 插件（`plugins/`）
 
-`launcher` 注册了 **Java 数据源插件**。VS 工作目录为 `assets/` 时，引擎会在该目录查找：
+Kanzi 引擎插件**统一放在仓库根 [`plugins/`](../plugins/README.md)**，不在此目录维护副本。
 
-| 文件 | 路径（相对 `assets/`） | 来源 |
-|------|------------------------|------|
-| `kzjava.jar` | `./kzjava.jar` | Kanzi Engine（`%KANZI_HOME%\Engine\lib\java\`） |
-| `DroidDataSourceplugin.jar` | `lib/java/Release/DroidDataSourceplugin.jar` | 仓库 `plugins/datasource/lib/java/Release/` |
-| `kzjvm.dll` | 与 **`launcher.exe` 同目录** | `%KANZI_HOME%\Engine\plugins\jvm\lib\win64\...` |
+VS 编译 `launcher` 时，CMake 会把 `plugins/` 中的 JAR/DLL **部署**到运行所需位置（`assets/` 与 exe 旁）。若缺文件，按 `plugins/README.md` 从 Kanzi 安装包复制到 `plugins/` 后重新编译。
 
-| 现象 | 原因 | 处理 |
-|------|------|------|
-| `kzjvm: Could not find ./kzjava.jar` | 工作目录改为 `assets/` 后未部署 Java 运行时 | 重新 CMake 生成并编译（`deploy-java-runtime.cmake` 会自动复制）；或手动把 `kzjava.jar` 放到 `assets/` |
-| `Failed to load plugin 'kzjvm.dll'` | JVM 桥接 DLL 不在 exe 目录，或 JDK 未配置 | 确认 `kzjvm.dll` 在 exe 旁；`PATH` 含 `%JAVA_HOME%\bin\server`（`jvm.dll`） |
-
-> 官方模板默认工作目录为 `Application/bin`，其中预置了 `kzjava.jar` 与 `lib/java/Release/`。迁到 `assets/` 后需由构建脚本补齐上述文件。
-
-`install_kanzi_libs_to_output_directory()` 只部署 Kanzi **核心**运行时，**不包含** `kzjava.jar` / 业务 Java 插件 JAR。
+| 现象 | 处理 |
+|------|------|
+| `Could not find ./kzjava.jar` | 放置 `plugins/java/kzjava.jar` 后重新编译 |
+| `Failed to load plugin 'kzjvm.dll'` | 放置 `plugins/jvm/lib/win64/.../kzjvm.dll` 后重新编译；并配置 JDK（`jvm.dll` 在 `PATH`） |
 
 ## 导出
 

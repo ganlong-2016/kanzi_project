@@ -93,6 +93,7 @@ endif()
 
 # KZB / cfg 导出目录（与 launcher.kzproj 的 BinaryExportDirectory 一致：仓库根 assets/）
 get_filename_component(KANZI_KZB_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/../../../assets" ABSOLUTE)
+get_filename_component(REPO_PLUGINS_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/../../../plugins" ABSOLUTE)
 
 set_target_properties(launcher PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${KANZI_KZB_DIRECTORY}")
 set_target_properties(launcher PROPERTIES VS_DEBUGGER_ENVIRONMENT "${KANZI_VS_DEBUGGER_ENVIRONMENT}")
@@ -101,5 +102,5 @@ install_kanzi_libs_to_output_directory()
 install_kzbs_to_output_directory("${KANZI_KZB_DIRECTORY}")
 install_target_to_output_directory(launcher)
 
-include(${CMAKE_CURRENT_LIST_DIR}/cmake/deploy-java-runtime.cmake)
-deploy_kanzi_java_runtime(launcher "${KANZI_KZB_DIRECTORY}")
+include(${CMAKE_CURRENT_LIST_DIR}/cmake/deploy-plugins.cmake)
+deploy_plugins_from_repo(launcher "${KANZI_KZB_DIRECTORY}" "${REPO_PLUGINS_DIRECTORY}")
