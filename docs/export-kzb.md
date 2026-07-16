@@ -47,3 +47,21 @@ flowchart LR
 - kzb 是构建产物,**不入库**(`.gitignore` 已忽略 `*.kzb` / `*.kzb.cfg` / `*.kzb.txt`)。
 - 若需把某些 kzb 作为对 Android 的交付物入库,单独评估并在 `.gitignore` 放行。
 - 大源资源(png/glb/otf/MeshData…)走 **Git LFS**(`.gitattributes`)。
+
+## 7. Visual Studio 本地运行（Windows）
+
+C++ 入口 `launcher.cpp` 在启动时加载:
+
+```cpp
+configuration.binaryName = "launcher.kzb.cfg";
+```
+
+CMake 将 VS **工作目录**设为 `IVI/launcher/Application/bin`。因此该目录下**必须**有 Studio 导出的 `launcher.kzb.cfg`（及其中列出的各 `.kzb`），仅有 `application.cfg` 不够。
+
+| 现象 | 原因 | 处理 |
+|------|------|------|
+| `Cannot open ... launcher.kzb.cfg` | 未 Export KZB，或导出到了别的目录 | Studio **File > Export > Export KZB**；确认 Binary Export Directory = `..\Application\bin` |
+| 能开 cfg 但黑屏/缺资源 | 依赖 kzb 未导出或未放在同目录 | 按 §2 顺序导出 `common`、各模块、`launcher` 到同一 `bin` |
+| DLL 找不到 | Kanzi Engine 运行时未安装或未复制到输出目录 | 重新 CMake 生成；`install_kanzi_libs_to_output_directory()` 会处理引擎 DLL |
+
+详见 `IVI/launcher/Application/bin/README.md`。
