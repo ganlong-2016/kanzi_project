@@ -15,7 +15,7 @@ android {
 
         sourceSets {
             main {
-                assets.srcDirs = [new File(rootDir, "../../../bin")]
+                assets.srcDirs = [new File(rootDir, "../../../../../assets")]
             }
         }
 

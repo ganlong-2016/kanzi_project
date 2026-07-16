@@ -91,9 +91,12 @@ endif()
 # [Car CodeBehind lib end]. Do not remove or change this identifier.
 # [CodeBehind libs end]. Do not remove this identifier.
 
-set_target_properties(launcher PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
+# KZB / cfg 导出目录（与 launcher.kzproj 的 BinaryExportDirectory 一致：仓库根 assets/）
+get_filename_component(KANZI_KZB_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/../../../assets" ABSOLUTE)
+
+set_target_properties(launcher PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${KANZI_KZB_DIRECTORY}")
 set_target_properties(launcher PROPERTIES VS_DEBUGGER_ENVIRONMENT "${KANZI_VS_DEBUGGER_ENVIRONMENT}")
 
 install_kanzi_libs_to_output_directory()
-install_kzbs_to_output_directory(${CMAKE_SOURCE_DIR}/bin)
+install_kzbs_to_output_directory("${KANZI_KZB_DIRECTORY}")
 install_target_to_output_directory(launcher)

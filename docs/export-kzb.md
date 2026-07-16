@@ -56,12 +56,14 @@ C++ 入口 `launcher.cpp` 在启动时加载:
 configuration.binaryName = "launcher.kzb.cfg";
 ```
 
-CMake 将 VS **工作目录**设为 `IVI/launcher/Application/bin`。因此该目录下**必须**有 Studio 导出的 `launcher.kzb.cfg`（及其中列出的各 `.kzb`），仅有 `application.cfg` 不够。
+CMake 将 VS **工作目录**设为仓库根 **`assets/`**（与 `launcher.kzproj` 的 `BinaryExportDirectory` 一致）。该目录下**必须**有 Studio 导出的 `launcher.kzb.cfg`（及其中列出的各 `.kzb`）。
 
 | 现象 | 原因 | 处理 |
 |------|------|------|
-| `Cannot open ... launcher.kzb.cfg` | 未 Export KZB，或导出到了别的目录 | Studio **File > Export > Export KZB**；确认 Binary Export Directory = `..\Application\bin` |
-| 能开 cfg 但黑屏/缺资源 | 依赖 kzb 未导出或未放在同目录 | 按 §2 顺序导出 `common`、各模块、`launcher` 到同一 `bin` |
-| DLL 找不到 | Kanzi Engine 运行时未安装或未复制到输出目录 | 重新 CMake 生成；`install_kanzi_libs_to_output_directory()` 会处理引擎 DLL |
+| `Cannot open ... launcher.kzb.cfg` | 未 Export KZB，或导出目录与 VS 工作目录不一致 | Studio 导出到 `assets/`；重新 CMake 生成 VS 方案 |
+| 能开 cfg 但黑屏/缺资源 | 依赖 kzb 未导出或未放在同目录 | 按 §2 顺序导出到同一 `assets/` |
+| DLL 找不到 | Kanzi Engine 运行时未安装或未复制到输出目录 | 重新 CMake 生成 |
 
-详见 `IVI/launcher/Application/bin/README.md`。
+> **不必**使用 `IVI/launcher/Application/bin`：只要 **导出目录 = 进程工作目录** 即可。本工程选用 `assets/` 是为与 `datasource.xml` 同目录。
+
+详见 [`assets/README.md`](../assets/README.md)。
