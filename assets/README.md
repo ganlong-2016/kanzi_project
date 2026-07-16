@@ -18,6 +18,17 @@ CMake 已将 `launcher` 的 **工作目录** 设为绝对路径指向本目录�
 
 缺 `launcher.kzb.cfg` 时会报错：`Cannot open the kzb configuration file 'launcher.kzb.cfg'`。
 
+## Engine Plugins（`kzshapes.dll` 等）
+
+`launcher` 引用了 **demo** 模块；demo 使用 **Kanzi Shapes**（`Rectangle2D` 等），导出后的 `launcher.kzb.cfg` 会要求加载 `kzshapes.dll`。
+
+| 现象 | 原因 | 处理 |
+|------|------|------|
+| `Failed to load plugin 'kzshapes.dll'` | 插件 DLL 不在 **`launcher.exe` 同目录**（与 kzb 工作目录 `assets/` 无关） | 确认已安装 Kanzi Shapes；重新 CMake 生成并编译（CMake 会尝试从 `KANZI_HOME` 复制）；或手动复制 `Engine/plugins/shapes/lib/win64/.../kzshapes.dll` 到 exe 输出目录 |
+| 仍失败 | VS 方案与插件变体不一致（Release/Debug、VS2019/2022、GL/非 GL） | Studio **Project > Properties** 与 VS 配置对齐；在 demo 中重新 Import `kzshapes.dll` 对应目录 |
+
+`install_kanzi_libs_to_output_directory()` 只部署 Kanzi **核心**运行时，**不包含** Engine Plugins。
+
 ## 导出
 
 1. `launcher.kzproj` → **Project > Properties** → Binary Export Directory = `..\..\..\assets`
