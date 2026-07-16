@@ -27,7 +27,8 @@ flowchart LR
 | 属性变化 | `On Property Change` | 监视节点属性;做"值变化→派生动作"。注意与绑定重复时优先用绑定 |
 | 节点挂载初始化 | `On Attached` | 进页面时的一次性动作(上报曝光、Write Log 调试) |
 | 定时 | `On Timer` | 轮播、演示模式;量产 UI 慎用(耗电/性能) |
-| 状态进出 | `Message Trigger > State Manager > Entered State / Left State` | 配 Condition(Message Argument `State == X`)做"进入某状态才做某事",如进入 Fault 播提示音消息 |
+| 状态进出 | `Message Trigger > State Manager > Entered State / Left State` | 配 Condition(Message Argument `State == X`)做"进入某状态才做某事",如进入 Fault 播提示音消息;3D 摄像头切视角时清手势旋转见 [camera-view-and-gesture.md](camera-view-and-gesture.md) |
+| 滚动开始 | `Scroll View: Scroll Started` | 3D 场景中与 ResetCameraRotation State1 配合,滑动期间不覆盖手势绑定 |
 | 自定义命令 | `Message Trigger > <自定义 Msg_*>` | 子模块 → launcher 的事件通道(见 [data-io-nodes.md §3.2](data-io-nodes.md)) |
 | 列表选择 | `List Box: Item Selected` | 菜单/列表页导航 |
 

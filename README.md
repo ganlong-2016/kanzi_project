@@ -61,6 +61,7 @@ flowchart TB
 - [状态机总纲 + 5 个状态机规格](docs/state-machines/README.md):[充电](docs/state-machines/sm-charging.md) / [驾驶模式](docs/state-machines/sm-drive-mode.md) / [底盘](docs/state-machines/sm-chassis.md) / [轮胎](docs/state-machines/sm-tires.md) / [空调](docs/state-machines/sm-hvac.md)
 - [Trigger 指南(触发器/条件/动作)](docs/trigger-guide.md)
 - [car 3D 模型分组（轮胎 / 车门）](docs/car-model-grouping.md) ⭐ **当前**
+- [3D 摄像头：视角状态机与手势旋转（CameraView + ResetCameraRotation）](docs/architecture/camera-view-and-gesture.md)
 - [数据源:插件 + XML 契约 + 绑定(读/写)](docs/data-source.md)
 - [demo 一站式搭建文档](docs/demo-build-all.md)（暂停维护,样板参考）
 - [Kanzi Studio 操作手册(手把手,含 common 建哪些资源)](docs/kanzi-studio-guide.md)
