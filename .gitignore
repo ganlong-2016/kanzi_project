@@ -34,14 +34,9 @@
 *.kzb.cfg
 *.kzb.txt
 
-# VS 构建时从 plugins/ 镜像到 assets/ 的文件（源在 plugins/）
+# VS 构建时镜像到 assets/ 的运行时文件（源：plugins/ 或 KANZI_HOME）
 assets/kzjava.jar
 assets/lib/
-
-# Kanzi 安装包复制到 plugins/ 的二进制（本地准备，不入库）
-plugins/java/
-plugins/jvm/
-plugins/shapes/
 
 # ===== OS / 编辑器 =====
 .DS_Store

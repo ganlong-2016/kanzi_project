@@ -254,10 +254,8 @@ flowchart TB
 │
 ├── assets/
 │   └── datasource.xml              # ★ 数据契约单一来源(Studio 与运行时共用)
-├── plugins/                        # ★ Kanzi 引擎插件统一目录（见 plugins/README.md）
-│   ├── datasource/                 # 数据源插件 jar
-│   ├── java/                       # kzjava.jar（本地从 Kanzi 复制）
-│   └── jvm/                        # kzjvm.dll 等
+├── plugins/                        # 业务 Kanzi 插件（自研 JAR/DLL）
+│   └── datasource/                 # 数据源插件
 ├── scripts/                        # 辅助脚本(模型分组/迁移/CI 导出)
 └── docs/                           # 架构、规范、操作手册、PlantUML 图源
 ```

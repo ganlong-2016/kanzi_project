@@ -103,4 +103,4 @@ install_kzbs_to_output_directory("${KANZI_KZB_DIRECTORY}")
 install_target_to_output_directory(launcher)
 
 include(${CMAKE_CURRENT_LIST_DIR}/cmake/deploy-plugins.cmake)
-deploy_plugins_from_repo(launcher "${KANZI_KZB_DIRECTORY}" "${REPO_PLUGINS_DIRECTORY}")
+deploy_kanzi_plugins(launcher "${KANZI_KZB_DIRECTORY}" "${REPO_PLUGINS_DIRECTORY}")

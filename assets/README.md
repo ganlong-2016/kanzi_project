@@ -18,16 +18,17 @@ CMake 已将 `launcher` 的 **工作目录** 设为绝对路径指向本目录�
 
 缺 `launcher.kzb.cfg` 时会报错：`Cannot open the kzb configuration file 'launcher.kzb.cfg'`。
 
-## 插件（`plugins/`）
+## 插件
 
-Kanzi 引擎插件**统一放在仓库根 [`plugins/`](../plugins/README.md)**，不在此目录维护副本。
-
-VS 编译 `launcher` 时，CMake 会把 `plugins/` 中的 JAR/DLL **部署**到运行所需位置（`assets/` 与 exe 旁）。若缺文件，按 `plugins/README.md` 从 Kanzi 安装包复制到 `plugins/` 后重新编译。
+| 类型 | 位置 |
+|------|------|
+| 业务插件（数据源 JAR） | 仓库 [`plugins/`](../plugins/README.md) |
+| 系统插件（`kzjvm.dll`、`kzjava.jar`） | Kanzi 安装目录；编译时自动部署 |
 
 | 现象 | 处理 |
 |------|------|
-| `Could not find ./kzjava.jar` | 放置 `plugins/java/kzjava.jar` 后重新编译 |
-| `Failed to load plugin 'kzjvm.dll'` | 放置 `plugins/jvm/lib/win64/.../kzjvm.dll` 后重新编译；并配置 JDK（`jvm.dll` 在 `PATH`） |
+| `Could not find ./kzjava.jar` | 确认 `KANZI_HOME` 正确，重新编译 |
+| `Failed to load plugin 'kzjvm.dll'` | 确认安装目录有 `Studio\Bin\EnginePlugins\<VS配置>\kzjvm.dll`；配置 JDK |
 
 ## 导出
 

@@ -48,7 +48,7 @@ flowchart TB
 | `IVI/car/` | 功能子工程 | 3D 卡车(`3D Assets/`、`MeshData/`、`Shaders/`) |
 | `IVI/car_setting/` | 功能子工程 | 车辆设置(纯 2D UI) |
 | `IVI/environment/` | 功能子工程 | 3D 场景 / 光照贴图 |
-| `plugins/` | **Kanzi 引擎插件（统一目录）** | `datasource` JAR；`java/kzjava.jar`、`jvm/.../kzjvm.dll` 等本地从 Kanzi 复制，见 [`plugins/README.md`](plugins/README.md) |
+| `plugins/` | **业务 Kanzi 插件** | `DroidDataSourceplugin.jar`；系统插件（`kzjvm` 等）用 Kanzi 安装目录，见 [`plugins/README.md`](plugins/README.md) |
 
 > 子工程**不要求**完整目录结构,按需即可(只有 `launcher` 带 `Application/`)。
 
