@@ -34,6 +34,10 @@
 *.kzb.cfg
 *.kzb.txt
 
+# VS 构建时复制到 assets/ 的 Java 运行时（源文件在 KANZI_HOME / plugins/datasource）
+assets/kzjava.jar
+assets/lib/
+
 # ===== OS / 编辑器 =====
 .DS_Store
 Thumbs.db

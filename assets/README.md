@@ -18,16 +18,24 @@ CMake 已将 `launcher` 的 **工作目录** 设为绝对路径指向本目录�
 
 缺 `launcher.kzb.cfg` 时会报错：`Cannot open the kzb configuration file 'launcher.kzb.cfg'`。
 
-## Engine Plugins（`kzshapes.dll` 等）
+## Java 插件运行时（`DroidDataSourceplugin`）
 
-`launcher` 引用了 **demo** 模块；demo 使用 **Kanzi Shapes**（`Rectangle2D` 等），导出后的 `launcher.kzb.cfg` 会要求加载 `kzshapes.dll`。
+`launcher` 注册了 **Java 数据源插件**。VS 工作目录为 `assets/` 时，引擎会在该目录查找：
+
+| 文件 | 路径（相对 `assets/`） | 来源 |
+|------|------------------------|------|
+| `kzjava.jar` | `./kzjava.jar` | Kanzi Engine（`%KANZI_HOME%\Engine\lib\java\`） |
+| `DroidDataSourceplugin.jar` | `lib/java/Release/DroidDataSourceplugin.jar` | 仓库 `plugins/datasource/lib/java/Release/` |
+| `kzjvm.dll` | 与 **`launcher.exe` 同目录** | `%KANZI_HOME%\Engine\plugins\jvm\lib\win64\...` |
 
 | 现象 | 原因 | 处理 |
 |------|------|------|
-| `Failed to load plugin 'kzshapes.dll'` | 插件 DLL 不在 **`launcher.exe` 同目录**（与 kzb 工作目录 `assets/` 无关） | 确认已安装 Kanzi Shapes；重新 CMake 生成并编译（CMake 会尝试从 `KANZI_HOME` 复制）；或手动复制 `Engine/plugins/shapes/lib/win64/.../kzshapes.dll` 到 exe 输出目录 |
-| 仍失败 | VS 方案与插件变体不一致（Release/Debug、VS2019/2022、GL/非 GL） | Studio **Project > Properties** 与 VS 配置对齐；在 demo 中重新 Import `kzshapes.dll` 对应目录 |
+| `kzjvm: Could not find ./kzjava.jar` | 工作目录改为 `assets/` 后未部署 Java 运行时 | 重新 CMake 生成并编译（`deploy-java-runtime.cmake` 会自动复制）；或手动把 `kzjava.jar` 放到 `assets/` |
+| `Failed to load plugin 'kzjvm.dll'` | JVM 桥接 DLL 不在 exe 目录，或 JDK 未配置 | 确认 `kzjvm.dll` 在 exe 旁；`PATH` 含 `%JAVA_HOME%\bin\server`（`jvm.dll`） |
 
-`install_kanzi_libs_to_output_directory()` 只部署 Kanzi **核心**运行时，**不包含** Engine Plugins。
+> 官方模板默认工作目录为 `Application/bin`，其中预置了 `kzjava.jar` 与 `lib/java/Release/`。迁到 `assets/` 后需由构建脚本补齐上述文件。
+
+`install_kanzi_libs_to_output_directory()` 只部署 Kanzi **核心**运行时，**不包含** `kzjava.jar` / 业务 Java 插件 JAR。
 
 ## 导出
 
