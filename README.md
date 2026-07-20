@@ -54,6 +54,7 @@ flowchart TB
 
 ## 文档索引
 
+- [Windows 桌面 VS 运行 / Java 插件崩溃排查](docs/windows-desktop-run.md)
 - [架构总览与设计原则](docs/architecture.md)
 - [Kanzi Studio 中控项目标准架构(官方文档对照:脑暴图/架构图/时序图/标准文件结构/差距分析)](docs/kanzi-standard-architecture.md)
 - [命名规范(单页执行版)](docs/naming-conventions.md)
