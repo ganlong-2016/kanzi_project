@@ -26,13 +26,23 @@ function(deploy_kanzi_plugins target kzb_directory plugins_directory)
     if(NOT EXISTS "${_deploy_script}")
         message(FATAL_ERROR "deploy-runtime.cmake not found: ${_deploy_script}")
     endif()
+    set(_deploy_args
+        -DCONFIG=$<CONFIG>
+        "-DKZB_DIRECTORY=${kzb_directory}"
+        "-DPLUGINS_DIRECTORY=${plugins_directory}"
+    )
+    if(KANZI_STUDIO_HOME)
+        list(APPEND _deploy_args "-DKANZI_STUDIO_HOME=${KANZI_STUDIO_HOME}")
+    endif()
+    if(DEFINED ENV{KANZI_HOME})
+        list(APPEND _deploy_args "-DKANZI_HOME=$ENV{KANZI_HOME}")
+    elseif(DEFINED KANZI_ROOT)
+        list(APPEND _deploy_args "-DKANZI_HOME=${KANZI_ROOT}")
+    endif()
+
     add_custom_command(TARGET ${target} POST_BUILD
-        COMMAND ${CMAKE_COMMAND}
-            -DCONFIG=$<CONFIG>
-            -DKZB_DIRECTORY=${kzb_directory}
-            -DPLUGINS_DIRECTORY=${plugins_directory}
-            -P ${_deploy_script}
-        COMMENT "Deploy Kanzi Java runtime (kzjava.jar + lib/java/$<CONFIG>)"
+        COMMAND ${CMAKE_COMMAND} ${_deploy_args} -P ${_deploy_script}
+        COMMENT "Deploy Kanzi Java runtime (EnginePlugins/*.jar -> assets/)"
         VERBATIM
     )
 endfunction()

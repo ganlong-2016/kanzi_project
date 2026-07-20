@@ -27,13 +27,17 @@ C++ 应用运行时，当前目录下应有：
 
 ```
 <KANZI_STUDIO_HOME>/Studio/Bin/EnginePlugins/
-├── GL_vs2019_Debug/kzjava.jar      ← VS **Debug** 时用
-└── GL_vs2019_Release/kzjava.jar    ← VS **Release** 时用
+├── GL_vs2019_Debug/
+│   ├── kzjava.jar
+│   └── kzjvm.jar          ← 工作目录也要 ./kzjvm.jar
+└── GL_vs2019_Release/
+    ├── kzjava.jar
+    └── kzjvm.jar
 ```
 
-示例：`D:\Kanzi 3_9_15_83\Studio\Bin\EnginePlugins\GL_vs2019_Debug\kzjava.jar`
+CMake 编译时会把**匹配 VS 配置**的目录下 **所有 `*.jar`** 复制到 `assets/`（工作目录根）。若只有 `Release` 目录、没有 `Debug`，会自动回退到 `GL_vs2019_Release`。
 
-设置环境变量（Workspace 与 Studio 分开时）：
+设置环境变量（或在 CMake 配置时 `-DKANZI_STUDIO_HOME=...`）：
 
 ```
 KANZI_STUDIO_HOME=D:\Kanzi 3_9_15_83
@@ -85,6 +89,7 @@ VS **Debug** 编译 `launcher` 后确认：
 
 ```
 assets/kzjava.jar
+assets/kzjvm.jar
 assets/lib/java/Debug/DroidDataSourceplugin.jar
 ```
 

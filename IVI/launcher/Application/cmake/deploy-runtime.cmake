@@ -1,9 +1,5 @@
 # 按 Kanzi 官方 Application/bin 布局部署运行时文件。
-# 参考:
-# - Installing plugins: Preview Working Directory = ../Application/bin
-# - Java plugins (3.9.5+): lib/java/Debug|Release/<plugin>.jar
-# - kzjava.jar: 工作目录根下的 ./kzjava.jar
-# - Studio 自带 kzjava.jar: Studio/Bin/EnginePlugins/GL_vs<VS>_<Debug|Release>/
+# 工作目录根下需要 Studio EnginePlugins 目录中的系统 JAR（至少 kzjava.jar、kzjvm.jar）。
 
 cmake_minimum_required(VERSION 3.15)
 
@@ -16,21 +12,33 @@ endif()
 
 if(CONFIG MATCHES "Debug|RelWithDebInfo")
     set(_build_suffix "Debug")
+    set(_fallback_suffix "Release")
 else()
     set(_build_suffix "Release")
+    set(_fallback_suffix "Debug")
 endif()
 
-# --- 解析 Studio 根目录 ---
-set(_studio_candidates)
-if(DEFINED ENV{KANZI_STUDIO_HOME} AND NOT "$ENV{KANZI_STUDIO_HOME}" STREQUAL "")
-    list(APPEND _studio_candidates "$ENV{KANZI_STUDIO_HOME}")
-endif()
-if(DEFINED ENV{KANZI_HOME} AND NOT "$ENV{KANZI_HOME}" STREQUAL "")
-    list(APPEND _studio_candidates "$ENV{KANZI_HOME}")
-endif()
+macro(_append_studio_roots _list_var)
+    if(DEFINED KANZI_STUDIO_HOME AND NOT "${KANZI_STUDIO_HOME}" STREQUAL "")
+        list(APPEND ${_list_var} "${KANZI_STUDIO_HOME}")
+    endif()
+    if(DEFINED ENV{KANZI_STUDIO_HOME} AND NOT "$ENV{KANZI_STUDIO_HOME}" STREQUAL "")
+        list(APPEND ${_list_var} "$ENV{KANZI_STUDIO_HOME}")
+    endif()
+    if(DEFINED KANZI_HOME AND NOT "${KANZI_HOME}" STREQUAL "")
+        list(APPEND ${_list_var} "${KANZI_HOME}")
+    endif()
+    if(DEFINED ENV{KANZI_HOME} AND NOT "$ENV{KANZI_HOME}" STREQUAL "")
+        list(APPEND ${_list_var} "$ENV{KANZI_HOME}")
+    endif()
+endmacro()
+
+set(_studio_roots)
+_append_studio_roots(_studio_roots)
+list(REMOVE_DUPLICATES _studio_roots)
 
 set(_engine_plugins_dir "")
-foreach(_root IN LISTS _studio_candidates)
+foreach(_root IN LISTS _studio_roots)
     foreach(_bin IN ITEMS "Studio/Bin" "Bin")
         set(_candidate "${_root}/${_bin}/EnginePlugins")
         if(IS_DIRECTORY "${_candidate}")
@@ -43,25 +51,38 @@ foreach(_root IN LISTS _studio_candidates)
     endif()
 endforeach()
 
-# --- kzjava.jar（系统，来自 Studio EnginePlugins，与 VS Debug/Release 对齐）---
-set(_kzjava_src "")
+# 先匹配 VS 配置（Debug/Release），再回退到另一套（本机可能只有 Release 目录）
+set(_variant_dirs)
 if(_engine_plugins_dir)
-    foreach(_vs IN ITEMS "vs2019" "vs2022")
-        set(_path "${_engine_plugins_dir}/GL_${_vs}_${_build_suffix}/kzjava.jar")
-        if(EXISTS "${_path}")
-            set(_kzjava_src "${_path}")
-            break()
-        endif()
+    foreach(_suffix IN ITEMS "${_build_suffix}" "${_fallback_suffix}")
+        foreach(_vs IN ITEMS "vs2019" "vs2022")
+            list(APPEND _variant_dirs "${_engine_plugins_dir}/GL_${_vs}_${_suffix}")
+        endforeach()
     endforeach()
 endif()
 
-if(_kzjava_src)
+set(_selected_variant "")
+foreach(_dir IN LISTS _variant_dirs)
+    if(IS_DIRECTORY "${_dir}" AND (EXISTS "${_dir}/kzjava.jar" OR EXISTS "${_dir}/kzjvm.jar"))
+        set(_selected_variant "${_dir}")
+        break()
+    endif()
+endforeach()
+
+if(_selected_variant)
     file(MAKE_DIRECTORY "${KZB_DIRECTORY}")
-    execute_process(COMMAND "${CMAKE_COMMAND}" -E copy_if_different
-        "${_kzjava_src}" "${KZB_DIRECTORY}/kzjava.jar")
-    message(STATUS "deploy-runtime: kzjava.jar <- ${_kzjava_src}")
+    file(GLOB _system_jars "${_selected_variant}/*.jar")
+    foreach(_jar IN LISTS _system_jars)
+        get_filename_component(_jar_name "${_jar}" NAME)
+        execute_process(COMMAND "${CMAKE_COMMAND}" -E copy_if_different
+            "${_jar}" "${KZB_DIRECTORY}/${_jar_name}")
+        message(STATUS "deploy-runtime: ${_jar_name} <- ${_jar}")
+    endforeach()
 else()
-    message(WARNING "deploy-runtime: kzjava.jar not found under ${_engine_plugins_dir}/GL_vs*_${_build_suffix}/")
+    message(WARNING
+        "deploy-runtime: no EnginePlugins variant with kzjava.jar/kzjvm.jar found.\n"
+        "  searched: ${_variant_dirs}\n"
+        "  set KANZI_STUDIO_HOME (e.g. D:/Kanzi 3_9_15_83) and rebuild.")
 endif()
 
 # --- 业务 Java 插件：仓库 plugins/ -> lib/java/<Debug|Release>/ ---

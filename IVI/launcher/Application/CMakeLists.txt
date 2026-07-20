@@ -102,5 +102,13 @@ install_kanzi_libs_to_output_directory()
 install_kzbs_to_output_directory("${KANZI_KZB_DIRECTORY}")
 install_target_to_output_directory(launcher)
 
+# Studio 安装根（与 KanziWorkspace 分开时必设，例如 D:/Kanzi 3_9_15_83）
+if(NOT DEFINED KANZI_STUDIO_HOME AND DEFINED ENV{KANZI_STUDIO_HOME})
+    set(KANZI_STUDIO_HOME "$ENV{KANZI_STUDIO_HOME}" CACHE PATH "Kanzi Studio install root")
+endif()
+if(KANZI_STUDIO_HOME)
+    message(STATUS "KANZI_STUDIO_HOME=${KANZI_STUDIO_HOME}")
+endif()
+
 include(${CMAKE_CURRENT_LIST_DIR}/cmake/deploy-plugins.cmake)
 deploy_kanzi_plugins(launcher "${KANZI_KZB_DIRECTORY}" "${REPO_PLUGINS_DIRECTORY}")
