@@ -177,13 +177,20 @@ CMake 输出应含：`deploy-runtime: kzjava.jar <- .../GL_vs2019_Debug/kzjava.j
 
 ### 优先排查（按顺序）
 
-1. **Debug/Release 必须成套**  
-   VS **Debug** 时，`assets/kzjava.jar` / `kzjvm.jar` 应来自：
+1. **Debug/Release 必须成套（最常见）**  
+   你当前日志已加载 `GL_vs2019_Debug_DLL\kzjvm.dll` + `jvm.dll` + `java.dll`，然后空指针——说明 **jar 已找到**，崩在 JNI。  
+   VS **Debug** 时，`assets` 里的 jar **必须**来自：
    ```
-   ...\EnginePlugins\GL_vs2019_Debug\
+   D:\Kanzi 3_9_15_83\Studio\Bin\EnginePlugins\GL_vs2019_Debug\
    ```
-   若编译日志显示复制自 `GL_vs2019_Release`，而引擎 DLL 是 `GL_vs2019_Debug_DLL`，极易 JNI 空指针。  
-   → 确认 `D:\Kanzi 3_9_15_83\Studio\Bin\EnginePlugins\GL_vs2019_Debug\` 下有 jar，重新编译；或改用 VS **Release** 整套跑。
+   **不要**用 `GL_vs2019_Release` 的 jar 配 Debug 引擎。
+
+   手动强制同步后重跑：
+   ```bat
+   copy /Y "D:\Kanzi 3_9_15_83\Studio\Bin\EnginePlugins\GL_vs2019_Debug\*.jar" ^
+     "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\assets\"
+   ```
+   或改用 VS **Release**，并复制 `GL_vs2019_Release\*.jar`。
 
 2. **看 Output 里崩溃前最后几行 Kanzi 日志**  
    是否还有 `Loading plugin 'DroidDataSourceplugin'`、数据源/XML 相关 error。把从 `Kanzi version` 到崩溃前的日志贴出来最有用。
