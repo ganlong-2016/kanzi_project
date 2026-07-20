@@ -1,5 +1,8 @@
 # 部署 Kanzi 运行时：业务插件来自仓库 plugins/，系统 kzjava.jar 来自 Studio EnginePlugins。
 
+# include() 时记录本文件目录；函数体内 CMAKE_CURRENT_LIST_DIR 会指向调用方 CMakeLists.txt
+get_filename_component(KANZI_LAUNCHER_CMAKE_DIR "${CMAKE_CURRENT_LIST_DIR}" ABSOLUTE)
+
 function(deploy_kanzi_plugins target kzb_directory plugins_directory)
     if(NOT WIN32 OR ANDROID)
         return()
@@ -19,7 +22,10 @@ function(deploy_kanzi_plugins target kzb_directory plugins_directory)
     endif()
 
     # Java 运行时：官方 Application/bin 布局（工作目录 = assets/）
-    set(_deploy_script "${CMAKE_CURRENT_LIST_DIR}/deploy-runtime.cmake")
+    set(_deploy_script "${KANZI_LAUNCHER_CMAKE_DIR}/deploy-runtime.cmake")
+    if(NOT EXISTS "${_deploy_script}")
+        message(FATAL_ERROR "deploy-runtime.cmake not found: ${_deploy_script}")
+    endif()
     add_custom_command(TARGET ${target} POST_BUILD
         COMMAND ${CMAKE_COMMAND}
             -DCONFIG=$<CONFIG>
