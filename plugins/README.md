@@ -96,3 +96,64 @@ assets/lib/java/Debug/DroidDataSourceplugin.jar
 CMake 输出应含：`deploy-runtime: kzjava.jar <- .../GL_vs2019_Debug/kzjava.jar`
 
 若仍报 `Could not find ./kzjava.jar`：检查 `KANZI_STUDIO_HOME`、是否**重新编译**（非仅 F5）、以及 `assets/` 下文件是否生成。
+
+---
+
+## FAQ：为什么要把 jar 复制到 `assets/`，不能直接用安装目录吗？
+
+### 简短结论
+
+**不是冲突，是引擎硬编码了相对路径。**  
+报错文案是 `Could not find ./kzjvm.jar` —— 前面的 **`./`** 表示：只在**进程当前工作目录**下找同名文件，**没有**公开的 `application.cfg` / 环境变量去指定绝对路径。
+
+官方默认工作目录是 `Application/bin`，那里同时放 kzb **和** 这些 jar。本工程工作目录改成了 `assets/`（为了和 kzb / `datasource.xml` 同目录），所以必须在 `assets/` 复现同样布局；复制是最稳妥的做法。
+
+### DLL 和 JAR 为什么待遇不同？
+
+| 文件 | 谁加载 | 搜索规则 | 能否留在安装目录 |
+|------|--------|----------|------------------|
+| `kzjvm.dll` / `kzjava.dll` / `kzcore*.dll` | Windows `LoadLibrary` | exe 目录、`PATH`、Kanzi `Engine\lib\Win64\...` | **可以**（你日志里已从 Workspace Engine 加载） |
+| `kzjava.jar` / `kzjvm.jar` | `kzjvm` 插件启动 JVM 时 | **写死**为工作目录下的 `./xxx.jar` | **不能直接引用**（除非工作目录就设到那个目录） |
+
+所以：系统 DLL 继续用安装目录没问题；系统 JAR 必须出现在**工作目录根**。
+
+### 能不能改工作目录到 Studio 的 EnginePlugins？
+
+不行。工作目录若设成：
+
+`D:\Kanzi 3_9_15_83\Studio\Bin\EnginePlugins\GL_vs2019_Release`
+
+引擎能找到 jar，但找不到：
+
+- `launcher.kzb.cfg` / `*.kzb`
+- `application.cfg`
+- `datasource.xml`
+
+这些在 `assets/`。**一个进程只有一个当前工作目录**，不能同时指向两处。
+
+### 有没有“配置路径”的官方开关？
+
+公开文档里：
+
+- 有：Preview Working Directory、`application.cfg` 里的 ModuleNames / BinaryName 等  
+- **没有**：`KzJavaJarPath=`、`JavaClasspath=` 这类可把 `kzjava.jar` 指到安装目录的选项  
+
+因此 VS 侧常见做法就是：工作目录 = 放 kzb 的目录，构建时把所需 jar **镜像**进去（本仓库 CMake `deploy-runtime.cmake`）。
+
+### 复制会不会有版本冲突？
+
+一般不会：
+
+- 复制的是 **当前 Kanzi 安装里** 与 Debug/Release 匹配的那一套 jar  
+- `assets/*.jar` 已在 `.gitignore`，不入库  
+- 换 Kanzi 版本后重新编译即覆盖  
+
+真正要避的是：**工作目录里混用旧 jar + 新 `kzjvm.dll`**（所以用 `copy_if_different` 从当前 `KANZI_STUDIO_HOME` 同步）。
+
+### 可选替代（都不比复制更简单）
+
+1. **工作目录改回官方 `Application/bin`**，jar 也放那里 —— 仍是“放进工作目录”，只是目录名不是 `assets/`  
+2. **目录联接 / 符号链接** 把 `assets\kzjvm.jar` 链到安装目录 —— Windows 权限/便携性差，CI 易碎  
+3. **改 Kanzi 源码** 支持绝对路径 —— 超出本项目范围  
+
+**推荐**：保持现状 —— 源在安装目录，构建时同步到工作目录。
