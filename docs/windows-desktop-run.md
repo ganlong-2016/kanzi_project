@@ -111,6 +111,24 @@ Copy-Item -Force "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\plugins\datasourc
 > 多为 HotSpot 的隐式空指针检查/safepoint 机制，被 JVM 自己接住，**不是崩溃**；
 > 以 Ctrl+F5 的实际报错和 `assets\hs_err_pid*.log` 是否生成为准。
 
+## 为什么 Ctrl+F5 正常、F5 调试会"报 0xC0000005"？
+
+HotSpot JVM **故意**用访问冲突实现隐式空指针检查和 safepoint 轮询，
+并用自己的异常处理器接住恢复：
+
+| 运行方式 | 异常去向 |
+|---------|---------|
+| Ctrl+F5（无调试器） | 直接交给 JVM 处理器，静默恢复 |
+| F5（挂调试器） | 调试器有 first-chance 知情权，VS 先拦下来报告，再交还 JVM |
+
+F5 下若中断，按 **继续(F5)** 即可照常运行；程序并没有崩。
+
+一劳永逸：**调试 → 窗口 → 异常设置**(Ctrl+Alt+E) → Win32 Exceptions →
+`c0000005 Access violation`：
+
+- 取消勾选（未处理的真访问冲突仍会中断，不影响排查真 bug）；或
+- 右键 → 编辑条件 → 模块名称 **不等于** `*jvm.dll`，只放行 JVM 内部异常。
+
 ---
 
 ## 正常 Windows 调试检查清单
