@@ -1,5 +1,22 @@
 # Windows 桌面运行 launcher（VS Debug）
 
+## FAQ：为什么 Kanzi 新建的工程直接能跑，本工程要配这么多东西？
+
+**差别不在 Preview Working Directory，而在本工程启用了 Java 引擎插件。**
+
+- 向导新建的工程没有 Java 插件 → 不加载 `kzjvm.dll`、不起 JVM、不需要任何 jar，
+  原始 CMake 自然什么都不用管。
+- 本工程启用了 `DroidDataSourceplugin`（Java 数据源）→ kzb 记录了该依赖 →
+  桌面上也要起 JVM，并按引擎硬编码规则从**工作目录根**找
+  `kzjvm.jar` / `kzjava.jar` / `DroidDataSourceplugin.jar`（官方文档的做法是手动复制）。
+
+本仓库的 CMake 改动只是**把官方要求的手动复制自动化**；改 Working Directory
+（`Application/bin` → `assets/`）只决定复制到哪，不是需要复制的原因。
+官方也说明 Java 插件主要面向 Android，桌面 `kzjvm` 仅供 Preview/调试。
+
+**省心做法**：桌面只调 UI 时，在 Studio 里对 `DroidDataSourceplugin`
+取消 **Is Enabled** 并重新 Export —— 桌面即回到与原生工程相同的状态。
+
 ## 复制 jar 后要不要重新编译？
 
 **不要。**  
