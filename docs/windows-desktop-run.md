@@ -1,5 +1,8 @@
 # Windows 桌面运行 launcher（VS Debug）
 
+> CMake 各文件如何配合、F5 与 Ctrl+F5 差异的完整解释见
+> [cmake-build-and-run.md](cmake-build-and-run.md)。
+
 ## FAQ：为什么 Kanzi 新建的工程直接能跑，本工程要配这么多东西？
 
 **差别不在 Preview Working Directory，而在本工程启用了 Java 引擎插件。**
