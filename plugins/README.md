@@ -157,3 +157,40 @@ CMake 输出应含：`deploy-runtime: kzjava.jar <- .../GL_vs2019_Debug/kzjava.j
 3. **改 Kanzi 源码** 支持绝对路径 —— 超出本项目范围  
 
 **推荐**：保持现状 —— 源在安装目录，构建时同步到工作目录。
+
+---
+
+## FAQ：过了 jar 查找后出现 `0xC0000005` 空指针崩溃
+
+典型现象：
+
+- 日志已能 `Loading plugin 'kzjvm.dll'`，并加载 `jvm.dll`
+- 不再报 `Could not find ./kzjava.jar` / `./kzjvm.jar`
+- 随后弹出 `0xC0000005: 读取位置 0x0000000000000000`，反汇编里常见 `xor esi,esi` 后立刻 `mov eax,[rsi]`
+- 调用堆栈只有一行「未知」→ 多半在 **JVM JIT / JNI** 里，没有 C++ 符号
+
+这通常**不是** `launcher.cpp` 写坏了，而是 Java 桥接初始化或插件执行时崩了。
+
+### 优先排查（按顺序）
+
+1. **Debug/Release 必须成套**  
+   VS **Debug** 时，`assets/kzjava.jar` / `kzjvm.jar` 应来自：
+   ```
+   ...\EnginePlugins\GL_vs2019_Debug\
+   ```
+   若编译日志显示复制自 `GL_vs2019_Release`，而引擎 DLL 是 `GL_vs2019_Debug_DLL`，极易 JNI 空指针。  
+   → 确认 `D:\Kanzi 3_9_15_83\Studio\Bin\EnginePlugins\GL_vs2019_Debug\` 下有 jar，重新编译；或改用 VS **Release** 整套跑。
+
+2. **看 Output 里崩溃前最后几行 Kanzi 日志**  
+   是否还有 `Loading plugin 'DroidDataSourceplugin'`、数据源/XML 相关 error。把从 `Kanzi version` 到崩溃前的日志贴出来最有用。
+
+3. **JDK**  
+   你之前加载的是 `ms-17.0.17`。若怀疑兼容性，可临时改用 Android Studio 自带 JBR，或 Temurin **11/17** 的 `bin\server` 进 PATH，保证 64 位。
+
+4. **隔离是不是数据源插件**  
+   Studio 里暂时取消勾选 `DroidDataSourceplugin` 的 **Is Enabled**，重新 Export KZB 再跑：  
+   - 不崩 → 问题在业务 Java 插件 / `datasource.xml`  
+   - 仍崩 → 问题在 `kzjvm`/`kzjava` 与引擎/JDK 组合
+
+5. **临时验证**  
+   手动把 `GL_vs2019_Debug`（或你 VS 配置对应目录）下的 **全部 jar** 拷到 `assets\`，再 F5（绕过 CMake 看是否配置问题）。

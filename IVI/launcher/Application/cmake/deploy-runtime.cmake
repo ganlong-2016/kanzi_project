@@ -70,6 +70,13 @@ foreach(_dir IN LISTS _variant_dirs)
 endforeach()
 
 if(_selected_variant)
+    if(_selected_variant MATCHES "_${_fallback_suffix}$" AND NOT _selected_variant MATCHES "_${_build_suffix}$")
+        message(WARNING
+            "deploy-runtime: VS CONFIG=${CONFIG} but copying jars from ${_selected_variant}\n"
+            "  Debug 引擎 DLL + Release jar（或相反）容易在 JVM/JNI 阶段空指针崩溃。\n"
+            "  请确认 Studio 安装下存在匹配目录，例如:\n"
+            "  ${_engine_plugins_dir}/GL_vs2019_${_build_suffix}/")
+    endif()
     file(MAKE_DIRECTORY "${KZB_DIRECTORY}")
     file(GLOB _system_jars "${_selected_variant}/*.jar")
     foreach(_jar IN LISTS _system_jars)
