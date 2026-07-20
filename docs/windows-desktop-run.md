@@ -72,6 +72,30 @@ Copy-Item -Force "D:\Kanzi 3_9_15_83\Studio\Bin\EnginePlugins\GL_vs2019_Release\
 
 ---
 
+## 报错：`Could not read the plugin file 'DroidDataSourceplugin.jar' from JAR plugin path 'null' or the working directory`
+
+JVM 已正常启动（能看到这个 Java 断言栈说明 kzjvm/JNI 没问题），失败在**加载业务插件**。
+
+桌面（win32 appfw）的 Java `PluginLoader` 只搜两个位置：
+
+1. **JAR plugin path** —— 仅 Android（droidfw）由宿主 App 传入；桌面上无人设置，恒为 `null`
+2. **工作目录根** —— 即 `assets\DroidDataSourceplugin.jar`
+
+`assets\lib\java\Debug|Release\` 是 **Android 打包布局，桌面引擎不会去那里找**。
+
+修复：把业务 jar 放到工作目录根（重新 CMake 编译会自动部署；或手动复制后直接 F5，无需重编）：
+
+```powershell
+Copy-Item -Force "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\plugins\datasource\lib\java\Release\DroidDataSourceplugin.jar" `
+  -Destination "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\assets\"
+```
+
+> 附注：VS 调试时在 `jvm.dll`/`java.dll` 加载后看到的 first-chance `0xC0000005`（读地址 0）
+> 多为 HotSpot 的隐式空指针检查/safepoint 机制，被 JVM 自己接住，**不是崩溃**；
+> 以 Ctrl+F5 的实际报错和 `assets\hs_err_pid*.log` 是否生成为准。
+
+---
+
 ## 正常 Windows 调试检查清单
 
 | 项 | 期望 |
@@ -79,6 +103,6 @@ Copy-Item -Force "D:\Kanzi 3_9_15_83\Studio\Bin\EnginePlugins\GL_vs2019_Release\
 | VS 工作目录 | 仓库 `assets\` |
 | `assets\launcher.kzb.cfg` | 已 Export |
 | `assets\kzjava.jar` / `kzjvm.jar` | 与 Debug/Release 成套 |
-| `assets\lib\java\Debug\DroidDataSourceplugin.jar` | 若启用了数据源插件 |
+| `assets\DroidDataSourceplugin.jar` | 若启用了数据源插件（桌面从工作目录根加载） |
 | `KANZI_HOME` | Studio 安装（本机） |
 | `Kanzi_DIR` | Workspace `Engine\lib\cmake\Kanzi` |

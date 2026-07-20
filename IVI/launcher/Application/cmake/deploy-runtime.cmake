@@ -71,13 +71,17 @@ else()
         "  Debug 构建勿用 Release 目录的 jar，否则易在 jvm.dll 加载后 0xC0000005 崩溃。")
 endif()
 
-# 业务插件：同时放到 Debug 与 Release（kzb 可能按任一侧查找）
+# 业务插件：win32 的 Java PluginLoader 只查 "JAR plugin path"（桌面为 null）
+# 和工作目录根，因此必须复制到 KZB_DIRECTORY 根；lib/java/<cfg>/ 布局仅 Android 使用。
 if(PLUGINS_DIRECTORY)
     set(_datasource "${PLUGINS_DIRECTORY}/datasource/lib/java/Release/DroidDataSourceplugin.jar")
     if(NOT EXISTS "${_datasource}")
         set(_datasource "${PLUGINS_DIRECTORY}/datasource/lib/java/Debug/DroidDataSourceplugin.jar")
     endif()
     if(EXISTS "${_datasource}")
+        execute_process(COMMAND "${CMAKE_COMMAND}" -E copy_if_different
+            "${_datasource}" "${KZB_DIRECTORY}/DroidDataSourceplugin.jar")
+        message(STATUS "deploy-runtime: DroidDataSourceplugin.jar -> ${KZB_DIRECTORY}/ (工作目录根，桌面加载路径)")
         foreach(_cfg IN ITEMS Debug Release)
             set(_dest_dir "${KZB_DIRECTORY}/lib/java/${_cfg}")
             file(MAKE_DIRECTORY "${_dest_dir}")

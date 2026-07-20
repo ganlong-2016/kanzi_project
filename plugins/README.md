@@ -11,13 +11,19 @@ C++ 应用运行时，当前目录下应有：
 ```
 <工作目录>/
 ├── kzjava.jar                          ← 根目录（./kzjava.jar）
+├── DroidDataSourceplugin.jar           ← 业务插件也在根目录（桌面加载路径）
 ├── application.cfg
 ├── launcher.kzb.cfg
 ├── *.kzb
 └── lib/java/
-    ├── Debug/DroidDataSourceplugin.jar   ← VS Debug 时用
-    └── Release/DroidDataSourceplugin.jar ← VS Release 时用
+    ├── Debug/DroidDataSourceplugin.jar   ← Android 打包布局（桌面不读取）
+    └── Release/DroidDataSourceplugin.jar
 ```
+
+> 桌面（win32 appfw）的 Java `PluginLoader` 只查 **JAR plugin path**（桌面恒为
+> `null`，仅 Android 由宿主传入）和**工作目录根**。业务 jar 若只放
+> `lib/java/<Config>/` 会报
+> `Could not read the plugin file ... from JAR plugin path 'null' or the working directory`。
 
 官方默认 **Preview Working Directory** = `..\Application\bin`。本工程把 kzb 导出到 `assets/`，VS 工作目录也设为 `assets/`，因此须在 `assets/` **复现上述 bin 布局**（由 CMake 编译后自动部署）。
 
@@ -94,7 +100,8 @@ VS **Debug** 编译 `launcher` 后确认：
 ```
 assets/kzjava.jar
 assets/kzjvm.jar
-assets/lib/java/Debug/DroidDataSourceplugin.jar
+assets/DroidDataSourceplugin.jar
+assets/lib/java/Debug/DroidDataSourceplugin.jar   （Android 布局镜像）
 ```
 
 CMake 输出应含：`deploy-runtime: kzjava.jar <- .../GL_vs2019_Debug/kzjava.jar`
