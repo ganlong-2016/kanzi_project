@@ -35,7 +35,7 @@
 *.kzb.txt
 
 # VS 构建时镜像到 assets/ 的运行时文件（源：plugins/ 或 KANZI_HOME）
-assets/kzjava.jar
+assets/*.jar
 assets/lib/
 
 # ===== OS / 编辑器 =====
