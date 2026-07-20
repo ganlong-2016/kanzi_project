@@ -37,23 +37,15 @@ C++ 应用运行时，当前目录下应有：
 
 CMake 编译时会把**匹配 VS 配置**的目录下 **所有 `*.jar`** 复制到 `assets/`（工作目录根）。若只有 `Release` 目录、没有 `Debug`，会自动回退到 `GL_vs2019_Release`。
 
-### 环境变量（两个根目录，不要搞混）
+### 环境变量（本机常见布局，CMake 已适配）
 
-| 变量 | 指向 | 示例 | 用途 |
-|------|------|------|------|
-| **`KANZI_HOME`** | Kanzi **Workspace**（含 `Engine\lib\cmake\Kanzi`） | `D:\KanziWorkspace_3_9_15_83` | CMake `find_package(Kanzi)`、引擎 DLL |
-| **`KANZI_STUDIO_HOME`** | Kanzi **Studio 安装** | `D:\Kanzi 3_9_15_83` | 仅部署 `kzjava.jar` / `kzjvm.jar` |
+| 变量 | 指向 | 示例 | CMake 用途 |
+|------|------|------|------------|
+| **`Kanzi_DIR`** | Workspace 的 Engine cmake | `D:\KanziWorkspace_3_9_15_83\Engine\lib\cmake\Kanzi` | **优先**：`find_package(Kanzi)` |
+| **`KANZI_HOME`** | Studio 安装 **或** Workspace | `D:\Kanzi 3_9_15_83` | 若其下有 `Studio\Bin\EnginePlugins` → 当 Studio 根拷 jar；若有 `Engine\lib\cmake\Kanzi` → 也可当 Workspace |
+| **`KANZI_STUDIO_HOME`** | （可选）显式 Studio 根 | 同 Studio 安装 | 覆盖上述 Studio 推断 |
 
-```bat
-setx KANZI_HOME "D:\KanziWorkspace_3_9_15_83"
-setx KANZI_STUDIO_HOME "D:\Kanzi 3_9_15_83"
-```
-
-若把 `KANZI_HOME` 设成 Studio 安装目录，CMake 会报：
-
-`Could not locate Kanzi_DIR. Input 'D:\Kanzi 3_9_15_83/Engine/lib/cmake/Kanzi/' is probably invalid`
-
-因为 Studio 安装树里**没有** `Engine\lib\cmake\Kanzi\`。
+本仓库 **不要求** 改你现有环境变量：`Kanzi_DIR` 找引擎，`KANZI_HOME`=Studio 只用于 jar。
 
 ### 3. 业务 Java 插件：仓库 `plugins/`（3.9.5+ 路径规范）
 

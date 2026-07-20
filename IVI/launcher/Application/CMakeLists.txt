@@ -102,12 +102,19 @@ install_kanzi_libs_to_output_directory()
 install_kzbs_to_output_directory("${KANZI_KZB_DIRECTORY}")
 install_target_to_output_directory(launcher)
 
-# Studio 安装根（与 KanziWorkspace 分开时必设，例如 D:/Kanzi 3_9_15_83）
-if(NOT DEFINED KANZI_STUDIO_HOME AND DEFINED ENV{KANZI_STUDIO_HOME})
-    set(KANZI_STUDIO_HOME "$ENV{KANZI_STUDIO_HOME}" CACHE PATH "Kanzi Studio install root")
+# Studio 安装根：优先 KANZI_STUDIO_HOME；否则若 KANZI_HOME 下有 Studio/Bin/EnginePlugins 则沿用（本机常见）
+if(NOT DEFINED KANZI_STUDIO_HOME OR "${KANZI_STUDIO_HOME}" STREQUAL "")
+    if(DEFINED ENV{KANZI_STUDIO_HOME} AND NOT "$ENV{KANZI_STUDIO_HOME}" STREQUAL "")
+        set(KANZI_STUDIO_HOME "$ENV{KANZI_STUDIO_HOME}" CACHE PATH "Kanzi Studio install root")
+    elseif(DEFINED ENV{KANZI_HOME} AND EXISTS "$ENV{KANZI_HOME}/Studio/Bin/EnginePlugins")
+        set(KANZI_STUDIO_HOME "$ENV{KANZI_HOME}" CACHE PATH "Kanzi Studio install root")
+    endif()
 endif()
 if(KANZI_STUDIO_HOME)
-    message(STATUS "KANZI_STUDIO_HOME=${KANZI_STUDIO_HOME}")
+    message(STATUS "KANZI_STUDIO_HOME=${KANZI_STUDIO_HOME} (system jars)")
+endif()
+if(DEFINED ENV{Kanzi_DIR})
+    message(STATUS "Kanzi_DIR(env)=$ENV{Kanzi_DIR}")
 endif()
 
 include(${CMAKE_CURRENT_LIST_DIR}/cmake/deploy-plugins.cmake)

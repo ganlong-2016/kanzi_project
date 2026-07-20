@@ -1,45 +1,73 @@
 cmake_minimum_required(VERSION 3.10.0)
 
-# Locate Kanzi Engine (Workspace), NOT Kanzi Studio install.
-#   KANZI_HOME  → KanziWorkspace_* （含 Engine/lib/cmake/Kanzi）
-#   KANZI_STUDIO_HOME → Studio 安装根（如 D:/Kanzi 3_9_15_83），仅用于 jar，见 deploy-runtime.cmake
+# Locate Kanzi Engine CMake package (KanziConfig.cmake).
+#
+# Supported layout (do NOT require changing user env):
+#   Kanzi_DIR  (env or -D) → Workspace Engine cmake, e.g.
+#              D:/KanziWorkspace_3_9_15_83/Engine/lib/cmake/Kanzi
+#   KANZI_HOME (env)       → may be Studio install OR Workspace;
+#              only used for Engine if .../Engine/lib/cmake/Kanzi exists.
+#   Otherwise              → walk up from project (under Workspace/Projects/...).
+
+function(_kanzi_try_start_dir out_var candidate message_out)
+    set(${out_var} "" PARENT_SCOPE)
+    if(NOT candidate OR "${candidate}" STREQUAL "")
+        return()
+    endif()
+    get_filename_component(_abs "${candidate}" ABSOLUTE)
+    if(EXISTS "${_abs}")
+        set(${out_var} "${_abs}" PARENT_SCOPE)
+        set(${message_out} PARENT_SCOPE)
+    endif()
+endfunction()
 
 function(find_kanzi)
     set(found_dir "")
     set(found_message "")
     set(start_dir "")
 
+    # 1) Explicit Kanzi_DIR (CMake -D or cache)
     if((DEFINED Kanzi_DIR) AND NOT ("${Kanzi_DIR}" STREQUAL "Kanzi_DIR-NOTFOUND") AND NOT ("${Kanzi_DIR}" STREQUAL ""))
-        set(start_dir "${Kanzi_DIR}")
-        set(found_message "Using Kanzi from Kanzi_DIR definition")
-    elseif((DEFINED KANZI_HOME) AND NOT ("${KANZI_HOME}" STREQUAL ""))
-        set(start_dir "${KANZI_HOME}/Engine/lib/cmake/Kanzi/")
-        set(found_message "Using Kanzi from KANZI_HOME definition")
-    elseif((DEFINED ENV{KANZI_HOME}) AND (NOT "$ENV{KANZI_HOME}" STREQUAL ""))
-        set(start_dir "$ENV{KANZI_HOME}/Engine/lib/cmake/Kanzi/")
-        set(found_message "Using Kanzi from KANZI_HOME environment variable")
+        _kanzi_try_start_dir(start_dir "${Kanzi_DIR}" found_message)
+        if(start_dir)
+            set(found_message "Using Kanzi from Kanzi_DIR (CMake)")
+        endif()
     endif()
 
-    # 若 KANZI_HOME 指到了 Studio 安装目录（无 Engine cmake），回退到工程向上搜索 Workspace
-    if(start_dir AND NOT EXISTS "${start_dir}")
-        message(WARNING
-            "KANZI_HOME points to a path without Engine CMake config:\n"
-            "  ${start_dir}\n"
-            "  KANZI_HOME must be the Kanzi *Workspace* (e.g. D:/KanziWorkspace_3_9_15_83),\n"
-            "  not the Studio install (e.g. D:/Kanzi 3_9_15_83).\n"
-            "  Falling back to parent-directory search from the project.")
-        set(start_dir "")
-        set(found_message "Using Kanzi from parent directory search (KANZI_HOME was invalid)")
+    # 2) Environment Kanzi_DIR (user env: Workspace Engine cmake path)
+    if(NOT start_dir AND DEFINED ENV{Kanzi_DIR} AND NOT "$ENV{Kanzi_DIR}" STREQUAL "")
+        _kanzi_try_start_dir(start_dir "$ENV{Kanzi_DIR}" found_message)
+        if(start_dir)
+            set(found_message "Using Kanzi from Kanzi_DIR environment variable")
+        endif()
     endif()
 
+    # 3) KANZI_HOME only if it actually contains Engine cmake (Workspace)
+    if(NOT start_dir AND DEFINED KANZI_HOME AND NOT "${KANZI_HOME}" STREQUAL "")
+        _kanzi_try_start_dir(start_dir "${KANZI_HOME}/Engine/lib/cmake/Kanzi" found_message)
+        if(start_dir)
+            set(found_message "Using Kanzi from KANZI_HOME (CMake)")
+        endif()
+    endif()
+    if(NOT start_dir AND DEFINED ENV{KANZI_HOME} AND NOT "$ENV{KANZI_HOME}" STREQUAL "")
+        _kanzi_try_start_dir(start_dir "$ENV{KANZI_HOME}/Engine/lib/cmake/Kanzi" found_message)
+        if(start_dir)
+            set(found_message "Using Kanzi from KANZI_HOME environment variable")
+        else()
+            message(STATUS
+                "KANZI_HOME=$ENV{KANZI_HOME} has no Engine/lib/cmake/Kanzi "
+                "(treated as Studio install for jars). Engine resolved via Kanzi_DIR or project path.")
+        endif()
+    endif()
+
+    # 4) Walk up from project / optional hint
     if(NOT start_dir)
         if((1 LESS ${ARGC}) AND NOT ("${ARGV1}" STREQUAL ""))
             get_filename_component(start_dir "${ARGV1}" ABSOLUTE)
-            set(found_message "Using Kanzi from parent directory search")
         else()
             get_filename_component(start_dir "." ABSOLUTE)
-            set(found_message "Using Kanzi from parent directory search")
         endif()
+        set(found_message "Using Kanzi from parent directory search")
     endif()
 
     get_filename_component(curr_dir "${start_dir}" ABSOLUTE)
@@ -60,7 +88,8 @@ function(find_kanzi)
                 set(found_dir "${curr_dir}")
                 break()
             endif()
-            if((EXISTS "${curr_dir}/Engine/lib/cmake/Kanzi/KanziConfig.cmake") OR (EXISTS "${curr_dir}/Engine/lib/cmake/Kanzi/kanzi-config.cmake"))
+            if((EXISTS "${curr_dir}/Engine/lib/cmake/Kanzi/KanziConfig.cmake") OR
+               (EXISTS "${curr_dir}/Engine/lib/cmake/Kanzi/kanzi-config.cmake"))
                 set(found_dir "${curr_dir}/Engine/lib/cmake/Kanzi")
                 break()
             endif()
@@ -71,13 +100,15 @@ function(find_kanzi)
             message(STATUS "${found_message}: '${found_dir}'")
             set(Kanzi_DIR "${found_dir}" CACHE STRING "Location of KanziConfig.cmake" FORCE)
             set(Kanzi_DIR "${found_dir}" PARENT_SCOPE)
-            set(KANZI_ROOT "${Kanzi_DIR}/../../../.." PARENT_SCOPE)
+            get_filename_component(KANZI_ROOT "${found_dir}/../../../.." ABSOLUTE)
+            set(KANZI_ROOT "${KANZI_ROOT}" PARENT_SCOPE)
         else()
-            message(FATAL_ERROR "Could not locate Kanzi_DIR (KanziConfig.cmake). "
-                "Set KANZI_HOME to your Kanzi Workspace, e.g. D:/KanziWorkspace_3_9_15_83")
+            message(FATAL_ERROR
+                "Could not locate KanziConfig.cmake.\n"
+                "Set env Kanzi_DIR to Workspace Engine cmake, e.g.\n"
+                "  D:\\KanziWorkspace_3_9_15_83\\Engine\\lib\\cmake\\Kanzi")
         endif()
     else()
-        message(FATAL_ERROR "Could not locate Kanzi_DIR. Input '${start_dir}' is probably invalid. "
-            "Set KANZI_HOME to Kanzi Workspace (not Studio install).")
+        message(FATAL_ERROR "Could not locate Kanzi_DIR. start_dir='${start_dir}' is invalid.")
     endif()
 endfunction()
