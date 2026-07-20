@@ -1,5 +1,6 @@
 # 按 Kanzi 官方 Application/bin 布局部署运行时文件。
-# 工作目录根下需要 Studio EnginePlugins 目录中的系统 JAR（至少 kzjava.jar、kzjvm.jar）。
+# 工作目录根：kzjava.jar / kzjvm.jar（须与 VS Debug|Release 及引擎 DLL 成套）
+# lib/java/Debug|Release/：业务 Java 插件
 
 cmake_minimum_required(VERSION 3.15)
 
@@ -12,37 +13,27 @@ endif()
 
 if(CONFIG MATCHES "Debug|RelWithDebInfo")
     set(_build_suffix "Debug")
-    set(_fallback_suffix "Release")
 else()
     set(_build_suffix "Release")
-    set(_fallback_suffix "Debug")
 endif()
 
-macro(_append_studio_roots _list_var)
-    if(DEFINED KANZI_STUDIO_HOME AND NOT "${KANZI_STUDIO_HOME}" STREQUAL "")
-        list(APPEND ${_list_var} "${KANZI_STUDIO_HOME}")
-    endif()
-    if(DEFINED ENV{KANZI_STUDIO_HOME} AND NOT "$ENV{KANZI_STUDIO_HOME}" STREQUAL "")
-        list(APPEND ${_list_var} "$ENV{KANZI_STUDIO_HOME}")
-    endif()
-    if(DEFINED KANZI_HOME AND NOT "${KANZI_HOME}" STREQUAL "")
-        list(APPEND ${_list_var} "${KANZI_HOME}")
-    endif()
-    if(DEFINED ENV{KANZI_HOME} AND NOT "$ENV{KANZI_HOME}" STREQUAL "")
-        list(APPEND ${_list_var} "$ENV{KANZI_HOME}")
-    endif()
-endmacro()
-
 set(_studio_roots)
-_append_studio_roots(_studio_roots)
+foreach(_cand IN ITEMS
+        "${KANZI_STUDIO_HOME}"
+        "$ENV{KANZI_STUDIO_HOME}"
+        "${KANZI_HOME}"
+        "$ENV{KANZI_HOME}")
+    if(NOT "${_cand}" STREQUAL "")
+        list(APPEND _studio_roots "${_cand}")
+    endif()
+endforeach()
 list(REMOVE_DUPLICATES _studio_roots)
 
 set(_engine_plugins_dir "")
 foreach(_root IN LISTS _studio_roots)
     foreach(_bin IN ITEMS "Studio/Bin" "Bin")
-        set(_candidate "${_root}/${_bin}/EnginePlugins")
-        if(IS_DIRECTORY "${_candidate}")
-            set(_engine_plugins_dir "${_candidate}")
+        if(IS_DIRECTORY "${_root}/${_bin}/EnginePlugins")
+            set(_engine_plugins_dir "${_root}/${_bin}/EnginePlugins")
             break()
         endif()
     endforeach()
@@ -51,32 +42,19 @@ foreach(_root IN LISTS _studio_roots)
     endif()
 endforeach()
 
-# 先匹配 VS 配置（Debug/Release），再回退到另一套（本机可能只有 Release 目录）
-set(_variant_dirs)
+# 只使用与当前 VS CONFIG 匹配的目录（禁止 Debug 引擎 + Release jar）
+set(_selected_variant "")
 if(_engine_plugins_dir)
-    foreach(_suffix IN ITEMS "${_build_suffix}" "${_fallback_suffix}")
-        foreach(_vs IN ITEMS "vs2019" "vs2022")
-            list(APPEND _variant_dirs "${_engine_plugins_dir}/GL_${_vs}_${_suffix}")
-        endforeach()
+    foreach(_vs IN ITEMS "vs2019" "vs2022")
+        set(_dir "${_engine_plugins_dir}/GL_${_vs}_${_build_suffix}")
+        if(EXISTS "${_dir}/kzjava.jar" AND EXISTS "${_dir}/kzjvm.jar")
+            set(_selected_variant "${_dir}")
+            break()
+        endif()
     endforeach()
 endif()
 
-set(_selected_variant "")
-foreach(_dir IN LISTS _variant_dirs)
-    if(IS_DIRECTORY "${_dir}" AND (EXISTS "${_dir}/kzjava.jar" OR EXISTS "${_dir}/kzjvm.jar"))
-        set(_selected_variant "${_dir}")
-        break()
-    endif()
-endforeach()
-
 if(_selected_variant)
-    if(_selected_variant MATCHES "_${_fallback_suffix}$" AND NOT _selected_variant MATCHES "_${_build_suffix}$")
-        message(WARNING
-            "deploy-runtime: VS CONFIG=${CONFIG} but copying jars from ${_selected_variant}\n"
-            "  Debug 引擎 DLL + Release jar（或相反）容易在 JVM/JNI 阶段空指针崩溃。\n"
-            "  请确认 Studio 安装下存在匹配目录，例如:\n"
-            "  ${_engine_plugins_dir}/GL_vs2019_${_build_suffix}/")
-    endif()
     file(MAKE_DIRECTORY "${KZB_DIRECTORY}")
     file(GLOB _system_jars "${_selected_variant}/*.jar")
     foreach(_jar IN LISTS _system_jars)
@@ -87,23 +65,26 @@ if(_selected_variant)
     endforeach()
 else()
     message(WARNING
-        "deploy-runtime: no EnginePlugins variant with kzjava.jar/kzjvm.jar found.\n"
-        "  searched: ${_variant_dirs}\n"
-        "  set KANZI_STUDIO_HOME (e.g. D:/Kanzi 3_9_15_83) and rebuild.")
+        "deploy-runtime: missing matching EnginePlugins jars for CONFIG=${CONFIG} (${_build_suffix}).\n"
+        "  Need both kzjava.jar and kzjvm.jar under e.g.\n"
+        "  ${_engine_plugins_dir}/GL_vs2019_${_build_suffix}/\n"
+        "  Debug 构建勿用 Release 目录的 jar，否则易在 jvm.dll 加载后 0xC0000005 崩溃。")
 endif()
 
-# --- 业务 Java 插件：仓库 plugins/ -> lib/java/<Debug|Release>/ ---
+# 业务插件：同时放到 Debug 与 Release（kzb 可能按任一侧查找）
 if(PLUGINS_DIRECTORY)
     set(_datasource "${PLUGINS_DIRECTORY}/datasource/lib/java/Release/DroidDataSourceplugin.jar")
     if(NOT EXISTS "${_datasource}")
         set(_datasource "${PLUGINS_DIRECTORY}/datasource/lib/java/Debug/DroidDataSourceplugin.jar")
     endif()
     if(EXISTS "${_datasource}")
-        set(_dest_dir "${KZB_DIRECTORY}/lib/java/${_build_suffix}")
-        file(MAKE_DIRECTORY "${_dest_dir}")
-        execute_process(COMMAND "${CMAKE_COMMAND}" -E copy_if_different
-            "${_datasource}" "${_dest_dir}/DroidDataSourceplugin.jar")
-        message(STATUS "deploy-runtime: DroidDataSourceplugin.jar -> ${_dest_dir}/")
+        foreach(_cfg IN ITEMS Debug Release)
+            set(_dest_dir "${KZB_DIRECTORY}/lib/java/${_cfg}")
+            file(MAKE_DIRECTORY "${_dest_dir}")
+            execute_process(COMMAND "${CMAKE_COMMAND}" -E copy_if_different
+                "${_datasource}" "${_dest_dir}/DroidDataSourceplugin.jar")
+            message(STATUS "deploy-runtime: DroidDataSourceplugin.jar -> ${_dest_dir}/")
+        endforeach()
     else()
         message(WARNING "deploy-runtime: DroidDataSourceplugin.jar not found under ${PLUGINS_DIRECTORY}/datasource/")
     endif()
