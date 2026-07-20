@@ -1,8 +1,13 @@
 # Kanzi 引擎插件
 
-## 官方怎么配（Kanzi 3.9.15）
+## 运行时布局怎么来的（Kanzi 3.9.15）
 
-依据 [Installing Kanzi Engine plugins](https://docs.kanzi.com/3.9.15/en/working-with/plugins/installing-kanzi-engine-plugins.html) 与 [Creating Kanzi Engine plugins](https://docs.kanzi.com/3.9.15/en/working-with/plugins/creating-kanzi-engine-plugins.html)：
+官方文档（[Installing Kanzi Engine plugins](https://docs.kanzi.com/3.9.15/en/working-with/plugins/installing-kanzi-engine-plugins.html)、[Creating Kanzi Engine plugins](https://docs.kanzi.com/3.9.15/en/working-with/plugins/creating-kanzi-engine-plugins.html)）只覆盖
+**Studio Preview** 与 **Android droidfw** 两种 Java 插件宿主；
+**独立 Windows exe 属于文档空白**。下面的运行时布局依据的是引擎实际报错行为
+（`Could not find ./kzjava.jar`、`from JAR plugin path 'null' or the working
+directory`）：引擎只按**工作目录根**的相对路径找 jar，"JAR plugin path"
+仅由 Studio Preview / Android 宿主传入，独立 exe 下为 `null`。
 
 ### 1. 工作目录 = `Application/bin`（本工程等价于 `assets/`）
 

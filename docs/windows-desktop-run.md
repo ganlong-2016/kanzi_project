@@ -8,11 +8,25 @@
   原始 CMake 自然什么都不用管。
 - 本工程启用了 `DroidDataSourceplugin`（Java 数据源）→ kzb 记录了该依赖 →
   桌面上也要起 JVM，并按引擎硬编码规则从**工作目录根**找
-  `kzjvm.jar` / `kzjava.jar` / `DroidDataSourceplugin.jar`（官方文档的做法是手动复制）。
+  `kzjvm.jar` / `kzjava.jar` / `DroidDataSourceplugin.jar`。
 
-本仓库的 CMake 改动只是**把官方要求的手动复制自动化**；改 Working Directory
-（`Application/bin` → `assets/`）只决定复制到哪，不是需要复制的原因。
-官方也说明 Java 插件主要面向 Android，桌面 `kzjvm` 仅供 Preview/调试。
+**"jar 必须在工作目录"的依据是引擎自身行为，不是官方文档条文**：
+
+- 报错 `Could not find ./kzjava.jar` —— `./` 即进程当前工作目录；
+- 报错 `Could not read the plugin file ... from JAR plugin path 'null' or the
+  working directory` —— 引擎 Java 侧 `PluginLoader` 只搜这两处，
+  而 "JAR plugin path" 仅由宿主（Studio Preview / Android App）传入，
+  独立 exe 下恒为 `null`。
+
+官方文档（[Using Kanzi Engine plugins](https://docs.kanzi.com/3.9.15/en/working-with/plugins/installing-kanzi-engine-plugins.html)、
+[Creating Kanzi Engine plugins](https://docs.kanzi.com/3.9.15/en/working-with/plugins/creating-kanzi-engine-plugins.html)）
+只覆盖两种 Java 插件宿主：**Studio Preview**（需 `jvm.dll` 在 PATH/JAVA_HOME）
+和 **Android droidfw**（"you can use Java plugins only with Kanzi Android
+framework (droidfw) applications"）；`lib/java/Debug|Release/` 是 **Studio 导入**
+的路径规范，不是运行时搜索路径。**独立 Windows exe + Java 插件**属于文档空白，
+本仓库的 CMake 部署是按上述引擎实际搜索行为补的工程做法。
+改 Working Directory（`Application/bin` → `assets/`）只决定复制到哪，
+不是需要复制的原因。
 
 **省心做法**：桌面只调 UI 时，在 Studio 里对 `DroidDataSourceplugin`
 取消 **Is Enabled** 并重新 Export —— 桌面即回到与原生工程相同的状态。
