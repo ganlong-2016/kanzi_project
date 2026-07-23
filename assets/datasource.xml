@@ -27,6 +27,8 @@
         <outsideTempValid type="bool">true</outsideTempValid>
         <networkLevel type="int">3</networkLevel>       <!-- 0-4 -->
         <bluetoothOn type="bool">true</bluetoothOn>
+        <!-- 视角  0前  1后-->
+        <perspective type="int">0</perspective>
     </System>
 
     <!-- ===== 行车 ===== -->
