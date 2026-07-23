@@ -2195,7 +2195,7 @@
                       </d10p1:Value>
                     </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                     <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                      <d10p1:Key>Feature</d10p1:Key>
+                      <d10p1:Key>Perspective</d10p1:Key>
                       <d10p1:Value>
                         <categoryOverride
                           i:nil="true" />
@@ -2203,7 +2203,7 @@
                           i:nil="true" />
                         <isReadOnly
                           i:nil="true" />
-                        <propertyTypeReference>Feature</propertyTypeReference>
+                        <propertyTypeReference>Perspective</propertyTypeReference>
                         <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
                           i:type="d13p1:int">0</value>
                       </d10p1:Value>
@@ -2230,9 +2230,193 @@
                         </value>
                       </d10p1:Value>
                     </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Node2D.LayoutTransformation</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Node2D.LayoutTransformation</propertyTypeReference>
+                        <value xmlns:d13p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                          i:type="d13p1:SRT2DTransformation">
+                          <d13p1:isScaleUniform
+                            i:nil="true" />
+                          <d13p1:rotation>0</d13p1:rotation>
+                          <d13p1:scale>
+                            <d13p1:X>1</d13p1:X>
+                            <d13p1:Y>1</d13p1:Y>
+                          </d13p1:scale>
+                          <d13p1:translation>
+                            <d13p1:X>0</d13p1:X>
+                            <d13p1:Y>19</d13p1:Y>
+                          </d13p1:translation>
+                        </value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                   </properties>
                   <SerializedName>Controls</SerializedName>
-                  <children />
+                  <children>
+                    <ProjectItem xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.Bindings"
+                      i:type="d11p1:BindingItem">
+                      <properties xmlns:d12p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>BindingItem.Target</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>BindingItem.Target</propertyTypeReference>
+                            <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
+                              i:type="d15p1:PropertyTypeReference">
+                              <d15p1:isExpression>false</d15p1:isExpression>
+                              <d15p1:propertyTypeName>Perspective</d15p1:propertyTypeName>
+                            </value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>BindingItem.TargetPropertyAttribute</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>BindingItem.TargetPropertyAttribute</propertyTypeReference>
+                            <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.AnimationItems"
+                              i:type="d15p1:AnimationTargetPropertyAttribute">WHOLE_PROPERTY</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>BindingItem.BindingMode</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>BindingItem.BindingMode</propertyTypeReference>
+                            <value
+                              i:type="d11p1:BindingType">OneWay</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>BindingItem.PushTarget</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>BindingItem.PushTarget</propertyTypeReference>
+                            <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
+                              i:type="d15p1:PropertyTypeReference">
+                              <d15p1:isExpression>false</d15p1:isExpression>
+                              <d15p1:propertyTypeName>Node2D.BackgroundBrush</d15p1:propertyTypeName>
+                            </value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>BindingItem.DisplayCodeForMerge</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>BindingItem.DisplayCodeForMerge</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">{DataContext.DroidDataSource.System.perspective}</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>BindingItem.RawCode</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>BindingItem.RawCode</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">{DataContext.DroidDataSource.System.perspective}</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>BindingItem.IsBindingEnabled</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>BindingItem.IsBindingEnabled</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:boolean">true</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>BindingItem.ErrorMessage</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>BindingItem.ErrorMessage</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string"></value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Name</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Name</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">3c04aa51-b135-4632-bfbe-e58a6e7d6a75</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>CreationTime</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>CreationTime</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:dateTime">2026-07-21T01:47:11.1247153Z</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      </properties>
+                      <SerializedName>3c04aa51-b135-4632-bfbe-e58a6e7d6a75</SerializedName>
+                      <children />
+                      <dataSource
+                        i:nil="true" />
+                      <isHidden>false</isHidden>
+                      <isReadOnly>false</isReadOnly>
+                    </ProjectItem>
+                  </children>
                   <dataSource
                     i:nil="true" />
                   <isHidden>false</isHidden>
@@ -2432,7 +2616,7 @@
                       </d10p1:Value>
                     </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                     <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                      <d10p1:Key>Feature</d10p1:Key>
+                      <d10p1:Key>Perspective</d10p1:Key>
                       <d10p1:Value>
                         <categoryOverride
                           i:nil="true" />
@@ -2440,7 +2624,7 @@
                           i:nil="true" />
                         <isReadOnly
                           i:nil="true" />
-                        <propertyTypeReference>Feature</propertyTypeReference>
+                        <propertyTypeReference>Perspective</propertyTypeReference>
                         <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
                           i:type="d13p1:int">0</value>
                       </d10p1:Value>
@@ -2894,10 +3078,10 @@
                                 <value xmlns:d17p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
                                   i:type="d17p1:HSLAColor">
                                   <d17p1:alpha>1</d17p1:alpha>
-                                  <d17p1:hue>0.368686855</d17p1:hue>
-                                  <d17p1:intensity>0</d17p1:intensity>
-                                  <d17p1:luminance>0.858585835</d17p1:luminance>
-                                  <d17p1:saturation>0.8181818</d17p1:saturation>
+                                  <d17p1:hue>0.8967972</d17p1:hue>
+                                  <d17p1:intensity>2.8</d17p1:intensity>
+                                  <d17p1:luminance>0.569395</d17p1:luminance>
+                                  <d17p1:saturation>0.953736663</d17p1:saturation>
                                 </value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -3266,7 +3450,7 @@
                                       i:nil="true" />
                                     <propertyTypeReference>BindingItem.IsBindingEnabled</propertyTypeReference>
                                     <value xmlns:d19p1="http://www.w3.org/2001/XMLSchema"
-                                      i:type="d19p1:boolean">true</value>
+                                      i:type="d19p1:boolean">false</value>
                                   </d16p1:Value>
                                 </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                                 <d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -3861,7 +4045,7 @@
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>Feature</d14p1:Key>
+                              <d14p1:Key>Perspective</d14p1:Key>
                               <d14p1:Value>
                                 <categoryOverride
                                   i:nil="true" />
@@ -3869,7 +4053,7 @@
                                   i:nil="true" />
                                 <isReadOnly
                                   i:nil="true" />
-                                <propertyTypeReference>Feature</propertyTypeReference>
+                                <propertyTypeReference>Perspective</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
                                   i:type="d17p1:int">0</value>
                               </d14p1:Value>
@@ -4043,7 +4227,7 @@
                                   </d16p1:Value>
                                 </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                                 <d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                                  <d16p1:Key>Feature</d16p1:Key>
+                                  <d16p1:Key>Perspective</d16p1:Key>
                                   <d16p1:Value>
                                     <categoryOverride
                                       i:nil="true" />
@@ -4051,7 +4235,7 @@
                                       i:nil="true" />
                                     <isReadOnly
                                       i:nil="true" />
-                                    <propertyTypeReference>Feature</propertyTypeReference>
+                                    <propertyTypeReference>Perspective</propertyTypeReference>
                                     <value xmlns:d19p1="http://www.w3.org/2001/XMLSchema"
                                       i:type="d19p1:int">1</value>
                                   </d16p1:Value>
@@ -4487,7 +4671,7 @@ createRotation(degreesY , degreesX, 0)
                                         <value xmlns:d21p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
                                           i:type="d21p1:PropertyTypeReference">
                                           <d21p1:isExpression>false</d21p1:isExpression>
-                                          <d21p1:propertyTypeName>Feature</d21p1:propertyTypeName>
+                                          <d21p1:propertyTypeName>Perspective</d21p1:propertyTypeName>
                                         </value>
                                       </d18p1:Value>
                                     </d18p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -4547,7 +4731,7 @@ createRotation(degreesY , degreesX, 0)
                                           i:nil="true" />
                                         <propertyTypeReference>BindingItem.DisplayCodeForMerge</propertyTypeReference>
                                         <value xmlns:d21p1="http://www.w3.org/2001/XMLSchema"
-                                          i:type="d21p1:string">{@../../../../Controls/Feature}</value>
+                                          i:type="d21p1:string">{@../../../../Controls/Perspective}</value>
                                       </d18p1:Value>
                                     </d18p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                                     <d18p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -4661,7 +4845,7 @@ createRotation(degreesY , degreesX, 0)
                                             <value xmlns:d23p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
                                               i:type="d23p1:PropertyTypeReference">
                                               <d23p1:isExpression>false</d23p1:isExpression>
-                                              <d23p1:propertyTypeName>Feature</d23p1:propertyTypeName>
+                                              <d23p1:propertyTypeName>Perspective</d23p1:propertyTypeName>
                                             </value>
                                           </d20p1:Value>
                                         </d20p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -4722,7 +4906,7 @@ createRotation(degreesY , degreesX, 0)
                                               i:nil="true" />
                                             <propertyTypeReference>CreationTime</propertyTypeReference>
                                             <value xmlns:d23p1="http://www.w3.org/2001/XMLSchema"
-                                              i:type="d23p1:dateTime">2026-07-15T09:28:18.774744Z</value>
+                                              i:type="d23p1:dateTime">2026-07-21T01:45:11.6242683Z</value>
                                           </d20p1:Value>
                                         </d20p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                                       </properties>
@@ -5970,7 +6154,7 @@ createRotation(degreesY , degreesX, 0)
                             <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
                               i:type="d15p1:PropertyTypeReference">
                               <d15p1:isExpression>false</d15p1:isExpression>
-                              <d15p1:propertyTypeName>Feature</d15p1:propertyTypeName>
+                              <d15p1:propertyTypeName>Perspective</d15p1:propertyTypeName>
                             </value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -6030,7 +6214,7 @@ createRotation(degreesY , degreesX, 0)
                               i:nil="true" />
                             <propertyTypeReference>BindingItem.DisplayCodeForMerge</propertyTypeReference>
                             <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
-                              i:type="d15p1:string">{@../Controls/Feature}</value>
+                              i:type="d15p1:string">{@../Controls/Perspective}</value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                         <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -6144,7 +6328,7 @@ createRotation(degreesY , degreesX, 0)
                                 <value xmlns:d17p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
                                   i:type="d17p1:PropertyTypeReference">
                                   <d17p1:isExpression>false</d17p1:isExpression>
-                                  <d17p1:propertyTypeName>Feature</d17p1:propertyTypeName>
+                                  <d17p1:propertyTypeName>Perspective</d17p1:propertyTypeName>
                                 </value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -6205,7 +6389,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-15T07:46:32.4243084Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:45:11.6367842Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                           </properties>
@@ -13531,101 +13715,6 @@ createRotation(degreesY , degreesX, 0)
                   i:nil="true" />
                 <propertyTypeReference>ProjectReferencePath</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:string">..\..\car\Car.kzproj</value>
-              </d6p1:Value>
-            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-              <d6p1:Key>AutomaticKzbExport</d6p1:Key>
-              <d6p1:Value>
-                <categoryOverride
-                  i:nil="true" />
-                <isHidden
-                  i:nil="true" />
-                <isReadOnly
-                  i:nil="true" />
-                <propertyTypeReference>AutomaticKzbExport</propertyTypeReference>
-                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:boolean">false</value>
-              </d6p1:Value>
-            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-              <d6p1:Key>LoadProjectToMemory</d6p1:Key>
-              <d6p1:Value>
-                <categoryOverride
-                  i:nil="true" />
-                <isHidden
-                  i:nil="true" />
-                <isReadOnly
-                  i:nil="true" />
-                <propertyTypeReference>LoadProjectToMemory</propertyTypeReference>
-                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:boolean">true</value>
-              </d6p1:Value>
-            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-              <d6p1:Key>ShowInPreview</d6p1:Key>
-              <d6p1:Value>
-                <categoryOverride
-                  i:nil="true" />
-                <isHidden
-                  i:nil="true" />
-                <isReadOnly
-                  i:nil="true" />
-                <propertyTypeReference>ShowInPreview</propertyTypeReference>
-                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:boolean">true</value>
-              </d6p1:Value>
-            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-              <d6p1:Key>Name</d6p1:Key>
-              <d6p1:Value>
-                <categoryOverride
-                  i:nil="true" />
-                <isHidden
-                  i:nil="true" />
-                <isReadOnly
-                  i:nil="true" />
-                <propertyTypeReference>Name</propertyTypeReference>
-                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:string">car</value>
-              </d6p1:Value>
-            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-              <d6p1:Key>CreationTime</d6p1:Key>
-              <d6p1:Value>
-                <categoryOverride
-                  i:nil="true" />
-                <isHidden
-                  i:nil="true" />
-                <isReadOnly
-                  i:nil="true" />
-                <propertyTypeReference>CreationTime</propertyTypeReference>
-                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:dateTime">2026-06-25T03:02:56.9056898Z</value>
-              </d6p1:Value>
-            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-          </properties>
-          <SerializedName>car</SerializedName>
-          <children />
-          <dataSource
-            i:nil="true" />
-          <isHidden>false</isHidden>
-          <isReadOnly>false</isReadOnly>
-        </ProjectItem>
-        <ProjectItem
-          i:type="d3p1:ProjectReferenceItem">
-          <properties xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
-            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-              <d6p1:Key>ProjectReferencePath</d6p1:Key>
-              <d6p1:Value>
-                <categoryOverride
-                  i:nil="true" />
-                <isHidden
-                  i:nil="true" />
-                <isReadOnly
-                  i:nil="true" />
-                <propertyTypeReference>ProjectReferencePath</propertyTypeReference>
-                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
                   i:type="d9p1:string">..\..\car_setting\car_setting.kzproj</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -15847,7 +15936,7 @@ createRotation(degreesY , degreesX, 0)
                       i:nil="true" />
                     <propertyTypeReference>CreationTime</propertyTypeReference>
                     <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:dateTime">2026-07-14T05:18:00.1223341Z</value>
+                      i:type="d11p1:dateTime">2026-07-21T01:46:22.7414989Z</value>
                   </d8p1:Value>
                 </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
               </properties>
@@ -15894,7 +15983,7 @@ createRotation(degreesY , degreesX, 0)
                           i:nil="true" />
                         <propertyTypeReference>CreationTime</propertyTypeReference>
                         <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
-                          i:type="d13p1:dateTime">2026-07-14T05:18:00.12335Z</value>
+                          i:type="d13p1:dateTime">2026-07-21T01:46:22.7464592Z</value>
                       </d10p1:Value>
                     </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                   </properties>
@@ -15941,7 +16030,7 @@ createRotation(degreesY , degreesX, 0)
                               i:nil="true" />
                             <propertyTypeReference>CreationTime</propertyTypeReference>
                             <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
-                              i:type="d15p1:dateTime">2026-07-14T05:18:00.12335Z</value>
+                              i:type="d15p1:dateTime">2026-07-21T01:46:22.7492147Z</value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                       </properties>
@@ -15988,7 +16077,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1243399Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7500058Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -16054,7 +16143,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1253623Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7529925Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -16120,7 +16209,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1253623Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7539908Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -16186,7 +16275,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.126358Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7546536Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -16252,7 +16341,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1272252Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7557915Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -16318,7 +16407,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1272252Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7566689Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -16384,7 +16473,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1287407Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7566689Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -16450,7 +16539,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1299499Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7583444Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -16469,6 +16558,72 @@ createRotation(degreesY , degreesX, 0)
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                           </properties>
                           <SerializedName>bluetoothOn</SerializedName>
+                          <children />
+                          <dataSource
+                            i:nil="true" />
+                          <isHidden>false</isHidden>
+                          <isReadOnly>true</isReadOnly>
+                        </ProjectItem>
+                        <ProjectItem
+                          i:type="d3p1:DataObject">
+                          <properties xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>DataObjectDataType</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>DataObjectDataType</propertyTypeReference>
+                                <value
+                                  i:type="d3p1:DataObjectDataType">INTEGER</value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>Name</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly>true</isReadOnly>
+                                <propertyTypeReference>Name</propertyTypeReference>
+                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
+                                  i:type="d17p1:string">perspective</value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>CreationTime</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>CreationTime</propertyTypeReference>
+                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.759438Z</value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>DataObjectValue</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>DataObjectValue</propertyTypeReference>
+                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
+                                  i:type="d17p1:string">0</value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          </properties>
+                          <SerializedName>perspective</SerializedName>
                           <children />
                           <dataSource
                             i:nil="true" />
@@ -16522,7 +16677,7 @@ createRotation(degreesY , degreesX, 0)
                               i:nil="true" />
                             <propertyTypeReference>CreationTime</propertyTypeReference>
                             <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
-                              i:type="d15p1:dateTime">2026-07-14T05:18:00.1309356Z</value>
+                              i:type="d15p1:dateTime">2026-07-21T01:46:22.7602875Z</value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                       </properties>
@@ -16569,7 +16724,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1317591Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7602875Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -16635,7 +16790,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1317591Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7614279Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -16701,7 +16856,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1328615Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7622762Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -16767,7 +16922,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1338877Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7633725Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -16833,7 +16988,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1348771Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7643953Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -16905,7 +17060,7 @@ createRotation(degreesY , degreesX, 0)
                               i:nil="true" />
                             <propertyTypeReference>CreationTime</propertyTypeReference>
                             <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
-                              i:type="d15p1:dateTime">2026-07-14T05:18:00.1348771Z</value>
+                              i:type="d15p1:dateTime">2026-07-21T01:46:22.7654089Z</value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                       </properties>
@@ -16952,7 +17107,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1362514Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7663585Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17018,7 +17173,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1368221Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7672832Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17084,7 +17239,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1378828Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7683714Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17156,7 +17311,7 @@ createRotation(degreesY , degreesX, 0)
                               i:nil="true" />
                             <propertyTypeReference>CreationTime</propertyTypeReference>
                             <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
-                              i:type="d15p1:dateTime">2026-07-14T05:18:00.138885Z</value>
+                              i:type="d15p1:dateTime">2026-07-21T01:46:22.7683714Z</value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                       </properties>
@@ -17203,7 +17358,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.138885Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7694723Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17269,7 +17424,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1398548Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7703309Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17335,7 +17490,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1408664Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7714397Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17401,7 +17556,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1418643Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7714397Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17467,7 +17622,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1418643Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7714397Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17533,7 +17688,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1428895Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7733336Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17599,7 +17754,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1438539Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7744522Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17665,7 +17820,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1438539Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7744522Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17731,7 +17886,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1448626Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7754407Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17803,7 +17958,7 @@ createRotation(degreesY , degreesX, 0)
                               i:nil="true" />
                             <propertyTypeReference>CreationTime</propertyTypeReference>
                             <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
-                              i:type="d15p1:dateTime">2026-07-14T05:18:00.1448626Z</value>
+                              i:type="d15p1:dateTime">2026-07-21T01:46:22.7764739Z</value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                       </properties>
@@ -17850,7 +18005,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1463267Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7764739Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17916,7 +18071,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1467586Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7764739Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -17982,7 +18137,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.147871Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7781462Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -18048,7 +18203,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.147871Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7792492Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -18120,7 +18275,7 @@ createRotation(degreesY , degreesX, 0)
                               i:nil="true" />
                             <propertyTypeReference>CreationTime</propertyTypeReference>
                             <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
-                              i:type="d15p1:dateTime">2026-07-14T05:18:00.1487565Z</value>
+                              i:type="d15p1:dateTime">2026-07-21T01:46:22.7792492Z</value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                       </properties>
@@ -18167,7 +18322,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1487565Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7802531Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -18233,7 +18388,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1498804Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7812168Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -18299,7 +18454,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1498804Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7812168Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -18365,7 +18520,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1511121Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7822704Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -18431,7 +18586,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1518586Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7822704Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -18497,7 +18652,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1528677Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7832185Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -18563,7 +18718,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1528677Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7843022Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -18629,7 +18784,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1538565Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7852203Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -18701,7 +18856,7 @@ createRotation(degreesY , degreesX, 0)
                               i:nil="true" />
                             <propertyTypeReference>CreationTime</propertyTypeReference>
                             <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
-                              i:type="d15p1:dateTime">2026-07-14T05:18:00.1548967Z</value>
+                              i:type="d15p1:dateTime">2026-07-21T01:46:22.7862187Z</value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                       </properties>
@@ -18748,7 +18903,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1548967Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7862187Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -18814,7 +18969,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1558668Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7872571Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -18880,7 +19035,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1567575Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7882624Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -18946,7 +19101,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1578461Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7888913Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19012,7 +19167,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1587581Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7888913Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19078,7 +19233,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1587581Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.790898Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19144,7 +19299,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.159867Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7917551Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19210,7 +19365,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.159867Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7926107Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19276,7 +19431,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1608747Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7926107Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19348,7 +19503,7 @@ createRotation(degreesY , degreesX, 0)
                               i:nil="true" />
                             <propertyTypeReference>CreationTime</propertyTypeReference>
                             <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
-                              i:type="d15p1:dateTime">2026-07-14T05:18:00.1618241Z</value>
+                              i:type="d15p1:dateTime">2026-07-21T01:46:22.7936959Z</value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                       </properties>
@@ -19395,7 +19550,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1618241Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7936959Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19461,7 +19616,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1628555Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7936959Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19527,7 +19682,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1628555Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7955936Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19593,7 +19748,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1639509Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7955936Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19659,7 +19814,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1639509Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7967129Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19731,7 +19886,7 @@ createRotation(degreesY , degreesX, 0)
                               i:nil="true" />
                             <propertyTypeReference>CreationTime</propertyTypeReference>
                             <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
-                              i:type="d15p1:dateTime">2026-07-14T05:18:00.1650067Z</value>
+                              i:type="d15p1:dateTime">2026-07-21T01:46:22.7967129Z</value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                       </properties>
@@ -19778,7 +19933,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1650067Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7967129Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19844,7 +19999,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1659929Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7984192Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19910,7 +20065,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1669715Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.7984192Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -19976,7 +20131,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1669715Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.800359Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -20042,7 +20197,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1680564Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.800359Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -20108,7 +20263,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1690035Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.8014522Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -20174,7 +20329,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1690035Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.8024657Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -20240,7 +20395,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1699943Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.8034846Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -20306,7 +20461,7 @@ createRotation(degreesY , degreesX, 0)
                                   i:nil="true" />
                                 <propertyTypeReference>CreationTime</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-14T05:18:00.1708696Z</value>
+                                  i:type="d17p1:dateTime">2026-07-21T01:46:22.8034846Z</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                           </properties>
@@ -20353,7 +20508,7 @@ createRotation(degreesY , degreesX, 0)
                                       i:nil="true" />
                                     <propertyTypeReference>CreationTime</propertyTypeReference>
                                     <value xmlns:d19p1="http://www.w3.org/2001/XMLSchema"
-                                      i:type="d19p1:dateTime">2026-07-14T05:18:00.1708696Z</value>
+                                      i:type="d19p1:dateTime">2026-07-21T01:46:22.8044614Z</value>
                                   </d16p1:Value>
                                 </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                               </properties>
@@ -20400,7 +20555,7 @@ createRotation(degreesY , degreesX, 0)
                                           i:nil="true" />
                                         <propertyTypeReference>CreationTime</propertyTypeReference>
                                         <value xmlns:d21p1="http://www.w3.org/2001/XMLSchema"
-                                          i:type="d21p1:dateTime">2026-07-14T05:18:00.1720042Z</value>
+                                          i:type="d21p1:dateTime">2026-07-21T01:46:22.8044614Z</value>
                                       </d18p1:Value>
                                     </d18p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                                     <d18p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -20466,7 +20621,7 @@ createRotation(degreesY , degreesX, 0)
                                           i:nil="true" />
                                         <propertyTypeReference>CreationTime</propertyTypeReference>
                                         <value xmlns:d21p1="http://www.w3.org/2001/XMLSchema"
-                                          i:type="d21p1:dateTime">2026-07-14T05:18:00.172878Z</value>
+                                          i:type="d21p1:dateTime">2026-07-21T01:46:22.805508Z</value>
                                       </d18p1:Value>
                                     </d18p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                                   </properties>
@@ -20518,7 +20673,7 @@ createRotation(degreesY , degreesX, 0)
                                           i:nil="true" />
                                         <propertyTypeReference>CreationTime</propertyTypeReference>
                                         <value xmlns:d21p1="http://www.w3.org/2001/XMLSchema"
-                                          i:type="d21p1:dateTime">2026-07-14T05:18:00.173978Z</value>
+                                          i:type="d21p1:dateTime">2026-07-21T01:46:22.8064584Z</value>
                                       </d18p1:Value>
                                     </d18p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                                   </properties>
@@ -52500,7 +52655,7 @@ createRotation(degreesY , degreesX, 0)
                     <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
                       i:type="d11p1:PropertyTypeReference">
                       <d11p1:isExpression>false</d11p1:isExpression>
-                      <d11p1:propertyTypeName>Feature</d11p1:propertyTypeName>
+                      <d11p1:propertyTypeName>Perspective</d11p1:propertyTypeName>
                     </value>
                   </d8p1:Value>
                 </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -52589,14 +52744,14 @@ createRotation(degreesY , degreesX, 0)
                       </d10p1:Value>
                     </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                     <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                      <d10p1:Key>Feature</d10p1:Key>
+                      <d10p1:Key>Perspective</d10p1:Key>
                       <d10p1:Value>
                         <categoryOverride
                           i:nil="true" />
                         <isHidden
                           i:nil="true" />
                         <isReadOnly>false</isReadOnly>
-                        <propertyTypeReference>Feature</propertyTypeReference>
+                        <propertyTypeReference>Perspective</propertyTypeReference>
                         <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
                           i:type="d13p1:int">0</value>
                       </d10p1:Value>
@@ -52726,14 +52881,14 @@ createRotation(degreesY , degreesX, 0)
                       </d10p1:Value>
                     </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                     <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                      <d10p1:Key>Feature</d10p1:Key>
+                      <d10p1:Key>Perspective</d10p1:Key>
                       <d10p1:Value>
                         <categoryOverride
                           i:nil="true" />
                         <isHidden
                           i:nil="true" />
                         <isReadOnly>false</isReadOnly>
-                        <propertyTypeReference>Feature</propertyTypeReference>
+                        <propertyTypeReference>Perspective</propertyTypeReference>
                         <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
                           i:type="d13p1:int">1</value>
                       </d10p1:Value>
@@ -52813,6 +52968,280 @@ createRotation(degreesY , degreesX, 0)
                                 <d16p1:_x>0</d16p1:_x>
                                 <d16p1:_y>0</d16p1:_y>
                                 <d16p1:_z>0</d16p1:_z>
+                              </d15p1:translation>
+                            </value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      </properties>
+                      <SerializedName>State Object</SerializedName>
+                      <children />
+                      <dataSource
+                        i:nil="true" />
+                      <isHidden>false</isHidden>
+                      <isReadOnly>false</isReadOnly>
+                    </ProjectItem>
+                  </children>
+                  <dataSource
+                    i:nil="true" />
+                  <isHidden>false</isHidden>
+                  <isReadOnly>false</isReadOnly>
+                </ProjectItem>
+                <ProjectItem
+                  i:type="d3p1:State">
+                  <properties xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Name</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Name</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:string">top</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>CreationTime</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>CreationTime</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:dateTime">2026-07-21T02:45:50.5193728Z</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Perspective</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly>false</isReadOnly>
+                        <propertyTypeReference>Perspective</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:int">2</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  </properties>
+                  <SerializedName>top</SerializedName>
+                  <children>
+                    <ProjectItem
+                      i:type="d3p1:State">
+                      <properties xmlns:d12p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Name</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Name</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">State Object</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>CreationTime</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>CreationTime</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:dateTime">2026-07-21T02:45:50.5163682Z</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>StateTargetObjectPath</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>StateTargetObjectPath</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">.</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Node3D.RenderTransformation</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Node3D.RenderTransformation</propertyTypeReference>
+                            <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                              i:type="d15p1:SRTTransformation">
+                              <d15p1:isScaleUniform>true</d15p1:isScaleUniform>
+                              <d15p1:rotation xmlns:d16p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                <d16p1:_x>-90</d16p1:_x>
+                                <d16p1:_y>0</d16p1:_y>
+                                <d16p1:_z>0</d16p1:_z>
+                              </d15p1:rotation>
+                              <d15p1:scale xmlns:d16p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                <d16p1:_x>1</d16p1:_x>
+                                <d16p1:_y>1</d16p1:_y>
+                                <d16p1:_z>1</d16p1:_z>
+                              </d15p1:scale>
+                              <d15p1:translation xmlns:d16p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                <d16p1:_x>0</d16p1:_x>
+                                <d16p1:_y>0</d16p1:_y>
+                                <d16p1:_z>0</d16p1:_z>
+                              </d15p1:translation>
+                            </value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      </properties>
+                      <SerializedName>State Object</SerializedName>
+                      <children />
+                      <dataSource
+                        i:nil="true" />
+                      <isHidden>false</isHidden>
+                      <isReadOnly>false</isReadOnly>
+                    </ProjectItem>
+                  </children>
+                  <dataSource
+                    i:nil="true" />
+                  <isHidden>false</isHidden>
+                  <isReadOnly>false</isReadOnly>
+                </ProjectItem>
+                <ProjectItem
+                  i:type="d3p1:State">
+                  <properties xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Name</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Name</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:string">left</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>CreationTime</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>CreationTime</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:dateTime">2026-07-21T02:48:06.6634822Z</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Perspective</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly>false</isReadOnly>
+                        <propertyTypeReference>Perspective</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:int">3</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  </properties>
+                  <SerializedName>left</SerializedName>
+                  <children>
+                    <ProjectItem
+                      i:type="d3p1:State">
+                      <properties xmlns:d12p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Name</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Name</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">State Object</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>CreationTime</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>CreationTime</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:dateTime">2026-07-21T02:48:06.6624747Z</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>StateTargetObjectPath</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>StateTargetObjectPath</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">.</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Node3D.RenderTransformation</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Node3D.RenderTransformation</propertyTypeReference>
+                            <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                              i:type="d15p1:SRTTransformation">
+                              <d15p1:isScaleUniform>true</d15p1:isScaleUniform>
+                              <d15p1:rotation xmlns:d16p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                <d16p1:_x>0</d16p1:_x>
+                                <d16p1:_y>90</d16p1:_y>
+                                <d16p1:_z>0</d16p1:_z>
+                              </d15p1:rotation>
+                              <d15p1:scale xmlns:d16p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                <d16p1:_x>1</d16p1:_x>
+                                <d16p1:_y>1</d16p1:_y>
+                                <d16p1:_z>1</d16p1:_z>
+                              </d15p1:scale>
+                              <d15p1:translation xmlns:d16p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                <d16p1:_x>0</d16p1:_x>
+                                <d16p1:_y>0</d16p1:_y>
+                                <d16p1:_z>10</d16p1:_z>
                               </d15p1:translation>
                             </value>
                           </d12p1:Value>
@@ -53564,7 +53993,7 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>82.399999999999864</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>178.39999999999986</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -53725,15 +54154,14 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/Viewport 2D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>173.60000000000002</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -53789,7 +54217,7 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>10.399999999999977</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -53824,8 +54252,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/Viewport 2D/Scene/CameraController</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -53860,7 +54287,7 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>480</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>1341.6</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -53888,7 +54315,7 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>27.199999999999932</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -53902,26 +54329,11 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>27.199999999999932</d4p1:ScrollPosition>
-      </d2p1:Value>
-    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-      <d2p1:Key>kzb://launcher/Themes</d2p1:Key>
-      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
-        <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
-        </d4p1:BindingEditorData>
-        <d4p1:MaterialRuleTreeData>
-          <d4p1:ExpandedEditorItemPaths />
-          <d4p1:ExpandedItemPaths />
-          <d4p1:SelectedItemPaths />
-        </d4p1:MaterialRuleTreeData>
         <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-      <d2p1:Key>kzb://launcher/Project References/car</d2p1:Key>
+      <d2p1:Key>kzb://launcher/Themes</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
           <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
@@ -53938,8 +54350,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/State Managers</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -53953,8 +54364,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/State Managers/CameraView</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -53968,23 +54378,21 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>1988.8000000000002</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/State1</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -53998,8 +54406,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/front</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54013,8 +54420,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/State2</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54036,15 +54442,14 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>144</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/front/State Object</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54058,23 +54463,21 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/back/State Object</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>144</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://launcher/Property Types</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54088,8 +54491,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/Property Types/Feature</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54103,8 +54505,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/State Managers/CameraView/_Preview/Edit/State Object</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54118,23 +54519,21 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/State Managers/ResetCameraRotation</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>140.80000000000007</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://launcher/State Managers/ResetCameraRotation/State Group</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54148,8 +54547,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/State Managers/ResetCameraRotation/State Group/State1</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54163,15 +54561,14 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/State Managers/ResetCameraRotation/State Group/State2</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>222.39999999999998</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -54220,8 +54617,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/Viewport 2D/Scene/CameraController/CameraRoot</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54235,8 +54631,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/Viewport 2D/Scene/CameraController/CameraRoot/Camera</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54250,23 +54645,21 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/Viewport 2D/Scene/CameraRoot</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>140.80000000000007</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/Viewport 2D/Scene/CameraRoot/CameraController</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54280,8 +54673,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/Viewport 2D/Scene/CameraRoot/CameraController/Camera</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54295,8 +54687,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/State Managers/ResetCameraRotation/State Group/State1/State Object</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54310,23 +54701,21 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/State Managers/ResetCameraRotation/State Group/State2/State Object</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>222.39999999999998</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>297.6</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/Viewport 2D/Scene/CameraRoot/CameraController/State Manager: Entered State</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54340,8 +54729,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/Viewport 2D/Scene/CameraRoot/CameraController/State Manager: Entered State/State Manager: Go To State</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54355,8 +54743,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/Viewport 2D/Scene/CameraRoot/CameraController/State Manager: Entered State/Scroll View: Set Scroll</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54370,8 +54757,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/Viewport 2D/Scene/CameraRoot/CameraController/State Manager: Entered State/Write Log</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -54393,6 +54779,110 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
         <d4p1:ScrollPosition>173.60000000000002</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://launcher/Property Types/Perspective</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/back_1</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/top</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/top/State Object</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>141.60000000000002</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/top_1</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/left</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/left/State Object</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>141.60000000000002</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
   </PropertyEditorViewModeStates>
@@ -54442,8 +54932,7 @@ createRotation(degreesY , degreesX, 0)
           <d5p1:defaultValue xmlns:d6p1="http://www.w3.org/2001/XMLSchema"
             i:type="d6p1:int">0</d5p1:defaultValue>
           <d5p1:displayName>Env_Switch</d5p1:displayName>
-          <d5p1:fixedOrderPosition
-            i:nil="true" />
+          <d5p1:fixedOrderPosition>2147483647</d5p1:fixedOrderPosition>
           <d5p1:id>3abfa688-170c-4aa5-8e96-38b76d22087a</d5p1:id>
           <d5p1:isExportedToEngine>true</d5p1:isExportedToEngine>
           <d5p1:isHidden>false</d5p1:isHidden>
@@ -54494,8 +54983,7 @@ createRotation(degreesY , degreesX, 0)
           <d5p1:defaultValue xmlns:d6p1="http://www.w3.org/2001/XMLSchema"
             i:type="d6p1:int">0</d5p1:defaultValue>
           <d5p1:displayName>Charging.Status</d5p1:displayName>
-          <d5p1:fixedOrderPosition
-            i:nil="true" />
+          <d5p1:fixedOrderPosition>2147483647</d5p1:fixedOrderPosition>
           <d5p1:id>61d772ef-82cd-4236-a691-d003925db2b3</d5p1:id>
           <d5p1:isExportedToEngine>true</d5p1:isExportedToEngine>
           <d5p1:isHidden>false</d5p1:isHidden>
@@ -54535,7 +55023,7 @@ createRotation(degreesY , degreesX, 0)
         </d3p1:Value>
       </d3p1:KeyValueOfstringDynamicPropertyTypeupo9qxsJ>
       <d3p1:KeyValueOfstringDynamicPropertyTypeupo9qxsJ>
-        <d3p1:Key>Feature</d3p1:Key>
+        <d3p1:Key>Perspective</d3p1:Key>
         <d3p1:Value xmlns:d5p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType" xmlns:d5p2="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType.PropertyTypes"
           i:type="d5p2:CustomEnumDynamicPropertyType">
           <d5p1:AffectLayout>false</d5p1:AffectLayout>
@@ -54557,7 +55045,7 @@ createRotation(degreesY , degreesX, 0)
           <d5p1:dataTypeEnum>ENUM</d5p1:dataTypeEnum>
           <d5p1:defaultValue xmlns:d6p1="http://www.w3.org/2001/XMLSchema"
             i:type="d6p1:int">0</d5p1:defaultValue>
-          <d5p1:displayName>Feature</d5p1:displayName>
+          <d5p1:displayName>Perspective</d5p1:displayName>
           <d5p1:fixedOrderPosition
             i:nil="true" />
           <d5p1:id>9840f39c-1dde-432e-b792-9ecf4e72e9af</d5p1:id>
@@ -54568,7 +55056,7 @@ createRotation(degreesY , degreesX, 0)
           <d5p1:isKzbIndependent>false</d5p1:isKzbIndependent>
           <d5p1:isUserAddable
             i:nil="true" />
-          <d5p1:name>Feature</d5p1:name>
+          <d5p1:name>Perspective</d5p1:name>
           <d5p1:targetHostType>
             <d2p1:TargetTypeNames>
               <d3p1:string>System.Object</d3p1:string>
@@ -54582,6 +55070,14 @@ createRotation(degreesY , degreesX, 0)
             <d3p1:KeyValueOfstringint>
               <d3p1:Key>Back</d3p1:Key>
               <d3p1:Value>1</d3p1:Value>
+            </d3p1:KeyValueOfstringint>
+            <d3p1:KeyValueOfstringint>
+              <d3p1:Key>Top</d3p1:Key>
+              <d3p1:Value>2</d3p1:Value>
+            </d3p1:KeyValueOfstringint>
+            <d3p1:KeyValueOfstringint>
+              <d3p1:Key>Left</d3p1:Key>
+              <d3p1:Value>3</d3p1:Value>
             </d3p1:KeyValueOfstringint>
           </d5p2:options>
         </d3p1:Value>
