@@ -1,5 +1,7 @@
 # car 3D 模型分组
 
+> 本文描述 `scania4.glb` 的**当前实际分组**(过渡态);拆模与分组的**目标规范**(完整节点树、pivot/轴向、材质、验收清单)见 [truck-model-grouping-spec.md](truck-model-grouping-spec.md)。
+>
 > 3D 场景里**摄像头视角切换与滑动手势**的协作说明见 [architecture/camera-view-and-gesture.md](architecture/camera-view-and-gesture.md)。
 
 > **当前优先级**: demo 暂停,car 3D 模型分组与可控性优先。
