@@ -179,7 +179,7 @@
 | `Demo.IconUri` | 读 | `Demo/iconUri` | 普通 |
 | List Box Items | 读 | `Demo/menu` | 普通 |
 
-数据字段定义见 [`assets/datasource.xml`](../assets/datasource.xml) 的 `Demo` 分组。
+数据字段定义见 [`IVI/assets/datasource.xml`](../IVI/assets/datasource.xml) 的 `Demo` 分组。
 
 ---
 
@@ -202,6 +202,6 @@
 ## 创建顺序
 1. `common`:建 18 个 Color Brush(§2)→ AppTheme 主题(§3)→ LocaleStyle/_zh(§4)→ Make Public → 导出。
 2. `demo`:按 §6 建 Card / LabelText 等组件与 DemoPage → Make Public → 导出(业务模块对照 demo,不引用 demo kzb)。
-2. `launcher`:导入插件 → 数据源指向 `assets/datasource.xml` → Screen 设 Data Context。
+2. `launcher`:导入插件 → 数据源指向 `IVI/assets/datasource.xml` → Screen 设 Data Context。
 3. `demo`:引用 common → DemoPage → 按 §8 搭卡片、expose §7 属性 → 本地化(§10)→ Make Public → 导出。
 4. `launcher`:Prefab View 挂 DemoView → 按 §9 连线 → 导航 → 导出。

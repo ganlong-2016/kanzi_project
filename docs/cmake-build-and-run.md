@@ -5,7 +5,7 @@
 1. `IVI/launcher/Application/` 下的几个 CMake 文件各是什么意思、怎么配合运行的;
 2. 为什么 **Ctrl+F5 正常运行,F5 调试却"报 0xC0000005 错"**。
 
-相关文档:[Windows 桌面运行排查](windows-desktop-run.md) · [插件部署原理](../plugins/README.md)
+相关文档:[Windows 桌面运行排查](windows-desktop-run.md) · [插件部署原理](../Shared/Plugins/README.md)
 
 ---
 
@@ -25,17 +25,17 @@
         └──► ④ cmake/deploy-plugins.cmake ← configure 阶段:只"登记"编译后要做的事
                   │  注册 POST_BUILD 命令
                   ▼
-             ⑤ cmake/deploy-runtime.cmake ← 每次编译成功后:真正复制 jar 到 assets/
+             ⑤ cmake/deploy-runtime.cmake ← 每次编译成功后:真正复制 jar 到 IVI/assets/
 ```
 
 | 时间点 | 谁在干活 | 产出 |
 |--------|---------|------|
-| 双击 bat | CMake configure:②③④ 依次执行 | `build_vs2022/launcher.sln`(内含工作目录=`assets/`、POST_BUILD 钩子) |
-| VS 点"生成" | 编译 `launcher.cpp` → 官方函数拷引擎 DLL → ⑤ 复制 jar | `runtime/Debug/launcher.exe` + `assets/` 下 jar 齐备 |
-| F5 / Ctrl+F5 | 进程以 `assets/` 为工作目录启动 | 引擎按 `./launcher.kzb.cfg` 读 kzb、按 `./kzjvm.jar` 起 JVM、加载 `./DroidDataSourceplugin.jar` |
+| 双击 bat | CMake configure:②③④ 依次执行 | `build_vs2022/launcher.sln`(内含工作目录=`IVI/assets/`、POST_BUILD 钩子) |
+| VS 点"生成" | 编译 `launcher.cpp` → 官方函数拷引擎 DLL → ⑤ 复制 jar | `runtime/Debug/launcher.exe` + `IVI/assets/` 下 jar 齐备 |
+| F5 / Ctrl+F5 | 进程以 `IVI/assets/` 为工作目录启动 | 引擎按 `./launcher.kzb.cfg` 读 kzb、按 `./kzjvm.jar` 起 JVM、加载 `./DroidDataSourceplugin.jar` |
 
 > 隐含约定贯穿全程:**Studio 的 Export 目录、CMake 的 `KANZI_KZB_DIRECTORY`、
-> VS 调试工作目录,三者都指向仓库根 `assets/`**。kzb 由 Studio 导出进去,
+> VS 调试工作目录,三者都指向仓库 `IVI/assets/`**。kzb 由 Studio 导出进去,
 > jar 由 CMake 编译后送进去,运行时引擎从同一目录读出来。任何一环指错目录,
 > 就会出现"找不到 xxx"系列错误。
 
@@ -76,14 +76,14 @@ configure 阶段从上到下执行:
    ```
 
    `VS_DEBUGGER_WORKING_DIRECTORY` 写进生成的 `.vcxproj`——这就是
-   "F5 时进程工作目录是 `assets\`"的出处。
+   "F5 时进程工作目录是 `IVI\assets\`"的出处。
 5. **官方部署函数**:`install_kanzi_libs_to_output_directory()` 等三个,
    编译后把引擎 DLL、kzb 同步到 `build_vs2022/runtime/<Config>/`。
 6. **推断 Studio 安装根**(系统 jar 来源):优先环境变量 `KANZI_STUDIO_HOME`;
    否则若 `KANZI_HOME` 下有 `Studio/Bin/EnginePlugins` 就沿用
    (日志 `KANZI_STUDIO_HOME=... (system jars)` 即此段输出)。
 7. **挂插件部署**:`include(deploy-plugins.cmake)` +
-   `deploy_kanzi_plugins(launcher <assets> <plugins>)`。
+   `deploy_kanzi_plugins(launcher <IVI/assets> <Shared/Plugins>)`。
 
 ### ③ `cmake/kanzi-locate.cmake`(只干一件事:找引擎)
 
@@ -103,11 +103,11 @@ configure 阶段从上到下执行:
 
 只在 Windows 桌面生效(`if(NOT WIN32 OR ANDROID) return()`;Android 走 Gradle 打包)。做两件事:
 
-1. `plugins/` 下若有自研 **DLL** 插件,登记 POST_BUILD 复制到 exe 目录
+1. `Shared/Plugins/` 下若有自研 **DLL** 插件,登记 POST_BUILD 复制到 exe 目录
    (当前仓库只有 Java 插件,此段空转);
 2. **核心**:给 `launcher` 挂一条 POST_BUILD 命令——每次编译成功后用
    `cmake -P` 以脚本模式执行 ⑤,传入 `$<CONFIG>`(生成器表达式,编译时才
-   展开成 Debug/Release)、`assets/` 路径、`plugins/` 路径、`KANZI_STUDIO_HOME`。
+   展开成 Debug/Release)、`IVI/assets/` 路径、`Shared/Plugins/` 路径、`KANZI_STUDIO_HOME`。
 
 > 注意:configure 阶段**什么都没复制**,只是把"编译完要跑这个脚本"写进 vcxproj。
 > 所以 configure 日志里看不到任何 `deploy-runtime:` 输出——那些在**编译**时
@@ -120,10 +120,10 @@ configure 阶段从上到下执行:
 1. **定成套配置**:`CONFIG` 为 Debug/RelWithDebInfo → `Debug` 后缀,否则 `Release`;
 2. **复制系统 jar**:在 Studio 根下找 `EnginePlugins/GL_vs2019_<配置>`,要求
    `kzjava.jar` 与 `kzjvm.jar` **同时存在**才选用(防止 Debug 引擎配 Release jar
-   的半套组合),把该目录全部 jar `copy_if_different` 到 `assets/`;
+   的半套组合),把该目录全部 jar `copy_if_different` 到 `IVI/assets/`;
    找不到成套目录则打 WARNING 说明后果;
-3. **复制业务插件**:`plugins/datasource/lib/java/.../DroidDataSourceplugin.jar`
-   → `assets/` **根目录**(桌面引擎实际加载位置)+ `assets/lib/java/Debug|Release/`
+3. **复制业务插件**:`Shared/Plugins/datasource/lib/java/.../DroidDataSourceplugin.jar`
+   → `IVI/assets/` **根目录**(桌面引擎实际加载位置)+ `IVI/assets/lib/java/Debug|Release/`
    (Android 布局镜像)。
 
 ---
@@ -160,7 +160,7 @@ HotSpot JVM(`jvm.dll`)在设计上就**故意制造访问冲突**来实现两个
 
 - 异常地址是高位动态地址(JIT 生成的代码区,不属于任何 DLL 模块);
 - 进程退出码是 **0**,不是 0xC0000005(真崩溃时退出码就是异常码);
-- `assets\` 下**没有** `hs_err_pid*.log`(JVM 真崩溃必写此文件)。
+- `IVI\assets\` 下**没有** `hs_err_pid*.log`(JVM 真崩溃必写此文件)。
 
 若 VS 在此中断,按**继续(F5)**程序照常运行——它并没有崩。
 
@@ -178,5 +178,5 @@ HotSpot JVM(`jvm.dll`)在设计上就**故意制造访问冲突**来实现两个
 
 1. **以 Ctrl+F5 的行为为准**:窗口能出来 → F5 下的异常是噪音;
 2. 看**退出码**:0 = 正常退出;0xC0000005 = 真崩溃;
-3. 看 `assets\hs_err_pid*.log`:存在 = JVM 真崩溃(内附 Java 栈);
+3. 看 `IVI\assets\hs_err_pid*.log`:存在 = JVM 真崩溃(内附 Java 栈);
 4. F5 中断时按继续,能继续跑 = 已被处理的 first-chance 异常。

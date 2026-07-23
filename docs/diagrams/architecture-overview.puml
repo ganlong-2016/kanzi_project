@@ -29,7 +29,7 @@ package "Kanzi Studio 工程(本仓库)" {
   component "environment\n3D 场景" as environment
 }
 
-component "plugins/datasource\nJava 数据源插件 (解析 XML)" as plugin #E8FFE8
+component "Shared/Plugins/datasource\nJava 数据源插件 (解析 XML)" as plugin #E8FFE8
 cloud "Android 渲染侧\n加载 kzb + 提供真实数据" as android
 
 launcher --> common : kzb:// 引用

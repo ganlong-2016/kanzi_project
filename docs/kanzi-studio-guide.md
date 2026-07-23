@@ -62,12 +62,12 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 打开 `IVI/launcher/Tool_project/launcher.kzproj`。
 
 ## B1. 导入并启用插件
-1. `Library` → **右键 `Kanzi Engine Plugins`** → **Import Kanzi Engine Plugin** → 选 `plugins/datasource/lib/java/Release/DroidDataSourceplugin.jar`(Android 用 Java 插件)。
+1. `Library` → **右键 `Kanzi Engine Plugins`** → **Import Kanzi Engine Plugin** → 选 `Shared/Plugins/datasource/lib/java/Release/DroidDataSourceplugin.jar`(Android 用 Java 插件)。
 2. 选中插件 → `Properties` 确认 **Is Enabled** 打开。改过插件后用右键 **Update Kanzi Engine Plugin** 刷新元数据。
 
 ## B2. 建数据源并指向 XML
 1. 打开 **Data Sources** 面板(`Window` 菜单)→ 右键 → 新建数据源,类型选插件的 **DroidDataSource** 类型,命名 `VehicleData`。
-2. 在其属性里把 **XML 路径**指向 `assets/datasource.xml`(仓库根,单一契约)。
+2. 在其属性里把 **XML 路径**指向 `IVI/assets/datasource.xml`(单一契约)。
 3. 右键数据源 → **Update Data Source Contents**,应出现 `System / Charging / VehicleControl / Interior / Demo` 分组字段。
 
 ## B3. 设 Data Context
@@ -147,7 +147,7 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 | 创建资源找不到入口 | 用 **Alt + 右键** 对应分类(如 Alt+右键 Materials and Textures) |
 | 主题切了不变 | 颜色写死了;应经 Theme Group 的 resource ID;预览用 Dictionaries>Locales and Themes |
 | demo 里选不到数据源字段 | 正常:数据源在 launcher。demo 只 expose 属性;字段绑定在 launcher 的 DemoView 上做 |
-| Update Data Source 后无字段 | XML 路径要指 `assets/datasource.xml`,插件 Is Enabled,再 Update |
+| Update Data Source 后无字段 | XML 路径要指 `IVI/assets/datasource.xml`,插件 Is Enabled,再 Update |
 | 开关点了不回写 | 补 To-Source(demo expose 属性 → launcher DemoView 上 To-Source 到数据源) |
 
 ---
@@ -157,6 +157,6 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 | 工程 | 建什么(章节) |
 |------|----------------|
 | `common` | Color Brush(A1)、Theme Group(A2)、Named Style(A3)、Make Public+导出(A4) — **仅资源** |
-| `launcher` | 导入插件(B1)、建数据源指向 `assets/datasource.xml`(B2)、Screen 设 Data Context(B3)、挂载 Prefab View + 连线(D) |
+| `launcher` | 导入插件(B1)、建数据源指向 `IVI/assets/datasource.xml`(B2)、Screen 设 Data Context(B3)、挂载 Prefab View + 连线(D) |
 | `demo` | 引用 common(C1)、UI 组件(C2)、页面(C3)、卡片 expose(C4)、Make Public+导出(C6) |
 | 业务模块 | 引用 common、**参照 demo** 自建 Prefab,expose 本模块属性,Make Public+导出 |

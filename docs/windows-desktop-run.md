@@ -28,7 +28,7 @@
 framework (droidfw) applications"）；`lib/java/Debug|Release/` 是 **Studio 导入**
 的路径规范，不是运行时搜索路径。**独立 Windows exe + Java 插件**属于文档空白，
 本仓库的 CMake 部署是按上述引擎实际搜索行为补的工程做法。
-改 Working Directory（`Application/bin` → `assets/`）只决定复制到哪，
+改 Working Directory（`Application/bin` → `IVI/assets/`）只决定复制到哪，
 不是需要复制的原因。
 
 **省心做法**：桌面只调 UI 时，在 Studio 里对 `DroidDataSourceplugin`
@@ -37,15 +37,15 @@ framework (droidfw) applications"）；`lib/java/Debug|Release/` 是 **Studio �
 ## 复制 jar 后要不要重新编译？
 
 **不要。**  
-`assets\kzjava.jar` / `kzjvm.jar` 是运行时文件，改完直接 F5 即可。  
+`IVI\assets\kzjava.jar` / `kzjvm.jar` 是运行时文件，改完直接 F5 即可。  
 只有改了 `CMakeLists.txt` / 源码 / 需要重新部署插件时才要重新编译。
 
 PowerShell 复制 Debug 系统 jar：
 
 ```powershell
 Copy-Item -Force "D:\Kanzi 3_9_15_83\Studio\Bin\EnginePlugins\GL_vs2019_Debug\*.jar" `
-  -Destination "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\assets\"
-Get-ChildItem "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\assets\*.jar"
+  -Destination "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\IVI\assets\"
+Get-ChildItem "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\IVI\assets\*.jar"
 ```
 
 ---
@@ -68,7 +68,7 @@ Get-ChildItem "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\assets\*.jar"
 1. Studio 打开 `launcher.kzproj`  
 2. `Library` → `Kanzi Engine Plugins` → `DroidDataSourceplugin`  
 3. Properties → **取消 Is Enabled**  
-4. **File → Export → Export KZB**（导出到 `assets/`）  
+4. **File → Export → Export KZB**（导出到 `IVI/assets/`）  
 5. VS 再 F5  
 
 | 结果 | 含义 |
@@ -95,7 +95,7 @@ VS 配置改为 **Release**，并复制：
 
 ```powershell
 Copy-Item -Force "D:\Kanzi 3_9_15_83\Studio\Bin\EnginePlugins\GL_vs2019_Release\*.jar" `
-  -Destination "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\assets\"
+  -Destination "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\IVI\assets\"
 ```
 
 （引擎也会走 `GL_vs2019_Release_DLL`，与 jar 成套。）
@@ -113,15 +113,15 @@ JVM 已正常启动（能看到这个 Java 断言栈说明 kzjvm/JNI 没问题�
 桌面（win32 appfw）的 Java `PluginLoader` 只搜两个位置：
 
 1. **JAR plugin path** —— 仅 Android（droidfw）由宿主 App 传入；桌面上无人设置，恒为 `null`
-2. **工作目录根** —— 即 `assets\DroidDataSourceplugin.jar`
+2. **工作目录根** —— 即 `IVI\assets\DroidDataSourceplugin.jar`
 
-`assets\lib\java\Debug|Release\` 是 **Android 打包布局，桌面引擎不会去那里找**。
+`IVI\assets\lib\java\Debug|Release\` 是 **Android 打包布局，桌面引擎不会去那里找**。
 
 修复：把业务 jar 放到工作目录根（重新 CMake 编译会自动部署；或手动复制后直接 F5，无需重编）：
 
 ```powershell
-Copy-Item -Force "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\plugins\datasource\lib\java\Release\DroidDataSourceplugin.jar" `
-  -Destination "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\assets\"
+Copy-Item -Force "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\Shared\Plugins\datasource\lib\java\Release\DroidDataSourceplugin.jar" `
+  -Destination "D:\KanziWorkspace_3_9_15_83\Projects\NextEra\IVI\assets\"
 ```
 
 > 附注：VS 调试时在 `jvm.dll`/`java.dll` 加载后看到的 first-chance `0xC0000005`（读地址 0）

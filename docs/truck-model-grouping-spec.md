@@ -146,7 +146,7 @@ Trailer (Root, 原点在牵引销 Kingpin)
 - 命名交付后**冻结,只追加不改名**;禁止中文、空格、特殊字符。
 - 命名统一后,Studio 侧分组脚本(`scripts/group_car_model.py`)可从"按网格名对表猜位置"简化为**按命名前缀直接归组**。
 
-## 8. 与数据契约(`assets/datasource.xml`)的映射
+## 8. 与数据契约(`IVI/assets/datasource.xml`)的映射
 
 ### 8.1 现有字段 → 节点
 
