@@ -97,6 +97,14 @@ if(EXISTS "${car_codebehind_lib_dir}")
     target_link_libraries(launcher car_CodeBehind)
 endif()
 # [car CodeBehind lib end]. Do not remove or change this identifier.
+# [car CodeBehind lib start]. Do not remove or change this identifier.
+set(car_codebehind_lib_dir "${CMAKE_CURRENT_SOURCE_DIR}/../../car/CodeBehind/car")
+if(EXISTS "${car_codebehind_lib_dir}")
+    add_subdirectory("${car_codebehind_lib_dir}" "${CMAKE_CURRENT_BINARY_DIR}/CodeBehind/car")
+    include_directories(${car_codebehind_lib_dir}/include)
+    target_link_libraries(launcher car_CodeBehind)
+endif()
+# [car CodeBehind lib end]. Do not remove or change this identifier.
 # [CodeBehind libs end]. Do not remove this identifier.
 
 # KZB / cfg 导出目录（与 launcher.kzproj 的 BinaryExportDirectory 一致：IVI/assets/）
