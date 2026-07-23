@@ -57,7 +57,7 @@
 
 ### 0.3 仓库侧已完成
 
-- 📁 `assets/datasource.xml`:契约字段(`System/Vehicle/Charging/VehicleControl/Interior/Demo`)已就绪,头部过时注释已修正(单一来源,无第二份副本)。本次 demo 不需要新增字段(子页 B 的卡片演示的是 UI 机制,复用现有字段)。
+- 📁 `IVI/assets/datasource.xml`:契约字段(`System/Vehicle/Charging/VehicleControl/Interior/Demo`)已就绪,头部过时注释已修正(单一来源,无第二份副本)。本次 demo 不需要新增字段(子页 B 的卡片演示的是 UI 机制,复用现有字段)。
 - 📁 本文档及 `demo-spec.md` / `demo-module.md` 的同步修订。
 
 ---
@@ -169,7 +169,7 @@ string(acquire("demo.title"))
 ### 4.1 机制
 
 ```text
-assets/datasource.xml(契约) → DroidDataSourceplugin(Java 插件,解析 XML)
+IVI/assets/datasource.xml(契约) → DroidDataSourceplugin(Java 插件,解析 XML)
   → Data Sources 面板里的数据源实例 → 节点 Data Context → 绑定(读 / To-Source 写)
 ```
 
@@ -463,7 +463,7 @@ DemoPage (根,1920×900)
 
 ### 8.3 验收
 
-Preview 里:改 `assets/datasource.xml` 里 `Demo` 组的默认值并保存 → Data Sources 面板点更新 → 卡 1/2/6 应变化;点 demo 里的开关/滑块 → Data Sources 面板里悬停 `toggleOn`/`sliderValue` 应看到值被写回。
+Preview 里:改 `IVI/assets/datasource.xml` 里 `Demo` 组的默认值并保存 → Data Sources 面板点更新 → 卡 1/2/6 应变化;点 demo 里的开关/滑块 → Data Sources 面板里悬停 `toggleOn`/`sliderValue` 应看到值被写回。
 
 ---
 

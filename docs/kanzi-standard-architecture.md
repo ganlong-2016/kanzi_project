@@ -216,46 +216,57 @@ flowchart TB
 
 ### 4.3 标准文件结构(仓库级)
 
-结合官方结构与中控工程实践,一个标准仓库长这样(`<repo>` 平铺所有工程,Solution 主工程带完整 `Tool_project + Application`,子工程精简):
+结合官方结构与中控工程实践,一个标准仓库长这样(Kanzi 工程集中在 `IVI/` 构建工作区,Solution 主工程带完整 `Tool_project + Application`,子工程精简;共享层 / 构建变体 / Android 独立平级,详见 [repo-structure.md](repo-structure.md)):
 
 ```text
 <repo>/
 ├── README.md
 ├── .gitattributes                  # 大二进制走 Git LFS(png/dds/otf/glb/jar/MeshData)
 ├── .gitignore                      # autosave / *.kzproj_N / .lock / Temp / 缓存 / *.kzb
+├── CMakeLists.txt                  # 根构建入口(add_subdirectory → IVI/launcher/Application)
 │
-├── launcher/                       # ★ Solution 主工程(唯一含 Application)
-│   ├── Tool_project/
-│   │   ├── launcher.kzproj         # Screen/RootPage、导航、Prefab View、数据源实例、主题、本地化表
-│   │   └── Images/ ...
-│   └── Application/
-│       ├── bin/                    # 全部 kzb 的统一导出与运行目录(含 application.cfg)
-│       ├── src/                    # C++ 入口(createApplication)
-│       ├── configs/platforms/      # android_gradle / win 等平台工程
-│       └── CMakeLists.txt
+├── IVI/                            # ★ Kanzi Studio 构建工作区(全部工程 + 运行时资源)
+│   ├── assets/                     # kzb 统一导出 / 运行时工作目录
+│   │   ├── datasource.xml          # ★ 数据契约单一来源(Studio 与运行时共用)
+│   │   ├── application.cfg
+│   │   └── Localization/ lz4/ pc_exe/   # 预留:本地化包 / 压缩包 / 桌面打包产物
+│   │
+│   ├── launcher/                   # ★ Solution 主工程(唯一含 Application)
+│   │   ├── Tool_project/
+│   │   │   ├── launcher.kzproj     # Screen/RootPage、导航、Prefab View、数据源实例、主题、本地化表
+│   │   │   └── Images/ ...
+│   │   └── Application/
+│   │       ├── bin/                # 官方模板运行目录(本仓库实际用 IVI/assets/)
+│   │       ├── src/                # C++ 入口(createApplication)
+│   │       ├── configs/platforms/  # android_gradle / win 等平台工程
+│   │       └── CMakeLists.txt
+│   │
+│   ├── common/                     # ★ 资源工程(官方 New Resource Project 形态)
+│   │   ├── common.kzproj           # 仅:Fonts / Brush / Theme token / Named Style / 图标(全 Public)
+│   │   └── Fonts/  Images/
+│   │
+│   ├── car/                        # ★ 功能子工程(Kanzi Studio project 模板,无 Application)
+│   │   ├── Car.kzproj              # 根 Prefab: Prefabs/Pages/CarPage(Public)
+│   │   ├── 3D Assets/              # glb/fbx 源
+│   │   ├── MeshData/               # 导入网格数据(入库!)
+│   │   ├── Animations/             # 动画关键帧(入库!)
+│   │   └── Images/  Shaders/
+│   ├── car_setting/
+│   │   └── car_setting.kzproj  + Images/ ...
+│   ├── environment/
+│   │   └── environment.kzproj  + Images/ MeshData/ Shaders/ ...
+│   └── demo/                       # (可选)样板工程:组件/绑定写法示例,非运行时依赖
+│       └── demo.kzproj
 │
-├── common/                         # ★ 资源工程(官方 New Resource Project 形态)
-│   ├── common.kzproj               # 仅:Fonts / Brush / Theme token / Named Style / 图标(全 Public)
-│   └── Fonts/  Images/
+├── Shared/                         # 共享组件层(跨模块 / 跨端复用)
+│   ├── Plugins/                    # 业务 Kanzi 插件(自研 JAR/DLL)
+│   │   └── datasource/             # 数据源插件
+│   └── Resources/                  # 非 kzproj 管理的共享资源
+│       ├── carmodel/               # 车型变体资源(预留)
+│       └── ota/                    # 热更新资源(预留)
 │
-├── car/                            # ★ 功能子工程(Kanzi Studio project 模板,无 Application)
-│   ├── car.kzproj                  # 根 Prefab: Prefabs/Pages/CarPage(Public)
-│   ├── 3D Assets/                  # glb/fbx 源
-│   ├── Mesh Data/                  # 导入网格数据(入库!)
-│   ├── Animations/                 # 动画关键帧(入库!)
-│   ├── Images/  Shaders/
-│   └── Source Assets/              # Blender 源文件等(不导出)
-├── car_setting/
-│   └── car_setting.kzproj  + Images/ ...
-├── environment/
-│   └── environment.kzproj  + Images/ MeshData/ Shaders/ ...
-├── demo/                           # (可选)样板工程:组件/绑定写法示例,非运行时依赖
-│   └── demo.kzproj
-│
-├── assets/
-│   └── datasource.xml              # ★ 数据契约单一来源(Studio 与运行时共用)
-├── plugins/                        # 业务 Kanzi 插件（自研 JAR/DLL）
-│   └── datasource/                 # 数据源插件
+├── BuildConfigs/                   # 构建变体配置(预留)
+├── Android/                        # Android 渲染侧工程(预留)
 ├── scripts/                        # 辅助脚本(模型分组/迁移/CI 导出)
 └── docs/                           # 架构、规范、操作手册、PlantUML 图源
 ```
@@ -413,7 +424,7 @@ sequenceDiagram
 | 引用方向 | 已核实 kzproj:launcher → 5 个工程;各子工程 → 仅 common;common 无引用 → **单向无环** ✅ | 引用规则 |
 | 只有 launcher 带 `Application/`(C++ 入口 + android_gradle) | ✅ 子工程精简为 `.kzproj` + 资源目录 | 子工程用 Studio-only 模板 |
 | 数据源归属 | 插件(`DroidDataSourceplugin.jar`)与数据源实例都在 launcher;子模块走 `##Template` 属性接口 | 数据源/Screen 级资源 §3.3 |
-| 数据契约 | `assets/datasource.xml` 单一来源,类型/Valid 约定清晰 | Data sources |
+| 数据契约 | `IVI/assets/datasource.xml` 单一来源,类型/Valid 约定清晰 | Data sources |
 | 主题/本地化 | 表在 launcher(Screen 级),common 出 token + Named Style,DataLayer 中转文案 | §3.2-5 |
 | 版控 | LFS 管大二进制;忽略 autosave/`kzproj_N`/lock/Temp/kzb 产物 | 官方 Version control 指引 |
 

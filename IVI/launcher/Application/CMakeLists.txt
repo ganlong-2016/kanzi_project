@@ -99,9 +99,9 @@ endif()
 # [car CodeBehind lib end]. Do not remove or change this identifier.
 # [CodeBehind libs end]. Do not remove this identifier.
 
-# KZB / cfg 导出目录（与 launcher.kzproj 的 BinaryExportDirectory 一致：仓库根 assets/）
-get_filename_component(KANZI_KZB_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/../../../assets" ABSOLUTE)
-get_filename_component(REPO_PLUGINS_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/../../../plugins" ABSOLUTE)
+# KZB / cfg 导出目录（与 launcher.kzproj 的 BinaryExportDirectory 一致：IVI/assets/）
+get_filename_component(KANZI_KZB_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/../../assets" ABSOLUTE)
+get_filename_component(REPO_PLUGINS_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/../../../Shared/Plugins" ABSOLUTE)
 
 set_target_properties(launcher PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${KANZI_KZB_DIRECTORY}")
 set_target_properties(launcher PROPERTIES VS_DEBUGGER_ENVIRONMENT "${KANZI_VS_DEBUGGER_ENVIRONMENT}")

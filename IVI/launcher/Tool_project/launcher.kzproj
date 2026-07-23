@@ -153,7 +153,7 @@
           i:nil="true" />
         <propertyTypeReference>BinaryExportDirectory</propertyTypeReference>
         <value xmlns:d5p1="http://www.w3.org/2001/XMLSchema"
-          i:type="d5p1:string">..\..\..\assets</value>
+          i:type="d5p1:string">..\..\assets</value>
       </d2p1:Value>
     </d2p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
     <d2p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -511,7 +511,7 @@
           i:nil="true" />
         <propertyTypeReference>PreviewWorkingDirectory</propertyTypeReference>
         <value xmlns:d5p1="http://www.w3.org/2001/XMLSchema"
-          i:type="d5p1:string">..\..\..\assets</value>
+          i:type="d5p1:string">..\..\assets</value>
       </d2p1:Value>
     </d2p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
     <d2p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
