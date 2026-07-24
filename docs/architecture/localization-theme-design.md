@@ -2,17 +2,24 @@
 
 > 依据 **Kanzi 3.9.15 官方文档** + 本仓库**当前实际资产**给出的落地架构。原则速查见 [localization-and-theme.md](../localization-and-theme.md);Trigger/Action 白名单见 [trigger-guide.md](trigger-guide.md)。
 >
-> 本文所有"现状"均核对自工程文件(`launcher.kzproj` / `common.kzproj` / `demo.kzproj` / `datasource.xml`),所有机制均标注官方出处,无推测性设计。
+> 本文所有"现状"均核对自工程文件(`launcher.kzproj` / `common.kzproj` / `demo.kzproj` / `datasource.xml`),所有机制均标注官方出处。
 
 ## 1. 结论速览
 
+**一条铁律决定整个架构**(官方对本地化与主题用同一句话规定,见 §2.3):
+
+> 多工程组合的应用里,**Localization Table 和 Theme Group 必须对主工程(含 Screen 的 launcher)的 Screen 节点可见**——定义在被引用工程(common)里的表/主题组,其他工程经 resource ID **找不到**。
+
+由此:
+
 | 关注点 | 结论 |
 |--------|------|
-| 谁决定语言/主题 | **Android 侧**,经数据契约 `System/locale`(string)、`System/theme`(int)下发——两个字段**契约里已预留** |
-| 谁执行切换 | **只有 launcher**(Screen 级资源,与 trigger 白名单"Activate Theme / Set Locale 只允许 launcher 用"一致) |
-| token/字体唯一源 | **common**(现状已是:`AppTheme` Theme Group + `LocaleStyle` 字体样式) |
-| 业务模块感知什么 | **零感知**:颜色用 `<Resource ID>` token、字体用 `LocaleStyle`、文案用本地化 key;切换时自动刷新 |
-| 3D 场景日夜 | 不走 UI 主题,**同一个 `System/theme` 字段**由 environment/car 模块用 State Manager / Data Trigger 自行消费 |
+| **字典放哪**(Localization Table / Theme Group) | **只放 launcher**(主工程)。common 里现有的表和 `AppTheme` 是放错了位置,要迁移(§6) |
+| **值资源放哪**(brush / style / 字体 / 贴图) | **common**(Public)。字典的每个格子可以用 `kzb://common/...` URL 或 Add Existing 指向 common 的资源——官方明确支持,launcher 表里 `LocaleStyle` 行已经这么用了 |
+| 模块感知什么 | **零感知**:节点只写 resource ID(`Color/Surface`、文案 key)和 `LocaleStyle`;运行时模块 prefab 实例挂在 launcher 的 Screen 下,由 launcher 的字典解析 |
+| 谁决定语言/主题 | **Android 侧**,经契约 `System/locale`(string)、`System/theme`(int)下发——字段已预留 |
+| 谁执行切换 | **只有 launcher**(与 trigger 白名单"Activate Theme / Set Locale 只允许 launcher"一致) |
+| 3D 场景日夜 | 不走 UI 主题,同一个 `System/theme` 字段由 environment/car 模块用 State Manager / Data Trigger 自行消费 |
 
 ## 2. 官方机制依据(Kanzi 3.9.15)
 
@@ -20,50 +27,61 @@
 
 出处:[Localization](https://docs.kanzi.com/3.9.15/en/working-with/localization/localization.html)、[Using locales](https://docs.kanzi.com/3.9.15/en/working-with/localization/using-locales.html)、[Localizing applications](https://docs.kanzi.com/3.9.15/en/working-with/localization/localizing-applications.html)
 
-- **Locale 是资源选择 ID**:Kanzi 用 locale 名(如 `zh-CN`)选择资源;可本地化的不只文本,还有字体、贴图、Style、材质等。
-- **Localization Table + resource ID 间接寻址**:节点不直接持有文案/资源,持有 resource ID;表记录"哪个 locale 用哪个资源"。**未定义的 locale 回退到默认 locale**(表中 `neutral` 列)。
-- **切换语言 = 改 Screen 节点的 `Locale` 属性**:官方明确"To set a locale using a control, use any trigger and the **Set Property** action to set the value of the **Locale** property in the **Screen** node";侦听变化用 On Property Change trigger。
-- **PO 文件**可导入/导出,导入时自动补建 locale——译文可在外部统一管理。
-- **Locale pack**:可把某 locale 的资源拆成独立 kzb,导出到 `<BinaryExportDirectory>/Locale_packs/`(目录名 Studio 固定),运行时用 Engine API 按需加载——主 kzb 不含这些资源,体积减小。
+- **Locale 是资源选择 ID**:可本地化的不只文本,还有字体、贴图、Style、材质等;节点持有 resource ID,表记录"哪个 locale 用哪个资源";**未定义的 locale 回退默认 locale**(`neutral` 列)。
+- **切换语言 = 改 Screen 节点的 `Locale` 属性**:官方原文 "To set a locale using a control, use any trigger and the **Set Property** action to set the value of the **Locale** property in the **Screen** node";侦听变化用 On Property Change。
+- **PO 文件**导入/导出:`Import All Localization Tables` 会读取 `<工程>/Localization/` 目录下的全部 PO(官方固定目录)——译文可外部统一管理,导入时自动补建 locale。
+- **Locale pack**:某 locale 的资源可拆成独立 kzb,导出到 `<BinaryExportDirectory>/Locale_packs/`(目录名固定),运行时 Engine API 按需加载;要留在主 kzb 的资源加 **Is Used By Code** 属性。
+- 支持**多张表**并存,官方建议按应用部位/分工/送翻拆表。
 
 ### 2.2 主题(Themes)
 
 出处:[Using Themes](https://docs.kanzi.com/3.9.15/en/working-with/themes/using-themes.html)、[Theming applications](https://docs.kanzi.com/3.9.15/en/working-with/themes/theming-applications.html)、[Setting the Screen node](https://docs.kanzi.com/3.9.15/en/working-with/screens/screens.html)
 
-- **Theme Group = 一组 Theme**;同一时刻每个 Theme Group 只有一个 Theme 激活;某 resource ID 在当前 Theme 未定义时**回退到该组默认值**(`DefaultValues`)。
-- **可以有多个 Theme Group**(官方示例:一组管车型、一组管界面风格)——为将来"车型主题 × 日夜主题"留了正交扩展位。
-- **切换主题的三种官方方式**:
-  1. Studio 设计期:Library > Themes 的 **Selected Theme** / Dictionaries 窗口 **Locales and Themes**(仅预览);
-  2. Trigger + **Activate Theme** action;
-  3. C++:`screen->activateTheme("kzb://<project>/Themes/<ThemeGroup>/<Theme>")`——URL 含工程名,**跨 kzb 寻址是官方形态**。
-- Locale 与 Theme 都在 **Screen 节点**上解析生效 → 都是**应用级**开关,归含 Screen 的 launcher 管。
+- **Theme Group = 一组 Theme**;每组同时只有一个 Theme 激活;resource ID 在当前 Theme 未定义时**回退该组 Default Value 列**。
+- **可多组并存**(官方示例:一组管车型、一组管界面风格)——为"车型主题 × 日夜主题"留正交扩展位。
+- **切换**:① 设计期 Selected Theme / Dictionaries > Locales and Themes(预览);② Trigger + **Activate Theme** action;③ C++ `screen->activateTheme("kzb://<project>/Themes/<Group>/<Theme>")`。
+- **Theme 格子的值可以跨工程**:Theme Editor 里选 `< URL >` 填 `kzb://` 指向另一工程的资源(官方原文举例"use a font from another Kanzi Studio project")。
+
+### 2.3 多工程组合的硬约束(本设计的根据)★
+
+**两处官方原文,措辞完全一致**:
+
+> *Using localization in multiple Kanzi Studio projects combined into a Kanzi application*([出处](https://docs.kanzi.com/3.9.15/en/working-with/localization/localizing-applications.html)):
+> "you must make the **localization tables accessible to the Screen node of the main project** of your application in one of these ways:
+> ① Define the localization tables **in the main project**;
+> ② **Merge** the localization tables from referenced projects **to the main project** which contains the Screen node(见 [Merging projects](https://docs.kanzi.com/3.9.15/en/working-with/projects/merging-projects.html));
+> ③ Contact the Rightware support team and request the **Kanzi Engine plugin** which enables you to use localization across multiple Kanzi Studio projects and kzb files."
+>
+> *Using themes in multiple Kanzi Studio projects combined into a Kanzi application*([出处](https://docs.kanzi.com/3.9.15/en/working-with/themes/using-themes.html)):对 **theme groups** 的规定逐字相同(①主工程定义 / ②Merge 到主工程 / ③向 Rightware 要跨工程插件)。
+
+**推论**:把语言文案/主题组定义在 common,再让引用 common 的工程用 resource ID 取——**官方不支持**(这正是实测"找不到"的原因)。方式③依赖 Rightware 私发插件,不可控;**本方案采用①为主、②为并行开发工作流**。
 
 ## 3. 项目现状盘点(2026-07 核对)
 
 ### 3.1 已有资产
 
-| 位置 | 资产 | 明细 |
-|------|------|------|
-| `IVI/assets/datasource.xml` | **契约字段已预留** | `System/locale`(string,默认 `zh-CN`,注释写 "zh-CN / en")、`System/theme`(int,0 Day / 1 Night) |
-| `IVI/common/common.kzproj` | **Localization Table** | locale 列:`neutral` / `en-US` / `zh-CN`;key:`LocaleStyle`(按语言切字体的 Named Style) |
-| | **Theme Group `AppTheme`** | Theme:`DefaultValues` / `Day` / `Night`;token:`Color/Accent`、`Color/Divider`、`Color/Error`、`Color/Success`、`Color/Surface`、`Color/TextPrimary`、`Color/TextSecondary`、`Color/Warning`(共 8 个) |
-| | **字体** | `NotoSansCJKsc` + `LocaleStyle` / `LocaleStyle_zh` Named Style |
-| `IVI/launcher/Tool_project/launcher.kzproj` | Screen | `Locale` 属性**写死 `zh-CN`** |
-| | Localization Table | locale 列仅 `neutral` / `zh-CN`;key:`LocaleStyle`(neutral/zh 列都指向 `kzb://common/Styles/LocaleStyle_zh`)、`title`(launcher 自己的文案 key,已验证"文案表建在节点所在工程"可行) |
-| | `System.theme` 消费 | 仅两处:Env 节点上一条 **disabled** 的绑定 + 一个调试 Text Block;**没有接任何 Theme 切换** |
-| `IVI/demo/demo.kzproj` | token 消费先例 | 节点实际引用 `Color/Accent` / `Color/Surface` / `Color/TextPrimary` resource ID 和 `LocaleStyle` —— **跨工程消费 common token 已验证可行** |
-| `IVI/car*` `IVI/environment` | 无 | 三个业务模块均无本地化/主题资产 |
+| 位置 | 资产 | 明细 | 评价 |
+|------|------|------|------|
+| `IVI/assets/datasource.xml` | 契约字段 | `System/locale`(string,默认 `zh-CN`,注释 "zh-CN / en")、`System/theme`(int,0 Day / 1 Night) | ✅ 已预留 |
+| `IVI/common/common.kzproj` | Localization Table(locale:`neutral`/`en-US`/`zh-CN`,key:`LocaleStyle`) | **放错位置**:按 §2.3 对其他工程不可见 | ⚠️ 迁 launcher |
+| | Theme Group `AppTheme`(`DefaultValues`/`Day`/`Night`;token:`Color/Accent、Divider、Error、Success、Surface、TextPrimary、TextSecondary、Warning`) | 同上,**放错位置**;另有杂散 key `a` | ⚠️ 迁 launcher |
+| | `NotoSansCJKsc` 字体、`LocaleStyle`/`LocaleStyle_zh` Named Style、各色 Brush | **值资源,位置正确**(Public,供字典格子引用) | ✅ 留 common |
+| `IVI/launcher/Tool_project/launcher.kzproj` | Screen `Locale` 写死 `zh-CN`;Localization Table(locale 仅 `neutral`/`zh-CN`;key `LocaleStyle`→`kzb://common/Styles/LocaleStyle_zh`、`title`) | 表的位置正确;`LocaleStyle` 行证明**格子值跨工程引用 common 可行**;缺 `en-US` 列 | ⚠️ 补列 |
+| | `System.theme` 消费:仅 Env 节点一条 **disabled** 绑定 + 调试 Text Block | 未接任何 Theme | ⚠️ 待接 |
+| `IVI/demo/demo.kzproj` | 节点引用 `Color/Accent`/`Color/Surface`/`Color/TextPrimary`/`LocaleStyle` resource ID | 节点侧写法正确;但 AppTheme 在 common → 按 §2.3 解析不到(与实测"找不到"一致)。**AppTheme 迁到 launcher 后,这些节点不用改**,运行时(demo 页挂在 launcher Screen 下)即可解析 | ✅ 保持 |
+| `IVI/car*` `IVI/environment` | 无本地化/主题资产 | 按 §6 规范接入 | — |
 
-### 3.2 现存问题(设计要解决的)
+### 3.2 问题清单(设计要解决的)
 
 | # | 问题 | 影响 |
 |---|------|------|
-| G1 | **locale 值不统一**:契约注释 `en`,common 表列名 `en-US` | 若 Android 下发 `en`,Kanzi 表里没有 `en` 列 → 全部回退默认 locale,英文不生效 |
-| G2 | launcher 表**缺 `en-US` 列**,`LocaleStyle` 两列都指 `_zh` | launcher 自己的文案/字体切不了英文 |
-| G3 | `Screen.Locale` 写死、`System/locale` **无任何消费者** | 语言切换链路完全未通 |
-| G4 | `System/theme` 无 Theme 消费者(仅 disabled Env 绑定) | 主题切换链路完全未通 |
-| G5 | `AppTheme` 有一个杂散 key `a`;token 缺命名规范里的 `Color/Background` 与 `Font/* Size/* Motion/*` | 清理 + 补齐 |
-| G6 | 业务模块(car_setting 等)未接 token/LocaleStyle/文案 key | 按规范接入 |
+| **G0** | **字典定义在 common,违反官方多工程规则(§2.3)** | 引用工程经 resource ID 找不到文案/token —— 实测已复现,**根因** |
+| G1 | locale 值不统一:契约注释 `en`,表列名 `en-US` | Android 下发 `en` → 整体回退默认 locale,英文不生效 |
+| G2 | launcher 表缺 `en-US` 列,`LocaleStyle` 各列都指 `_zh` | 字体切不了英文 |
+| G3 | `Screen.Locale` 写死、`System/locale` 无消费者 | 语言链路未通 |
+| G4 | `System/theme` 未接任何 Theme | 主题链路未通 |
+| G5 | `AppTheme` 杂散 key `a`;缺 `Color/Background` 等 token | 清理 + 按需补 |
+| G6 | 业务模块未接 token/LocaleStyle/文案 key | 按规范接入 |
 
 ## 4. 目标架构
 
@@ -72,20 +90,20 @@ flowchart TB
     android["Android 渲染侧<br/>系统设置(语言/深色模式)"]
     ds["DroidDataSource(契约)<br/>System/locale = 'zh-CN' | 'en-US'<br/>System/theme = 0 Day | 1 Night"]
 
-    subgraph launcher["launcher(唯一切换执行点,Screen 所在工程)"]
+    subgraph launcher["launcher = 唯一字典 + 唯一切换点(Screen 所在工程)"]
+        dict["字典(§2.3 规则)<br/>Localization Tables(全部文案 key + LocaleStyle 行)<br/>Theme Group AppTheme(Color/* token,Day/Night)"]
         lb1["绑定:Screen.Locale ← System/locale"]
         lb2["RootPage 属性 Launcher.ThemeRequest(int)<br/>← 绑定 System/theme"]
-        tr["On Property Change Trigger ×2<br/>Condition ==0 → Activate Theme Day<br/>Condition ==1 → Activate Theme Night"]
+        tr["On Property Change Trigger ×2<br/>==0 → Activate Theme Day<br/>==1 → Activate Theme Night"]
         lb2 --> tr
     end
 
-    subgraph common["common(唯一 token / 字体源)"]
-        theme["AppTheme Theme Group<br/>Color/* token(Day/Night/DefaultValues)"]
-        style["LocaleStyle(按 locale 切字体)<br/>+ NotoSansCJKsc"]
+    subgraph common["common = 值资源库(Public,被字典格子引用)"]
+        vals["Brush(Day/Night 两套)<br/>LocaleStyle / LocaleStyle_zh Named Style<br/>NotoSansCJKsc 字体"]
     end
 
     subgraph modules["业务模块(car_setting / car / environment / demo)"]
-        ui["UI 节点:颜色=<Resource ID> token<br/>字体=LocaleStyle,文案=本模块表的 key"]
+        ui["UI 节点:颜色 = <Resource ID> token<br/>字体 = LocaleStyle,文案 = key<br/>(运行时挂在 launcher Screen 下,由 launcher 字典解析)"]
         env3d["3D 昼夜:State Manager / Data Trigger<br/>直接消费 System/theme"]
     end
 
@@ -93,88 +111,114 @@ flowchart TB
     ds --> lb1
     ds --> lb2
     ds --> env3d
-    tr -->|"Screen 级生效"| theme
-    lb1 -->|"Screen 级生效"| style
-    theme --> ui
-    style --> ui
+    tr --> dict
+    lb1 --> dict
+    dict -->|"格子值 kzb://common/... 或 Add Existing"| vals
+    dict -->|"Screen 级解析"| ui
 ```
 
-要点:**数据驱动、单点执行、来源分离**——切换指令来自数据契约(与车辆真实数据同通道,Preview 里改 `datasource.xml` 默认值即可模拟);执行只在 launcher;样式值只在 common;模块只消费不切换。
+**数据驱动、单点执行、字典与值分离**:切换指令来自数据契约;字典与切换只在 launcher;值(具体 brush/style/字体)在 common;模块只消费 resource ID。
 
 ## 5. 设计决策
 
+### D0 字典归 launcher,值归 common(修 G0,依据 §2.3)★
+
+- **Localization Table、Theme Group 只在 launcher 定义**(官方方式①);common 里现有的表和 `AppTheme` 迁移到 launcher(操作见 §6.1)。
+- **brush / Named Style / 字体留在 common(Public)**:字典格子用 **Add Existing**(引用工程资源在下拉里可选)或 **`< URL >` 填 `kzb://common/...`**(官方明确支持)指向它们——launcher 表 `LocaleStyle` 行已是活例。
+- 模块节点**只写 resource ID**,不引用字典本身 → 模块对字典位置零感知,迁移不改模块。
+
 ### D1 locale 命名统一为 `zh-CN` / `en-US`(修 G1/G2)
 
-Kanzi 的 locale 名就是字符串 ID,契约值必须与表列名**逐字符一致**。common 表已用 `en-US`,改动最小的统一方向:
+- `datasource.xml` 注释 `en`→`en-US`(值是 string,无结构变更,Android 侧同步确认);
+- launcher 表补 `en-US` 列;`LocaleStyle` 行:`zh-CN`→`LocaleStyle_zh`,`en-US`→`LocaleStyle`(拉丁),`neutral`(回退)→`LocaleStyle_zh`;
+- 新增语言 = 契约枚举 + launcher 各表加列,不改任何节点。
 
-- `datasource.xml`:`System/locale` 注释改为 `zh-CN / en-US`(值本身是 string,无结构变更,Android 侧同步确认);
-- launcher 表补 `en-US` 列;`LocaleStyle` 行:`zh-CN`→`LocaleStyle_zh`,`en-US`→`LocaleStyle`(拉丁),`neutral`(默认回退)→`LocaleStyle_zh`(产品默认中文,与 Screen 默认 locale 一致);
-- 新增语言 = 契约枚举 + 各表加列,**不改任何节点**。
+### D2 token 清单(修 G5)
 
-### D2 token / 字体唯一源 = common(维持现状并补齐,修 G5)
-
-- 保持 `AppTheme` 在 common(demo 已验证跨工程消费 token 可行);清理杂散 key `a`;
-- 补 `Color/Background`;`Font/Title、Font/Body、Font/Caption`、`Size/*`、`Motion/*` 按 [naming-conventions.md](naming-conventions.md) 的 token 清单**用到即建**,不预建空 token;
-- 模块规则不变:**只引用 token,禁止写死颜色/字号**(反模式见 §8)。
+清理 `AppTheme` 杂散 key `a`;补 `Color/Background`;`Font/* Size/* Motion/*` 按 [naming-conventions.md](naming-conventions.md) **用到即建**。
 
 ### D3 主题切换链路(修 G4)— Studio 内实现,零 C++
 
-契约 `System/theme` 是 **int**,而激活主题是 **Action** 不是属性,因此不能直接绑定,用"绑定 + On Property Change"桥接:
+1. RootPage 加自定义 int 属性 `Launcher.ThemeRequest`,OneWay 绑定 `{DataContext.DroidDataSource.System.theme}`;
+2. RootPage 挂两条 **On Property Change**(监视该属性)Trigger:Condition `==0` → **Activate Theme** `AppTheme/Day`;`==1` → `AppTheme/Night`;
+3. `AppTheme` 的 Selected Theme 设为契约默认值对应的 `Night`。
 
-1. RootPage 加自定义 int 属性 `Launcher.ThemeRequest`,**OneWay 绑定** `{DataContext.DroidDataSource.System.theme}`;
-2. RootPage 挂两条 **On Property Change**(监视 `Launcher.ThemeRequest`)Trigger:
-   - Condition `ThemeRequest == 0` → **Activate Theme** `AppTheme/Day`
-   - Condition `ThemeRequest == 1` → **Activate Theme** `AppTheme/Night`
-3. 启动初值:`AppTheme` 的 Selected Theme 设为与契约默认值(`theme=1` Night)一致。
-
-> **验证点 V1**:Studio 的 Activate Theme action 能否直接选中**引用工程(common)**的 Theme Group。若不能:把 Theme Group 移到 launcher 定义(token resource ID 名不变,各 Theme 列仍指向 common 的 public brush)——旧文档"在含 Screen 的工程统一定义/合并主题"即此预案;模块侧引用的是 token ID,**不受影响**。C++ `activateTheme("kzb://common/Themes/AppTheme/Night")` 是第二兜底(URL 跨工程寻址是官方形态,car 模块已有 code-behind 先例)。
+> AppTheme 迁到 launcher 后,Activate Theme action 在本工程内直接可选(原跨工程可选性风险不存在了)。C++ `activateTheme` 仍是备用手段。
 
 ### D4 语言切换链路(修 G3)
 
-首选:**Screen 的 `Locale` 属性直接 OneWay 绑定** `{DataContext.DroidDataSource.System.locale}`(Locale 是普通属性,官方允许用 Set Property 改它,绑定是等价的声明式写法;Screen/RootPage 已设 Data Context)。
+首选:Screen 的 `Locale` 属性 OneWay 绑定 `{DataContext.DroidDataSource.System.locale}`。
+**验证点 V2**:若 Screen 上建绑定不可行,退官方字面做法——RootPage `Launcher.LocaleRequest`(string)绑定契约值,On Property Change + **Set Property** 写 `Screen.Locale`。
 
-> **验证点 V2**:若 Screen 节点上对该属性建绑定在 Studio 中不可用,退回官方字面做法:RootPage 加 `Launcher.LocaleRequest`(string)绑定契约值,On Property Change Trigger + **Set Property** action 写 `Screen.Locale`。
+### D5 文案工作流:launcher 多表 + PO 单一来源;并行开发用 Merge(官方方式②)
 
-### D5 文案归属:key 建在**节点所在工程**的表里
-
-- launcher 已有先例(key `title` 在 launcher 表);每个有文案的模块工程自建 Localization Table,**locale 列名三处统一**(D1);
-- key 命名 `<模块>.<语义>`(`charging.title`、`common.ok`),交付后冻结只追加;
-- **译文单一来源 = PO 文件**,放 `Shared/Resources/localization/<locale>.po`(符合 Shared/Resources 的"非 kzproj 原始资产"定位),各工程表从 PO 导入——官方支持导入时自动建 locale,保证各工程列名一致;
-- 模块内**禁止 TextBlock 写死文字**。
-
-> **验证点 V3**:模块 kzb 的 prefab 实例化到 launcher Screen 下后,切 `Screen.Locale` 是否会刷新该模块表里的文案(P2 用 car_setting 首个页面验证)。若跨 kzb 不生效,降级方案 = 旧文档 §1.1 的 **DataLayer 字符串中转**(launcher 集中解析 `string(acquire('key'))`,To-Source 写 common DataLayer,模块只绑普通 string)——架构上模块同样零感知,只是文案表集中到 launcher。
+- launcher 里**按模块建表**:`Table_launcher`、`Table_car_setting`…(官方明确多表就是为分工/送翻);key 命名 `<模块>.<语义>`,冻结只追加;
+- **译文单一来源 = PO**,放官方固定目录 `IVI/launcher/Tool_project/Localization/`(`Import All Localization Tables` 自动读取);
+- 模块 Text 节点只填 resource ID(key)。**模块工程独立预览时文案显示不出来是官方模型的固有代价**,两种应对:
+  - **标准流(推荐)**:文案验收一律在 launcher 工程 Preview 做(模块页挂在 launcher Screen 下,字典生效);模块独立预览只看布局;
+  - **并行流(模块团队要看到真文案时)**:模块工程内自建同 key 开发表(仅供本工程预览),交付节点用 **File > Import > Merge Project** 把模块表并入 launcher(官方方式②;Kanzi 提供三方合并与冲突解决,可增量重复合并)。运行时以 launcher 的表为准,模块 kzb 里那份表不生效、仅冗余体积。
 
 ### D6 3D 场景日夜与 UI 主题解耦
 
-Env 节点上那条 disabled 的 `System.theme` 绑定表达的意图是对的:**3D 昼夜不走 AppTheme**(光照/天空盒/贴图不是 brush token),environment / car 模块直接消费 `System/theme` 数据字段,用 State Manager(状态机规范见 [state-machine-guide.md](state-machine-guide.md))切光照与背景。UI 主题和 3D 昼夜是**同一数据源字段的两个消费者**,天然同步、互不耦合。
+Env 节点那条 disabled 绑定的意图正确:3D 昼夜(光照/天空盒/贴图)不是 brush token,不走 `AppTheme`;environment/car 直接消费 `System/theme` 字段,用 State Manager 切换(规范见 [state-machine-guide.md](state-machine-guide.md))。UI 主题与 3D 昼夜是同一字段的两个消费者,天然同步、互不耦合。
 
-### D7 分包与 OTA(远期,预留已就位)
+### D7 分包与 OTA(远期)
 
-- **Locale pack**:量产语言多于 2 种时,把非默认语言标记为 locale pack,导出产物在 `IVI/assets/Locale_packs/`(Studio 固定目录名;注意**不是**此前预留的 `IVI/assets/Localization/`,该目录改为存放 PO 之外的本地化中间产物或直接留给 Locale_packs 的部署副本),Android 侧用 Engine API 按 locale 加载;
-- 需要进主 kzb 的资源加 **Is Used By Code** 属性(官方机制,防止被拆进 pack);
-- **主题不支持分包**(theme 资源在主 kzb),车型级差异将来用第二个 Theme Group(§2.2 官方多组示例)或 `Shared/Resources/carmodel/` 资源变体解决。
+- 语言多于 2 种时,非默认语言标 locale pack,导出到 `IVI/assets/Locale_packs/`(Studio 固定目录名),Android 侧 Engine API 按 locale 加载;需进主 kzb 的资源加 **Is Used By Code**;
+- 主题不支持分包(theme 资源在主 kzb);车型差异将来用第二个 Theme Group(§2.2)或 `Shared/Resources/carmodel/` 变体。
 
-## 6. 落地改造清单(分阶段)
+## 6. 具体 Studio 操作步骤
+
+### 6.1 一次性迁移:字典从 common → launcher(修 G0,先做)
+
+1. 打开 `launcher.kzproj` → **File > Import > Merge Project** → 选 `IVI/common/common.kzproj`;
+2. Project Merge 对话框里**只勾**:`Localization > Localization Table`、`Themes > AppTheme`(勾 *Select referenced items* 让 Studio 自动带上引用项;若把 brush/style 一并带来了,取消勾选——它们留在 common);
+3. 合并后在 launcher 里核对:表的 locale 列(`neutral`/`en-US`/`zh-CN`)与 `LocaleStyle` 行、`AppTheme` 的 8 个 token + `Day`/`Night` 列都在;**格子值应指向 `kzb://common/...`**(不是本地副本);
+4. Theme Editor 里删除杂散 key `a`(右键 → Delete Resource ID);
+5. 回 `common.kzproj`:删除其 Localization Table 与 `AppTheme`(防止再被误用);Brush/Style/字体保持 Public 不动;
+6. 两工程都 Save + Export KZB,launcher Preview 里 Dictionaries > Locales and Themes 切 `Day`/`Night`、`zh-CN`/`en-US` 验证 demo 页 token 与字体随切换刷新(demo 节点已写好 resource ID,应立即生效)。
+
+> 内容量小(1 个 key + 8 个 token),若 Merge 冲突处理麻烦,**手动在 launcher 重建同名表/组**是等价做法:Theme Editor → + Add Resource → **Add Existing** 选 common 的 brush,或格子里 `< URL >` 填 `kzb://common/Materials and Textures/Brushes/...`。
+
+### 6.2 多语言(操作序列)
+
+1. **补列**(G1/G2):launcher 任一表 → Localization Editor → + Create Locale `en-US`(自动加到本工程所有表);`LocaleStyle` 行三列按 D1 指定;
+2. **建文案表**:Library > Localization(Alt+右键)→ Localization Table → `Table_car_setting`;+ Add Resource → Create > Text,key 如 `car_setting.title`,填 `neutral`/`zh-CN`/`en-US` 三列文案;
+3. **模块节点引用**:模块工程里 Text Block 的 `Text` 属性 → 下拉选 `< Resource ID >` → 填 `car_setting.title`(模块工程内显示不解析是预期,见 D5);
+4. **切换链路**(G3):launcher Screen 节点 `Locale` 属性 → Binding Editor 建 OneWay 绑定 `{DataContext.DroidDataSource.System.locale}`(不可行则按 D4 的 V2 退路);
+5. **契约对齐**(G1):`datasource.xml` 注释改 `zh-CN / en-US`,与 Android 侧确认下发值;
+6. **验证**:改 `datasource.xml` 里 `locale` 默认值为 `en-US` → 重启 Preview,launcher 的 `title`、模块文案、字体全部切英文;运行期由 Android 改值即时切换;
+7. **送翻**:Library > Localization 右键 → Export All Localization Tables → PO 交译 → Import All Localization Tables(PO 放 `Tool_project/Localization/`)。
+
+### 6.3 多主题(操作序列)
+
+1. **准备双套值**(如缺):common 里为每个 token 建 Day/Night 两个 brush(`Brush_Bg_Day`/`Brush_Bg_Night`…),Make Public;
+2. **字典**:launcher 的 `AppTheme`(6.1 已迁入)Theme Editor 里逐 token 指定 Day/Night 两列(Add Existing / `< URL >` 指 common brush);Default Value 列给回退值;
+3. **模块节点引用**:颜色类属性(Background Brush / Foreground Brush 等)→ `< Resource ID >` → `Color/Surface` 等(demo 已有先例,照抄);
+4. **切换链路**(G4,D3):RootPage 加 int 属性 `Launcher.ThemeRequest` + 绑定;Node Components > Triggers 加两条 On Property Change(Condition `==0`/`==1`)分别挂 **Activate Theme** `Day`/`Night`;
+5. **初值**:Library > Themes > AppTheme 的 Selected Theme = `Night`(与契约 `theme=1` 一致);
+6. **验证**:Preview 里 Dictionaries 切 Day/Night 先验字典;再改 `datasource.xml` `theme` 默认值 0/1 重启 Preview 验链路;
+7. **3D 昼夜**(D6):environment 里恢复/重建对 `System/theme` 的消费(State Manager 两态切光照贴图),与 UI 主题无耦合。
+
+## 7. 落地阶段与验收
 
 | 阶段 | 内容 | 验收 |
 |------|------|------|
-| **P0 修不一致**(G1/G2/G5) | 契约注释 `en`→`en-US`(Android 同步);launcher 表补 `en-US` 列并修 `LocaleStyle` 三列指向;清理 AppTheme 杂 key `a`;补 `Color/Background` | Dictionaries 里切 `en-US`,launcher 的 `title` 与字体正确切换 |
-| **P1 打通切换链路**(G3/G4,D3/D4) | Screen.Locale 绑定;`Launcher.ThemeRequest` + 双 Trigger + Activate Theme;核销验证点 **V1/V2** | 改 `datasource.xml` 里 `locale`/`theme` 默认值 → 重启 Preview,语言与 Day/Night 随之变;运行期由 Android 改值即时切换 |
-| **P2 首个业务模块接入**(G6,D5/D6) | car_setting 页面:颜色全部改 token、文字挂 `LocaleStyle` + 本模块表 key;PO 流程跑通;核销 **V3**;environment 接 `System/theme` 状态机 | 切语言/主题,car_setting 页面与 3D 场景全量正确刷新,无写死残留 |
-| **P3 分包/OTA**(D7,远期) | 非默认语言 locale pack 化;Android 侧加载 API 联调 | 主 kzb 体积下降,动态加载语言包成功 |
+| **P0 迁字典 + 修不一致**(G0/G1/G2/G5) | §6.1 迁移;补 `en-US` 列;契约注释对齐;清杂 key | Dictionaries 里切 locale/theme,launcher `title`、demo token/字体正确切换 |
+| **P1 打通切换链路**(G3/G4) | §6.2 步骤 4、§6.3 步骤 4-5;核销 V2 | 改契约默认值重启 Preview 即切;运行期 Android 改值即时切 |
+| **P2 首个业务模块接入**(G6) | car_setting 按 §6.2 步骤 2-3、§6.3 步骤 3 接入;PO 流程跑通;environment 接 `System/theme` | 切语言/主题,car_setting 页面与 3D 场景全量刷新,无写死残留 |
+| **P3 分包/OTA**(D7,远期) | 非默认语言 locale pack 化;Android 加载联调 | 主 kzb 体积下降,动态加载语言包成功 |
 
-## 7. 风险与验证点汇总
+**剩余验证点**:
 
-| # | 风险 | 预案 |
+| # | 事项 | 预案 |
 |---|------|------|
-| V1 | Activate Theme action 选不了 common 的 Theme Group | Theme Group 移 launcher(token ID 不变,模块无感);或 C++ `activateTheme` |
-| V2 | Screen.Locale 属性不可绑定 | On Property Change + Set Property(官方字面做法) |
-| V3 | 模块 kzb 文案表不随 Screen.Locale 刷新 | DataLayer 字符串中转(旧方案,模块仍零感知) |
-| — | Android 下发值与表列名漂移 | 契约是唯一枚举源(D1);新增语言走"契约先行"流程,禁止 Studio 单方面加列 |
+| V2 | Screen.Locale 能否直接建绑定 | On Property Change + Set Property(官方字面做法,必可行) |
+| — | 模块工程独立预览看不到真文案/主题色(官方模型固有) | 验收在 launcher Preview 做;或模块自建开发表 + Merge(D5 并行流) |
 
 ## 8. 反模式(沿用并强化)
 
+- **把 Localization Table / Theme Group 建在 common 或任何子工程里当共享字典用**(官方多工程规则不支持,§2.3)——字典只建 launcher。
 - TextBlock 直接填中文/英文字面量;节点写死十六进制颜色/固定字号。
-- 模块工程里放 Activate Theme / Set Locale(**只允许 launcher**,trigger 白名单已约定)。
-- 切主题用改 Prefab 属性的方式伪装(必须走 Theme Group resource ID)。
+- 模块工程里放 Activate Theme / Set Locale(只允许 launcher)。
 - 漏译回退成 key 名/空串不报缺陷;用默认值掩盖 `locale`/`theme` 数据无效。
