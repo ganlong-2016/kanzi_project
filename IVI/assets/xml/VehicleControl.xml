@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  nextera / ScaniaGui 数据源契约(DroidDataSource)
+  由 Java 插件 DroidDataSourceplugin 解析,定义 Kanzi 数据模型结构。
+
+  规则(依据插件解析器 SaxHandler / TypeConverters):
+    - type 支持:int / float / bool / string / list(大小写不敏感)
+    - 无 type 的元素 = Object(分组节点,可嵌套用于归类)
+    - list 内部只允许标量列(int/float/bool/string),不可再嵌套 Object/list
+    - 标量的文本为"默认值"(占位,运行时由 Android 侧提供真值);解析会去除空白,故默认字符串勿依赖空格
+    - 字段/类型/枚举在 XML、Kanzi 绑定、Android 三处必须一致;交付后只追加不改名
+    - 关键信号配 <xxxValid type="bool"> 表达有效性/故障,UI 据此显示故障态,禁止用默认值掩盖故障
+  本文件是唯一契约来源(设计期与运行期共用):Studio 里数据源的 File 属性直接指向本文件
+  (从 IVI/launcher/Tool_project 出发相对路径为 ../../../assets/datasource.xml,见 docs/demo-build-all.md §4.3);
+  Android 运行时侧按部署约定取用同一份内容,不再维护第二份副本。
+-->
+<DroidDataSource>
+
+ 
+
+    <!-- ===== 车控 ===== -->
+    <VehicleControl>
+        <locked type="bool">true</locked>
+        <lockedValid type="bool">true</lockedValid>
+        <doorFrontLeft type="bool">false</doorFrontLeft>
+        <doorFrontRight type="bool">false</doorFrontRight>
+        <doorRearLeft type="bool">false</doorRearLeft>
+        <doorRearRight type="bool">false</doorRearRight>
+        <doorValid type="bool">true</doorValid>
+        <windowFrontLeft type="int">0</windowFrontLeft> <!-- 开度 0-100 -->
+        <headlightOn type="bool">false</headlightOn>
+    </VehicleControl>
+
+    <!-- ===== 内饰 ===== -->
+    <Interior>
+        <ambientOn type="bool">true</ambientOn>
+        <ambientColor type="string">#4D8BFFFF</ambientColor>
+        <ambientBrightness type="int">70</ambientBrightness>
+        <fragranceOn type="bool">false</fragranceOn>
+        <seatHeatLevel type="int">0</seatHeatLevel>     <!-- 0-3 -->
+    </Interior>
+
+
+
+</DroidDataSource>
