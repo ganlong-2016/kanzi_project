@@ -26,6 +26,8 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 
 ## A2. 主题(日/夜):Theme Group
 
+> ⚠️ **勘误(官方多工程规则)**:Theme Group **必须建在 launcher(含 Screen 的主工程)**,不能建在 common——定义在被引用工程里的 Theme Group,其他工程经 resource ID 找不到(官方 [Using Themes](https://docs.kanzi.com/3.9.15/en/working-with/themes/using-themes.html) "Using themes in multiple Kanzi Studio projects" 一节)。common 只放各主题用的 **brush(值资源,Public)**;Theme Editor 的格子用 Add Existing / `< URL >` 指向 common 的 brush。迁移与完整方案见 [architecture/localization-theme-design.md](architecture/localization-theme-design.md)。下述操作流程本身不变,只是**建组的工程换成 launcher**。
+
 3.9.15 用 **Theme(Theme Group)** 做主题切换,资源 ID 在各 Theme 下取不同 brush。
 
 1. **先准备两套值的 brush**:如 `Brush_Bg_Day`(浅)与 `Brush_Bg_Night`(深),`Brush_Accent_Day` / `Brush_Accent_Night` 等。
@@ -37,6 +39,8 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 > 组件/页面里"用某颜色" = 用主题的 resource ID(经 Theme Group),而不是写死某个 brush,这样才可日夜切换。
 
 ## A3. 字体与多语言样式(Named Style)
+
+> ⚠️ **勘误(官方多工程规则)**:**Localization Table 必须建在 launcher**,理由同 A2(官方 [Localizing applications](https://docs.kanzi.com/3.9.15/en/working-with/localization/localizing-applications.html) "Using localization in multiple Kanzi Studio projects" 一节)。common 只放 **Named Style 与字体(值资源,Public)**;launcher 表的各 locale 列指向 `kzb://common/Styles/LocaleStyle_zh` 等(launcher 现有表已是这种写法)。见 [architecture/localization-theme-design.md](architecture/localization-theme-design.md)。
 
 你工程里的 `LocaleStyle` / `LocaleStyle_zh` 就是这套(按语言切字体):
 

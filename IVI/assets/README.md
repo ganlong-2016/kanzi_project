@@ -12,7 +12,7 @@
 | 内容 | 说明 |
 |------|------|
 | `*.kzb`、`launcher.kzb.cfg`、`application.cfg`、`datasource.xml`、`*.jar` | **必须在本目录根**:引擎与数据源插件按裸文件名 / `./xxx.jar` 相对工作目录根查找,不能移入子目录 |
-| `Localization/` | 预留:本地化资源包(独立下发的翻译 kzb) |
+| `Localization/` | 预留:本地化中间产物。注意 Studio 导出 locale pack 的目录名固定为 `Locale_packs/`(生成在本目录下,见 [localization-theme-design.md](../../docs/architecture/localization-theme-design.md) §D7) |
 | `lz4/` | 预留:lz4 压缩的资源包 |
 | `pc_exe/` | 预留:桌面端打包产物(exe + 运行时依赖) |
 
