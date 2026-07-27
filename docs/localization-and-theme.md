@@ -1,5 +1,7 @@
 # 本地化(中/英)与主题(日/夜)
 
+> **落地架构方案**(结合官方 3.9.15 机制与工程现有资产的完整设计:数据驱动切换链路、分阶段改造清单、验证点)见 [architecture/localization-theme-design.md](architecture/localization-theme-design.md)。本文保留为原则速查。
+
 Kanzi 的**本地化表**和**主题组**都在 **Screen 节点**层解析,属于"应用级"资源,**不能像普通 Public 资源那样跨工程实时共享**。所以多工程下需要专门的处理方式。
 
 ## 1. 本地化(中文 / 英文)
