@@ -19716,7 +19716,7 @@ createRotation(degreesY , degreesX, 0)
                   i:nil="true" />
                 <propertyTypeReference>ValueColumnWidth</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:float">174</value>
+                  i:type="d9p1:float">197.2</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
           </properties>
@@ -19845,7 +19845,7 @@ createRotation(degreesY , degreesX, 0)
                       i:nil="true" />
                     <propertyTypeReference>ValueColumnWidth</propertyTypeReference>
                     <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:float">237</value>
+                      i:type="d11p1:float">190</value>
                   </d8p1:Value>
                 </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
               </properties>
@@ -19883,6 +19883,128 @@ createRotation(degreesY , degreesX, 0)
                 </ResourceDictionaryEntry>
               </entries>
             </ProjectItem>
+            <ProjectItem
+              i:type="d3p1:Locale">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsThemeVisible</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsThemeVisible</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsThemeExportedToProjectKzb</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsThemeExportedToProjectKzb</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ResourceDictionaryLinkedDictionaries</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ResourceDictionaryLinkedDictionaries</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">en-US</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-27T07:28:40.97466Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ValueColumnWidth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ValueColumnWidth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:float">205</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>en-US</SerializedName>
+              <children />
+              <dataSource
+                i:nil="true" />
+              <isHidden>true</isHidden>
+              <isReadOnly>false</isReadOnly>
+              <entries xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceDictionaryItems">
+                <ResourceDictionaryEntry>
+                  <Key>title</Key>
+                  <entryType>RESOURCE</entryType>
+                  <resourceReference xmlns:d10p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project">
+                    <d10p1:ContentType>TEXT</d10p1:ContentType>
+                    <d10p1:IsResourceReference>false</d10p1:IsResourceReference>
+                    <d10p1:referredItemPath>
+                      <d10p1:pathString>relative://</d10p1:pathString>
+                    </d10p1:referredItemPath>
+                    <d10p1:textContent>title</d10p1:textContent>
+                  </resourceReference>
+                </ResourceDictionaryEntry>
+                <ResourceDictionaryEntry>
+                  <Key>LocaleStyle</Key>
+                  <entryType>RESOURCE</entryType>
+                  <resourceReference xmlns:d10p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project">
+                    <d10p1:ContentType>RESOURCE_REFERENCE</d10p1:ContentType>
+                    <d10p1:IsResourceReference>false</d10p1:IsResourceReference>
+                    <d10p1:referredItemPath>
+                      <d10p1:pathString>relative://kzb://common/Styles/LocaleStyle_en</d10p1:pathString>
+                    </d10p1:referredItemPath>
+                    <d10p1:textContent
+                      i:nil="true" />
+                  </resourceReference>
+                </ResourceDictionaryEntry>
+              </entries>
+            </ProjectItem>
           </children>
           <dataSource
             i:nil="true" />
@@ -19908,7 +20030,7 @@ createRotation(degreesY , degreesX, 0)
                 <d8p1:ContentType>RESOURCE_REFERENCE</d8p1:ContentType>
                 <d8p1:IsResourceReference>false</d8p1:IsResourceReference>
                 <d8p1:referredItemPath>
-                  <d8p1:pathString>relative://kzb://common/Styles/LocaleStyle_zh</d8p1:pathString>
+                  <d8p1:pathString>relative://kzb://common/Styles/LocaleStyle_en</d8p1:pathString>
                 </d8p1:referredItemPath>
                 <d8p1:textContent
                   i:nil="true" />
@@ -33917,7 +34039,7 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>301.59999999999991</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -33946,7 +34068,7 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>480</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>840</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -34065,14 +34187,15 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/Controls</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>840</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -35099,7 +35222,7 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>120</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -35113,7 +35236,7 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>120</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -35127,7 +35250,7 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>120</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -35141,7 +35264,7 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>120</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -35185,7 +35308,7 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>120</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -35199,7 +35322,7 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>120</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
   </PropertyEditorViewModeStates>

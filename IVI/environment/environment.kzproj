@@ -18868,7 +18868,7 @@
           <d3p1:cachedMeshVariables>
             <d3p1:ClusterCount>1</d3p1:ClusterCount>
             <d3p1:HasVertexColor>false</d3p1:HasVertexColor>
-            <d3p1:MeshDataWriteTime>2026-06-30T09:58:43.1047311Z</d3p1:MeshDataWriteTime>
+            <d3p1:MeshDataWriteTime>2026-07-23T02:44:51.5009319Z</d3p1:MeshDataWriteTime>
           </d3p1:cachedMeshVariables>
           <d3p1:meshData xmlns:d6p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.ColladaLoader"
             i:nil="true" />
@@ -19029,7 +19029,7 @@
           <d3p1:cachedMeshVariables>
             <d3p1:ClusterCount>1</d3p1:ClusterCount>
             <d3p1:HasVertexColor>false</d3p1:HasVertexColor>
-            <d3p1:MeshDataWriteTime>2026-06-30T09:58:43.108731Z</d3p1:MeshDataWriteTime>
+            <d3p1:MeshDataWriteTime>2026-07-23T02:44:51.5071215Z</d3p1:MeshDataWriteTime>
           </d3p1:cachedMeshVariables>
           <d3p1:meshData xmlns:d6p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.ColladaLoader"
             i:nil="true" />
@@ -19190,7 +19190,7 @@
           <d3p1:cachedMeshVariables>
             <d3p1:ClusterCount>1</d3p1:ClusterCount>
             <d3p1:HasVertexColor>false</d3p1:HasVertexColor>
-            <d3p1:MeshDataWriteTime>2026-02-16T04:33:04Z</d3p1:MeshDataWriteTime>
+            <d3p1:MeshDataWriteTime>2026-07-23T02:44:51.497614Z</d3p1:MeshDataWriteTime>
           </d3p1:cachedMeshVariables>
           <d3p1:meshData xmlns:d6p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.ColladaLoader"
             i:nil="true" />
@@ -19351,7 +19351,7 @@
           <d3p1:cachedMeshVariables>
             <d3p1:ClusterCount>1</d3p1:ClusterCount>
             <d3p1:HasVertexColor>false</d3p1:HasVertexColor>
-            <d3p1:MeshDataWriteTime>2026-02-16T04:33:04Z</d3p1:MeshDataWriteTime>
+            <d3p1:MeshDataWriteTime>2026-07-23T02:44:51.50349Z</d3p1:MeshDataWriteTime>
           </d3p1:cachedMeshVariables>
           <d3p1:meshData xmlns:d6p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.ColladaLoader"
             i:nil="true" />
@@ -19512,7 +19512,7 @@
           <d3p1:cachedMeshVariables>
             <d3p1:ClusterCount>1</d3p1:ClusterCount>
             <d3p1:HasVertexColor>false</d3p1:HasVertexColor>
-            <d3p1:MeshDataWriteTime>2026-02-16T04:33:04Z</d3p1:MeshDataWriteTime>
+            <d3p1:MeshDataWriteTime>2026-07-23T02:44:51.5102051Z</d3p1:MeshDataWriteTime>
           </d3p1:cachedMeshVariables>
           <d3p1:meshData xmlns:d6p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.ColladaLoader"
             i:nil="true" />
@@ -19673,7 +19673,7 @@
           <d3p1:cachedMeshVariables>
             <d3p1:ClusterCount>1</d3p1:ClusterCount>
             <d3p1:HasVertexColor>false</d3p1:HasVertexColor>
-            <d3p1:MeshDataWriteTime>2026-02-16T04:33:04Z</d3p1:MeshDataWriteTime>
+            <d3p1:MeshDataWriteTime>2026-07-23T02:44:51.5127387Z</d3p1:MeshDataWriteTime>
           </d3p1:cachedMeshVariables>
           <d3p1:meshData xmlns:d6p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.ColladaLoader"
             i:nil="true" />
@@ -19834,7 +19834,7 @@
           <d3p1:cachedMeshVariables>
             <d3p1:ClusterCount>1</d3p1:ClusterCount>
             <d3p1:HasVertexColor>false</d3p1:HasVertexColor>
-            <d3p1:MeshDataWriteTime>2026-02-16T04:33:04Z</d3p1:MeshDataWriteTime>
+            <d3p1:MeshDataWriteTime>2026-07-23T02:44:51.5152623Z</d3p1:MeshDataWriteTime>
           </d3p1:cachedMeshVariables>
           <d3p1:meshData xmlns:d6p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.ColladaLoader"
             i:nil="true" />
@@ -19995,7 +19995,7 @@
           <d3p1:cachedMeshVariables>
             <d3p1:ClusterCount>1</d3p1:ClusterCount>
             <d3p1:HasVertexColor>false</d3p1:HasVertexColor>
-            <d3p1:MeshDataWriteTime>2026-02-16T04:33:06Z</d3p1:MeshDataWriteTime>
+            <d3p1:MeshDataWriteTime>2026-07-23T02:44:51.535639Z</d3p1:MeshDataWriteTime>
           </d3p1:cachedMeshVariables>
           <d3p1:meshData xmlns:d6p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.ColladaLoader"
             i:nil="true" />
@@ -43468,7 +43468,7 @@
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>372</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>255.20000000000005</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -43482,7 +43482,7 @@
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>704.80000000000007</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>322.40000000000009</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -43783,8 +43783,7 @@
       <d2p1:Key>kzb://environment/Property Types</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -43812,8 +43811,7 @@
       <d2p1:Key>kzb://environment/Textures/Floor_bump</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -43827,8 +43825,7 @@
       <d2p1:Key>kzb://environment/Prefabs/env/env</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -43842,8 +43839,7 @@
       <d2p1:Key>kzb://environment/Prefabs/env/env/Prefab View 3D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -43857,8 +43853,7 @@
       <d2p1:Key>kzb://environment/Prefabs/Showroom/Showroom</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -43900,8 +43895,7 @@
       <d2p1:Key>kzb://environment/Mesh Data/Back</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -43915,8 +43909,7 @@
       <d2p1:Key>kzb://environment/Prefabs/Env/Env/Env_Sunset</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -43930,8 +43923,7 @@
       <d2p1:Key>kzb://environment/Prefabs/Env/Env/Prefab View 3D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -43945,8 +43937,7 @@
       <d2p1:Key>kzb://environment/Prefabs/Env/Env/Env_Showroom</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -43960,8 +43951,7 @@
       <d2p1:Key>kzb://environment/Property Types/TextureCube</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -43975,8 +43965,7 @@
       <d2p1:Key>kzb://environment/Property Types/environment</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -43990,8 +43979,7 @@
       <d2p1:Key>kzb://environment/Property Types/Env_Switch</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -44005,8 +43993,7 @@
       <d2p1:Key>kzb://environment/Materials/TexturedLightMap_Back_Material</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -44020,8 +44007,7 @@
       <d2p1:Key>kzb://environment/Prefabs/Showroom/Showroom/Wood_Light</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -44035,8 +44021,7 @@
       <d2p1:Key>kzb://environment/Prefabs/Showroom/Showroom/Roof</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -44050,8 +44035,7 @@
       <d2p1:Key>kzb://environment/Prefabs/Showroom/Showroom/Back</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -44065,8 +44049,7 @@
       <d2p1:Key>kzb://environment/Prefabs/Showroom/Showroom/Walls</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -44080,8 +44063,7 @@
       <d2p1:Key>kzb://environment/Prefabs/Showroom/Showroom/Floor</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -44095,8 +44077,7 @@
       <d2p1:Key>kzb://environment/Prefabs/Showroom/Showroom/Woods</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -44475,8 +44456,7 @@
           <d5p1:defaultValue xmlns:d6p1="http://www.w3.org/2001/XMLSchema"
             i:type="d6p1:int">0</d5p1:defaultValue>
           <d5p1:displayName>Env_Switch</d5p1:displayName>
-          <d5p1:fixedOrderPosition
-            i:nil="true" />
+          <d5p1:fixedOrderPosition>2147483647</d5p1:fixedOrderPosition>
           <d5p1:id>4d25a2aa-582c-4b89-8403-5ffc6c62048f</d5p1:id>
           <d5p1:isExportedToEngine>true</d5p1:isExportedToEngine>
           <d5p1:isHidden>false</d5p1:isHidden>
