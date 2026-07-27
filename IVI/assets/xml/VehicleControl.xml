@@ -23,7 +23,7 @@
     <VehicleControl>
         <locked type="bool">true</locked>
         <lockedValid type="bool">true</lockedValid>
-        <doorFrontLeft type="bool">false</doorFrontLeft>
+        <doorFrontLeft type="bool">true</doorFrontLeft>
         <doorFrontRight type="bool">false</doorFrontRight>
         <doorRearLeft type="bool">false</doorRearLeft>
         <doorRearRight type="bool">false</doorRearRight>

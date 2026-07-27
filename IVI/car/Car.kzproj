@@ -3623,222 +3623,6 @@ createRotation(degreesY , degreesX, 0)
                           <isReadOnly>false</isReadOnly>
                           <d11p1:isPrivate>false</d11p1:isPrivate>
                         </ProjectItem>
-                        <ProjectItem
-                          i:type="d11p1:ObjectPrefabPlaceholder">
-                          <properties xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
-                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>Node3DPrefabPlaceholderTemplate</d14p1:Key>
-                              <d14p1:Value>
-                                <categoryOverride
-                                  i:nil="true" />
-                                <isHidden
-                                  i:nil="true" />
-                                <isReadOnly
-                                  i:nil="true" />
-                                <propertyTypeReference>Node3DPrefabPlaceholderTemplate</propertyTypeReference>
-                                <value xmlns:d17p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
-                                  i:type="d17p1:ProjectItemReference">
-                                  <d17p1:ContentType>ABSOLUTE</d17p1:ContentType>
-                                  <d17p1:IsResourceReference>false</d17p1:IsResourceReference>
-                                  <d17p1:referredItemPath>
-                                    <d17p1:pathString>car/Prefabs/Car/</d17p1:pathString>
-                                  </d17p1:referredItemPath>
-                                  <d17p1:textContent
-                                    i:nil="true" />
-                                </value>
-                              </d14p1:Value>
-                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>Tags</d14p1:Key>
-                              <d14p1:Value>
-                                <categoryOverride
-                                  i:nil="true" />
-                                <isHidden
-                                  i:nil="true" />
-                                <isReadOnly
-                                  i:nil="true" />
-                                <propertyTypeReference>Tags</propertyTypeReference>
-                                <value xmlns:d17p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
-                                  i:type="d17p1:ArrayOfProjectItemReference" />
-                              </d14p1:Value>
-                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>ImportedFrom</d14p1:Key>
-                              <d14p1:Value>
-                                <categoryOverride
-                                  i:nil="true" />
-                                <isHidden
-                                  i:nil="true" />
-                                <isReadOnly
-                                  i:nil="true" />
-                                <propertyTypeReference>ImportedFrom</propertyTypeReference>
-                                <value xmlns:d17p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
-                                  i:type="d17p1:ProjectItemReference">
-                                  <d17p1:ContentType>ABSOLUTE</d17p1:ContentType>
-                                  <d17p1:IsResourceReference>false</d17p1:IsResourceReference>
-                                  <d17p1:referredItemPath
-                                    i:nil="true" />
-                                  <d17p1:textContent
-                                    i:nil="true" />
-                                </value>
-                              </d14p1:Value>
-                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>IDInImportSource</d14p1:Key>
-                              <d14p1:Value>
-                                <categoryOverride
-                                  i:nil="true" />
-                                <isHidden
-                                  i:nil="true" />
-                                <isReadOnly
-                                  i:nil="true" />
-                                <propertyTypeReference>IDInImportSource</propertyTypeReference>
-                                <value
-                                  i:nil="true" />
-                              </d14p1:Value>
-                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>OriginalNameInImportSource</d14p1:Key>
-                              <d14p1:Value>
-                                <categoryOverride
-                                  i:nil="true" />
-                                <isHidden
-                                  i:nil="true" />
-                                <isReadOnly
-                                  i:nil="true" />
-                                <propertyTypeReference>OriginalNameInImportSource</propertyTypeReference>
-                                <value
-                                  i:nil="true" />
-                              </d14p1:Value>
-                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>EffectiveDataContext</d14p1:Key>
-                              <d14p1:Value>
-                                <categoryOverride
-                                  i:nil="true" />
-                                <isHidden
-                                  i:nil="true" />
-                                <isReadOnly
-                                  i:nil="true" />
-                                <propertyTypeReference>EffectiveDataContext</propertyTypeReference>
-                                <value xmlns:d17p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.DataSourceItems"
-                                  i:type="d17p1:DataContext">
-                                  <d17p1:dataObjectPath></d17p1:dataObjectPath>
-                                  <d17p1:dataSourceReference xmlns:d18p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project">
-                                    <d18p1:ContentType>ABSOLUTE</d18p1:ContentType>
-                                    <d18p1:IsResourceReference>false</d18p1:IsResourceReference>
-                                    <d18p1:referredItemPath>
-                                      <d18p1:pathString>car/Data Sources/Data source/</d18p1:pathString>
-                                    </d18p1:referredItemPath>
-                                    <d18p1:textContent
-                                      i:nil="true" />
-                                  </d17p1:dataSourceReference>
-                                </value>
-                              </d14p1:Value>
-                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>EffectiveActivitySource</d14p1:Key>
-                              <d14p1:Value>
-                                <categoryOverride
-                                  i:nil="true" />
-                                <isHidden
-                                  i:nil="true" />
-                                <isReadOnly
-                                  i:nil="true" />
-                                <propertyTypeReference>EffectiveActivitySource</propertyTypeReference>
-                                <value xmlns:d17p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.DataSourceItems"
-                                  i:type="d17p1:DataContext">
-                                  <d17p1:dataObjectPath></d17p1:dataObjectPath>
-                                  <d17p1:dataSourceReference xmlns:d18p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project">
-                                    <d18p1:ContentType>ABSOLUTE</d18p1:ContentType>
-                                    <d18p1:IsResourceReference>false</d18p1:IsResourceReference>
-                                    <d18p1:referredItemPath
-                                      i:nil="true" />
-                                    <d18p1:textContent
-                                      i:nil="true" />
-                                  </d17p1:dataSourceReference>
-                                </value>
-                              </d14p1:Value>
-                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>Name</d14p1:Key>
-                              <d14p1:Value>
-                                <categoryOverride
-                                  i:nil="true" />
-                                <isHidden
-                                  i:nil="true" />
-                                <isReadOnly
-                                  i:nil="true" />
-                                <propertyTypeReference>Name</propertyTypeReference>
-                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:string">Car</value>
-                              </d14p1:Value>
-                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>CreationTime</d14p1:Key>
-                              <d14p1:Value>
-                                <categoryOverride
-                                  i:nil="true" />
-                                <isHidden
-                                  i:nil="true" />
-                                <isReadOnly
-                                  i:nil="true" />
-                                <propertyTypeReference>CreationTime</propertyTypeReference>
-                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:dateTime">2026-07-23T02:38:10.1639781Z</value>
-                              </d14p1:Value>
-                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>Car.Door.Door_FL_Open</d14p1:Key>
-                              <d14p1:Value>
-                                <categoryOverride
-                                  i:nil="true" />
-                                <isHidden
-                                  i:nil="true" />
-                                <isReadOnly
-                                  i:nil="true" />
-                                <propertyTypeReference>Car.Door.Door_FL_Open</propertyTypeReference>
-                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:boolean">false</value>
-                              </d14p1:Value>
-                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>Car.Door.Door_FR_Open</d14p1:Key>
-                              <d14p1:Value>
-                                <categoryOverride
-                                  i:nil="true" />
-                                <isHidden
-                                  i:nil="true" />
-                                <isReadOnly
-                                  i:nil="true" />
-                                <propertyTypeReference>Car.Door.Door_FR_Open</propertyTypeReference>
-                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:boolean">false</value>
-                              </d14p1:Value>
-                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>Node.QuickHide</d14p1:Key>
-                              <d14p1:Value>
-                                <categoryOverride
-                                  i:nil="true" />
-                                <isHidden
-                                  i:nil="true" />
-                                <isReadOnly
-                                  i:nil="true" />
-                                <propertyTypeReference>Node.QuickHide</propertyTypeReference>
-                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:boolean">true</value>
-                              </d14p1:Value>
-                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                          </properties>
-                          <SerializedName>Car</SerializedName>
-                          <children />
-                          <dataSource
-                            i:nil="true" />
-                          <isHidden>false</isHidden>
-                          <isReadOnly>false</isReadOnly>
-                          <d11p1:isPrivate>false</d11p1:isPrivate>
-                        </ProjectItem>
                         <ProjectItem xmlns:d13p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.UserInterfaceItems"
                           i:type="d13p1:ComponentNode">
                           <properties xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
@@ -61837,7 +61621,7 @@ createRotation(degreesY , degreesX, 0)
                               <d15p1:ContentType>ABSOLUTE</d15p1:ContentType>
                               <d15p1:IsResourceReference>false</d15p1:IsResourceReference>
                               <d15p1:referredItemPath>
-                                <d15p1:pathString>car/State Managers/SM_CarData/</d15p1:pathString>
+                                <d15p1:pathString>car/State Managers/SM_CarData.DoorFL/</d15p1:pathString>
                               </d15p1:referredItemPath>
                               <d15p1:textContent
                                 i:nil="true" />
@@ -65809,15 +65593,16 @@ createRotation(degreesY , degreesX, 0)
                               i:type="d15p1:ProjectItemReference">
                               <d15p1:ContentType>ABSOLUTE</d15p1:ContentType>
                               <d15p1:IsResourceReference>false</d15p1:IsResourceReference>
-                              <d15p1:referredItemPath
-                                i:nil="true" />
+                              <d15p1:referredItemPath>
+                                <d15p1:pathString>car/State Managers/SM_CarData.DoorFR/</d15p1:pathString>
+                              </d15p1:referredItemPath>
                               <d15p1:textContent
                                 i:nil="true" />
                             </value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                         <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                          <d12p1:Key>Car.Door.Door_FL_Open</d12p1:Key>
+                          <d12p1:Key>Car.Door.Door_FR_Open</d12p1:Key>
                           <d12p1:Value>
                             <categoryOverride
                               i:nil="true" />
@@ -65825,9 +65610,9 @@ createRotation(degreesY , degreesX, 0)
                               i:nil="true" />
                             <isReadOnly
                               i:nil="true" />
-                            <propertyTypeReference>Car.Door.Door_FL_Open</propertyTypeReference>
+                            <propertyTypeReference>Car.Door.Door_FR_Open</propertyTypeReference>
                             <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
-                              i:type="d15p1:boolean">true</value>
+                              i:type="d15p1:boolean">false</value>
                           </d12p1:Value>
                         </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                       </properties>
@@ -68345,7 +68130,7 @@ createRotation(degreesY , degreesX, 0)
                                         <value xmlns:d21p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
                                           i:type="d21p1:PropertyTypeReference">
                                           <d21p1:isExpression>false</d21p1:isExpression>
-                                          <d21p1:propertyTypeName>Car.Door.Door_FL_Open</d21p1:propertyTypeName>
+                                          <d21p1:propertyTypeName>Car.Door.Door_FR_Open</d21p1:propertyTypeName>
                                         </value>
                                       </d18p1:Value>
                                     </d18p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -68466,7 +68251,7 @@ createRotation(degreesY , degreesX, 0)
                                           i:nil="true" />
                                         <isReadOnly
                                           i:nil="true" />
-                                        <propertyTypeReference>Car.Door.Door_FL_Open</propertyTypeReference>
+                                        <propertyTypeReference>Car.Door.Door_FR_Open</propertyTypeReference>
                                         <value xmlns:d21p1="http://www.w3.org/2001/XMLSchema"
                                           i:type="d21p1:boolean">true</value>
                                         <OverrideFixedOrderPosition>159</OverrideFixedOrderPosition>
@@ -68786,7 +68571,7 @@ createRotation(degreesY , degreesX, 0)
                                         <value xmlns:d21p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
                                           i:type="d21p1:PropertyTypeReference">
                                           <d21p1:isExpression>false</d21p1:isExpression>
-                                          <d21p1:propertyTypeName>Car.Door.Door_FL_Open</d21p1:propertyTypeName>
+                                          <d21p1:propertyTypeName>Car.Door.Door_FR_Open</d21p1:propertyTypeName>
                                         </value>
                                       </d18p1:Value>
                                     </d18p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -68907,7 +68692,7 @@ createRotation(degreesY , degreesX, 0)
                                           i:nil="true" />
                                         <isReadOnly
                                           i:nil="true" />
-                                        <propertyTypeReference>Car.Door.Door_FL_Open</propertyTypeReference>
+                                        <propertyTypeReference>Car.Door.Door_FR_Open</propertyTypeReference>
                                         <value xmlns:d21p1="http://www.w3.org/2001/XMLSchema"
                                           i:type="d21p1:boolean">false</value>
                                         <OverrideFixedOrderPosition>159</OverrideFixedOrderPosition>
@@ -69335,6 +69120,274 @@ createRotation(degreesY , degreesX, 0)
                           <isReadOnly>false</isReadOnly>
                           <d7p1:isPrivate>false</d7p1:isPrivate>
                           <d13p1:serializedComponentTypeName>Kanzi.ToggleButton3D</d13p1:serializedComponentTypeName>
+                        </ProjectItem>
+                        <ProjectItem xmlns:d13p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.Bindings"
+                          i:type="d13p1:BindingItem">
+                          <properties xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>BindingItem.Target</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>BindingItem.Target</propertyTypeReference>
+                                <value xmlns:d17p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
+                                  i:type="d17p1:PropertyTypeReference">
+                                  <d17p1:isExpression>false</d17p1:isExpression>
+                                  <d17p1:propertyTypeName>Car.Door.Door_FR_Open</d17p1:propertyTypeName>
+                                </value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>BindingItem.TargetPropertyAttribute</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>BindingItem.TargetPropertyAttribute</propertyTypeReference>
+                                <value xmlns:d17p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.AnimationItems"
+                                  i:type="d17p1:AnimationTargetPropertyAttribute">WHOLE_PROPERTY</value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>BindingItem.BindingMode</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>BindingItem.BindingMode</propertyTypeReference>
+                                <value
+                                  i:type="d13p1:BindingType">OneWay</value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>BindingItem.PushTarget</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>BindingItem.PushTarget</propertyTypeReference>
+                                <value xmlns:d17p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
+                                  i:type="d17p1:PropertyTypeReference">
+                                  <d17p1:isExpression>false</d17p1:isExpression>
+                                  <d17p1:propertyTypeName>ConstraintOrientation</d17p1:propertyTypeName>
+                                </value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>BindingItem.DisplayCodeForMerge</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>BindingItem.DisplayCodeForMerge</propertyTypeReference>
+                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
+                                  i:type="d17p1:string">{##Template/Car.Door.Door_FR_Open}</value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>BindingItem.RawCode</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>BindingItem.RawCode</propertyTypeReference>
+                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
+                                  i:type="d17p1:string">{0}</value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>BindingItem.IsBindingEnabled</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>BindingItem.IsBindingEnabled</propertyTypeReference>
+                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
+                                  i:type="d17p1:boolean">true</value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>BindingItem.ErrorMessage</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>BindingItem.ErrorMessage</propertyTypeReference>
+                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
+                                  i:type="d17p1:string"></value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>Name</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>Name</propertyTypeReference>
+                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
+                                  i:type="d17p1:string">073acb08-abe3-46bd-98e0-01d4a2b59fda</value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                            <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              <d14p1:Key>CreationTime</d14p1:Key>
+                              <d14p1:Value>
+                                <categoryOverride
+                                  i:nil="true" />
+                                <isHidden
+                                  i:nil="true" />
+                                <isReadOnly
+                                  i:nil="true" />
+                                <propertyTypeReference>CreationTime</propertyTypeReference>
+                                <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
+                                  i:type="d17p1:dateTime">2026-07-24T06:54:45.1579161Z</value>
+                              </d14p1:Value>
+                            </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          </properties>
+                          <SerializedName>073acb08-abe3-46bd-98e0-01d4a2b59fda</SerializedName>
+                          <children>
+                            <ProjectItem
+                              i:type="d13p1:BindingSourceItem">
+                              <properties xmlns:d16p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                                <d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                                  <d16p1:Key>BindingSourceItem.Item</d16p1:Key>
+                                  <d16p1:Value>
+                                    <categoryOverride
+                                      i:nil="true" />
+                                    <isHidden
+                                      i:nil="true" />
+                                    <isReadOnly
+                                      i:nil="true" />
+                                    <propertyTypeReference>BindingSourceItem.Item</propertyTypeReference>
+                                    <value xmlns:d19p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                                      i:type="d19p1:ProjectItemReference">
+                                      <d19p1:ContentType>OBJECT_NODE_REFERENCE</d19p1:ContentType>
+                                      <d19p1:IsResourceReference>false</d19p1:IsResourceReference>
+                                      <d19p1:referredItemPath>
+                                        <d19p1:pathString>relative://##Template</d19p1:pathString>
+                                      </d19p1:referredItemPath>
+                                      <d19p1:textContent
+                                        i:nil="true" />
+                                    </value>
+                                  </d16p1:Value>
+                                </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                                <d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                                  <d16p1:Key>BindingSourceItem.Source</d16p1:Key>
+                                  <d16p1:Value>
+                                    <categoryOverride
+                                      i:nil="true" />
+                                    <isHidden
+                                      i:nil="true" />
+                                    <isReadOnly
+                                      i:nil="true" />
+                                    <propertyTypeReference>BindingSourceItem.Source</propertyTypeReference>
+                                    <value xmlns:d19p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
+                                      i:type="d19p1:PropertyTypeReference">
+                                      <d19p1:isExpression>false</d19p1:isExpression>
+                                      <d19p1:propertyTypeName>Car.Door.Door_FR_Open</d19p1:propertyTypeName>
+                                    </value>
+                                  </d16p1:Value>
+                                </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                                <d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                                  <d16p1:Key>BindingSourceItem.RangePropertyType</d16p1:Key>
+                                  <d16p1:Value>
+                                    <categoryOverride
+                                      i:nil="true" />
+                                    <isHidden
+                                      i:nil="true" />
+                                    <isReadOnly
+                                      i:nil="true" />
+                                    <propertyTypeReference>BindingSourceItem.RangePropertyType</propertyTypeReference>
+                                    <value xmlns:d19p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
+                                      i:type="d19p1:PropertyTypeReference">
+                                      <d19p1:isExpression>false</d19p1:isExpression>
+                                      <d19p1:propertyTypeName
+                                        i:nil="true" />
+                                    </value>
+                                  </d16p1:Value>
+                                </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                                <d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                                  <d16p1:Key>BindingSourceItem.PropertyAttribute</d16p1:Key>
+                                  <d16p1:Value>
+                                    <categoryOverride
+                                      i:nil="true" />
+                                    <isHidden
+                                      i:nil="true" />
+                                    <isReadOnly
+                                      i:nil="true" />
+                                    <propertyTypeReference>BindingSourceItem.PropertyAttribute</propertyTypeReference>
+                                    <value xmlns:d19p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.AnimationItems"
+                                      i:type="d19p1:AnimationTargetPropertyAttribute">WHOLE_PROPERTY</value>
+                                  </d16p1:Value>
+                                </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                                <d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                                  <d16p1:Key>Name</d16p1:Key>
+                                  <d16p1:Value>
+                                    <categoryOverride
+                                      i:nil="true" />
+                                    <isHidden
+                                      i:nil="true" />
+                                    <isReadOnly
+                                      i:nil="true" />
+                                    <propertyTypeReference>Name</propertyTypeReference>
+                                    <value xmlns:d19p1="http://www.w3.org/2001/XMLSchema"
+                                      i:type="d19p1:string">0</value>
+                                  </d16p1:Value>
+                                </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                                <d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                                  <d16p1:Key>CreationTime</d16p1:Key>
+                                  <d16p1:Value>
+                                    <categoryOverride
+                                      i:nil="true" />
+                                    <isHidden
+                                      i:nil="true" />
+                                    <isReadOnly
+                                      i:nil="true" />
+                                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                                    <value xmlns:d19p1="http://www.w3.org/2001/XMLSchema"
+                                      i:type="d19p1:dateTime">2026-07-24T06:54:45.1522305Z</value>
+                                  </d16p1:Value>
+                                </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                              </properties>
+                              <SerializedName>0</SerializedName>
+                              <children />
+                              <dataSource
+                                i:nil="true" />
+                              <isHidden>false</isHidden>
+                              <isReadOnly>false</isReadOnly>
+                            </ProjectItem>
+                          </children>
+                          <dataSource
+                            i:nil="true" />
+                          <isHidden>false</isHidden>
+                          <isReadOnly>false</isReadOnly>
                         </ProjectItem>
                       </children>
                       <dataSource
@@ -95683,7 +95736,7 @@ createRotation(degreesY , degreesX, 0)
                   i:nil="true" />
                 <propertyTypeReference>Name</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:string">SM_CarData</value>
+                  i:type="d9p1:string">SM_CarData.DoorFL</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
             <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -95701,7 +95754,7 @@ createRotation(degreesY , degreesX, 0)
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
           </properties>
-          <SerializedName>SM_CarData</SerializedName>
+          <SerializedName>SM_CarData.DoorFL</SerializedName>
           <children>
             <ProjectItem
               i:type="d3p1:StateGroup">
@@ -95733,7 +95786,7 @@ createRotation(degreesY , degreesX, 0)
                           <d13p1:ContentType>ABSOLUTE</d13p1:ContentType>
                           <d13p1:IsResourceReference>false</d13p1:IsResourceReference>
                           <d13p1:referredItemPath>
-                            <d13p1:pathString>car/State Managers/SM_CarData/SG_DoorFL/Close/</d13p1:pathString>
+                            <d13p1:pathString>car/State Managers/SM_CarData.DoorFL/SG_DoorFL/Close/</d13p1:pathString>
                           </d13p1:referredItemPath>
                           <d13p1:textContent
                             i:nil="true" />
@@ -95744,7 +95797,7 @@ createRotation(degreesY , degreesX, 0)
                           <d13p1:ContentType>ABSOLUTE</d13p1:ContentType>
                           <d13p1:IsResourceReference>false</d13p1:IsResourceReference>
                           <d13p1:referredItemPath>
-                            <d13p1:pathString>car/State Managers/SM_CarData/SG_DoorFL/Open/</d13p1:pathString>
+                            <d13p1:pathString>car/State Managers/SM_CarData.DoorFL/SG_DoorFL/Open/</d13p1:pathString>
                           </d13p1:referredItemPath>
                           <d13p1:textContent
                             i:nil="true" />
@@ -95768,7 +95821,7 @@ createRotation(degreesY , degreesX, 0)
                           <d13p1:ContentType>ABSOLUTE</d13p1:ContentType>
                           <d13p1:IsResourceReference>false</d13p1:IsResourceReference>
                           <d13p1:referredItemPath>
-                            <d13p1:pathString>car/State Managers/SM_CarData/SG_DoorFL/Open/</d13p1:pathString>
+                            <d13p1:pathString>car/State Managers/SM_CarData.DoorFL/SG_DoorFL/Open/</d13p1:pathString>
                           </d13p1:referredItemPath>
                           <d13p1:textContent
                             i:nil="true" />
@@ -95779,7 +95832,7 @@ createRotation(degreesY , degreesX, 0)
                           <d13p1:ContentType>ABSOLUTE</d13p1:ContentType>
                           <d13p1:IsResourceReference>false</d13p1:IsResourceReference>
                           <d13p1:referredItemPath>
-                            <d13p1:pathString>car/State Managers/SM_CarData/SG_DoorFL/Close/</d13p1:pathString>
+                            <d13p1:pathString>car/State Managers/SM_CarData.DoorFL/SG_DoorFL/Close/</d13p1:pathString>
                           </d13p1:referredItemPath>
                           <d13p1:textContent
                             i:nil="true" />
@@ -95851,7 +95904,7 @@ createRotation(degreesY , degreesX, 0)
                       <d11p1:ContentType>ABSOLUTE</d11p1:ContentType>
                       <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
                       <d11p1:referredItemPath>
-                        <d11p1:pathString>car/State Managers/SM_CarData/SG_DoorFL/Close/</d11p1:pathString>
+                        <d11p1:pathString>car/State Managers/SM_CarData.DoorFL/SG_DoorFL/Close/</d11p1:pathString>
                       </d11p1:referredItemPath>
                       <d11p1:textContent
                         i:nil="true" />
@@ -96148,6 +96201,485 @@ createRotation(degreesY , degreesX, 0)
           <isHidden>false</isHidden>
           <isReadOnly>false</isReadOnly>
         </ProjectItem>
+        <ProjectItem
+          i:type="d3p1:StateManager">
+          <properties xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              <d6p1:Key>Name</d6p1:Key>
+              <d6p1:Value>
+                <categoryOverride
+                  i:nil="true" />
+                <isHidden
+                  i:nil="true" />
+                <isReadOnly
+                  i:nil="true" />
+                <propertyTypeReference>Name</propertyTypeReference>
+                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
+                  i:type="d9p1:string">SM_CarData.DoorFR</value>
+              </d6p1:Value>
+            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              <d6p1:Key>CreationTime</d6p1:Key>
+              <d6p1:Value>
+                <categoryOverride
+                  i:nil="true" />
+                <isHidden
+                  i:nil="true" />
+                <isReadOnly
+                  i:nil="true" />
+                <propertyTypeReference>CreationTime</propertyTypeReference>
+                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
+                  i:type="d9p1:dateTime">2026-07-24T06:46:07.4828889Z</value>
+              </d6p1:Value>
+            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+          </properties>
+          <SerializedName>SM_CarData.DoorFR</SerializedName>
+          <children>
+            <ProjectItem
+              i:type="d3p1:StateGroup">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>StateTransitions</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>StateTransitions</propertyTypeReference>
+                    <value
+                      i:type="d3p1:ArrayOfStateTransition">
+                      <d3p1:StateTransition>
+                        <d3p1:AutomaticAnimationType>LINEAR</d3p1:AutomaticAnimationType>
+                        <d3p1:Duration>800</d3p1:Duration>
+                        <d3p1:EasingArgumentsValue>
+                          <d3p1:BackAmplitude>1</d3p1:BackAmplitude>
+                          <d3p1:ElasticOscillations>3</d3p1:ElasticOscillations>
+                          <d3p1:ElasticSpringiness>3</d3p1:ElasticSpringiness>
+                          <d3p1:ExponentialExponent>2</d3p1:ExponentialExponent>
+                          <d3p1:PowerPower>6</d3p1:PowerPower>
+                        </d3p1:EasingArgumentsValue>
+                        <d3p1:EasingMode>EASYIN</d3p1:EasingMode>
+                        <d3p1:EndStateReference xmlns:d13p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project">
+                          <d13p1:ContentType>ABSOLUTE</d13p1:ContentType>
+                          <d13p1:IsResourceReference>false</d13p1:IsResourceReference>
+                          <d13p1:referredItemPath>
+                            <d13p1:pathString>car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Close/</d13p1:pathString>
+                          </d13p1:referredItemPath>
+                          <d13p1:textContent
+                            i:nil="true" />
+                        </d3p1:EndStateReference>
+                        <d3p1:ID>4b5ead21-308f-4323-929e-9d05344ffd87</d3p1:ID>
+                        <d3p1:ReturnTimeType>ELAPSED</d3p1:ReturnTimeType>
+                        <d3p1:StartStateReference xmlns:d13p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project">
+                          <d13p1:ContentType>ABSOLUTE</d13p1:ContentType>
+                          <d13p1:IsResourceReference>false</d13p1:IsResourceReference>
+                          <d13p1:referredItemPath>
+                            <d13p1:pathString>car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Open/</d13p1:pathString>
+                          </d13p1:referredItemPath>
+                          <d13p1:textContent
+                            i:nil="true" />
+                        </d3p1:StartStateReference>
+                        <d3p1:StartTime>0</d3p1:StartTime>
+                        <d3p1:TransitionAnimationDefinitions />
+                        <d3p1:direction>UNIDIRECTIONAL</d3p1:direction>
+                      </d3p1:StateTransition>
+                      <d3p1:StateTransition>
+                        <d3p1:AutomaticAnimationType>LINEAR</d3p1:AutomaticAnimationType>
+                        <d3p1:Duration>800</d3p1:Duration>
+                        <d3p1:EasingArgumentsValue>
+                          <d3p1:BackAmplitude>1</d3p1:BackAmplitude>
+                          <d3p1:ElasticOscillations>3</d3p1:ElasticOscillations>
+                          <d3p1:ElasticSpringiness>3</d3p1:ElasticSpringiness>
+                          <d3p1:ExponentialExponent>2</d3p1:ExponentialExponent>
+                          <d3p1:PowerPower>6</d3p1:PowerPower>
+                        </d3p1:EasingArgumentsValue>
+                        <d3p1:EasingMode>EASYIN</d3p1:EasingMode>
+                        <d3p1:EndStateReference xmlns:d13p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project">
+                          <d13p1:ContentType>ABSOLUTE</d13p1:ContentType>
+                          <d13p1:IsResourceReference>false</d13p1:IsResourceReference>
+                          <d13p1:referredItemPath>
+                            <d13p1:pathString>car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Open/</d13p1:pathString>
+                          </d13p1:referredItemPath>
+                          <d13p1:textContent
+                            i:nil="true" />
+                        </d3p1:EndStateReference>
+                        <d3p1:ID>13efb7d5-8513-4932-89c7-479f4465b3be</d3p1:ID>
+                        <d3p1:ReturnTimeType>ELAPSED</d3p1:ReturnTimeType>
+                        <d3p1:StartStateReference xmlns:d13p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project">
+                          <d13p1:ContentType>ABSOLUTE</d13p1:ContentType>
+                          <d13p1:IsResourceReference>false</d13p1:IsResourceReference>
+                          <d13p1:referredItemPath>
+                            <d13p1:pathString>car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Close/</d13p1:pathString>
+                          </d13p1:referredItemPath>
+                          <d13p1:textContent
+                            i:nil="true" />
+                        </d3p1:StartStateReference>
+                        <d3p1:StartTime>0</d3p1:StartTime>
+                        <d3p1:TransitionAnimationDefinitions />
+                        <d3p1:direction>UNIDIRECTIONAL</d3p1:direction>
+                      </d3p1:StateTransition>
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>StateGroupControllerPropertyTypeReference</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>StateGroupControllerPropertyTypeReference</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
+                      i:type="d11p1:PropertyTypeReference">
+                      <d11p1:isExpression>false</d11p1:isExpression>
+                      <d11p1:propertyTypeName>Car.Door.Door_FR_Open</d11p1:propertyTypeName>
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">SG_DoorFR</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:dateTime">2026-07-24T06:46:07.4818897Z</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>StateGroupInitialState</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>StateGroupInitialState</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ProjectItemReference">
+                      <d11p1:ContentType>ABSOLUTE</d11p1:ContentType>
+                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
+                      <d11p1:referredItemPath>
+                        <d11p1:pathString>car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Close/</d11p1:pathString>
+                      </d11p1:referredItemPath>
+                      <d11p1:textContent
+                        i:nil="true" />
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>SG_DoorFR</SerializedName>
+              <children>
+                <ProjectItem
+                  i:type="d3p1:State">
+                  <properties xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Name</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Name</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:string">Open</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>CreationTime</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>CreationTime</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:dateTime">2026-07-24T06:46:07.4818897Z</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Car.Door.Door_FR_Open</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly>false</isReadOnly>
+                        <propertyTypeReference>Car.Door.Door_FR_Open</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:boolean">true</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  </properties>
+                  <SerializedName>Open</SerializedName>
+                  <children>
+                    <ProjectItem
+                      i:type="d3p1:State">
+                      <properties xmlns:d12p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Name</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Name</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">State Object</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>CreationTime</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>CreationTime</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:dateTime">2026-07-24T06:46:07.4818897Z</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>StateTargetObjectPath</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>StateTargetObjectPath</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">.</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Node3D.RenderTransformation</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Node3D.RenderTransformation</propertyTypeReference>
+                            <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                              i:type="d15p1:SRTTransformation">
+                              <d15p1:isScaleUniform>true</d15p1:isScaleUniform>
+                              <d15p1:rotation xmlns:d16p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                <d16p1:_x>0</d16p1:_x>
+                                <d16p1:_y>60</d16p1:_y>
+                                <d16p1:_z>0</d16p1:_z>
+                              </d15p1:rotation>
+                              <d15p1:scale xmlns:d16p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                <d16p1:_x>1</d16p1:_x>
+                                <d16p1:_y>1</d16p1:_y>
+                                <d16p1:_z>1</d16p1:_z>
+                              </d15p1:scale>
+                              <d15p1:translation xmlns:d16p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                <d16p1:_x>-1.59</d16p1:_x>
+                                <d16p1:_y>3</d16p1:_y>
+                                <d16p1:_z>3.79</d16p1:_z>
+                              </d15p1:translation>
+                            </value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      </properties>
+                      <SerializedName>State Object</SerializedName>
+                      <children />
+                      <dataSource
+                        i:nil="true" />
+                      <isHidden>false</isHidden>
+                      <isReadOnly>false</isReadOnly>
+                    </ProjectItem>
+                  </children>
+                  <dataSource
+                    i:nil="true" />
+                  <isHidden>false</isHidden>
+                  <isReadOnly>false</isReadOnly>
+                </ProjectItem>
+                <ProjectItem
+                  i:type="d3p1:State">
+                  <properties xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Name</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Name</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:string">Close</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>CreationTime</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>CreationTime</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:dateTime">2026-07-24T06:46:07.4818897Z</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Car.Door.Door_FR_Open</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly>false</isReadOnly>
+                        <propertyTypeReference>Car.Door.Door_FR_Open</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:boolean">false</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  </properties>
+                  <SerializedName>Close</SerializedName>
+                  <children>
+                    <ProjectItem
+                      i:type="d3p1:State">
+                      <properties xmlns:d12p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Name</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Name</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">State Object_1</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>CreationTime</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>CreationTime</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:dateTime">2026-07-24T06:46:07.4828889Z</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>StateTargetObjectPath</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>StateTargetObjectPath</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">.</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Node3D.RenderTransformation</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Node3D.RenderTransformation</propertyTypeReference>
+                            <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                              i:type="d15p1:SRTTransformation">
+                              <d15p1:isScaleUniform>true</d15p1:isScaleUniform>
+                              <d15p1:rotation xmlns:d16p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                <d16p1:_x>0</d16p1:_x>
+                                <d16p1:_y>0</d16p1:_y>
+                                <d16p1:_z>0</d16p1:_z>
+                              </d15p1:rotation>
+                              <d15p1:scale xmlns:d16p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                <d16p1:_x>1</d16p1:_x>
+                                <d16p1:_y>1</d16p1:_y>
+                                <d16p1:_z>1</d16p1:_z>
+                              </d15p1:scale>
+                              <d15p1:translation xmlns:d16p1="http://schemas.datacontract.org/2004/07/System.Windows.Media.Media3D">
+                                <d16p1:_x>-1.59</d16p1:_x>
+                                <d16p1:_y>3</d16p1:_y>
+                                <d16p1:_z>3.79</d16p1:_z>
+                              </d15p1:translation>
+                            </value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      </properties>
+                      <SerializedName>State Object_1</SerializedName>
+                      <children />
+                      <dataSource
+                        i:nil="true" />
+                      <isHidden>false</isHidden>
+                      <isReadOnly>false</isReadOnly>
+                    </ProjectItem>
+                  </children>
+                  <dataSource
+                    i:nil="true" />
+                  <isHidden>false</isHidden>
+                  <isReadOnly>false</isReadOnly>
+                </ProjectItem>
+              </children>
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+              <d3p1:ignoreStateValidityCheck>false</d3p1:ignoreStateValidityCheck>
+            </ProjectItem>
+          </children>
+          <dataSource
+            i:nil="true" />
+          <isHidden>false</isHidden>
+          <isReadOnly>false</isReadOnly>
+        </ProjectItem>
       </children>
       <dataSource
         i:nil="true" />
@@ -96297,8 +96829,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Screens/Screen/RootPage/Viewport 2D/Scene</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96312,8 +96843,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96338,7 +96868,7 @@ createRotation(degreesY , degreesX, 0)
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-      <d2p1:Key>kzb://car/Screens/Screen/RootPage/Viewport 2D/Scene/Car</d2p1:Key>
+      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFL</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
           <d4p1:IsUniformEditorExpanded
@@ -96349,7 +96879,7 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>196</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -96370,8 +96900,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Screens/Screen/RootPage</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96413,23 +96942,21 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>432</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>57</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/Headlights</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96443,8 +96970,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/Headlight_L</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96458,8 +96984,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/Headlights/a05</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96473,8 +96998,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FL</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96488,8 +97012,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Wheels/Steer_FL</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96517,8 +97040,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Screens/Screen/RootPage/Viewport 2D/Scene/Bt_Door_FL</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96532,8 +97054,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Screens/Screen/RootPage/Viewport 2D/Scene/Bt_Door_FL/左前门</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96547,8 +97068,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Screens/Screen/RootPage/Viewport 2D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96562,8 +97082,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FL/Toggle Button 3D/Toggle Button: State Toggled</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96577,8 +97096,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FL/Button 3D/Text Block 3D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96592,8 +97110,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FL/Toggle Button 3D/Toggle Button: Toggled On/Set Property</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96635,8 +97152,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Data Sources/Data source</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96664,8 +97180,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Body</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96679,8 +97194,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96694,8 +97208,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Screens/Screen/RootPage/Viewport 2D/Empty Node 2D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96709,8 +97222,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Screens/Screen/RootPage/Empty Node 2D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96724,8 +97236,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Screens/Screen/RootPage/DataSourcDataLayer</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96739,8 +97250,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Screens/Screen/RootPage/DataSourcDataLayer/CarDataLayer</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96754,8 +97264,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FL/DoorShell_FL</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96769,8 +97278,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96784,8 +97292,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_CarData</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96799,8 +97306,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_CarData/State Group</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96829,8 +97335,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_CarData/SG_DoorFL/State1</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96844,8 +97349,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Property Types</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96859,8 +97363,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Property Types/Car/Car.DorrFL_Open</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96874,8 +97377,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_CarData/SG_DoorFL/State2</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96889,8 +97391,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_CarData/SG_DoorFL/Open</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96904,8 +97405,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_CarData/SG_DoorFL/Close</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96919,8 +97419,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_CarData/SG_DoorFL/Open/State Object</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96934,8 +97433,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Rendering</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96963,8 +97461,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Message Types</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96978,8 +97475,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_CarData/SG_DoorFL/Close/State Object_1</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -96993,8 +97489,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FL/Toggle Button 3D/Text Block 3D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97008,8 +97503,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FL/Toggle Button 3D/Toggle Button: Toggled Off/Set Property</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97023,8 +97517,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FL/Button 3D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97038,8 +97531,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97053,8 +97545,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Screens/Screen/RootPage/Viewport 2D/Button 2D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97068,8 +97559,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97083,8 +97573,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/Headlight_R</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97098,8 +97587,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/DRL_L</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97113,8 +97601,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/DRL_R</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97128,8 +97615,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/TurnSignal_FL</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97143,8 +97629,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/TurnSignal_FR</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97158,8 +97643,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/TurnSignal_RL</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97173,8 +97657,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/TurnSignal_RR</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97188,8 +97671,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/Taillight_R</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97203,8 +97685,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/ReverseLight_L</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97218,8 +97699,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/ReverseLight_R</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97233,8 +97713,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/MarkerLights</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97248,8 +97727,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Lights/Worklight</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97263,8 +97741,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Movables/Wiper_L</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97278,8 +97755,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Movables/Wiper_R</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97293,8 +97769,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Movables/Grille_Front</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97308,8 +97783,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Movables/ChargePort_Door</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97323,8 +97797,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Movables/FuelCap</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97338,8 +97811,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Movables/SunVisor</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97353,8 +97825,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FL/Window_FL</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97368,15 +97839,14 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/Toggle Button 3D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>240</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>143</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -97397,8 +97867,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/DoorShell_FR</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97420,30 +97889,28 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>22</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>143</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/Toggle Button 3D/Toggle Button: Toggled Off/Set Property</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>240</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>143</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://car/Property Types/Car/Car.Door_Open</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97471,8 +97938,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/Window_FR</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97486,8 +97952,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/Window_FR/window_R</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97501,8 +97966,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Property Types/Car</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97516,8 +97980,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Property Types/Car/Door</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97531,8 +97994,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Property Types/Car/Door/Car.Door.Door_Open</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97546,8 +98008,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Property Types/Car/Door/Car.Door.Door_FL_Open</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97561,8 +98022,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Property Types/Car/Door/Car.Door.Door_FL_Open_1</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97576,8 +98036,7 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Property Types/Car/Door/Car.Door.Door_FR_Open</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -97591,6 +98050,34 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Screens/Screen/RootPage/Viewport 2D/Scene/Prefab View 3D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>190</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Screens/Screen/RootPage/Viewport 2D/Scene/Directional Light</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFL_1</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
           <d4p1:IsUniformEditorExpanded
             i:nil="true" />
         </d4p1:BindingEditorData>
@@ -97603,7 +98090,7 @@ createRotation(degreesY , degreesX, 0)
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-      <d2p1:Key>kzb://car/Screens/Screen/RootPage/Viewport 2D/Scene/Directional Light</d2p1:Key>
+      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR/SG_DoorFL</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
           <d4p1:IsUniformEditorExpanded
@@ -97615,6 +98102,141 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
         <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_CarData/SG_DoorFR</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR/SG_DoorFR</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Open/State Object</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>255</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFL/SG_DoorFL/Open</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFL/SG_DoorFL/Open/State Object</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>255</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Close/State Object_1</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>255</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/DoorShell_FR/a19.2</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>143</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/Toggle Button 3D/Toggle Button: Toggled Off</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>143</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
   </PropertyEditorViewModeStates>
@@ -97676,8 +98298,7 @@ createRotation(degreesY , degreesX, 0)
           <d5p1:defaultValue xmlns:d6p1="http://www.w3.org/2001/XMLSchema"
             i:type="d6p1:boolean">true</d5p1:defaultValue>
           <d5p1:displayName>Door_FL_Open</d5p1:displayName>
-          <d5p1:fixedOrderPosition
-            i:nil="true" />
+          <d5p1:fixedOrderPosition>2147483647</d5p1:fixedOrderPosition>
           <d5p1:id>db6afe35-0971-467a-ac2d-23f3ab8cc743</d5p1:id>
           <d5p1:isExportedToEngine>true</d5p1:isExportedToEngine>
           <d5p1:isHidden>false</d5p1:isHidden>
@@ -97718,8 +98339,7 @@ createRotation(degreesY , degreesX, 0)
           <d5p1:defaultValue xmlns:d6p1="http://www.w3.org/2001/XMLSchema"
             i:type="d6p1:boolean">true</d5p1:defaultValue>
           <d5p1:displayName>Door_FR_Open</d5p1:displayName>
-          <d5p1:fixedOrderPosition
-            i:nil="true" />
+          <d5p1:fixedOrderPosition>2147483647</d5p1:fixedOrderPosition>
           <d5p1:id>b0d3ca17-04db-42e6-b950-b0315f388018</d5p1:id>
           <d5p1:isExportedToEngine>true</d5p1:isExportedToEngine>
           <d5p1:isHidden>false</d5p1:isHidden>
