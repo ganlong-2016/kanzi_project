@@ -200,6 +200,32 @@ Env 节点那条 disabled 绑定的意图正确:3D 昼夜(光照/天空盒/贴�
 6. **验证**:Preview 里 Dictionaries 切 Day/Night 先验字典;再改 `datasource.xml` `theme` 默认值 0/1 重启 Preview 验链路;
 7. **3D 昼夜**(D6):environment 里恢复/重建对 `System/theme` 的消费(State Manager 两态切光照贴图),与 UI 主题无耦合。
 
+### 6.4 FAQ:模块独立开发怎么办
+
+**Q1:单独打开子工程,文案/主题色是不是看不到?会不会报错?**
+
+看不到,但**不报错**。resource ID 是运行时弱引用:解析失败只回退默认值(Text 显示为空、brush 不生效),Preview 正常启动、Export KZB 正常导出,Studio Log 里只有解析失败的 warning——不阻塞开发,区别于 `kzb://` 直链断链。
+
+**Q2:子工程要提前知道主工程的 resource ID,是不是就没法独立开发?**
+
+resource ID 本来就是一份**契约**——这正是 Kanzi resource ID 间接寻址的设计意图,和 `datasource.xml` 字段的性质完全一样:**契约先行,照单开发**。模块开发者需要的不是打开 launcher 工程,而是两份清单:
+
+- **token 清单**:`Color/*` 等(见 [naming-conventions.md](naming-conventions.md),新增 token 走评审后同时更新清单与 launcher 字典);
+- **文案 key 规范**:`<模块>.<语义>`,模块自己起名、交付时进 launcher 表(前缀即命名空间,新增 key 不冲突)。
+
+**Q3:开发期想在模块 Preview 里看到真实效果怎么办?**
+
+两种工作流,按团队情况选:
+
+| 工作流 | 做法 | 独立预览效果 | 成本 |
+|--------|------|--------------|------|
+| **简单流(推荐先用)** | 模块只写 resource ID,不建本地字典 | 布局可见,文案/主题色空缺 | 零维护;效果验收统一在 launcher Preview 做(模块页挂上后字典即生效) |
+| **并行流(模块团队大/页面多时)** | 模块工程自建**开发用字典**:同 token ID 的 Theme Group + 同 key 的文案表(值可直接引 common 的 public brush/style) | 完整可见,可用 Dictionaries 切语言/主题自测 | 双份维护;交付节点用官方 **Merge Project** 把模块表并入 launcher(§2.3 方式②,三方合并可增量重复) |
+
+并行流之所以安全:模块工程的字典挂在**模块自己的预览 Screen** 上(架构铁律:子工程 Screen 仅用于独立预览,不参与运行时),运行时生效的只有 launcher 字典,两者同 key 不冲突,模块 kzb 里那份仅是少量体积冗余。若采用并行流,建议做一个**模块起步模板**(预置全套 token 的 dev Theme Group + 空文案表),保证各模块独立开发体验一致。
+
+> 若两种工作流都嫌重,官方还有方式③:向 Rightware 申请跨工程本地化/主题插件(§2.3)——量产前可评估,但外部依赖不可控,本方案不默认采用。
+
 ## 7. 落地阶段与验收
 
 | 阶段 | 内容 | 验收 |
