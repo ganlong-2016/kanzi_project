@@ -6940,7 +6940,7 @@
                                   i:nil="true" />
                                 <propertyTypeReference>Car.Door.Door_FR_Open</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:boolean">false</value>
+                                  i:type="d17p1:boolean">true</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -6954,7 +6954,7 @@
                                   i:nil="true" />
                                 <propertyTypeReference>Car.Door.Door_FL_Open</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:boolean">false</value>
+                                  i:type="d17p1:boolean">true</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -6968,7 +6968,7 @@
                                   i:nil="true" />
                                 <propertyTypeReference>Charging.ChargeStatus</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
-                                  i:type="d17p1:int">3</value>
+                                  i:type="d17p1:int">0</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                           </properties>
@@ -10623,7 +10623,8 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
                                           <d20p1:Value>
                                             <categoryOverride
                                               i:nil="true" />
-                                            <isHidden>false</isHidden>
+                                            <isHidden
+                                              i:nil="true" />
                                             <isReadOnly
                                               i:nil="true" />
                                             <propertyTypeReference>TriggerCondition.PropertyAttributeA</propertyTypeReference>
@@ -63217,8 +63218,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -63708,8 +63708,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
       <d2p1:Key>kzb://launcher/Property Types</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -64087,8 +64086,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
       <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/left</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -64193,7 +64191,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>205.60000000000002</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -64522,8 +64520,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
       <d2p1:Key>kzb://launcher/Property Types/Charging/Charging.ChargeStatus</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -64537,8 +64534,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
       <d2p1:Key>kzb://launcher/Property Types/Charging</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -64552,8 +64548,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
       <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/left_1</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -64567,8 +64562,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
       <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/inside</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -64582,8 +64576,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
       <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/inside/State Object</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -64597,8 +64590,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
       <d2p1:Key>kzb://launcher/State Managers/CameraView/State Group/inside/Camera</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -64612,8 +64604,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/tool</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -64627,8 +64618,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/tool/Stack Layout 2D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -64642,8 +64632,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
       <d2p1:Key>kzb://launcher/Screens/Screen/RootPage/tool/Stack Layout 2D/Text Box 2D</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -65032,8 +65021,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
           <d5p1:defaultValue xmlns:d6p1="http://www.w3.org/2001/XMLSchema"
             i:type="d6p1:int">0</d5p1:defaultValue>
           <d5p1:displayName>ChargeStatus</d5p1:displayName>
-          <d5p1:fixedOrderPosition
-            i:nil="true" />
+          <d5p1:fixedOrderPosition>2147483647</d5p1:fixedOrderPosition>
           <d5p1:id>41902a61-4382-4371-b90b-ba7e914a4c14</d5p1:id>
           <d5p1:isExportedToEngine>true</d5p1:isExportedToEngine>
           <d5p1:isHidden>false</d5p1:isHidden>
