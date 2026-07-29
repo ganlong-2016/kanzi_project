@@ -123902,9 +123902,406 @@ createRotation(degreesY , degreesX, 0)
                 i:nil="true" />
             </ProjectItem>
             <ProjectItem
+<<<<<<< HEAD
               i:type="d3p1:ImageResourceFileDirectory">
               <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
                 <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+=======
+              i:type="d3p1:ImageFile">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePreview</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePreview</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string"></value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">84 x 84</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">32</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasTransparency</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasTransparency</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileHasICCProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileHasICCProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>TargetImageFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>TargetImageFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.BinaryExport"
+                      i:type="d11p1:KzbImageTargetFormat">PNG</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AtcCompressionScheme">EXPLICIT_ALPHA</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcBitDepth</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcBitDepth</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">2</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcQuality</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcQuality</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePvrtcCompressionScheme</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePvrtcCompressionScheme</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">1</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcBlockSize</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcBlockSize</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcBlockSize">UNORM_BLOCK_4x4</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageAstcCompressionSpeed</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageAstcCompressionSpeed</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
+                      i:type="d11p1:AstcCompressionSpeed">VeryFast</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageRawColorByteFormat</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageRawColorByteFormat</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.TextureItems"
+                      i:type="d11p1:ImageColorByteFormat">RGBA_8</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFilePngCompressionLevel</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFilePngCompressionLevel</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
+                      i:type="d11p1:PngCompressionLevel">ProjectDefault</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIsSRGB</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIsSRGB</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageIgnoreColorProfile</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageIgnoreColorProfile</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImagePremultiplyAlpha</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImagePremultiplyAlpha</propertyTypeReference>
+                    <value
+                      i:type="d3p1:PremultipliedAlphaOption">PROJECT_DEFAULT</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageLinearPremultiply</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageLinearPremultiply</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageEtc2Effort</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden>true</isHidden>
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageEtc2Effort</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:int">0</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>HasMipmaps</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>HasMipmaps</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportSourceImage</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportSourceImage</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportAlways</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportAlways</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">true</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImageFileExportEmptyWhenFileIsMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImageFileExportEmptyWhenFileIsMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>ImportedFrom</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>ImportedFrom</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ProjectItemReference">
+                      <d11p1:ContentType>ABSOLUTE</d11p1:ContentType>
+                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
+                      <d11p1:referredItemPath
+                        i:nil="true" />
+                      <d11p1:textContent
+                        i:nil="true" />
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IDInImportSource</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IDInImportSource</propertyTypeReference>
+                    <value
+                      i:nil="true" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>MipmapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>MipmapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CubemapReferences</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CubemapReferences</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                      i:type="d11p1:ArrayOfProjectItemReference" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>IsFileMissing</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>IsFileMissing</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:boolean">false</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
                   <d8p1:Key>Name</d8p1:Key>
                   <d8p1:Value>
                     <categoryOverride
@@ -123914,7 +124311,11 @@ createRotation(degreesY , degreesX, 0)
                     <isReadOnly>true</isReadOnly>
                     <propertyTypeReference>Name</propertyTypeReference>
                     <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+<<<<<<< HEAD
                       i:type="d11p1:string">mipmaps</value>
+=======
+                      i:type="d11p1:string">Door_normal.png</value>
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
                   </d8p1:Value>
                 </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                 <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -123928,6 +124329,7 @@ createRotation(degreesY , degreesX, 0)
                       i:nil="true" />
                     <propertyTypeReference>CreationTime</propertyTypeReference>
                     <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+<<<<<<< HEAD
                       i:type="d11p1:dateTime">2026-07-28T03:13:07.9680584Z</value>
                   </d8p1:Value>
                 </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -156881,425 +157283,7 @@ createRotation(degreesY , degreesX, 0)
               <d3p1:fileSystemNameOverride
                 i:nil="true" />
               <d3p1:relativePath>Images\mipmaps</d3p1:relativePath>
-            </ProjectItem>
-            <ProjectItem
-              i:type="d3p1:ImageFile">
-              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImagePreview</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImagePreview</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:string"></value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageSize</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageSize</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:string">84 x 84</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageBitDepth</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageBitDepth</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:int">32</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageFileHasTransparency</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageFileHasTransparency</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:boolean">true</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageFileHasICCProfile</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageFileHasICCProfile</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:boolean">false</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>TargetImageFormat</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>TargetImageFormat</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.BinaryExport"
-                      i:type="d11p1:KzbImageTargetFormat">PNG</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageAtcCompressionScheme</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden>true</isHidden>
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageAtcCompressionScheme</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
-                      i:type="d11p1:AtcCompressionScheme">EXPLICIT_ALPHA</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImagePvrtcBitDepth</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden>true</isHidden>
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImagePvrtcBitDepth</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:int">2</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImagePvrtcQuality</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden>true</isHidden>
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImagePvrtcQuality</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:int">0</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImagePvrtcCompressionScheme</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden>true</isHidden>
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImagePvrtcCompressionScheme</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:int">1</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageAstcBlockSize</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden>true</isHidden>
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageAstcBlockSize</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
-                      i:type="d11p1:AstcBlockSize">UNORM_BLOCK_4x4</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageAstcCompressionSpeed</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden>true</isHidden>
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageAstcCompressionSpeed</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.ResourceFileItems.ImageCompression"
-                      i:type="d11p1:AstcCompressionSpeed">VeryFast</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageRawColorByteFormat</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden>true</isHidden>
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageRawColorByteFormat</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project.TextureItems"
-                      i:type="d11p1:ImageColorByteFormat">RGBA_8</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageFilePngCompressionLevel</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageFilePngCompressionLevel</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.DataTypes"
-                      i:type="d11p1:PngCompressionLevel">ProjectDefault</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageIsSRGB</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageIsSRGB</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:boolean">true</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageIgnoreColorProfile</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageIgnoreColorProfile</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:boolean">false</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImagePremultiplyAlpha</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImagePremultiplyAlpha</propertyTypeReference>
-                    <value
-                      i:type="d3p1:PremultipliedAlphaOption">PROJECT_DEFAULT</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageLinearPremultiply</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageLinearPremultiply</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:boolean">true</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageEtc2Effort</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden>true</isHidden>
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageEtc2Effort</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:int">0</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>HasMipmaps</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>HasMipmaps</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:boolean">false</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageFileExportSourceImage</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageFileExportSourceImage</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:boolean">false</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageFileExportAlways</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageFileExportAlways</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:boolean">true</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImageFileExportEmptyWhenFileIsMissing</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImageFileExportEmptyWhenFileIsMissing</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:boolean">false</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>ImportedFrom</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>ImportedFrom</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
-                      i:type="d11p1:ProjectItemReference">
-                      <d11p1:ContentType>ABSOLUTE</d11p1:ContentType>
-                      <d11p1:IsResourceReference>false</d11p1:IsResourceReference>
-                      <d11p1:referredItemPath
-                        i:nil="true" />
-                      <d11p1:textContent
-                        i:nil="true" />
-                    </value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>IDInImportSource</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>IDInImportSource</propertyTypeReference>
-                    <value
-                      i:nil="true" />
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>MipmapReferences</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>MipmapReferences</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
-                      i:type="d11p1:ArrayOfProjectItemReference" />
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>CubemapReferences</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>CubemapReferences</propertyTypeReference>
-                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
-                      i:type="d11p1:ArrayOfProjectItemReference" />
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>IsFileMissing</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>IsFileMissing</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:boolean">false</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>Name</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly>true</isReadOnly>
-                    <propertyTypeReference>Name</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
-                      i:type="d11p1:string">Door_normal.png</value>
-                  </d8p1:Value>
-                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                  <d8p1:Key>CreationTime</d8p1:Key>
-                  <d8p1:Value>
-                    <categoryOverride
-                      i:nil="true" />
-                    <isHidden
-                      i:nil="true" />
-                    <isReadOnly
-                      i:nil="true" />
-                    <propertyTypeReference>CreationTime</propertyTypeReference>
-                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+=======
                       i:type="d11p1:dateTime">2026-07-29T01:41:31.5476753Z</value>
                   </d8p1:Value>
                 </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -157747,6 +157731,7 @@ createRotation(degreesY , degreesX, 0)
               <d3p1:IsMipmapContainer>false</d3p1:IsMipmapContainer>
               <d3p1:PsdImageFileImportSettings
                 i:nil="true" />
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
             </ProjectItem>
           </children>
           <dataSource
@@ -164819,6 +164804,863 @@ createRotation(degreesY , degreesX, 0)
           <isHidden>false</isHidden>
           <isReadOnly>false</isReadOnly>
         </ProjectItem>
+        <ProjectItem
+          i:type="d3p1:StateManager">
+          <properties xmlns:d6p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              <d6p1:Key>Name</d6p1:Key>
+              <d6p1:Value>
+                <categoryOverride
+                  i:nil="true" />
+                <isHidden
+                  i:nil="true" />
+                <isReadOnly
+                  i:nil="true" />
+                <propertyTypeReference>Name</propertyTypeReference>
+                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
+<<<<<<< HEAD
+                  i:type="d9p1:string">SM_ChargingStatus</value>
+=======
+                  i:type="d9p1:string">SM_IconSt</value>
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
+              </d6p1:Value>
+            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+            <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              <d6p1:Key>CreationTime</d6p1:Key>
+              <d6p1:Value>
+                <categoryOverride
+                  i:nil="true" />
+                <isHidden
+                  i:nil="true" />
+                <isReadOnly
+                  i:nil="true" />
+                <propertyTypeReference>CreationTime</propertyTypeReference>
+                <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
+<<<<<<< HEAD
+                  i:type="d9p1:dateTime">2026-07-28T10:07:06.0908205Z</value>
+              </d6p1:Value>
+            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+          </properties>
+          <SerializedName>SM_ChargingStatus</SerializedName>
+=======
+                  i:type="d9p1:dateTime">2026-07-29T02:50:30.0796842Z</value>
+              </d6p1:Value>
+            </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+          </properties>
+          <SerializedName>SM_IconSt</SerializedName>
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
+          <children>
+            <ProjectItem
+              i:type="d3p1:StateGroup">
+              <properties xmlns:d8p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>StateTransitions</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>StateTransitions</propertyTypeReference>
+                    <value
+                      i:type="d3p1:ArrayOfStateTransition" />
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>StateGroupControllerPropertyTypeReference</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>StateGroupControllerPropertyTypeReference</propertyTypeReference>
+                    <value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
+                      i:type="d11p1:PropertyTypeReference">
+                      <d11p1:isExpression>false</d11p1:isExpression>
+<<<<<<< HEAD
+                      <d11p1:propertyTypeName>Charging.ChargeStatus</d11p1:propertyTypeName>
+=======
+                      <d11p1:propertyTypeName>CarControl.IconSt</d11p1:propertyTypeName>
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
+                    </value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>Name</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>Name</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+                      i:type="d11p1:string">State Group</value>
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                <d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  <d8p1:Key>CreationTime</d8p1:Key>
+                  <d8p1:Value>
+                    <categoryOverride
+                      i:nil="true" />
+                    <isHidden
+                      i:nil="true" />
+                    <isReadOnly
+                      i:nil="true" />
+                    <propertyTypeReference>CreationTime</propertyTypeReference>
+                    <value xmlns:d11p1="http://www.w3.org/2001/XMLSchema"
+<<<<<<< HEAD
+                      i:type="d11p1:dateTime">2026-07-28T10:07:06.0933198Z</value>
+=======
+                      i:type="d11p1:dateTime">2026-07-29T02:50:30.0796842Z</value>
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
+                  </d8p1:Value>
+                </d8p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+              </properties>
+              <SerializedName>State Group</SerializedName>
+              <children>
+                <ProjectItem
+                  i:type="d3p1:State">
+                  <properties xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Name</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Name</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+<<<<<<< HEAD
+                          i:type="d13p1:string">Unknown</value>
+=======
+                          i:type="d13p1:string">OpenSt</value>
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>CreationTime</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>CreationTime</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+<<<<<<< HEAD
+                          i:type="d13p1:dateTime">2026-07-28T10:07:06.0948201Z</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Charging.ChargeStatus</d10p1:Key>
+=======
+                          i:type="d13p1:dateTime">2026-07-29T02:50:30.0796842Z</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>CarControl.IconSt</d10p1:Key>
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly>false</isReadOnly>
+<<<<<<< HEAD
+                        <propertyTypeReference>Charging.ChargeStatus</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:int">0</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  </properties>
+                  <SerializedName>Unknown</SerializedName>
+                  <children>
+                    <ProjectItem
+                      i:type="d3p1:State">
+                      <properties xmlns:d12p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Name</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Name</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">State Object</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>CreationTime</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>CreationTime</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:dateTime">2026-07-28T10:08:35.8018686Z</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>StateTargetObjectPath</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>StateTargetObjectPath</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">.</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>TextConcept.Text</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>TextConcept.Text</propertyTypeReference>
+                            <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                              i:type="d15p1:ProjectItemReference">
+                              <d15p1:ContentType>TEXT</d15p1:ContentType>
+                              <d15p1:IsResourceReference>false</d15p1:IsResourceReference>
+                              <d15p1:referredItemPath>
+                                <d15p1:pathString>relative://</d15p1:pathString>
+                              </d15p1:referredItemPath>
+                              <d15p1:textContent>UnKonw</d15p1:textContent>
+                            </value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      </properties>
+                      <SerializedName>State Object</SerializedName>
+                      <children />
+                      <dataSource
+                        i:nil="true" />
+                      <isHidden>false</isHidden>
+                      <isReadOnly>false</isReadOnly>
+                    </ProjectItem>
+                  </children>
+=======
+                        <propertyTypeReference>CarControl.IconSt</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:boolean">true</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Texture</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Texture</propertyTypeReference>
+                        <value xmlns:d13p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                          i:type="d13p1:ProjectItemReference">
+                          <d13p1:ContentType>ABSOLUTE</d13p1:ContentType>
+                          <d13p1:IsResourceReference>false</d13p1:IsResourceReference>
+                          <d13p1:referredItemPath>
+                            <d13p1:pathString>car/Textures/Door_selected/</d13p1:pathString>
+                          </d13p1:referredItemPath>
+                          <d13p1:textContent
+                            i:nil="true" />
+                        </value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  </properties>
+                  <SerializedName>OpenSt</SerializedName>
+                  <children />
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
+                  <dataSource
+                    i:nil="true" />
+                  <isHidden>false</isHidden>
+                  <isReadOnly>false</isReadOnly>
+                </ProjectItem>
+                <ProjectItem
+                  i:type="d3p1:State">
+                  <properties xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Name</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Name</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+<<<<<<< HEAD
+                          i:type="d13p1:string">Charging</value>
+=======
+                          i:type="d13p1:string">CloseSt</value>
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>CreationTime</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>CreationTime</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+<<<<<<< HEAD
+                          i:type="d13p1:dateTime">2026-07-28T10:07:06.0953201Z</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Charging.ChargeStatus</d10p1:Key>
+=======
+                          i:type="d13p1:dateTime">2026-07-29T02:50:30.0796842Z</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>CarControl.IconSt</d10p1:Key>
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly>false</isReadOnly>
+<<<<<<< HEAD
+                        <propertyTypeReference>Charging.ChargeStatus</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:int">1</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  </properties>
+                  <SerializedName>Charging</SerializedName>
+                  <children>
+                    <ProjectItem
+                      i:type="d3p1:State">
+                      <properties xmlns:d12p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Name</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Name</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">State Object</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>CreationTime</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>CreationTime</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:dateTime">2026-07-28T10:14:03.3079623Z</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>StateTargetObjectPath</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>StateTargetObjectPath</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">.</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>TextConcept.Text</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>TextConcept.Text</propertyTypeReference>
+                            <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                              i:type="d15p1:ProjectItemReference">
+                              <d15p1:ContentType>TEXT</d15p1:ContentType>
+                              <d15p1:IsResourceReference>false</d15p1:IsResourceReference>
+                              <d15p1:referredItemPath>
+                                <d15p1:pathString>relative://</d15p1:pathString>
+                              </d15p1:referredItemPath>
+                              <d15p1:textContent>Charging</d15p1:textContent>
+                            </value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      </properties>
+                      <SerializedName>State Object</SerializedName>
+                      <children />
+                      <dataSource
+                        i:nil="true" />
+                      <isHidden>false</isHidden>
+                      <isReadOnly>false</isReadOnly>
+                    </ProjectItem>
+                  </children>
+                  <dataSource
+                    i:nil="true" />
+                  <isHidden>false</isHidden>
+                  <isReadOnly>false</isReadOnly>
+                </ProjectItem>
+                <ProjectItem
+                  i:type="d3p1:State">
+                  <properties xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Name</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Name</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:string">Complete</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>CreationTime</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>CreationTime</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:dateTime">2026-07-28T10:14:09.9608739Z</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Charging.ChargeStatus</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly>false</isReadOnly>
+                        <propertyTypeReference>Charging.ChargeStatus</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:int">2</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  </properties>
+                  <SerializedName>Complete</SerializedName>
+                  <children>
+                    <ProjectItem
+                      i:type="d3p1:State">
+                      <properties xmlns:d12p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Name</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Name</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">State Object</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>CreationTime</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>CreationTime</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:dateTime">2026-07-28T10:14:09.9603807Z</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>StateTargetObjectPath</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>StateTargetObjectPath</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">.</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>TextConcept.Text</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>TextConcept.Text</propertyTypeReference>
+                            <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                              i:type="d15p1:ProjectItemReference">
+                              <d15p1:ContentType>TEXT</d15p1:ContentType>
+                              <d15p1:IsResourceReference>false</d15p1:IsResourceReference>
+                              <d15p1:referredItemPath>
+                                <d15p1:pathString>relative://</d15p1:pathString>
+                              </d15p1:referredItemPath>
+                              <d15p1:textContent>Complete</d15p1:textContent>
+                            </value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      </properties>
+                      <SerializedName>State Object</SerializedName>
+                      <children />
+                      <dataSource
+                        i:nil="true" />
+                      <isHidden>false</isHidden>
+                      <isReadOnly>false</isReadOnly>
+                    </ProjectItem>
+                  </children>
+                  <dataSource
+                    i:nil="true" />
+                  <isHidden>false</isHidden>
+                  <isReadOnly>false</isReadOnly>
+                </ProjectItem>
+                <ProjectItem
+                  i:type="d3p1:State">
+                  <properties xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Name</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Name</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:string">Paused</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>CreationTime</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>CreationTime</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:dateTime">2026-07-28T10:14:14.1754612Z</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Charging.ChargeStatus</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly>false</isReadOnly>
+                        <propertyTypeReference>Charging.ChargeStatus</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:int">3</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  </properties>
+                  <SerializedName>Paused</SerializedName>
+                  <children>
+                    <ProjectItem
+                      i:type="d3p1:State">
+                      <properties xmlns:d12p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Name</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Name</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">State Object</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>CreationTime</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>CreationTime</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:dateTime">2026-07-28T10:14:14.1749571Z</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>StateTargetObjectPath</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>StateTargetObjectPath</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">.</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>TextConcept.Text</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>TextConcept.Text</propertyTypeReference>
+                            <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                              i:type="d15p1:ProjectItemReference">
+                              <d15p1:ContentType>TEXT</d15p1:ContentType>
+                              <d15p1:IsResourceReference>false</d15p1:IsResourceReference>
+                              <d15p1:referredItemPath>
+                                <d15p1:pathString>relative://</d15p1:pathString>
+                              </d15p1:referredItemPath>
+                              <d15p1:textContent>Paused</d15p1:textContent>
+                            </value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      </properties>
+                      <SerializedName>State Object</SerializedName>
+                      <children />
+                      <dataSource
+                        i:nil="true" />
+                      <isHidden>false</isHidden>
+                      <isReadOnly>false</isReadOnly>
+                    </ProjectItem>
+                  </children>
+                  <dataSource
+                    i:nil="true" />
+                  <isHidden>false</isHidden>
+                  <isReadOnly>false</isReadOnly>
+                </ProjectItem>
+                <ProjectItem
+                  i:type="d3p1:State">
+                  <properties xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Name</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Name</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:string">Fault</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>CreationTime</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>CreationTime</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:dateTime">2026-07-28T10:14:15.0264908Z</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Charging.ChargeStatus</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly>false</isReadOnly>
+                        <propertyTypeReference>Charging.ChargeStatus</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:int">4</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  </properties>
+                  <SerializedName>Fault</SerializedName>
+                  <children>
+                    <ProjectItem
+                      i:type="d3p1:State">
+                      <properties xmlns:d12p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties">
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>Name</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>Name</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">State Object</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>CreationTime</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>CreationTime</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:dateTime">2026-07-28T10:14:15.0259873Z</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>StateTargetObjectPath</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>StateTargetObjectPath</propertyTypeReference>
+                            <value xmlns:d15p1="http://www.w3.org/2001/XMLSchema"
+                              i:type="d15p1:string">.</value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                        <d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                          <d12p1:Key>TextConcept.Text</d12p1:Key>
+                          <d12p1:Value>
+                            <categoryOverride
+                              i:nil="true" />
+                            <isHidden
+                              i:nil="true" />
+                            <isReadOnly
+                              i:nil="true" />
+                            <propertyTypeReference>TextConcept.Text</propertyTypeReference>
+                            <value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                              i:type="d15p1:ProjectItemReference">
+                              <d15p1:ContentType>TEXT</d15p1:ContentType>
+                              <d15p1:IsResourceReference>false</d15p1:IsResourceReference>
+                              <d15p1:referredItemPath>
+                                <d15p1:pathString>relative://</d15p1:pathString>
+                              </d15p1:referredItemPath>
+                              <d15p1:textContent>Fault</d15p1:textContent>
+                            </value>
+                          </d12p1:Value>
+                        </d12p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      </properties>
+                      <SerializedName>State Object</SerializedName>
+                      <children />
+                      <dataSource
+                        i:nil="true" />
+                      <isHidden>false</isHidden>
+                      <isReadOnly>false</isReadOnly>
+                    </ProjectItem>
+                  </children>
+=======
+                        <propertyTypeReference>CarControl.IconSt</propertyTypeReference>
+                        <value xmlns:d13p1="http://www.w3.org/2001/XMLSchema"
+                          i:type="d13p1:boolean">false</value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                    <d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                      <d10p1:Key>Texture</d10p1:Key>
+                      <d10p1:Value>
+                        <categoryOverride
+                          i:nil="true" />
+                        <isHidden
+                          i:nil="true" />
+                        <isReadOnly
+                          i:nil="true" />
+                        <propertyTypeReference>Texture</propertyTypeReference>
+                        <value xmlns:d13p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Project"
+                          i:type="d13p1:ProjectItemReference">
+                          <d13p1:ContentType>ABSOLUTE</d13p1:ContentType>
+                          <d13p1:IsResourceReference>false</d13p1:IsResourceReference>
+                          <d13p1:referredItemPath>
+                            <d13p1:pathString>car/Textures/Door_normal/</d13p1:pathString>
+                          </d13p1:referredItemPath>
+                          <d13p1:textContent
+                            i:nil="true" />
+                        </value>
+                      </d10p1:Value>
+                    </d10p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
+                  </properties>
+                  <SerializedName>CloseSt</SerializedName>
+                  <children />
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
+                  <dataSource
+                    i:nil="true" />
+                  <isHidden>false</isHidden>
+                  <isReadOnly>false</isReadOnly>
+                </ProjectItem>
+              </children>
+              <dataSource
+                i:nil="true" />
+              <isHidden>false</isHidden>
+              <isReadOnly>false</isReadOnly>
+              <d3p1:ignoreStateValidityCheck>false</d3p1:ignoreStateValidityCheck>
+            </ProjectItem>
+          </children>
+          <dataSource
+            i:nil="true" />
+          <isHidden>false</isHidden>
+          <isReadOnly>false</isReadOnly>
+        </ProjectItem>
       </children>
       <dataSource
         i:nil="true" />
@@ -166259,7 +167101,472 @@ createRotation(degreesY , degreesX, 0)
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+<<<<<<< HEAD
+      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Open/State Object</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>255</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+=======
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
       <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFL/SG_DoorFL/Open</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFL/SG_DoorFL/Open/State Object</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>255</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Close/State Object_1</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>255</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/DoorShell_FR/a19.2</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>143</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/Toggle Button 3D/Toggle Button: Toggled Off</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>143</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Prefabs/Car/Car/Wheels/Steer_FR/Wheel_FR</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Resource Files</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/State1</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/socValid</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/Unknown</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/State2</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/Charging</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/Unknown/State Object</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Prefabs/Charging/Charging</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Prefabs/Charging/Charging/ChargingStatus</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Property Types/ChargeStatus/ChargeStatus.ChargeStatus</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/Charging/State Object</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/Charging_1</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/Charging_2</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/Charging_3</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>1932.8000000000002</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/Complete</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/Complete/State Object</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/Paused</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/Paused/State Object</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/Fault</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_ChargingStatus/State Group/Fault/State Object</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Prefabs/CarRoot/CarRoot</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Prefabs/CarRoot/CarRoot/Prefab View 3D</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Prefabs/CarRoot/CarRoot/Prefab View 3D_1</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Property Types/ChargeStatus</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/Property Types/Charging/Charging.ChargeStatus</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
           <d4p1:IsUniformEditorExpanded
@@ -166274,10 +167581,12 @@ createRotation(degreesY , degreesX, 0)
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFL/SG_DoorFL/Open/State Object</d2p1:Key>
+      <d2p1:Key>kzb://car/Prefabs/CarRoot/CarRoot/Charging</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
           <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+<<<<<<< HEAD
+=======
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -166321,12 +167630,16 @@ createRotation(degreesY , degreesX, 0)
         <d4p1:BindingEditorData>
           <d4p1:IsUniformEditorExpanded
             i:nil="true" />
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
+<<<<<<< HEAD
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+=======
         <d4p1:ScrollPosition>611</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -166334,7 +167647,8 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Materials</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -166408,7 +167722,8 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/Toggle Button 3D/Plane</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -166422,7 +167737,8 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/FR_Door_Control/Plane</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -166436,7 +167752,8 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/Textures</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -166465,7 +167782,8 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_DoorOpen/State Group</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -166568,7 +167886,8 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Open/State Object</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -166597,7 +167916,8 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFL/SG_DoorFL</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -166611,7 +167931,8 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Close</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -166744,7 +168065,8 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Close/State Object_1</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -166758,7 +168080,8 @@ createRotation(degreesY , degreesX, 0)
       <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Close/DoorStatus</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
         </d4p1:BindingEditorData>
         <d4p1:MaterialRuleTreeData>
           <d4p1:ExpandedEditorItemPaths />
@@ -166769,7 +168092,7 @@ createRotation(degreesY , degreesX, 0)
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-      <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/Toggle Button 3D/Toggle Button: Toggled Off</d2p1:Key>
+      <d2p1:Key>kzb://car/State Managers/SM_IconSt/State Group/OpenSt</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
         <d4p1:BindingEditorData>
           <d4p1:IsUniformEditorExpanded
@@ -166780,7 +168103,23 @@ createRotation(degreesY , degreesX, 0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>143</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://car/State Managers/SM_IconSt/State Group/CloseSt</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>75</d4p1:ScrollPosition>
+>>>>>>> 928f7c2492efc2b7e1d8c48c95dad2f7d24d0ade
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
   </PropertyEditorViewModeStates>
