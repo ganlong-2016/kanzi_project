@@ -167756,34 +167756,8 @@ createRotation(degreesY , degreesX, 0)
         <d4p1:ScrollPosition>286</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-      <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/DoorShell_FR/a19.2</d2p1:Key>
-      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
-        <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
-        </d4p1:BindingEditorData>
-        <d4p1:MaterialRuleTreeData>
-          <d4p1:ExpandedEditorItemPaths />
-          <d4p1:ExpandedItemPaths />
-          <d4p1:SelectedItemPaths />
-        </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>143</d4p1:ScrollPosition>
-      </d2p1:Value>
-    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-      <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FR/Toggle Button 3D/Toggle Button: Toggled Off</d2p1:Key>
-      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
-        <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
-        </d4p1:BindingEditorData>
-        <d4p1:MaterialRuleTreeData>
-          <d4p1:ExpandedEditorItemPaths />
-          <d4p1:ExpandedItemPaths />
-          <d4p1:SelectedItemPaths />
-        </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>143</d4p1:ScrollPosition>
-      </d2p1:Value>
-    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    
+    
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://car/Prefabs/Car/Car/Doors/Door_FL/Toggle Button 3D/Plane</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
@@ -168038,21 +168012,7 @@ createRotation(degreesY , degreesX, 0)
         <d4p1:ScrollPosition>43</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Open/State Object</d2p1:Key>
-      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
-        <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
-        </d4p1:BindingEditorData>
-        <d4p1:MaterialRuleTreeData>
-          <d4p1:ExpandedEditorItemPaths />
-          <d4p1:ExpandedItemPaths />
-          <d4p1:SelectedItemPaths />
-        </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
-      </d2p1:Value>
-    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFL/SG_DoorFL/Close/IconStatus_1</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
@@ -168142,21 +168102,7 @@ createRotation(degreesY , degreesX, 0)
         <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-      <d2p1:Key>kzb://car/Resource Files</d2p1:Key>
-      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
-        <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
-        </d4p1:BindingEditorData>
-        <d4p1:MaterialRuleTreeData>
-          <d4p1:ExpandedEditorItemPaths />
-          <d4p1:ExpandedItemPaths />
-          <d4p1:SelectedItemPaths />
-        </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
-      </d2p1:Value>
-    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://car/State Managers/SM_IconSt</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
@@ -168217,21 +168163,7 @@ createRotation(degreesY , degreesX, 0)
         <d4p1:ScrollPosition>75</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
-      <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Close/State Object_1</d2p1:Key>
-      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
-        <d4p1:BindingEditorData>
-          <d4p1:IsUniformEditorExpanded
-            i:nil="true" />
-        </d4p1:BindingEditorData>
-        <d4p1:MaterialRuleTreeData>
-          <d4p1:ExpandedEditorItemPaths />
-          <d4p1:ExpandedItemPaths />
-          <d4p1:SelectedItemPaths />
-        </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
-      </d2p1:Value>
-    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
       <d2p1:Key>kzb://car/State Managers/SM_CarData.DoorFR/SG_DoorFR/Close/DoorStatus</d2p1:Key>
       <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
