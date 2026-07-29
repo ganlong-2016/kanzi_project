@@ -6930,7 +6930,7 @@
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>Car.Door.Door_FR_Open</d14p1:Key>
+                              <d14p1:Key>CarControl.Door.Door_FR_Open</d14p1:Key>
                               <d14p1:Value>
                                 <categoryOverride
                                   i:nil="true" />
@@ -6938,13 +6938,13 @@
                                   i:nil="true" />
                                 <isReadOnly
                                   i:nil="true" />
-                                <propertyTypeReference>Car.Door.Door_FR_Open</propertyTypeReference>
+                                <propertyTypeReference>CarControl.Door.Door_FR_Open</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
                                   i:type="d17p1:boolean">true</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>Car.Door.Door_FL_Open</d14p1:Key>
+                              <d14p1:Key>CarControl.Door.Door_FL_Open</d14p1:Key>
                               <d14p1:Value>
                                 <categoryOverride
                                   i:nil="true" />
@@ -6952,7 +6952,7 @@
                                   i:nil="true" />
                                 <isReadOnly
                                   i:nil="true" />
-                                <propertyTypeReference>Car.Door.Door_FL_Open</propertyTypeReference>
+                                <propertyTypeReference>CarControl.Door.Door_FL_Open</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
                                   i:type="d17p1:boolean">true</value>
                               </d14p1:Value>
@@ -6990,7 +6990,7 @@
                                     <value xmlns:d19p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
                                       i:type="d19p1:PropertyTypeReference">
                                       <d19p1:isExpression>false</d19p1:isExpression>
-                                      <d19p1:propertyTypeName>Car.Door.Door_FL_Open</d19p1:propertyTypeName>
+                                      <d19p1:propertyTypeName>CarControl.Door.Door_FL_Open</d19p1:propertyTypeName>
                                     </value>
                                   </d16p1:Value>
                                 </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -7050,7 +7050,7 @@
                                       i:nil="true" />
                                     <propertyTypeReference>BindingItem.DisplayCodeForMerge</propertyTypeReference>
                                     <value xmlns:d19p1="http://www.w3.org/2001/XMLSchema"
-                                      i:type="d19p1:string">{#CarDataLayer/Car.Door.Door_FL_Open}</value>
+                                      i:type="d19p1:string">{#CarDataLayer/CarControl.Door.Door_FL_Open}</value>
                                   </d16p1:Value>
                                 </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                                 <d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -7164,7 +7164,7 @@
                                         <value xmlns:d21p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
                                           i:type="d21p1:PropertyTypeReference">
                                           <d21p1:isExpression>false</d21p1:isExpression>
-                                          <d21p1:propertyTypeName>Car.Door.Door_FL_Open</d21p1:propertyTypeName>
+                                          <d21p1:propertyTypeName>CarControl.Door.Door_FL_Open</d21p1:propertyTypeName>
                                         </value>
                                       </d18p1:Value>
                                     </d18p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -7225,7 +7225,7 @@
                                           i:nil="true" />
                                         <propertyTypeReference>CreationTime</propertyTypeReference>
                                         <value xmlns:d21p1="http://www.w3.org/2001/XMLSchema"
-                                          i:type="d21p1:dateTime">2026-07-24T06:18:14.2406119Z</value>
+                                          i:type="d21p1:dateTime">2026-07-29T06:30:35.0432953Z</value>
                                       </d18p1:Value>
                                     </d18p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                                   </properties>
@@ -7258,7 +7258,7 @@
                                     <value xmlns:d19p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
                                       i:type="d19p1:PropertyTypeReference">
                                       <d19p1:isExpression>false</d19p1:isExpression>
-                                      <d19p1:propertyTypeName>Car.Door.Door_FR_Open</d19p1:propertyTypeName>
+                                      <d19p1:propertyTypeName>CarControl.Door.Door_FR_Open</d19p1:propertyTypeName>
                                     </value>
                                   </d16p1:Value>
                                 </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -7318,7 +7318,7 @@
                                       i:nil="true" />
                                     <propertyTypeReference>BindingItem.DisplayCodeForMerge</propertyTypeReference>
                                     <value xmlns:d19p1="http://www.w3.org/2001/XMLSchema"
-                                      i:type="d19p1:string">{#CarDataLayer/Car.Door.Door_FR_Open}</value>
+                                      i:type="d19p1:string">{#CarDataLayer/CarControl.Door.Door_FR_Open}</value>
                                   </d16p1:Value>
                                 </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                                 <d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -7432,7 +7432,7 @@
                                         <value xmlns:d21p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
                                           i:type="d21p1:PropertyTypeReference">
                                           <d21p1:isExpression>false</d21p1:isExpression>
-                                          <d21p1:propertyTypeName>Car.Door.Door_FR_Open</d21p1:propertyTypeName>
+                                          <d21p1:propertyTypeName>CarControl.Door.Door_FR_Open</d21p1:propertyTypeName>
                                         </value>
                                       </d18p1:Value>
                                     </d18p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -7493,7 +7493,7 @@
                                           i:nil="true" />
                                         <propertyTypeReference>CreationTime</propertyTypeReference>
                                         <value xmlns:d21p1="http://www.w3.org/2001/XMLSchema"
-                                          i:type="d21p1:dateTime">2026-07-24T06:57:00.7169191Z</value>
+                                          i:type="d21p1:dateTime">2026-07-29T06:30:35.0261338Z</value>
                                       </d18p1:Value>
                                     </d18p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                                   </properties>
@@ -13312,7 +13312,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>Car.Door.Door_FR_Open</d14p1:Key>
+                              <d14p1:Key>CarControl.Door.Door_FR_Open</d14p1:Key>
                               <d14p1:Value>
                                 <categoryOverride
                                   i:nil="true" />
@@ -13320,13 +13320,13 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
                                   i:nil="true" />
                                 <isReadOnly
                                   i:nil="true" />
-                                <propertyTypeReference>Car.Door.Door_FR_Open</propertyTypeReference>
+                                <propertyTypeReference>CarControl.Door.Door_FR_Open</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
                                   i:type="d17p1:boolean">false</value>
                               </d14p1:Value>
                             </d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
                             <d14p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
-                              <d14p1:Key>Car.Door.Door_FL_Open</d14p1:Key>
+                              <d14p1:Key>CarControl.Door.Door_FL_Open</d14p1:Key>
                               <d14p1:Value>
                                 <categoryOverride
                                   i:nil="true" />
@@ -13334,7 +13334,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
                                   i:nil="true" />
                                 <isReadOnly
                                   i:nil="true" />
-                                <propertyTypeReference>Car.Door.Door_FL_Open</propertyTypeReference>
+                                <propertyTypeReference>CarControl.Door.Door_FL_Open</propertyTypeReference>
                                 <value xmlns:d17p1="http://www.w3.org/2001/XMLSchema"
                                   i:type="d17p1:boolean">false</value>
                               </d14p1:Value>
@@ -13358,7 +13358,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
                                     <value xmlns:d19p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
                                       i:type="d19p1:PropertyTypeReference">
                                       <d19p1:isExpression>false</d19p1:isExpression>
-                                      <d19p1:propertyTypeName>Car.Door.Door_FL_Open</d19p1:propertyTypeName>
+                                      <d19p1:propertyTypeName>CarControl.Door.Door_FL_Open</d19p1:propertyTypeName>
                                     </value>
                                   </d16p1:Value>
                                 </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -13515,7 +13515,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
                                     <value xmlns:d19p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType"
                                       i:type="d19p1:PropertyTypeReference">
                                       <d19p1:isExpression>false</d19p1:isExpression>
-                                      <d19p1:propertyTypeName>Car.Door.Door_FR_Open</d19p1:propertyTypeName>
+                                      <d19p1:propertyTypeName>CarControl.Door.Door_FR_Open</d19p1:propertyTypeName>
                                     </value>
                                   </d16p1:Value>
                                 </d16p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
@@ -63561,7 +63561,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
           <d4p1:ExpandedItemPaths />
           <d4p1:SelectedItemPaths />
         </d4p1:MaterialRuleTreeData>
-        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+        <d4p1:ScrollPosition>353.6</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
     <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
@@ -64684,6 +64684,50 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
         <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
       </d2p1:Value>
     </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://launcher/Property Types/CarControl</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded>true</d4p1:IsUniformEditorExpanded>
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://launcher/Property Types/CarControl/Door/CarControl.Door.Door_FL_Open</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+    <d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
+      <d2p1:Key>kzb://launcher/Property Types/CarControl/Door</d2p1:Key>
+      <d2p1:Value xmlns:d4p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Base.Persistence">
+        <d4p1:BindingEditorData>
+          <d4p1:IsUniformEditorExpanded
+            i:nil="true" />
+        </d4p1:BindingEditorData>
+        <d4p1:MaterialRuleTreeData>
+          <d4p1:ExpandedEditorItemPaths />
+          <d4p1:ExpandedItemPaths />
+          <d4p1:SelectedItemPaths />
+        </d4p1:MaterialRuleTreeData>
+        <d4p1:ScrollPosition>0</d4p1:ScrollPosition>
+      </d2p1:Value>
+    </d2p1:KeyValueOfstringPropertyEditorViewModeData1Qk_SHUva>
   </PropertyEditorViewModeStates>
   <VirtualLayoutProjectSpecificData
     i:nil="true" />
@@ -64822,7 +64866,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
         </d3p1:Value>
       </d3p1:KeyValueOfstringDynamicPropertyTypeupo9qxsJ>
       <d3p1:KeyValueOfstringDynamicPropertyTypeupo9qxsJ>
-        <d3p1:Key>Car.Door.Door_FR_Open</d3p1:Key>
+        <d3p1:Key>CarControl.Door.Door_FR_Open</d3p1:Key>
         <d3p1:Value xmlns:d5p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType" xmlns:d5p2="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType.PropertyTypes"
           i:type="d5p2:BooleanDynamicPropertyType">
           <d5p1:AffectLayout>false</d5p1:AffectLayout>
@@ -64854,7 +64898,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
           <d5p1:isKzbIndependent>false</d5p1:isKzbIndependent>
           <d5p1:isUserAddable
             i:nil="true" />
-          <d5p1:name>Car.Door.Door_FR_Open</d5p1:name>
+          <d5p1:name>CarControl.Door.Door_FR_Open</d5p1:name>
           <d5p1:targetHostType>
             <d2p1:TargetTypeNames>
               <d3p1:string>System.Object</d3p1:string>
@@ -64863,7 +64907,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
         </d3p1:Value>
       </d3p1:KeyValueOfstringDynamicPropertyTypeupo9qxsJ>
       <d3p1:KeyValueOfstringDynamicPropertyTypeupo9qxsJ>
-        <d3p1:Key>Car.Door.Door_FL_Open</d3p1:Key>
+        <d3p1:Key>CarControl.Door.Door_FL_Open</d3p1:Key>
         <d3p1:Value xmlns:d5p1="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType" xmlns:d5p2="http://schemas.datacontract.org/2004/07/Rightware.Kanzi.Tool.Logic.Properties.PropertyType.PropertyTypes"
           i:type="d5p2:BooleanDynamicPropertyType">
           <d5p1:AffectLayout>false</d5p1:AffectLayout>
@@ -64895,7 +64939,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
           <d5p1:isKzbIndependent>false</d5p1:isKzbIndependent>
           <d5p1:isUserAddable
             i:nil="true" />
-          <d5p1:name>Car.Door.Door_FL_Open</d5p1:name>
+          <d5p1:name>CarControl.Door.Door_FL_Open</d5p1:name>
           <d5p1:targetHostType>
             <d2p1:TargetTypeNames>
               <d3p1:string>System.Object</d3p1:string>
