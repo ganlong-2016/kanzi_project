@@ -1,6 +1,6 @@
 # 数据源:Java 插件 + XML 契约 + 绑定(读/写)
 
-UI 与业务数据通过 **数据源(Data Source)** 解耦。本工程的数据源由 **Java 插件** `Shared/Plugins/datasource/DroidDataSourceplugin.jar` 提供,**解析一份 XML** 得到数据结构,UI 通过**绑定**读写。
+UI 与业务数据通过 **数据源(Data Source)** 解耦。本工程的数据源由 **Java 插件** `IVI/plugins/datasource/DroidDataSourceplugin.jar` 提供,**解析一份 XML** 得到数据结构,UI 通过**绑定**读写。
 
 ## 1. 数据流
 
@@ -24,7 +24,7 @@ sequenceDiagram
 
 ## 2. XML 契约(关键:这是和插件/Android 的接口)
 
-数据结构由 XML 决定。**真实契约已落地**在**单一来源** [`IVI/assets/datasource.xml`](../IVI/assets/datasource.xml)(设计期与运行期共用一份,已不再有 common/launcher 两份副本):包含 `System / Vehicle / Charging / VehicleControl / Interior / Demo` 六个分组。示例数据供各模块绑定参照,`Demo` 分组专供样板([demo-module.md](demo-module.md))。Studio 里数据源实例的 File 属性必须指向本文件(修正步骤见 [demo-build-all.md](demo-build-all.md) §4.3)。
+数据结构由 XML 决定。**真实契约已落地**在**单一来源** [`IVI/assets/xml/datasource.xml`](../IVI/assets/xml/datasource.xml)(设计期与运行期共用一份,已不再有 common/launcher 两份副本):包含 `System / Vehicle / Charging / VehicleControl / Interior / Demo` 六个分组。示例数据供各模块绑定参照,`Demo` 分组专供样板([demo-module.md](demo-module.md))。Studio 里数据源实例的 File 属性必须指向本文件(修正步骤见 [demo-build-all.md](demo-build-all.md) §4.3)。
 
 **解析器支持的结构(依据插件源码 `SaxHandler` / `TypeConverters`)**:
 - `type`:`int` / `float` / `bool` / `string` / `list`(大小写不敏感)。
@@ -121,7 +121,7 @@ flowchart LR
 | 现象 | 原因 | 解决 |
 |------|------|------|
 | 子模块里绑不到数据源字段 | 数据源在 launcher,子模块设计期看不到 | 子模块暴露属性、绑 `##Template`;launcher 侧把数据源绑到 Prefab View 属性(§3.5) |
-| 运行时数据不更新 | 插件/XML 没加载,或字段名不一致 | 校验插件路径、`IVI/assets/datasource.xml` 路径、字段名三方一致 |
+| 运行时数据不更新 | 插件/XML 没加载,或字段名不一致 | 校验插件路径、`IVI/assets/xml/datasource.xml` 路径、字段名三方一致 |
 | 写不回数据源 | 只做了读绑定 | 用 To-Source(属性回写)或 Message(§3.5 写) |
 | 显示成默认值看不出故障 | 没用有效性字段 | 加 `<signal>Valid`,UI 绑定它显示故障态 |
 | 子模块预览没数据 | 设计期无数据源 | 给暴露属性设计期默认值,便于独立预览 |

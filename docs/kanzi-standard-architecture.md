@@ -223,7 +223,7 @@ flowchart TB
 ├── README.md
 ├── .gitattributes                  # 大二进制走 Git LFS(png/dds/otf/glb/jar/MeshData)
 ├── .gitignore                      # autosave / *.kzproj_N / .lock / Temp / 缓存 / *.kzb
-├── CMakeLists.txt                  # 根构建入口(add_subdirectory → IVI/launcher/Application)
+├── CMakeLists.txt                  # 根构建入口(add_subdirectory → IVI/KanziProject/launcher/Application)
 │
 ├── IVI/                            # ★ Kanzi Studio 构建工作区(全部工程 + 运行时资源)
 │   ├── assets/                     # kzb 统一导出 / 运行时工作目录
@@ -265,7 +265,7 @@ flowchart TB
 │       ├── carmodel/               # 车型变体资源(预留)
 │       └── ota/                    # 热更新资源(预留)
 │
-├── BuildConfigs/                   # 构建变体配置(预留)
+├── build_configs/                   # 构建变体配置(预留)
 ├── Android/                        # Android 渲染侧工程(预留)
 ├── scripts/                        # 辅助脚本(模型分组/迁移/CI 导出)
 └── docs/                           # 架构、规范、操作手册、PlantUML 图源
@@ -424,7 +424,7 @@ sequenceDiagram
 | 引用方向 | 已核实 kzproj:launcher → 5 个工程;各子工程 → 仅 common;common 无引用 → **单向无环** ✅ | 引用规则 |
 | 只有 launcher 带 `Application/`(C++ 入口 + android_gradle) | ✅ 子工程精简为 `.kzproj` + 资源目录 | 子工程用 Studio-only 模板 |
 | 数据源归属 | 插件(`DroidDataSourceplugin.jar`)与数据源实例都在 launcher;子模块走 `##Template` 属性接口 | 数据源/Screen 级资源 §3.3 |
-| 数据契约 | `IVI/assets/datasource.xml` 单一来源,类型/Valid 约定清晰 | Data sources |
+| 数据契约 | `IVI/assets/xml/datasource.xml` 单一来源,类型/Valid 约定清晰 | Data sources |
 | 主题/本地化 | 表在 launcher(Screen 级),common 出 token + Named Style,DataLayer 中转文案 | §3.2-5 |
 | 版控 | LFS 管大二进制;忽略 autosave/`kzproj_N`/lock/Temp/kzb 产物 | 官方 Version control 指引 |
 

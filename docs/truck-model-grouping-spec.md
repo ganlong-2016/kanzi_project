@@ -144,9 +144,9 @@ Trailer (Root, 原点在牵引销 Kingpin)
 - **节点 / 组**:PascalCase + 位置后缀 `_FL/_FR/_RL/_RR/_L/_R`,与 `datasource.xml` 字段后缀一致(`Wheel_FL` ↔ `statusFL`)。
 - **DCC 侧 mesh**:`内外饰_部件_功能_材质`,如 `ext_door_fl_hinge_metal`、`ext_wheel_fl_tire_rubber`。**禁止交付 Blender 默认名**(`Cube.014`、`Circle.076`)。
 - 命名交付后**冻结,只追加不改名**;禁止中文、空格、特殊字符。
-- 命名统一后,Studio 侧分组脚本(`scripts/group_car_model.py`)可从"按网格名对表猜位置"简化为**按命名前缀直接归组**。
+- 命名统一后,Studio 侧分组脚本(`scripts/tools/group_car_model.py`)可从"按网格名对表猜位置"简化为**按命名前缀直接归组**。
 
-## 8. 与数据契约(`IVI/assets/datasource.xml`)的映射
+## 8. 与数据契约(`IVI/assets/xml/datasource.xml`)的映射
 
 ### 8.1 现有字段 → 节点
 

@@ -29,7 +29,7 @@
 | **launcher** | Screen、数据源、本地化表、挂模块 | 业务 UI 细节 |
 | **业务模块** | 本域 Prefab 与页面 | 复制 common 资源;不运行时依赖 demo |
 
-> **组件在 demo**: `LabelText` / `Card` 等 UI Prefab 已在 `IVI/demo/demo.kzproj` 的 `Prefabs` 下;common 只提供 Brush / Theme / Font。业务模块对照 demo 自建,不运行时引用 demo kzb。
+> **组件在 demo**: `LabelText` / `Card` 等 UI Prefab 已在 `IVI/KanziProject/demo/demo.kzproj` 的 `Prefabs` 下;common 只提供 Brush / Theme / Font。业务模块对照 demo 自建,不运行时引用 demo kzb。
 
 ## 0.1 已完成的部分(经工程文件核实)
 
@@ -57,7 +57,7 @@
 
 ### 0.3 仓库侧已完成
 
-- 📁 `IVI/assets/datasource.xml`:契约字段(`System/Vehicle/Charging/VehicleControl/Interior/Demo`)已就绪,头部过时注释已修正(单一来源,无第二份副本)。本次 demo 不需要新增字段(子页 B 的卡片演示的是 UI 机制,复用现有字段)。
+- 📁 `IVI/assets/xml/datasource.xml`:契约字段(`System/Vehicle/Charging/VehicleControl/Interior/Demo`)已就绪,头部过时注释已修正(单一来源,无第二份副本)。本次 demo 不需要新增字段(子页 B 的卡片演示的是 UI 机制,复用现有字段)。
 - 📁 本文档及 `demo-spec.md` / `demo-module.md` 的同步修订。
 
 ---
@@ -88,7 +88,7 @@ Kanzi 的主题 = **Theme Group** 里若干 **Theme**,每个 Theme 给同一批 
 
 ### 2.2 检查现状(1 分钟)
 
-1. 打开 `IVI/common/common.kzproj`。
+1. 打开 `IVI/KanziProject/Shared/common/common.kzproj`。
 2. `Library > Themes` 下应有 **AppTheme**;双击它打开 **Theme Editor**,应看到 `Day`、`Night` 两列和 9 行 `Color/*` resource ID,每格分别指向 `Brush_*_Day` / `Brush_*_Night`。
 3. 预览切换:打开 **Dictionaries** 窗口 → 点 **Locales and Themes** → 给 AppTheme 选 `Day` 或 `Night`,Preview 应立即变色。
 
@@ -112,7 +112,7 @@ Kanzi 的主题 = **Theme Group** 里若干 **Theme**,每个 Theme 给同一批 
 
 ### 3.2 创建本地化表与 locale(launcher)🔨
 
-1. 打开 `IVI/launcher/Tool_project/launcher.kzproj`。
+1. 打开 `IVI/KanziProject/launcher/Tool_project/launcher.kzproj`。
 2. `Library` 里按住 **Alt 右键点击 Localization** → 选 **Localization Table** → 命名 `AppStrings`。
    - 当前工程里已有一个名为 `Localization Table` 的表(只有 zh-CN 一个 locale、没有条目),可直接复用它:双击打开后继续下面步骤,不必新建。
 3. 双击该表打开 **Localization Editor**。
@@ -169,7 +169,7 @@ string(acquire("demo.title"))
 ### 4.1 机制
 
 ```text
-IVI/assets/datasource.xml(契约) → DroidDataSourceplugin(Java 插件,解析 XML)
+IVI/assets/xml/datasource.xml(契约) → DroidDataSourceplugin(Java 插件,解析 XML)
   → Data Sources 面板里的数据源实例 → 节点 Data Context → 绑定(读 / To-Source 写)
 ```
 
@@ -185,10 +185,10 @@ IVI/assets/datasource.xml(契约) → DroidDataSourceplugin(Java 插件,解析 X
 
 1. 菜单 **Window > Data Sources** 打开 **Data Sources** 窗口。
 2. 找到 `Data source`(可顺手重命名为 `VehicleData`,后文按此名称写)。
-3. 点它的属性设置图标,把 **File** 改为指向仓库根的契约文件。从 `IVI/launcher/Tool_project/` 出发的相对路径是:
+3. 点它的属性设置图标,把 **File** 改为指向仓库根的契约文件。从 `IVI/KanziProject/launcher/Tool_project/` 出发的相对路径是:
 
 ```text
-../../../assets/datasource.xml
+../../../assets/xml/datasource.xml
 ```
 
    (若相对路径不生效,先用绝对路径验证,再和团队统一相对写法。)
@@ -236,7 +236,7 @@ IVI/assets/datasource.xml(契约) → DroidDataSourceplugin(Java 插件,解析 X
 
 ## 5. 通用基础四:组件库(demo)🔨
 
-> **在 `IVI/demo/demo.kzproj` 里操作**(已引用 common,可直接用 `<Resource ID>` `Color/*` 与 `LocaleStyle`)。**不要在 common 建 UI Prefab。**
+> **在 `IVI/KanziProject/demo/demo.kzproj` 里操作**(已引用 common,可直接用 `<Resource ID>` `Color/*` 与 `LocaleStyle`)。**不要在 common 建 UI Prefab。**
 
 ### 5.1 总表
 
@@ -341,7 +341,7 @@ Card (Empty Node 2D,Layout Width=440, Layout Height=360)
 
 ## 6. demo 页面骨架 🔨(DemoPage + 双子页)
 
-打开 `IVI/demo/demo.kzproj`(已引用 common ✅)。
+打开 `IVI/KanziProject/demo/demo.kzproj`(已引用 common ✅)。
 
 ### 6.1 统一 DemoPage 位置与尺寸
 
@@ -463,7 +463,7 @@ DemoPage (根,1920×900)
 
 ### 8.3 验收
 
-Preview 里:改 `IVI/assets/datasource.xml` 里 `Demo` 组的默认值并保存 → Data Sources 面板点更新 → 卡 1/2/6 应变化;点 demo 里的开关/滑块 → Data Sources 面板里悬停 `toggleOn`/`sliderValue` 应看到值被写回。
+Preview 里:改 `IVI/assets/xml/datasource.xml` 里 `Demo` 组的默认值并保存 → Data Sources 面板点更新 → 卡 1/2/6 应变化;点 demo 里的开关/滑块 → Data Sources 面板里悬停 `toggleOn`/`sliderValue` 应看到值被写回。
 
 ---
 
@@ -597,7 +597,7 @@ Preview 里:改 `IVI/assets/datasource.xml` 里 `Demo` 组的默认值并保存 
 
 | 现象 | 处理 |
 |------|------|
-| 数据源 Update 后没字段 | File 路径不对(§4.3 用 `../../../assets/datasource.xml`);插件未 Enabled |
+| 数据源 Update 后没字段 | File 路径不对(§4.3 用 `../../../assets/xml/datasource.xml`);插件未 Enabled |
 | 卡片里加了内容看不见 | ① Card 结构不对(§5.2);② 内容没加在 `Content` 下;③ `Background` 挡住了 `Content`(顺序);④ 2D 节点没设 Layout Width/Height(无尺寸=0×0) |
 | 用主题色的文字在 demo 预览里不显示 | demo 预览需激活主题:Dictionaries → Locales and Themes 选 Day/Night;排查时可临时把 Foreground 换成具体 Brush |
 | 切主题不变色 | 颜色写死了,改走 `<Resource ID>` `Color/*`(§2.3) |

@@ -62,14 +62,14 @@
 
 | 位置 | 资产 | 明细 | 评价 |
 |------|------|------|------|
-| `IVI/assets/datasource.xml` | 契约字段 | `System/locale`(string,默认 `zh-CN`,注释 "zh-CN / en")、`System/theme`(int,0 Day / 1 Night) | ✅ 已预留 |
-| `IVI/common/common.kzproj` | Localization Table(locale:`neutral`/`en-US`/`zh-CN`,key:`LocaleStyle`) | **放错位置**:按 §2.3 对其他工程不可见 | ⚠️ 迁 launcher |
+| `IVI/assets/xml/datasource.xml` | 契约字段 | `System/locale`(string,默认 `zh-CN`,注释 "zh-CN / en")、`System/theme`(int,0 Day / 1 Night) | ✅ 已预留 |
+| `IVI/KanziProject/Shared/common/common.kzproj` | Localization Table(locale:`neutral`/`en-US`/`zh-CN`,key:`LocaleStyle`) | **放错位置**:按 §2.3 对其他工程不可见 | ⚠️ 迁 launcher |
 | | Theme Group `AppTheme`(`DefaultValues`/`Day`/`Night`;token:`Color/Accent、Divider、Error、Success、Surface、TextPrimary、TextSecondary、Warning`) | 同上,**放错位置**;另有杂散 key `a` | ⚠️ 迁 launcher |
 | | `NotoSansCJKsc` 字体、`LocaleStyle`/`LocaleStyle_zh` Named Style、各色 Brush | **值资源,位置正确**(Public,供字典格子引用) | ✅ 留 common |
-| `IVI/launcher/Tool_project/launcher.kzproj` | Screen `Locale` 写死 `zh-CN`;Localization Table(locale 仅 `neutral`/`zh-CN`;key `LocaleStyle`→`kzb://common/Styles/LocaleStyle_zh`、`title`) | 表的位置正确;`LocaleStyle` 行证明**格子值跨工程引用 common 可行**;缺 `en-US` 列 | ⚠️ 补列 |
+| `IVI/KanziProject/launcher/Tool_project/launcher.kzproj` | Screen `Locale` 写死 `zh-CN`;Localization Table(locale 仅 `neutral`/`zh-CN`;key `LocaleStyle`→`kzb://common/Styles/LocaleStyle_zh`、`title`) | 表的位置正确;`LocaleStyle` 行证明**格子值跨工程引用 common 可行**;缺 `en-US` 列 | ⚠️ 补列 |
 | | `System.theme` 消费:仅 Env 节点一条 **disabled** 绑定 + 调试 Text Block | 未接任何 Theme | ⚠️ 待接 |
-| `IVI/demo/demo.kzproj` | 节点引用 `Color/Accent`/`Color/Surface`/`Color/TextPrimary`/`LocaleStyle` resource ID | 节点侧写法正确;但 AppTheme 在 common → 按 §2.3 解析不到(与实测"找不到"一致)。**AppTheme 迁到 launcher 后,这些节点不用改**,运行时(demo 页挂在 launcher Screen 下)即可解析 | ✅ 保持 |
-| `IVI/car*` `IVI/environment` | 无本地化/主题资产 | 按 §6 规范接入 | — |
+| `IVI/KanziProject/demo/demo.kzproj` | 节点引用 `Color/Accent`/`Color/Surface`/`Color/TextPrimary`/`LocaleStyle` resource ID | 节点侧写法正确;但 AppTheme 在 common → 按 §2.3 解析不到(与实测"找不到"一致)。**AppTheme 迁到 launcher 后,这些节点不用改**,运行时(demo 页挂在 launcher Screen 下)即可解析 | ✅ 保持 |
+| `IVI/car*` `IVI/KanziProject/environment` | 无本地化/主题资产 | 按 §6 规范接入 | — |
 
 ### 3.2 问题清单(设计要解决的)
 
@@ -153,7 +153,7 @@ flowchart TB
 ### D5 文案工作流:launcher 多表 + PO 单一来源;并行开发用 Merge(官方方式②)
 
 - launcher 里**按模块建表**:`Table_launcher`、`Table_car_setting`…(官方明确多表就是为分工/送翻);key 命名 `<模块>.<语义>`,冻结只追加;
-- **译文单一来源 = PO**,放官方固定目录 `IVI/launcher/Tool_project/Localization/`(`Import All Localization Tables` 自动读取);
+- **译文单一来源 = PO**,放官方固定目录 `IVI/KanziProject/launcher/Tool_project/Localization/`(`Import All Localization Tables` 自动读取);
 - 模块 Text 节点只填 resource ID(key)。**模块工程独立预览时文案显示不出来是官方模型的固有代价**,两种应对:
   - **标准流(推荐)**:文案验收一律在 launcher 工程 Preview 做(模块页挂在 launcher Screen 下,字典生效);模块独立预览只看布局;
   - **并行流(模块团队要看到真文案时)**:模块工程内自建同 key 开发表(仅供本工程预览),交付节点用 **File > Import > Merge Project** 把模块表并入 launcher(官方方式②;Kanzi 提供三方合并与冲突解决,可增量重复合并)。运行时以 launcher 的表为准,模块 kzb 里那份表不生效、仅冗余体积。
@@ -165,13 +165,13 @@ Env 节点那条 disabled 绑定的意图正确:3D 昼夜(光照/天空盒/贴�
 ### D7 分包与 OTA(远期)
 
 - 语言多于 2 种时,非默认语言标 locale pack,导出到 `IVI/assets/Locale_packs/`(Studio 固定目录名),Android 侧 Engine API 按 locale 加载;需进主 kzb 的资源加 **Is Used By Code**;
-- 主题不支持分包(theme 资源在主 kzb);车型差异将来用第二个 Theme Group(§2.2)或 `Shared/Resources/carmodel/` 变体。
+- 主题不支持分包(theme 资源在主 kzb);车型差异将来用第二个 Theme Group(§2.2)或 `IVI/KanziProject/Shared/carmodel/` 变体。
 
 ## 6. 具体 Studio 操作步骤
 
 ### 6.1 一次性迁移:字典从 common → launcher(修 G0,先做)
 
-1. 打开 `launcher.kzproj` → **File > Import > Merge Project** → 选 `IVI/common/common.kzproj`;
+1. 打开 `launcher.kzproj` → **File > Import > Merge Project** → 选 `IVI/KanziProject/Shared/common/common.kzproj`;
 2. Project Merge 对话框里**只勾**:`Localization > Localization Table`、`Themes > AppTheme`(勾 *Select referenced items* 让 Studio 自动带上引用项;若把 brush/style 一并带来了,取消勾选——它们留在 common);
 3. 合并后在 launcher 里核对:表的 locale 列(`neutral`/`en-US`/`zh-CN`)与 `LocaleStyle` 行、`AppTheme` 的 8 个 token + `Day`/`Night` 列都在;**格子值应指向 `kzb://common/...`**(不是本地副本);
 4. Theme Editor 里删除杂散 key `a`(右键 → Delete Resource ID);

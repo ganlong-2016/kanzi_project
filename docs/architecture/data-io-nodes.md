@@ -1,6 +1,6 @@
 # 数据接收与发送节点(Data In / Data Out)
 
-> 清单产物 2/9。定义本工程里 **UI 节点如何"收数据"与"发数据"** 的标准做法:有哪几种节点/机制、分别何时用、每条链路的完整路径,并给出与 `IVI/assets/datasource.xml` 的字段对照。
+> 清单产物 2/9。定义本工程里 **UI 节点如何"收数据"与"发数据"** 的标准做法:有哪几种节点/机制、分别何时用、每条链路的完整路径,并给出与 `IVI/assets/xml/datasource.xml` 的字段对照。
 > 机制依据 Kanzi 3.9.15 官方文档:Data sources / Bindings / Triggers;工程内落地方式见 [data-source.md](data-source.md)。
 
 ## 1. 一张图:数据进出 UI 的所有通道
@@ -98,7 +98,7 @@ flowchart LR
 
 ## 5. 与契约的对照与规则
 
-- 每个"接收/发送"链路必须能落到 `IVI/assets/datasource.xml` 的一个字段;**没有字段就先改契约**(评审),再连线。
+- 每个"接收/发送"链路必须能落到 `IVI/assets/xml/datasource.xml` 的一个字段;**没有字段就先改契约**(评审),再连线。
 - 读写混合字段(如 `targetSoc`、`targetTemp`、`hvacMode`)= 读绑定 + To-Source 双链路,两条都要建。
 - 每个关键信号消费方**必须同时消费 `<signal>Valid`**:Valid=false 时禁用交互并显示故障态(用 Data Trigger 或状态机)。
 - 子模块暴露属性即模块的**数据接口清单**,新增/变更需更新模块文档中的"连线对照表"。

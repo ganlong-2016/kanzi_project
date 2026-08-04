@@ -29,7 +29,7 @@ flowchart TB
         environment -.推荐引用.-> common
     end
 
-    plugin["Shared/Plugins/datasource<br/>Java 数据源插件(解析 XML)"]
+    plugin["IVI/plugins/datasource<br/>Java 数据源插件(解析 XML)"]
     android["Android 渲染侧<br/>加载 kzb + 提供真实数据"]
 
     plugin -->|数据模型| Studio
@@ -43,21 +43,19 @@ flowchart TB
 
 | 路径 | 角色 | 说明 |
 |------|------|------|
-| `CMakeLists.txt` | **根构建入口** | `cmake -S . -B build` 即可;等价于 `IVI/launcher/Application` 下的 bat |
+| `CMakeLists.txt` | **根构建入口** | `cmake -S . -B build` 即可;等价于 `IVI/KanziProject/launcher/Application` 下的 bat |
 | `IVI/` | **Kanzi 构建工作区** | 全部 Kanzi 工程 + 运行时资源,Studio 侧只需关心这一个目录 |
-| `IVI/assets/` | **运行时/导出目录** | kzb 导出目标 + VS 调试工作目录;含 `datasource.xml`(**数据契约**单一来源)、`application.cfg`;`Localization/`、`lz4/`、`pc_exe/` 为预留 |
-| `IVI/launcher/` | **集成主工程** | 含 `Tool_project/launcher.kzproj` 与 `Application/`(C++);持有 Screen,组合各模块,运行时入口 |
-| `IVI/common/` | **共享资源工程** | `common.kzproj` + 字体 / Color Brush / AppTheme / Named Style(**不含 UI 组件**) |
-| `IVI/demo/` | **样板工程** | `demo.kzproj` — Card 等组件、DemoPage、绑定示例;照着做,非运行时依赖 |
-| `IVI/car/` | 功能子工程 | 3D 卡车(`3D Assets/`、`MeshData/`、`Shaders/`) |
-| `IVI/car_setting/` | 功能子工程 | 车辆设置(纯 2D UI) |
-| `IVI/environment/` | 功能子工程 | 3D 场景 / 光照贴图 |
-| `Shared/Plugins/` | **业务 Kanzi 插件** | `DroidDataSourceplugin.jar`;系统插件(`kzjvm` 等)用 Kanzi 安装目录,见 [`Shared/Plugins/README.md`](Shared/Plugins/README.md) |
-| `Shared/Resources/` | 跨模块原始资源 | `carmodel/`(车型变体)、`ota/`(热更新)预留,见 [`Shared/Resources/README.md`](Shared/Resources/README.md) |
-| `BuildConfigs/` | 构建变体配置 | 预留,见 [`BuildConfigs/README.md`](BuildConfigs/README.md) |
-| `Android/` | Android 渲染侧 | 预留,见 [`Android/README.md`](Android/README.md) |
-| `scripts/` | 自动化脚本 | 模型分组(`group_car_model.py`)、文档上传 Confluence |
-| `docs/` | 文档 | 架构、规范、操作手册、PlantUML 图源 |
+| `IVI/assets/` | **运行时/导出目录** | VS 工作目录;`xml/datasource.xml`(**数据契约**)、`application.cfg`;`localization/` / `lz4/` / `kzb/` / `pc_exe/` 预留 |
+| `IVI/KanziProject/` | **Studio 工程根** | `launcher` / `car` / `environment` / … + `Shared/` + 预留模块 |
+| `IVI/KanziProject/launcher/` | **集成主工程** | `Tool_project/launcher.kzproj` + `Application/`(C++) |
+| `IVI/KanziProject/Shared/common/` | **共享资源工程** | `common.kzproj` + 字体/主题;车型变体子目录预留 |
+| `IVI/KanziProject/Shared/{carmodel,ota}/` | 原始资产 / OTA | 见 [`Shared/README.md`](IVI/KanziProject/Shared/README.md) |
+| `IVI/plugins/` | **业务插件** | `datasource/` JAR;见 [`IVI/plugins/README.md`](IVI/plugins/README.md) |
+| `build_configs/` | 构建变体 | 预留,见 [`build_configs/README.md`](build_configs/README.md) |
+| `android/` | Android 适配 | 预留,见 [`android/README.md`](android/README.md) |
+| `tests/` | 测试 | `unit` / `integration` / `uitest` 骨架 |
+| `scripts/` | 自动化 | `build/` · `tools/` · `ci/` |
+| `docs/` | 文档 | `architecture/` · `api/` · `onboarding/` |
 
 > 子工程**不要求**完整目录结构,按需即可(只有 `launcher` 带 `Application/`)。
 
@@ -90,7 +88,7 @@ flowchart TB
 ## 快速上手(开发一个新模块)
 
 1. 读 [架构总览](docs/architecture.md) 和 [命名/引用规范](docs/conventions.md)。
-2. 在 `IVI/` 下新建 `<module>/<module>.kzproj`,**引用 `common`**(字体/主题/Brush)。
+2. 在 `IVI/KanziProject/` 下新建 `<module>/<module>.kzproj`,**引用 `Shared/common`**(字体/主题/Brush)。
 3. 参照 **demo** 的组件与绑定写法,在**本模块**建自己的 Prefab;属性**绑定到数据源**(见 [data-source](docs/data-source.md))。
 4. 文案走**本地化**、样式走**主题 token**(见 [localization-and-theme](docs/localization-and-theme.md))。
 5. 在 `launcher` 里用 **Prefab View** 把模块挂上、加导航。
