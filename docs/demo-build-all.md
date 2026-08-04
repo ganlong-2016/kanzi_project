@@ -88,7 +88,7 @@ Kanzi 的主题 = **Theme Group** 里若干 **Theme**,每个 Theme 给同一批 
 
 ### 2.2 检查现状(1 分钟)
 
-1. 打开 `IVI/KanziProject/Shared/common/common.kzproj`。
+1. 打开 `IVI/KanziProject/Shared/common/v101_sedan/common.kzproj`。
 2. `Library > Themes` 下应有 **AppTheme**;双击它打开 **Theme Editor**,应看到 `Day`、`Night` 两列和 9 行 `Color/*` resource ID,每格分别指向 `Brush_*_Day` / `Brush_*_Night`。
 3. 预览切换:打开 **Dictionaries** 窗口 → 点 **Locales and Themes** → 给 AppTheme 选 `Day` 或 `Night`,Preview 应立即变色。
 

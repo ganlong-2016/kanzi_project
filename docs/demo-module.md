@@ -81,7 +81,7 @@ flowchart TB
 > 因此下表/下文里写的 `Demo/xxx` 指**数据源字段**,实际"绑定到数据源"这一步在 **launcher 侧**完成;**demo 内部**只绑定到自己暴露的输入属性 `Demo.Xxx`(`##Template`)。数据传递机制见 [data-source.md §3.5](data-source.md)。
 
 ### 1. 新建/打开 demo 并引用 common
-- `Library > Project References > Add Existing Project` → `IVI/KanziProject/Shared/common/common.kzproj`。
+- `Library > Project References > Add Existing Project` → `IVI/KanziProject/Shared/common/v101_sedan/common.kzproj`。
 - 之后可用 common 的字体、主题 token、Brush。**组件 Prefab 在 demo 工程** — 对照 demo 的 `Prefabs` 学习 expose 与绑定,在 demo 内搭建;业务模块复制模式到本模块。
 
 ### 2. 暴露输入属性(替代"在 demo 里设数据源 Data Context")
