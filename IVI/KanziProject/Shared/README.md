@@ -2,7 +2,7 @@
 
 | 子目录 | 用途 |
 |--------|------|
-| `common/` | 共享资源 Kanzi 工程(`common.kzproj`) + 按车型变体分目录的扩展资源预留 |
+| `common/` | 按车型变体分目录的共享资源工程(`v101_sedan/common.kzproj` 等) |
 | `carmodel/` | 车型专属 3D 模型/纹理/参数(原始资产,非 kzproj 树内资源) |
 | `ota/` | OTA 热更新资源预备区 |
 

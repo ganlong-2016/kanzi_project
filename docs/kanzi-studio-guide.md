@@ -11,7 +11,7 @@
 
 # A. 在 `common` 里创建共享资源
 
-打开 `IVI/KanziProject/Shared/common/common.kzproj`。common **只提供资源**:颜色画刷、主题、字体与 Named Style。**不放 UI 组件 Prefab**(组件在 `demo` 或各业务模块)。数据源不在 common(在 launcher,见 B)。
+打开 `IVI/KanziProject/Shared/common/v101_sedan/common.kzproj`。common **只提供资源**:颜色画刷、主题、字体与 Named Style。**不放 UI 组件 Prefab**(组件在 `demo` 或各业务模块)。数据源不在 common(在 launcher,见 B)。
 
 ## A1. 颜色:Color Brush
 
@@ -89,7 +89,7 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 
 ## C1. 引用 common
 
-- `Library` → **右键 `Project References`** → **Add** → **Existing Project** → `IVI/KanziProject/Shared/common/common.kzproj`。
+- `Library` → **右键 `Project References`** → **Add** → **Existing Project** → `IVI/KanziProject/Shared/common/v101_sedan/common.kzproj`。
 - 组件里颜色用 `< Resource ID >` → `Color/Surface` 等;文字用 `LocaleStyle`。
 
 ## C2. UI 组件(Prefab,建在 demo)

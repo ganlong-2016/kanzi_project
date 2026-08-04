@@ -48,7 +48,7 @@ flowchart TB
 | `IVI/assets/` | **运行时/导出目录** | VS 工作目录;`xml/datasource.xml`(**数据契约**)、`application.cfg`;`localization/` / `lz4/` / `kzb/` / `pc_exe/` 预留 |
 | `IVI/KanziProject/` | **Studio 工程根** | `launcher` / `car` / `environment` / … + `Shared/` + 预留模块 |
 | `IVI/KanziProject/launcher/` | **集成主工程** | `Tool_project/launcher.kzproj` + `Application/`(C++) |
-| `IVI/KanziProject/Shared/common/` | **共享资源工程** | `common.kzproj` + 字体/主题;车型变体子目录预留 |
+| `IVI/KanziProject/Shared/common/` | **共享资源工程** | 按车型:`v101_sedan/common.kzproj`(当前)+ `v102_suv` / `v201_ev` 预留 |
 | `IVI/KanziProject/Shared/{carmodel,ota}/` | 原始资产 / OTA | 见 [`Shared/README.md`](IVI/KanziProject/Shared/README.md) |
 | `IVI/plugins/` | **业务插件** | `datasource/` JAR;见 [`IVI/plugins/README.md`](IVI/plugins/README.md) |
 | `build_configs/` | 构建变体 | 预留,见 [`build_configs/README.md`](build_configs/README.md) |
