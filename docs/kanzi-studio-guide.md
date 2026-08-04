@@ -11,7 +11,7 @@
 
 # A. 在 `common` 里创建共享资源
 
-打开 `IVI/common/common.kzproj`。common **只提供资源**:颜色画刷、主题、字体与 Named Style。**不放 UI 组件 Prefab**(组件在 `demo` 或各业务模块)。数据源不在 common(在 launcher,见 B)。
+打开 `IVI/KanziProject/Shared/common/common.kzproj`。common **只提供资源**:颜色画刷、主题、字体与 Named Style。**不放 UI 组件 Prefab**(组件在 `demo` 或各业务模块)。数据源不在 common(在 launcher,见 B)。
 
 ## A1. 颜色:Color Brush
 
@@ -63,15 +63,15 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 
 # B. 数据源(在 `launcher` 创建)
 
-打开 `IVI/launcher/Tool_project/launcher.kzproj`。
+打开 `IVI/KanziProject/launcher/Tool_project/launcher.kzproj`。
 
 ## B1. 导入并启用插件
-1. `Library` → **右键 `Kanzi Engine Plugins`** → **Import Kanzi Engine Plugin** → 选 `Shared/Plugins/datasource/lib/java/Release/DroidDataSourceplugin.jar`(Android 用 Java 插件)。
+1. `Library` → **右键 `Kanzi Engine Plugins`** → **Import Kanzi Engine Plugin** → 选 `IVI/plugins/datasource/lib/java/Release/DroidDataSourceplugin.jar`(Android 用 Java 插件)。
 2. 选中插件 → `Properties` 确认 **Is Enabled** 打开。改过插件后用右键 **Update Kanzi Engine Plugin** 刷新元数据。
 
 ## B2. 建数据源并指向 XML
 1. 打开 **Data Sources** 面板(`Window` 菜单)→ 右键 → 新建数据源,类型选插件的 **DroidDataSource** 类型,命名 `VehicleData`。
-2. 在其属性里把 **XML 路径**指向 `IVI/assets/datasource.xml`(单一契约)。
+2. 在其属性里把 **XML 路径**指向 `IVI/assets/xml/datasource.xml`(单一契约)。
 3. 右键数据源 → **Update Data Source Contents**,应出现 `System / Charging / VehicleControl / Interior / Demo` 分组字段。
 
 ## B3. 设 Data Context
@@ -81,7 +81,7 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 
 # C. 搭 `demo` 样板(组件 + 页面)
 
-打开 `IVI/demo/demo.kzproj`。demo 是**完整参考实现**:UI 组件、DemoPage、绑定示例都在这里。业务模块**对照 demo 学**,运行时**不依赖** demo kzb(除非 launcher 要挂 Demo 页)。
+打开 `IVI/KanziProject/demo/demo.kzproj`。demo 是**完整参考实现**:UI 组件、DemoPage、绑定示例都在这里。业务模块**对照 demo 学**,运行时**不依赖** demo kzb(除非 launcher 要挂 Demo 页)。
 
 ## C0. 若组件仍在 common(历史遗留)
 
@@ -89,7 +89,7 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 
 ## C1. 引用 common
 
-- `Library` → **右键 `Project References`** → **Add** → **Existing Project** → `IVI/common/common.kzproj`。
+- `Library` → **右键 `Project References`** → **Add** → **Existing Project** → `IVI/KanziProject/Shared/common/common.kzproj`。
 - 组件里颜色用 `< Resource ID >` → `Color/Surface` 等;文字用 `LocaleStyle`。
 
 ## C2. UI 组件(Prefab,建在 demo)
@@ -128,7 +128,7 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 回到 `launcher`。
 
 ## D1. 引用并挂载
-1. `Library > Project References > Add > Existing Project` → `IVI/demo/demo.kzproj`。
+1. `Library > Project References > Add > Existing Project` → `IVI/KanziProject/demo/demo.kzproj`。
 2. `Node Tree` 内容区 → **Alt + 右键** 目标节点 → **Prefab View** → 命名 `DemoView` → `Properties` 的 **Prefab Template** = `kzb://demo/Prefabs/Pages/DemoPage`。
 
 ## D2. 连线(在 DemoView 上,数据源 ↔ 暴露属性)
@@ -151,7 +151,7 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 | 创建资源找不到入口 | 用 **Alt + 右键** 对应分类(如 Alt+右键 Materials and Textures) |
 | 主题切了不变 | 颜色写死了;应经 Theme Group 的 resource ID;预览用 Dictionaries>Locales and Themes |
 | demo 里选不到数据源字段 | 正常:数据源在 launcher。demo 只 expose 属性;字段绑定在 launcher 的 DemoView 上做 |
-| Update Data Source 后无字段 | XML 路径要指 `IVI/assets/datasource.xml`,插件 Is Enabled,再 Update |
+| Update Data Source 后无字段 | XML 路径要指 `IVI/assets/xml/datasource.xml`,插件 Is Enabled,再 Update |
 | 开关点了不回写 | 补 To-Source(demo expose 属性 → launcher DemoView 上 To-Source 到数据源) |
 
 ---
@@ -161,6 +161,6 @@ Kanzi 里"颜色"是 **Color Brush**(在 `Materials and Textures > Brushes` 下)
 | 工程 | 建什么(章节) |
 |------|----------------|
 | `common` | Color Brush(A1)、Theme Group(A2)、Named Style(A3)、Make Public+导出(A4) — **仅资源** |
-| `launcher` | 导入插件(B1)、建数据源指向 `IVI/assets/datasource.xml`(B2)、Screen 设 Data Context(B3)、挂载 Prefab View + 连线(D) |
+| `launcher` | 导入插件(B1)、建数据源指向 `IVI/assets/xml/datasource.xml`(B2)、Screen 设 Data Context(B3)、挂载 Prefab View + 连线(D) |
 | `demo` | 引用 common(C1)、UI 组件(C2)、页面(C3)、卡片 expose(C4)、Make Public+导出(C6) |
 | 业务模块 | 引用 common、**参照 demo** 自建 Prefab,expose 本模块属性,Make Public+导出 |

@@ -10,7 +10,7 @@ IVI 中控 HMI 采用 **多工程模块化 + 多 kzb** 架构:
 - **`common`** = **共享资源工程**(仅资源):字体、Color Brush、Theme Group、Named Style 等。**不放 UI 组件 Prefab**。
 - **`demo`** = **样板/reference 工程**（**当前暂停维护**）:完整 2D UI 示例;供团队对照学习,**不是**各模块的运行时依赖。
 - **功能子工程**(`car` / `car_setting` / `environment` …)= 各自业务域,独立导出 kzb;引用 **common** 拿资源,参照 **demo** 学做法。
-- **`Shared/Plugins/datasource`** = Java 数据源插件(**在 launcher 注册**),解析 `IVI/assets/datasource.xml`;数据源属 **Screen 级**,归 launcher。
+- **`IVI/plugins/datasource`** = Java 数据源插件(**在 launcher 注册**),解析 `IVI/assets/xml/datasource.xml`;数据源属 **Screen 级**,归 launcher。
 
 每个 `.kzproj` 导出一个 **kzb**,由 Android 渲染侧加载。
 

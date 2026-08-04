@@ -271,7 +271,7 @@ sequenceDiagram
 | 场景节点 | `launcher/Screens/Screen/RootPage/Viewport 2D/Scene/CameraRoot/...` |
 | CameraView SM | `launcher/State Managers/CameraView/` |
 | ResetCameraRotation SM | `launcher/State Managers/ResetCameraRotation/` |
-| 工程文件 | `IVI/launcher/Tool_project/launcher.kzproj` |
+| 工程文件 | `IVI/KanziProject/launcher/Tool_project/launcher.kzproj` |
 
 相关文档：
 

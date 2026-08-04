@@ -79,7 +79,7 @@ Car (EmptyNode)
 
 ## 在 Kanzi Studio 中检查
 
-1. 打开 `IVI/car/Car.kzproj` → `Prefabs` → 双击 `Car`。
+1. 打开 `IVI/KanziProject/car/Car.kzproj` → `Prefabs` → 双击 `Car`。
 2. Node Tree 应看到 `Body` / `Doors` / `Wheels` / `Lights` / `Movables` 五个一级组。
 3. 选中 `Door_FL` 绕 Y 轴旋转,门壳、窗、镜应绕前缘铰链联动;选中 `Wheel_FL` 绕 X 轴旋转应绕轮心滚动,无位移漂移。
 4. 空分组(`Movables` 等)选中后 gizmo 应落在对应物理位置附近(近似值,拆模后精调)。
@@ -89,7 +89,7 @@ Car (EmptyNode)
 若从旧版结构恢复,可运行:
 
 ```bash
-python3 scripts/group_car_model.py
+python3 scripts/tools/group_car_model.py
 ```
 
 （会按脚本内的网格分配表与 pivot 表重写 `Car` 预制体子节点;网格→分组的归属依据是 `truck.glb` 的包围盒空间位置 + 材质分析,见脚本头部注释。）
