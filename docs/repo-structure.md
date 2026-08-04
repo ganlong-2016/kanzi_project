@@ -29,7 +29,7 @@ Scania_IVI/                         # 仓库根(=本仓库)
 │   │   ├── ev/  sr/  avm/          # 预留模块(仅 README)
 │   │   ├── aircondition/  vpa/     # 预留模块(仅 README)
 │   │   └── Shared/
-│   │       ├── common/             # 通用资源工程 common.kzproj + 车型变体预留
+│   │       ├── common/             # 按车型: v101_sedan/common.kzproj (+ v102_suv / v201_ev 预留)
 │   │       ├── ota/                # OTA 热更新预备
 │   │       └── carmodel/           # 车型专属原始 3D/贴图
 │   │
@@ -54,7 +54,7 @@ Scania_IVI/                         # 仓库根(=本仓库)
 | 旧路径 | 新路径 |
 |--------|--------|
 | `IVI/launcher/` 等各 kzproj | `IVI/KanziProject/<module>/` |
-| `IVI/common/` | `IVI/KanziProject/Shared/common/` |
+| `IVI/common/` | `IVI/KanziProject/Shared/common/v101_sedan/` |
 | `Shared/Plugins/` | `IVI/plugins/` |
 | `Shared/Resources/{carmodel,ota}/` | `IVI/KanziProject/Shared/{carmodel,ota}/` |
 | `BuildConfigs/` | `build_configs/` |
@@ -65,8 +65,8 @@ Scania_IVI/                         # 仓库根(=本仓库)
 
 同步已改的引用:
 
-- `launcher.kzproj`:`BinaryExportDirectory` → `..\..\..\assets`;`common` → `..\..\Shared\common\common.kzproj`
-- 子工程对 `common` 的引用 → `..\Shared\common\common.kzproj`
+- `launcher.kzproj`:`BinaryExportDirectory` → `..\..\..\assets`;`common` → `..\..\Shared\common\v101_sedan\common.kzproj`
+- 子工程对 `common` 的引用 → `..\Shared\common\v101_sedan\common.kzproj`
 - 根 `CMakeLists.txt` → `IVI/KanziProject/launcher/Application`
 - `KANZI_KZB_DIRECTORY` / `REPO_PLUGINS_DIRECTORY` 深度与 `IVI/plugins` 路径
 
@@ -77,7 +77,7 @@ Scania_IVI/                         # 仓库根(=本仓库)
 | 运行时 `*.kzb` / `*.jar` 只放 `assets/kzb/` | **Studio 导出与 VS 工作目录仍指向 `IVI/assets/` 根**;`assets/kzb/` 作归档/预留 | 引擎按工作目录根查找 `./launcher.kzb.cfg`、`./kzjvm.jar`;拆到子目录会直接跑不起来。归档流程就绪后再把“发布副本”同步进 `kzb/` |
 | `application.cfg` 进变体目录 | 留在 `assets/` 根;`build_configs/` 存变体源,构建期复制进去 | 运行时按裸文件名读取 |
 | 预留模块建空 `.kzproj` | 只放 `README.md` | 空 kzproj 无法预留相对引用,反而制造死工程;真正开做时按 [add-new-module.md](add-new-module.md) 创建 |
-| `Shared/common/v101_*` 替代 `common.kzproj` | **`common.kzproj` 仍在 `Shared/common/`**;变体子目录为扩展资源预留 | Kanzi 共享资源必须是可 `kzb://` 引用的工程 |
+| 多车型共用一份 `common.kzproj` | **`common.kzproj` 按车型放在 `Shared/common/<variant>/`**(当前 `v101_sedan`) | 车型差异资源隔离;`kzb://common/...` 仍按工程名解析 |
 
 ## 4. 分层原则
 

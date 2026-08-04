@@ -19996,7 +19996,7 @@ createRotation(finalDegreesY, finalDegreesX , 0.0)
                   i:nil="true" />
                 <propertyTypeReference>ProjectReferencePath</propertyTypeReference>
                 <value xmlns:d9p1="http://www.w3.org/2001/XMLSchema"
-                  i:type="d9p1:string">..\..\Shared\common\common.kzproj</value>
+                  i:type="d9p1:string">..\..\Shared\common\v101_sedan\common.kzproj</value>
               </d6p1:Value>
             </d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>
             <d6p1:KeyValueOfstringDynamicPropertyeuDbPpRS>

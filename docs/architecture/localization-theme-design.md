@@ -63,7 +63,7 @@
 | 位置 | 资产 | 明细 | 评价 |
 |------|------|------|------|
 | `IVI/assets/xml/datasource.xml` | 契约字段 | `System/locale`(string,默认 `zh-CN`,注释 "zh-CN / en")、`System/theme`(int,0 Day / 1 Night) | ✅ 已预留 |
-| `IVI/KanziProject/Shared/common/common.kzproj` | Localization Table(locale:`neutral`/`en-US`/`zh-CN`,key:`LocaleStyle`) | **放错位置**:按 §2.3 对其他工程不可见 | ⚠️ 迁 launcher |
+| `IVI/KanziProject/Shared/common/v101_sedan/common.kzproj` | Localization Table(locale:`neutral`/`en-US`/`zh-CN`,key:`LocaleStyle`) | **放错位置**:按 §2.3 对其他工程不可见 | ⚠️ 迁 launcher |
 | | Theme Group `AppTheme`(`DefaultValues`/`Day`/`Night`;token:`Color/Accent、Divider、Error、Success、Surface、TextPrimary、TextSecondary、Warning`) | 同上,**放错位置**;另有杂散 key `a` | ⚠️ 迁 launcher |
 | | `NotoSansCJKsc` 字体、`LocaleStyle`/`LocaleStyle_zh` Named Style、各色 Brush | **值资源,位置正确**(Public,供字典格子引用) | ✅ 留 common |
 | `IVI/KanziProject/launcher/Tool_project/launcher.kzproj` | Screen `Locale` 写死 `zh-CN`;Localization Table(locale 仅 `neutral`/`zh-CN`;key `LocaleStyle`→`kzb://common/Styles/LocaleStyle_zh`、`title`) | 表的位置正确;`LocaleStyle` 行证明**格子值跨工程引用 common 可行**;缺 `en-US` 列 | ⚠️ 补列 |
@@ -171,7 +171,7 @@ Env 节点那条 disabled 绑定的意图正确:3D 昼夜(光照/天空盒/贴�
 
 ### 6.1 一次性迁移:字典从 common → launcher(修 G0,先做)
 
-1. 打开 `launcher.kzproj` → **File > Import > Merge Project** → 选 `IVI/KanziProject/Shared/common/common.kzproj`;
+1. 打开 `launcher.kzproj` → **File > Import > Merge Project** → 选 `IVI/KanziProject/Shared/common/v101_sedan/common.kzproj`;
 2. Project Merge 对话框里**只勾**:`Localization > Localization Table`、`Themes > AppTheme`(勾 *Select referenced items* 让 Studio 自动带上引用项;若把 brush/style 一并带来了,取消勾选——它们留在 common);
 3. 合并后在 launcher 里核对:表的 locale 列(`neutral`/`en-US`/`zh-CN`)与 `LocaleStyle` 行、`AppTheme` 的 8 个 token + `Day`/`Night` 列都在;**格子值应指向 `kzb://common/...`**(不是本地副本);
 4. Theme Editor 里删除杂散 key `a`(右键 → Delete Resource ID);

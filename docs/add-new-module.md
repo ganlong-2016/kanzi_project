@@ -28,7 +28,7 @@ flowchart LR
 
 ### 2. 引用 common
 
-- `Library > Project References` → **Add Existing Project** → 选 `IVI/KanziProject/Shared/common/common.kzproj`。
+- `Library > Project References` → **Add Existing Project** → 选 `IVI/KanziProject/Shared/common/v101_sedan/common.kzproj`。
 - 之后即可使用 common 的字体、主题 token、Color Brush。**UI 组件不在 common** — 打开 `IVI/KanziProject/demo/demo.kzproj` 对照 Card / LabelText 等做法,在**本模块**建自己的 Prefab。
 
 ### 3. 搭页面 Prefab

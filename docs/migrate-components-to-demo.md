@@ -2,7 +2,7 @@
 
 > **背景**: `common` 只放**资源**(Brush / Theme / Font / Named Style)。Card、LabelText 等 **UI 组件 Prefab 归 `demo`**,作为可照着抄的样板,不在 common 里维护。
 
-**本仓库状态**: `IVI/KanziProject/demo/demo.kzproj` 已含 `Card` / `LabelText` / `ToggleSwitch` / `Slider`;`IVI/KanziProject/Shared/common/common.kzproj` 的 `Prefabs` 下仅剩 Studio 内置预览项。若你本地仍是旧布局,按下面步骤在 **Kanzi Studio 3.9.15** 迁移一次。
+**本仓库状态**: `IVI/KanziProject/demo/demo.kzproj` 已含 `Card` / `LabelText` / `ToggleSwitch` / `Slider`;`IVI/KanziProject/Shared/common/v101_sedan/common.kzproj` 的 `Prefabs` 下仅剩 Studio 内置预览项。若你本地仍是旧布局,按下面步骤在 **Kanzi Studio 3.9.15** 迁移一次。
 
 ## 迁移范围
 
@@ -23,7 +23,7 @@
 ### 1. 把 Prefab 合并进 demo
 
 1. 打开 `IVI/KanziProject/demo/demo.kzproj`
-2. **File → Import → Merge Project** → 选 `IVI/KanziProject/Shared/common/common.kzproj`
+2. **File → Import → Merge Project** → 选 `IVI/KanziProject/Shared/common/v101_sedan/common.kzproj`
 3. 在合并对话框中**只勾选** `Prefabs` 下要迁的项:`Card`、`LabelText`、`ToggleSwitch`、`Slider` 等
 4. 冲突时选 **Resolve to source**(以 common 里的版本为准)
 5. 点 **Merge** — Prefab 会出现在 demo 的 `Prefabs` 下
@@ -50,7 +50,7 @@
 
 ### 4. 从 common 删除已迁走的 Prefab
 
-1. 打开 `IVI/KanziProject/Shared/common/common.kzproj`
+1. 打开 `IVI/KanziProject/Shared/common/v101_sedan/common.kzproj`
 2. `Prefabs` 里删除 `Card`、`LabelText`、`ToggleSwitch`、`Slider` 及试验品 `Card2`、`Slider 2D`
 3. 若 `Property Types` 里只剩这些组件用的类型且无别处引用,可一并清理
 4. Save
